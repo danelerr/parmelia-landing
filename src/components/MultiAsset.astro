@@ -1,0 +1,35 @@
+---
+import TokenIcon from './TokenIcon.astro';
+
+const assets = [
+  { token: 'USDC', name: 'USDC', desc: 'Para cobrar, pagar y mantener valor estable.' },
+  { token: 'MON', name: 'MON', desc: 'Para moverte dentro del ecosistema Monad.' },
+  { token: 'WBTC', name: 'WBTC', desc: 'Para guardar exposición a Bitcoin sin salir de la app.' },
+] as const;
+---
+
+<section id="multi-asset" class="landing-section" style="background-color: var(--color-cream);">
+  <div class="landing-shell">
+    <div class="copy-stack" data-reveal>
+      <span class="section-eyebrow">Saldo listo para usar</span>
+      <h2 class="section-title">Guarda, paga y mueve desde un solo lugar.</h2>
+      <p class="section-copy">
+        Parmelia reúne tus activos principales para que no tengas que saltar entre wallets, exchanges y pantallas técnicas.
+      </p>
+    </div>
+
+    <div class="feature-grid" data-reveal-stagger>
+      {assets.map((asset) => (
+        <article class="feature-card asset-card">
+          <TokenIcon token={asset.token} />
+          <h3 class="card-title">{asset.name}</h3>
+          <p class="card-copy">{asset.desc}</p>
+        </article>
+      ))}
+    </div>
+
+    <p class="microcopy mt-10" data-reveal>
+      Tu saldo está para moverse, no para quedarse atrapado.
+    </p>
+  </div>
+</section>

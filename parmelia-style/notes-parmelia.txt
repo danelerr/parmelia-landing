@@ -1,0 +1,15 @@
+Como usuario de parmelia, en cuestion de transferencias quiero poder realizar lo siguiente:
+1. Depositar USDC, MON o WBTC a mi wallet de Parmelia
+2. Poder enviar mi dinero a otras wallets (dentro o fuera de Parmelia) sin commission
+3. Poder activar un modo earn, en el cual como usuario gane intereses con mi dinero
+4. Retirar mi dinero del modo earn cuando yo quiera (o desativarlo cuando yo quiera)
+5. Poder hacer intercambios entre USDC, MON y WBTC dentro de la app
+
+
+#Features que no se si son posible
+6. Depositar a Parmelia desde cualquier red y que parmelia automaticamente lo convierta a la red de Monad y le cobre fee al usuario
+7. Retirar desde parmelia a cualquier otra red. Si es Monad es gratis, si es otra red, que parmelia automaticamente haga la conversion y le cobre fee al usuario por eso. 
+Vi que Uniswap ya puede hacer crosschain recientemente.
+
+
+

@@ -1,0 +1,39 @@
+---
+interface Props {
+  token: 'USDC' | 'MON' | 'WBTC';
+  className?: string;
+}
+
+const { token, className = '' } = Astro.props;
+const label = token === 'WBTC' ? 'Wrapped Bitcoin' : token;
+---
+
+<span class={`token-logo token-${token.toLowerCase()} ${className}`} aria-label={label} role="img">
+  {token === 'USDC' && (
+    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="32" cy="32" r="30" fill="#2775CA" />
+      <circle cx="32" cy="32" r="22" stroke="white" stroke-width="4" />
+      <path d="M24 38.5C26.2 41 28.9 42.2 32.1 42.2C36.3 42.2 39.2 40.1 39.2 36.7C39.2 33.8 37.5 32.2 32.6 31.1C28.7 30.2 27.4 29.4 27.4 27.6C27.4 25.8 29.1 24.7 31.7 24.7C34.2 24.7 36.3 25.6 38.2 27.4" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M32 18V24.2M32 42.2V48" stroke="white" stroke-width="4" stroke-linecap="round" />
+      <path d="M17 23.4C14.9 25.8 13.7 28.8 13.7 32C13.7 35.2 14.9 38.2 17 40.6M47 23.4C49.1 25.8 50.3 28.8 50.3 32C50.3 35.2 49.1 38.2 47 40.6" stroke="white" stroke-width="3" stroke-linecap="round" />
+    </svg>
+  )}
+
+  {token === 'WBTC' && (
+    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="32" cy="32" r="30" fill="#F7931A" />
+      <path d="M25 17V47M35 17V47" stroke="white" stroke-width="3" stroke-linecap="round" />
+      <path d="M23 21H34.5C39.5 21 42.5 23.2 42.5 27C42.5 30 40.7 31.8 37.8 32.5C41.2 33.1 43.4 35.3 43.4 39C43.4 43.5 39.9 46 34.3 46H23" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M23 32.5H35.2" stroke="white" stroke-width="5" stroke-linecap="round" />
+    </svg>
+  )}
+
+  {token === 'MON' && (
+    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="32" cy="32" r="30" fill="#836EF9" />
+      <path d="M18 42V23L32 34.5L46 23V42" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M18 23L32 15L46 23" stroke="#D7CCFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M24 45H40" stroke="white" stroke-width="5" stroke-linecap="round" />
+    </svg>
+  )}
+</span>

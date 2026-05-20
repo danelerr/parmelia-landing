@@ -1,11 +1,93 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import '../styles/global.css';
+import Hero from '../components/Hero.astro';
+import BrowserFirst from '../components/BrowserFirst.astro';
+import PaymentLinks from '../components/PaymentLinks.astro';
+import QRUsernames from '../components/QRUsernames.astro';
+import NoFees from '../components/NoFees.astro';
+import MultiAsset from '../components/MultiAsset.astro';
+import Swaps from '../components/Swaps.astro';
+import EarnMode from '../components/EarnMode.astro';
+import CrossChain from '../components/CrossChain.astro';
+import Control from '../components/Control.astro';
+import CTAFinal from '../components/CTAFinal.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout>
-	<Welcome />
+  <main>
+    <Hero />
+    <BrowserFirst />
+    <PaymentLinks />
+    <QRUsernames />
+    <NoFees />
+    <MultiAsset />
+    <Swaps />
+    <EarnMode />
+    <CrossChain />
+    <Control />
+    <CTAFinal />
+  </main>
+
+  <Footer />
 </Layout>
+
+<!-- Scroll Reveal Animation Script using Motion.js -->
+<script>
+  import { animate, inView } from 'motion';
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!prefersReducedMotion) {
+    document.querySelectorAll('[data-reveal]').forEach((el) => {
+      inView(el, () => {
+        animate(
+          el,
+          {
+            opacity: [0, 1],
+            transform: ['translateY(26px) scale(0.985)', 'translateY(0) scale(1)'],
+            filter: ['blur(4px)', 'blur(0px)'],
+          },
+          { duration: 0.95, easing: [0.16, 1, 0.3, 1] }
+        );
+      }, { margin: '0px 0px -80px 0px' });
+    });
+
+    document.querySelectorAll('[data-reveal-stagger]').forEach((el) => {
+      inView(el, () => {
+        Array.from(el.children).forEach((child, i) => {
+          animate(
+            child,
+            {
+              opacity: [0, 1],
+              transform: [
+                `translateY(${24 + i * 5}px) rotate(${i % 2 === 0 ? '-0.8deg' : '0.8deg'})`,
+                'translateY(0) rotate(0deg)',
+              ],
+              filter: ['blur(3px)', 'blur(0px)'],
+            },
+            { duration: 0.82, delay: i * 0.09, easing: [0.16, 1, 0.3, 1] }
+          );
+        });
+      }, { margin: '0px 0px -60px 0px' });
+    });
+
+    document.querySelectorAll('[data-float]').forEach((el, index) => {
+      animate(
+        el,
+        {
+          transform: ['translateY(0px)', 'translateY(-7px)', 'translateY(0px)'],
+        },
+        { duration: 5.8 + index * 0.4, repeat: Infinity, easing: 'ease-in-out' }
+      );
+    });
+
+  } else {
+    document.querySelectorAll('[data-reveal], [data-reveal-stagger] > *').forEach((el) => {
+      el.style.opacity = '1';
+      el.style.transform = 'none';
+      el.style.filter = 'none';
+    });
+  }
+</script>

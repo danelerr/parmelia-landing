@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap" rel="stylesheet">
+<style>
+  body {
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .btn-parmelia {
+    position: relative;
+    padding: 16px 40px;
+    font-family: 'Shippori Antique', sans-serif;
+    font-size: 18px;
+    color: #FFFFFF;
+    background: #050505;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.3s ease;
+  }
+
+  /* Borde animado con el gradiente de tus tres colores */
+  .btn-parmelia::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: -2;
+    background: linear-gradient(90deg, #A7D4DE, #DEA6BC, #DED9A6, #A7D4DE);
+    background-size: 300% 100%;
+    animation: gradient-flow 4s linear infinite;
+    border-radius: 8px;
+  }
+
+  /* Fondo interno del botón para mantenerlo oscuro */
+  .btn-parmelia::after {
+    content: '';
+    position: absolute;
+    top: 2px; left: 2px; right: 2px; bottom: 2px;
+    background: #121212;
+    z-index: -1;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+  }
+
+  /* Efecto Hover */
+  .btn-parmelia:hover::after {
+    background: transparent;
+  }
+  .btn-parmelia:hover {
+    color: #121212; /* Texto oscuro al iluminarse el fondo */
+    font-weight: bold;
+    box-shadow: 0 0 20px rgba(167, 212, 222, 0.4);
+  }
+
+  @keyframes gradient-flow {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+  }
+</style>
+</head>
+<body>
+
+  <button class="btn-parmelia">Usar la App</button>
+
+</body>
+</html>

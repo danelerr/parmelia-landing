@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<style>
+  body {
+    background-color: #050505;
+    overflow: hidden;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .core-network {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    opacity: 0.8;
+  }
+
+  /* Animación de los pulsos de datos */
+  .data-stream {
+    fill: none;
+    stroke-width: 4;
+    stroke-linecap: round;
+    /* Un guion largo (el pulso) seguido de un espacio gigante para que parezca un solo paquete viajando */
+    stroke-dasharray: 40 2000;
+  }
+
+  /* Distintas velocidades y direcciones para crear un ecosistema vivo */
+  .stream-blue {
+    stroke: #A7D4DE;
+    animation: flow-forward 4s linear infinite;
+    filter: drop-shadow(0 0 6px #A7D4DE);
+  }
+
+  .stream-pink {
+    stroke: #DEA6BC;
+    animation: flow-reverse 5s linear infinite;
+    filter: drop-shadow(0 0 6px #DEA6BC);
+  }
+
+  .stream-yellow {
+    stroke: #DED9A6;
+    animation: flow-forward 3.5s linear infinite 1s;
+    filter: drop-shadow(0 0 6px #DED9A6);
+  }
+
+  /* Nodos centrales que pulsan lentamente */
+  .core-node {
+    animation: core-pulse 3s ease-in-out infinite alternate;
+  }
+
+  @keyframes flow-forward {
+    0% { stroke-dashoffset: 2000; }
+    100% { stroke-dashoffset: 0; }
+  }
+
+  @keyframes flow-reverse {
+    0% { stroke-dashoffset: 0; }
+    100% { stroke-dashoffset: 2000; }
+  }
+
+  @keyframes core-pulse {
+    0% { opacity: 0.5; transform: scale(0.98); }
+    100% { opacity: 1; transform: scale(1.02); }
+  }
+</style>
+</head>
+<body>
+
+  <svg class="core-network" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="#1a1a1a" stroke-width="2" fill="none">
+      <path id="path1" d="M -100,100 L 300,300 L 500,200 L 800,350 L 1100,200" />
+      <path id="path2" d="M -100,500 L 200,350 L 400,450 L 700,300 L 1100,500" />
+      <path id="path3" d="M 100,-100 L 400,200 L 400,400 L 600,500 L 900,350 L 1100,450" />
+      <path d="M 300,300 L 400,200" />
+      <path d="M 500,200 L 700,300" />
+      <path d="M 400,450 L 400,400" />
+    </g>
+
+    <path class="data-stream stream-blue" d="M -100,100 L 300,300 L 500,200 L 800,350 L 1100,200" />
+    <path class="data-stream stream-pink" d="M -100,500 L 200,350 L 400,450 L 700,300 L 1100,500" />
+    <path class="data-stream stream-yellow" d="M 100,-100 L 400,200 L 400,400 L 600,500 L 900,350 L 1100,450" />
+    
+    <path class="data-stream stream-blue" d="M 1100,500 L 700,300 L 500,200 L 300,300 L -100,100" style="animation-duration: 6s; animation-delay: 2s;" />
+
+    <g class="core-node" transform="translate(500, 200)">
+      <polygon points="0,-15 15,0 0,15 -15,0" fill="#121212" stroke="#DEA6BC" stroke-width="3"/>
+      <circle cx="0" cy="0" r="4" fill="#DEA6BC" />
+    </g>
+
+    <g class="core-node" transform="translate(300, 300)" style="animation-delay: 1s;">
+      <polygon points="0,-15 15,0 0,15 -15,0" fill="#121212" stroke="#A7D4DE" stroke-width="3"/>
+      <circle cx="0" cy="0" r="4" fill="#A7D4DE" />
+    </g>
+
+    <g class="core-node" transform="translate(700, 300)" style="animation-delay: 0.5s;">
+      <polygon points="0,-15 15,0 0,15 -15,0" fill="#121212" stroke="#DED9A6" stroke-width="3"/>
+      <circle cx="0" cy="0" r="4" fill="#DED9A6" />
+    </g>
+    
+    <g class="core-node" transform="translate(400, 400)" style="animation-delay: 1.5s;">
+      <circle cx="0" cy="0" r="10" fill="#121212" stroke="#FFFFFF" stroke-width="2" opacity="0.5"/>
+      <circle cx="0" cy="0" r="3" fill="#FFFFFF" />
+    </g>
+  </svg>
+
+</body>
+</html>

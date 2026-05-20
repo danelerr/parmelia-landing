@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<style>
+  body {
+    background-color: #050505; /* Fondo ultra oscuro para mayor contraste */
+    overflow: hidden;
+    margin: 0;
+  }
+
+  .network-bg {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.6;
+  }
+
+  .node {
+    animation: pulse 2s infinite alternate;
+  }
+
+  .packet {
+    animation: travel 3s linear infinite;
+  }
+
+  .packet-2 { animation: travel 4s linear infinite; animation-delay: 1s; }
+  .packet-3 { animation: travel 3.5s linear infinite; animation-delay: 2s; }
+
+  @keyframes pulse {
+    0% { filter: drop-shadow(0 0 2px currentColor); }
+    100% { filter: drop-shadow(0 0 8px currentColor); }
+  }
+
+  @keyframes travel {
+    0% { stroke-dashoffset: 1000; }
+    100% { stroke-dashoffset: 0; }
+  }
+</style>
+</head>
+<body>
+
+  <svg class="network-bg" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <path d="M-100,200 L300,100 L500,250 L900,150" fill="none" stroke="#222" stroke-width="2"/>
+    <path d="M-100,300 L250,300 L450,150 L900,250" fill="none" stroke="#222" stroke-width="2"/>
+
+    <path class="packet" d="M-100,200 L300,100 L500,250 L900,150" fill="none" stroke="#A7D4DE" stroke-width="3" stroke-dasharray="20 1000" stroke-linecap="round"/>
+    <path class="packet packet-2" d="M-100,300 L250,300 L450,150 L900,250" fill="none" stroke="#DEA6BC" stroke-width="3" stroke-dasharray="20 1000" stroke-linecap="round"/>
+    <path class="packet packet-3" d="M-100,200 L300,100 L500,250 L900,150" fill="none" stroke="#DED9A6" stroke-width="3" stroke-dasharray="20 1000" stroke-linecap="round"/>
+
+    <polygon class="node" points="300,90 310,95 300,100 290,95" fill="#A7D4DE" style="color: #A7D4DE;"/>
+    <polygon class="node" points="500,240 510,245 500,250 490,245" fill="#DEA6BC" style="color: #DEA6BC;"/>
+    <polygon class="node" points="450,140 460,145 450,150 440,145" fill="#DED9A6" style="color: #DED9A6;"/>
+  </svg>
+
+</body>
+</html>

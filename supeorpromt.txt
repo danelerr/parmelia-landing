@@ -1,0 +1,54 @@
+Actua como un senior desarrollador de landing pages, y tambien expero en marketing
+  Necesito que crees una lading page para parmelia
+
+  la carpeta
+
+  parmelia-style
+   puedes encontrar todo el contexto que recopile para ti
+
+
+  specifications.md
+   colores y fuentes
+
+
+  Logo_parmelia.svg
+
+
+  portada_de_X.svg
+   algunos materiales de parmelia
+  En
+
+  pruebashtml
+   hice agunas animaciones que honestamente no estan muy pulidas pero todas me gustan a excepcion de p1 y p4 que eran animaciones de logo pero no estan completas
+
+  dentro
+
+  notes-parmelia.txt
+   y
+
+  notion-parmelia.md
+   cosas puntuales sobre parmelia
+
+
+  landing-content-model1.md
+   y
+
+  landing-content-model2.md
+   son ejemplos de texto super puntual y de ventas y de como podria ser la landing respecto a contenido
+  y
+
+  context-parmelia1.md
+   y
+
+  CONTEXT-MORE-EXTENSIVE.md
+   contexto muy largo sobre todo lo que es el producto de Parmelia
+
+  Tambien tienes muchismas skills de todo, revisa tus skills para decidir que es lo mejor para utilizar.
+  Quiero que la pagina en temas de marketing y de estructura se parezca a https:;//peanut.me que es un competidor y me gusta mucho como se venden.
+
+  Me gustaria que tambien usaras para la lading pretext https://github.com/chenglou/pretext https://chenglou.me/pretext/ https://pretextjs.dev/ para ya sea hacer alguna animacion brutal con ese efecto o
+  simplemente para optimizar algo
+
+  Si gustas puedes revisar la app de parmelai que esta aqui "C:\Users\danie\OneDrive\Desktop\parmelia-links\parmelia-links\client" aunque esta fuera de tu workspace, creo que podrias leerlo.
+
+  Realiza la landing-page.

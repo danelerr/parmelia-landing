@@ -1,0 +1,33 @@
+---
+const cards = [
+  { mark: '01', title: 'Sin puentes confusos' },
+  { mark: '02', title: 'Sin cambiar de app' },
+  { mark: '03', title: 'Sin estudiar cada red' },
+];
+---
+
+<section id="cross-chain" class="landing-section" style="background-color: var(--color-sky);">
+  <div class="landing-shell">
+    <div class="copy-stack" data-reveal>
+      <span class="section-eyebrow">Próximamente</span>
+      <h2 class="section-title">Trae dinero desde otras redes sin romper el flujo.</h2>
+      <p class="section-copy">
+        La idea es simple: depositas desde donde ya tienes saldo y Parmelia lo deja listo para usar dentro de la app.
+      </p>
+    </div>
+
+    <div class="bridge-ribbons" data-reveal>
+      <div class="bridge-line"><span>Wallet externa a Parmelia</span></div>
+      <div class="bridge-line"><span>Saldo listo para pagar</span></div>
+    </div>
+
+    <div class="feature-grid" data-reveal-stagger>
+      {cards.map((card) => (
+        <article class="feature-card">
+          <span class="card-mark">{card.mark}</span>
+          <h3 class="card-title">{card.title}</h3>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

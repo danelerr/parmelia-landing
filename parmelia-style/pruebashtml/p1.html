@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<style>
+  body {
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .parmelia-logo {
+    width: 250px;
+    height: 250px;
+    cursor: pointer;
+  }
+
+  /* Animaciones suaves y desfasadas para cada capa */
+  .layer {
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform-origin: center;
+  }
+
+  .layer-blue {
+    animation: float-blue 4s ease-in-out infinite;
+  }
+  .layer-pink {
+    animation: float-pink 4s ease-in-out infinite;
+    animation-delay: 0.5s;
+  }
+  .layer-yellow {
+    animation: float-yellow 4s ease-in-out infinite;
+    animation-delay: 1s;
+  }
+
+  /* Efecto de expansión al pasar el mouse */
+  .parmelia-logo:hover .layer-blue { transform: translateY(-15px); }
+  .parmelia-logo:hover .layer-pink { transform: translateY(0px); }
+  .parmelia-logo:hover .layer-yellow { transform: translateY(15px); }
+
+  @keyframes float-blue {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+  }
+  @keyframes float-pink {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-3px); }
+  }
+  @keyframes float-yellow {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(3px); }
+  }
+</style>
+</head>
+<body>
+
+  <svg class="parmelia-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <g transform="translate(0, 10)">
+      <polygon class="layer layer-blue" points="100,10 180,50 100,90 20,50" fill="#A7D4DE"/>
+      
+      <path class="layer layer-pink" d="M20,65 L100,105 L180,65 L180,95 L100,135 L20,95 Z" fill="#DEA6BC"/>
+      
+      <path class="layer layer-yellow" d="M20,110 L100,150 L180,110 L180,140 L100,180 L20,140 Z" fill="#DED9A6"/>
+    </g>
+  </svg>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+---
+import TokenIcon from './TokenIcon.astro';
+
+const swaps = [
+  { from: 'USDC', to: 'MON' },
+  { from: 'MON', to: 'USDC' },
+  { from: 'USDC', to: 'WBTC' },
+] as const;
+---
+
+<section id="swaps" class="landing-section" style="background-color: var(--color-pink);">
+  <div class="landing-shell">
+    <div class="copy-stack" data-reveal>
+      <span class="section-eyebrow">Cambios dentro de la app</span>
+      <h2 class="section-title">Cambia cuando el pago lo necesita.</h2>
+      <p class="section-copy">
+        Convierte entre activos sin salir de Parmelia. Menos pestañas, menos pasos y menos margen para equivocarte.
+      </p>
+    </div>
+
+    <div class="w-full max-w-[560px] mt-14 flex flex-col gap-4" data-reveal-stagger>
+      {swaps.map((swap) => (
+        <article class="feature-card swap-row">
+          <span class="flex items-center gap-3">
+            <TokenIcon token={swap.from} className="!w-12 !h-12" />
+            <span class="card-title text-[20px]">{swap.from}</span>
+          </span>
+          <span class="swap-divider">
+            <span class="transfer-dot block h-3 w-3 rounded-full"></span>
+          </span>
+          <span class="flex items-center gap-3">
+            <TokenIcon token={swap.to} className="!w-12 !h-12" />
+            <span class="card-title text-[20px]">{swap.to}</span>
+          </span>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

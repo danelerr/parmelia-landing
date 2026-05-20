@@ -1,0 +1,63 @@
+---
+import ParmeliaStack from './ParmeliaStack.astro';
+---
+
+<section id="hero" class="hero-section hero-dark dark-field">
+  <svg class="hero-network-bg" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g class="hero-network-base">
+      <path d="M100,100 L300,200 L500,100 L700,250" />
+      <path d="M50,300 L250,150 L450,280 L750,120" />
+      <path d="M150,50 L400,350 L650,200" />
+      <path d="M300,200 L250,150" />
+      <path d="M500,100 L450,280" />
+      <path d="M400,350 L450,280" />
+    </g>
+
+    <path class="hero-network-packet packet-sky" d="M100,100 L300,200 L500,100 L700,250" />
+    <path class="hero-network-packet packet-pink" d="M50,300 L250,150 L450,280 L750,120" />
+    <path class="hero-network-packet packet-cream" d="M150,50 L400,350 L650,200" />
+
+    <g class="hero-network-node" transform="translate(300 200)">
+      <polygon points="0,-14 14,0 0,14 -14,0" fill="#121212" stroke="#A7D4DE" stroke-width="3" />
+      <circle r="4" fill="#A7D4DE" />
+    </g>
+    <g class="hero-network-node" transform="translate(500 100)" style="animation-delay: .6s;">
+      <polygon points="0,-14 14,0 0,14 -14,0" fill="#121212" stroke="#DEA6BC" stroke-width="3" />
+      <circle r="4" fill="#DEA6BC" />
+    </g>
+    <g class="hero-network-node" transform="translate(650 200)" style="animation-delay: 1.1s;">
+      <polygon points="0,-14 14,0 0,14 -14,0" fill="#121212" stroke="#DED9A6" stroke-width="3" />
+      <circle r="4" fill="#DED9A6" />
+    </g>
+  </svg>
+
+  <div class="landing-shell">
+    <div class="copy-stack wide" data-reveal>
+      <ParmeliaStack className="hero-logo-glow" />
+
+      <div class="relative w-full">
+        <h1 class="hero-title hero-title-light">
+          Mueve dinero digital sin fricción.
+        </h1>
+      </div>
+
+      <p class="section-copy">
+        Parmelia hace que cobrar y pagar con stablecoins se sienta como mandar un mensaje, no como usar una wallet cripto.
+      </p>
+
+      <div class="button-row">
+        <a href="https://app.parmelia.me" target="_blank" rel="noopener noreferrer" class="btn-parmelia hero-cta">
+          Probar Parmelia
+        </a>
+      </div>
+
+      <p class="microcopy hero-proofline">
+        <span>Sin descargar apps</span>
+        <span class="proof-dot proof-dot-sky" aria-hidden="true"></span>
+        <span>sin frases semilla</span>
+        <span class="proof-dot proof-dot-pink" aria-hidden="true"></span>
+        <span>sin complicaciones</span>
+      </p>
+    </div>
+  </div>
+</section>
