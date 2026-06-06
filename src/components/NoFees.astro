@@ -1,10 +1,10 @@
 ---
 ---
 
-<section id="no-fees" class="landing-section bg-white">
+<section id="no-fees" class="landing-section">
   <div class="landing-shell">
     <div class="copy-stack" data-reveal>
-      <span class="section-eyebrow">Sin fricción diaria</span>
+      <span class="section-eyebrow"><span class="eyebrow-num">03</span><span class="eyebrow-sep"></span>Sin fricción diaria</span>
       <h2 class="section-title">Sin comisiones por transacción.</h2>
       <p class="section-copy">
         Mueve saldo dentro de Parmelia sin comisiones entre usuarios. Cuando necesites salir, retiras a otra dirección desde la misma app.
@@ -16,31 +16,33 @@
 
     <div class="fee-compare" data-reveal-stagger>
       <article class="fee-panel">
-        <p class="text-sm font-bold uppercase text-[#121212]/40">Antes</p>
-        <h3 class="mt-4 text-3xl font-bold leading-tight text-[#121212]">Direcciones, gas y pasos extra.</h3>
-        <p class="mt-4 text-base font-bold leading-relaxed text-[#121212]/56">
+        <p class="text-sm font-semibold uppercase tracking-wide text-white/40">Antes</p>
+        <h3 class="mt-4 font-display text-2xl font-semibold leading-tight tracking-tight text-white">Direcciones, gas y pasos extra.</h3>
+        <p class="mt-4 text-base font-normal leading-relaxed text-white/60">
           El pago se siente técnico incluso cuando solo quieres mandar dinero a otra persona.
         </p>
       </article>
 
       <article class="fee-panel highlight">
-        <p class="text-sm font-bold uppercase text-[#121212]/48">Con Parmelia</p>
-        <h3 class="mt-4 text-3xl font-bold leading-tight text-[#121212]">Username, monto y confirmar.</h3>
-        <p class="mt-4 text-base font-bold leading-relaxed text-[#121212]/62">
+        <p class="text-sm font-semibold uppercase tracking-wide text-white/55">Con Parmelia</p>
+        <h3 class="mt-4 font-display text-2xl font-semibold leading-tight tracking-tight text-white">Username, monto y confirmar.</h3>
+        <p class="mt-4 text-base font-normal leading-relaxed text-white/70">
           El flujo se concentra en la acción, no en explicar la infraestructura.
         </p>
       </article>
     </div>
 
-    <svg class="protocol-heartbeat" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" data-reveal>
-      <defs>
-        <linearGradient id="protocol-heartbeat-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#A7D4DE" />
-          <stop offset="50%" stop-color="#DEA6BC" />
-          <stop offset="100%" stop-color="#121212" />
-        </linearGradient>
-      </defs>
-      <path class="ekg-line" d="M 0,75 L 100,75 L 120,40 L 140,110 L 160,30 L 180,75 L 300,75" fill="none" stroke="url(#protocol-heartbeat-grad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-    </svg>
+    <div class="fee-burn" data-reveal>
+      <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <!-- gas / fees rising and vanishing to nothing -->
+        <circle class="gas-particle" cx="100" cy="92" r="8" fill="#F4A9CF" />
+        <circle class="gas-particle" cx="80" cy="104" r="5" fill="#EFE08C" />
+        <circle class="gas-particle" cx="120" cy="98" r="6" fill="#9CE3F4" />
+        <!-- the value that stays -->
+        <polygon points="100,96 138,115 100,134 62,115" fill="#A7D4DE" />
+        <polygon points="100,114 138,133 100,152 62,133" fill="#DEA6BC" opacity=".0" />
+      </svg>
+      <p class="microcopy" style="margin-top:6px;">Las comisiones se evaporan. Tu saldo se queda.</p>
+    </div>
   </div>
 </section>

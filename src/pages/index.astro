@@ -61,13 +61,9 @@ import Footer from '../components/Footer.astro';
             child,
             {
               opacity: [0, 1],
-              transform: [
-                `translateY(${24 + i * 5}px) rotate(${i % 2 === 0 ? '-0.8deg' : '0.8deg'})`,
-                'translateY(0) rotate(0deg)',
-              ],
-              filter: ['blur(3px)', 'blur(0px)'],
+              transform: ['translateY(18px)', 'translateY(0)'],
             },
-            { duration: 0.82, delay: i * 0.09, easing: [0.16, 1, 0.3, 1] }
+            { duration: 0.7, delay: i * 0.08, easing: [0.16, 1, 0.3, 1] }
           );
         });
       }, { margin: '0px 0px -60px 0px' });
