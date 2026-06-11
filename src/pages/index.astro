@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
 import Hero from '../components/Hero.astro';
+import ProofBar from '../components/ProofBar.astro';
 import BrowserFirst from '../components/BrowserFirst.astro';
 import PaymentLinks from '../components/PaymentLinks.astro';
 import QRUsernames from '../components/QRUsernames.astro';
@@ -11,6 +12,7 @@ import Swaps from '../components/Swaps.astro';
 import EarnMode from '../components/EarnMode.astro';
 import CrossChain from '../components/CrossChain.astro';
 import Control from '../components/Control.astro';
+import Faq from '../components/Faq.astro';
 import CTAFinal from '../components/CTAFinal.astro';
 import Footer from '../components/Footer.astro';
 ---
@@ -18,6 +20,7 @@ import Footer from '../components/Footer.astro';
 <Layout>
   <main>
     <Hero />
+    <ProofBar />
     <BrowserFirst />
     <PaymentLinks />
     <QRUsernames />
@@ -27,6 +30,7 @@ import Footer from '../components/Footer.astro';
     <EarnMode />
     <CrossChain />
     <Control />
+    <Faq />
     <CTAFinal />
   </main>
 
@@ -40,7 +44,7 @@ import Footer from '../components/Footer.astro';
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   if (!prefersReducedMotion) {
-    document.querySelectorAll('[data-reveal]').forEach((el) => {
+    document.querySelectorAll<HTMLElement>('[data-reveal]').forEach((el) => {
       inView(el, () => {
         animate(
           el,
@@ -49,38 +53,38 @@ import Footer from '../components/Footer.astro';
             transform: ['translateY(26px) scale(0.985)', 'translateY(0) scale(1)'],
             filter: ['blur(4px)', 'blur(0px)'],
           },
-          { duration: 0.95, easing: [0.16, 1, 0.3, 1] }
+          { duration: 0.95, ease: [0.16, 1, 0.3, 1] }
         );
       }, { margin: '0px 0px -80px 0px' });
     });
 
-    document.querySelectorAll('[data-reveal-stagger]').forEach((el) => {
+    document.querySelectorAll<HTMLElement>('[data-reveal-stagger]').forEach((el) => {
       inView(el, () => {
         Array.from(el.children).forEach((child, i) => {
           animate(
-            child,
+            child as HTMLElement,
             {
               opacity: [0, 1],
               transform: ['translateY(18px)', 'translateY(0)'],
             },
-            { duration: 0.7, delay: i * 0.08, easing: [0.16, 1, 0.3, 1] }
+            { duration: 0.7, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }
           );
         });
       }, { margin: '0px 0px -60px 0px' });
     });
 
-    document.querySelectorAll('[data-float]').forEach((el, index) => {
+    document.querySelectorAll<HTMLElement>('[data-float]').forEach((el, index) => {
       animate(
         el,
         {
           transform: ['translateY(0px)', 'translateY(-7px)', 'translateY(0px)'],
         },
-        { duration: 5.8 + index * 0.4, repeat: Infinity, easing: 'ease-in-out' }
+        { duration: 5.8 + index * 0.4, repeat: Infinity, ease: 'easeInOut' }
       );
     });
 
   } else {
-    document.querySelectorAll('[data-reveal], [data-reveal-stagger] > *').forEach((el) => {
+    document.querySelectorAll<HTMLElement>('[data-reveal], [data-reveal-stagger] > *').forEach((el) => {
       el.style.opacity = '1';
       el.style.transform = 'none';
       el.style.filter = 'none';

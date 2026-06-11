@@ -1,4 +1,6 @@
 ---
+import ShareChannels from './ShareChannels.astro';
+
 const tags = ['Freelancers', 'Eventos', 'Comunidades', 'Ventas por DM'];
 ---
 
@@ -6,12 +8,11 @@ const tags = ['Freelancers', 'Eventos', 'Comunidades', 'Ventas por DM'];
   <div class="landing-shell">
     <div class="split" data-reveal>
       <div class="split-copy">
-        <span class="section-eyebrow"><span class="eyebrow-num">01</span><span class="eyebrow-sep"></span>Links de pago</span>
-        <h2 class="section-title">Cobra donde quieras, fácilmente.</h2>
+        <h2 class="section-title">Cobra con un link.</h2>
         <p class="section-copy">
-          Genera un link, compártelo por WhatsApp, Telegram, Instagram o X, y recibe el pago sin explicar redes, gas ni direcciones.
+          Crea un link en segundos y compártelo por WhatsApp, Telegram, Instagram o donde quieras. La otra persona abre el link, paga y listo.
         </p>
-        <div class="pill-row" style="width:100%; margin:6px 0 0; justify-content:flex-start;">
+        <div class="pill-row">
           {tags.map((tag) => (
             <span class="pill">{tag}</span>
           ))}
@@ -37,6 +38,8 @@ const tags = ['Freelancers', 'Eventos', 'Comunidades', 'Ventas por DM'];
               <path d="M86.7497 164.587C85.6645 165.298 84.3459 165.295 83.2635 164.578L7.13366 111.688L0.179813 106.869L0.11123 138.127L7.0658 142.947L84.9454 197.085L163.02 143.344L169.993 138.527L170.052 107.322L163.079 112.106L86.7497 164.587Z" fill="#DED9A6"/>
             </g>
           </svg>
+
+          <ShareChannels />
         </div>
       </div>
     </div>

@@ -1,0 +1,36 @@
+Parmelia definitive pitch QA
+
+Output:
+- presentations/parmelia-pitch-definitivo-arbitrum.pptx
+- 11 slides, 1280x720, 185946 bytes
+
+Profile:
+- Product/platform pitch, modern Parmelia brand system.
+- Final narrative corrects old Monad positioning to Arbitrum.
+
+Score: 46/50
+- Story clarity: 5/5
+- Specificity: 5/5
+- Rhythm: 5/5
+- Whitespace: 4/5
+- Visual clarity: 4/5
+- Typography: 4/5
+- Restraint: 5/5
+- Precision: 4/5
+- Brand coherence: 5/5
+- Reference improvement: 5/5
+
+Checks:
+- PPTX export passed.
+- Packaged slide count: 11.
+- Text check: Arbitrum present; Monad absent; MON absent.
+- Media check: 7 embedded media assets; 0 empty media.
+- Layout check: 0 errors, 30 warnings.
+- Visual contact sheet reviewed after final export.
+
+Accepted warnings:
+- Tight text boxes are from deliberate compact headline and label treatment.
+- Split inline warnings are intentional row-label pairs on the wedge slide.
+
+Caveat:
+- Used editable Segoe UI fallback because the target brand fonts were not installed in the local PowerPoint environment.

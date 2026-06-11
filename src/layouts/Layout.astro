@@ -1,13 +1,50 @@
 ---
+import '@fontsource-variable/inter/index.css';
+import '@fontsource-variable/bricolage-grotesque/opsz.css';
+
 interface Props {
   title?: string;
   description?: string;
 }
 
-const { 
-  title = 'Parmelia — Mueve dinero digital sin fricción',
-  description = 'Cobra con links, paga con QR y envía a usernames. Parmelia hace que mover stablecoins se sienta simple.'
+const {
+  title = 'Parmelia — Mueve dinero digital como mandar un mensaje',
+  description = 'Cobra con links, paga con QR y envía a usernames. Mover dinero digital, fácil para ti y para quien recibe. Sin descargar apps, sin comisiones entre usuarios.'
 } = Astro.props;
+
+const siteUrl = 'https://parmelia.me/';
+const ogImage = new URL('/og.png', siteUrl).href;
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': `${siteUrl}#org`,
+      name: 'Parmelia',
+      url: siteUrl,
+      logo: new URL('/Logo_parmelia.svg', siteUrl).href,
+      sameAs: ['https://x.com/parmelia_'],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${siteUrl}#website`,
+      url: siteUrl,
+      name: 'Parmelia',
+      inLanguage: 'es',
+      publisher: { '@id': `${siteUrl}#org` },
+    },
+    {
+      '@type': 'WebApplication',
+      name: 'Parmelia',
+      url: 'https://app.parmelia.me',
+      applicationCategory: 'FinanceApplication',
+      operatingSystem: 'Web',
+      description,
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    },
+  ],
+};
 ---
 
 <!doctype html>
@@ -15,38 +52,47 @@ const {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="keywords" content="pagos digitales, stablecoins, USDC, links de pago, QR, LATAM, Bolivia, cripto simple, Monad" />
     <meta name="robots" content="index, follow" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href={siteUrl} />
+    <link rel="sitemap" href="/sitemap.xml" />
 
     <!-- Open Graph -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://parmelia.me" />
+    <meta property="og:url" content={siteUrl} />
     <meta property="og:site_name" content="Parmelia" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Parmelia — mueve dinero digital como mandar un mensaje" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@parmelia_" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content="Parmelia — mueve dinero digital como mandar un mensaje" />
 
-    <!-- Canonical -->
-    <link rel="canonical" href="https://parmelia.me" />
-
-    <!-- Favicon -->
+    <!-- Icons -->
     <link rel="icon" type="image/svg+xml" href="/Logo_parmelia.svg" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
     <!-- Theme color for mobile browser chrome -->
     <meta name="theme-color" content="#0A0A0B" />
 
-    <!-- Google Fonts: Space Grotesk (display) + Inter (UI/body) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <!-- Structured data -->
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} is:inline />
 
-    <title>{title}</title>
+    <!-- Gate scroll-reveal hiding behind JS availability: without JS the page stays fully visible -->
+    <script is:inline>document.documentElement.classList.add('js');</script>
   </head>
   <body class="antialiased">
     <slot />

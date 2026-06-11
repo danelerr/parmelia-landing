@@ -1,0 +1,61 @@
+---
+const faqs = [
+  {
+    q: '¿Es seguro? ¿Dónde queda mi dinero?',
+    a: 'Tu dinero es tuyo y solo tú puedes moverlo. Parmelia no lo guarda por ti ni puede tocarlo. Entras con tu huella o tu cara, sin contraseñas ni frases raras que memorizar.',
+  },
+  {
+    q: '¿Necesito saber de cripto para usarla?',
+    a: 'No. Si sabes mandar un mensaje, sabes usar Parmelia. Cobras con un link, pagas con un QR y envías a un nombre de usuario. La parte técnica queda escondida.',
+  },
+  {
+    q: '¿Cuánto cuesta?',
+    a: 'Enviar dinero entre usuarios de Parmelia no tiene comisiones. Si alguna vez hay un costo, lo ves claro antes de confirmar.',
+  },
+  {
+    q: '¿Qué es un dólar digital?',
+    a: 'Es dinero que vale lo mismo que un dólar, pero vive en tu teléfono y se mueve al instante, sin bancos de por medio. En Parmelia usas USDC.',
+  },
+  {
+    q: '¿Necesito descargar algo?',
+    a: 'No. Parmelia funciona desde el navegador: entras y empiezas, sin instalar ni actualizar nada.',
+  },
+  {
+    q: '¿Puedo sacar mi dinero cuando quiera?',
+    a: 'Cuando quieras. Puedes enviarlo a otra wallet o retirarlo sin pedir permiso. No te quedas encerrado.',
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} is:inline />
+
+<section id="faq" class="landing-section">
+  <div class="landing-shell">
+    <div class="copy-stack" data-reveal>
+      <h2 class="section-title">Preguntas frecuentes</h2>
+      <p class="section-copy">Lo esencial, sin vueltas.</p>
+    </div>
+
+    <div class="faq-list" data-reveal>
+      {faqs.map((f) => (
+        <details class="faq-item">
+          <summary>
+            <span>{f.q}</span>
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+          <p>{f.a}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

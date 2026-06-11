@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<title>Parmelia — Manual de Marca y Sistema de Diseño</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --sky:#A7D4DE; --pink:#DEA6BC; --cream:#DED9A6;
+    --glow-sky:#9CE3F4; --glow-pink:#F4A9CF; --glow-gold:#EFE08C;
+    --bg:#0A0A0B; --bg2:#101117; --surface:#141417; --surface2:#1A1A1E;
+    --border:rgba(255,255,255,.08); --border-strong:rgba(255,255,255,.16);
+    --text:#F5F5F3; --muted:rgba(245,245,243,.64); --faint:rgba(245,245,243,.44);
+    --display:'Bricolage Grotesque','Inter',system-ui,sans-serif;
+    --sans:'Inter',system-ui,sans-serif;
+  }
+  @page{ size:A4; margin:0; }
+  *{ box-sizing:border-box; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  html,body{ margin:0; padding:0; }
+  body{ font-family:var(--sans); color:var(--text); background:var(--bg); line-height:1.55; -webkit-font-smoothing:antialiased; }
+
+  .page{ position:relative; width:210mm; min-height:297mm; padding:18mm 16mm 14mm;
+    background:var(--bg); overflow:hidden; page-break-after:always; display:flex; flex-direction:column; }
+  .page:last-child{ page-break-after:auto; }
+  .page::after{ content:''; position:absolute; top:0; left:50%; transform:translateX(-50%);
+    width:120px; height:3px; border-radius:0 0 999px 999px;
+    background:linear-gradient(90deg,transparent,var(--accent,var(--glow-sky)),transparent);
+    box-shadow:0 0 16px var(--accent,var(--glow-sky)); }
+  .glow{ position:absolute; inset:0; pointer-events:none; }
+  .glow::before{ content:''; position:absolute; width:520px; height:520px; border-radius:50%;
+    background:radial-gradient(circle, var(--accent,var(--glow-sky)) 0%, transparent 60%); opacity:.10; top:-160px; right:-150px; }
+
+  .kicker{ font-size:10.5px; letter-spacing:.22em; text-transform:uppercase; color:var(--faint); font-weight:600; }
+  .part{ font-size:10.5px; letter-spacing:.22em; text-transform:uppercase; color:var(--accent,var(--glow-sky)); font-weight:700; }
+  h1,h2,h3,h4{ font-family:var(--display); font-weight:600; letter-spacing:-.02em; margin:0; line-height:1.05; }
+  h2{ font-size:34px; margin:6px 0 6px; }
+  h3{ font-size:17px; margin:0 0 7px; }
+  h4{ font-size:14px; margin:0 0 4px; }
+  p{ margin:0 0 10px; color:var(--muted); font-size:13.5px; }
+  .lead{ font-size:15px; color:var(--muted); max-width:64ch; }
+  .foot{ margin-top:auto; padding-top:12px; display:flex; justify-content:space-between;
+    font-size:9.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--faint); border-top:1px solid var(--border); }
+  .content{ position:relative; z-index:1; flex:1; }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .grid3{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+  .card{ border:1px solid var(--border); border-radius:16px; background:var(--surface); padding:16px 18px; }
+  .text-gradient{ background:linear-gradient(100deg,var(--glow-sky),var(--glow-pink) 52%,var(--glow-gold));
+    -webkit-background-clip:text; background-clip:text; color:transparent; }
+  ul{ margin:5px 0 0; padding-left:17px; color:var(--muted); font-size:13px; }
+  li{ margin:3px 0; }
+  .pill{ display:inline-block; border:1px solid var(--border-strong); border-radius:999px; padding:4px 11px; font-size:11.5px; color:var(--muted); margin:3px 4px 3px 0; }
+  table{ width:100%; border-collapse:collapse; font-size:12.5px; }
+  th,td{ text-align:left; padding:6px 9px; border-bottom:1px solid var(--border); vertical-align:top; }
+  th{ color:var(--faint); font-weight:600; font-size:10.5px; text-transform:uppercase; letter-spacing:.07em; }
+  td{ color:var(--muted); }
+  code{ font-family:ui-monospace,Menlo,monospace; font-size:11.5px; color:var(--text); }
+  .mono{ font-family:ui-monospace,Menlo,monospace; font-size:10.5px; color:var(--muted); white-space:pre; line-height:1.65; }
+  .row{ display:flex; align-items:center; gap:10px; }
+  .swatches{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+  .sw{ border:1px solid var(--border); border-radius:12px; overflow:hidden; background:var(--surface); }
+  .sw .chip{ height:64px; } .sw .meta{ padding:8px 10px; }
+  .sw .nm{ font-family:var(--display); font-weight:600; font-size:13px; } .sw .hex{ font-size:11px; color:var(--faint); }
+
+  /* cover */
+  .cover{ justify-content:center; align-items:center; text-align:center; } .cover::after{ display:none; }
+  .cover .glow::before{ width:760px; height:760px; top:50%; left:50%; transform:translate(-50%,-60%); opacity:.16;
+    background:radial-gradient(circle, var(--glow-sky) 0%, var(--glow-pink) 35%, transparent 62%); }
+  .logo-xl{ width:118px; filter:drop-shadow(0 0 26px rgba(167,212,222,.35)); }
+  .cover h1{ font-size:80px; margin:24px 0 0; letter-spacing:-.04em; }
+  .cover .sub{ font-family:var(--display); font-size:19px; color:var(--muted); margin-top:8px; font-weight:500; max-width:30ch; }
+  .cover .ver{ margin-top:20px; font-size:11.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--faint); }
+  .cover .tag{ position:absolute; bottom:22mm; left:0; right:0; text-align:center; font-size:12.5px; color:var(--faint); }
+
+  /* type specimen */
+  .specimen{ font-family:var(--display); font-weight:600; font-size:96px; letter-spacing:-.04em; line-height:.9; }
+
+  /* buttons */
+  .btn{ display:inline-flex; align-items:center; justify-content:center; min-height:46px; padding:12px 22px; border-radius:999px; font-weight:600; font-size:14px; }
+  .btn-primary{ background:var(--text); color:var(--bg); }
+  .btn-gradient{ color:var(--text);
+    background:linear-gradient(var(--surface),var(--surface)) padding-box, linear-gradient(90deg,var(--sky),var(--pink),var(--cream)) border-box; border:1.5px solid transparent; }
+  .btn-ghost{ background:transparent; color:var(--text); border:1px solid var(--border-strong); }
+
+  /* app mockups */
+  .mock{ background:var(--surface); border:1px solid var(--border); border-radius:18px; padding:16px; }
+  .balcard{ border-radius:20px; padding:18px 20px; border:1px solid var(--border);
+    background:radial-gradient(420px circle at 90% 0%, rgba(222,217,166,.10), transparent 60%), var(--surface); box-shadow:0 18px 50px rgba(0,0,0,.4); }
+  .amount{ font-family:var(--display); font-weight:600; letter-spacing:-.03em; }
+  .seg{ display:inline-flex; gap:4px; background:var(--surface2); border:1px solid var(--border); border-radius:999px; padding:3px; }
+  .seg span{ font-size:11px; padding:4px 10px; border-radius:999px; color:var(--muted); }
+  .seg span.on{ background:var(--text); color:var(--bg); font-weight:600; }
+  .qa{ display:grid; grid-template-columns:repeat(4,1fr); gap:8px; }
+  .qa-item{ background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:12px 6px; text-align:center; }
+  .qa-ic{ width:30px; height:30px; border-radius:999px; margin:0 auto 6px; display:grid; place-items:center; }
+  .qa-item .lb{ font-size:10.5px; color:var(--muted); }
+  .txrow{ display:flex; align-items:center; gap:10px; padding:9px 0; border-bottom:1px solid var(--border); }
+  .txic{ width:32px; height:32px; border-radius:999px; background:var(--surface2); display:grid; place-items:center; flex:0 0 auto; font-size:14px; }
+  .txrow .nm{ font-family:var(--display); font-weight:600; font-size:13px; }
+  .txrow .dt{ font-size:10.5px; color:var(--faint); }
+  .txamt{ margin-left:auto; font-size:13px; font-variant-numeric:tabular-nums; }
+  .coin{ width:26px; height:26px; border-radius:999px; display:grid; place-items:center; color:#0A0A0B; font-weight:700; font-size:11px; }
+  .stateflow{ display:grid; gap:8px; }
+  .state{ display:flex; align-items:center; gap:10px; padding:10px 12px; border:1px solid var(--border); border-radius:12px; background:var(--surface); font-size:13px; }
+  .state b{ font-weight:600; color:var(--text); }
+  .num{ width:20px;height:20px;border-radius:999px;background:var(--surface2);border:1px solid var(--border-strong);display:grid;place-items:center;font-size:10px;color:var(--muted);flex:0 0 auto;font-family:var(--display);}
+  .qrmock{ width:96px; height:96px; border-radius:8px; background:
+      linear-gradient(90deg,#0A0A0B 25%,transparent 25%) 0 0/16px 16px,
+      linear-gradient(#0A0A0B 25%,transparent 25%) 0 0/16px 16px, #fff; border:6px solid #fff; }
+  .screenlist{ display:grid; gap:9px; }
+  .screen{ border:1px solid var(--border); border-radius:12px; background:var(--surface); padding:11px 14px; }
+  .screen .t{ font-family:var(--display); font-weight:600; font-size:14px; }
+  .screen .t .tag{ font-size:10px; color:var(--faint); font-family:var(--sans); font-weight:500; }
+  .check{ display:grid; gap:6px; }
+  .check .ci{ display:flex; gap:9px; align-items:flex-start; font-size:13px; color:var(--muted); }
+  .check .ci .n{ font-family:var(--display); font-weight:600; color:var(--glow-sky); flex:0 0 auto; }
+</style>
+</head>
+<body>
+
+<!-- 1 · COVER -->
+<section class="page cover">
+  <div class="glow"></div>
+  <svg class="logo-xl" viewBox="0 0 171 198" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M83.3377 0.820332L0.328533 58.6046L8.32585 64.2196L85.1075 118.216L162.136 64.6112L170.082 59.0738L87.3243 0.832505C86.0859 0.0162387 84.5791 0.00937285 83.3377 0.820332Z" fill="#A7D4DE"/>
+    <path d="M86.8349 125.155C85.7498 125.866 84.4312 125.863 83.3487 125.146L7.21886 72.2561L0.265018 67.4362L0.196435 98.6944L7.15101 103.514L85.0306 157.652L163.105 103.911L170.078 99.095L170.137 67.8895L163.164 72.6739L86.8349 125.155Z" fill="#DEA6BC"/>
+    <path d="M86.7497 164.587C85.6645 165.298 84.3459 165.295 83.2635 164.578L7.13366 111.688L0.179813 106.869L0.11123 138.127L7.0658 142.947L84.9454 197.085L163.02 143.344L169.993 138.527L170.052 107.322L163.079 112.106L86.7497 164.587Z" fill="#DED9A6"/>
+  </svg>
+  <h1>Parmelia</h1>
+  <div class="sub">Manual de Marca y Sistema de Diseño</div>
+  <div class="ver">Versión 2.0 · Junio 2026</div>
+  <div class="tag">Mueve dinero digital <span class="text-gradient">como mandar un mensaje.</span></div>
+</section>
+
+<!-- 2 · ESENCIA -->
+<section class="page" style="--accent:var(--glow-pink)">
+  <div class="glow"></div>
+  <div class="content">
+    <div class="part">Parte I — Marca</div>
+    <h2>La marca, en una idea.</h2>
+    <p class="lead">Parmelia es una app para <b style="color:var(--text)">mover dinero digital sin fricción</b>: cobrar, pagar, enviar, guardar y cambiar dólares digitales con links, QR y usernames — sin que nadie tenga que entender cripto. Por debajo es infraestructura no custodial (passkeys, gas patrocinado, Monad); <b style="color:var(--text)">esa parte es invisible</b>.</p>
+    <div class="grid2" style="margin-top:14px">
+      <div class="card"><h3>Posicionamiento</h3>
+        <p style="font-family:var(--display);font-size:19px;color:var(--text);line-height:1.15;margin:0">“Mueve dinero digital <span class="text-gradient">como mandar un mensaje</span>.”</p>
+        <p style="margin-top:8px"><em>Cobra con links. Paga con QR. Envía a usernames.</em></p></div>
+      <div class="card"><h3>Para quién</h3><p style="margin:0">Bolivia y LATAM: freelancers y creadores, comunidades y eventos, comercios digitales, gente que ya paga con QR, y usuarios cripto que quieren simpleza.</p></div>
+    </div>
+    <div class="card" style="margin-top:12px"><h3>Tesis</h3><p style="margin:0">El mayor problema de cripto no es la infraestructura, es la <b style="color:var(--text)">experiencia</b>. Parmelia esconde la complejidad y deja a la vista solo acciones humanas.</p></div>
+    <div class="grid2" style="margin-top:12px">
+      <div class="card"><h3>Personalidad</h3>
+        <span class="pill">Simple</span><span class="pill">Cercana</span><span class="pill">Directa</span><span class="pill">Humana</span><span class="pill">Optimista</span><span class="pill">Confiable</span></div>
+      <div class="card" style="border-color:rgba(244,169,207,.3)"><h3 style="color:var(--glow-pink)">El reto de confianza</h3><p style="margin:0">El producto vive de <b style="color:var(--text)">links de pago</b>, y un link puede parecer phishing. La UI debe verse <b style="color:var(--text)">inconfundiblemente Parmelia</b>: marca visible, quién recibe y cuánto siempre claros, y micro-estados honestos.</p></div>
+    </div>
+  </div>
+  <div class="foot"><span>Parmelia — Manual de marca</span><span>Esencia</span></div>
+</section>
+
+<!-- 3 · LOGO -->
+<section class="page" style="--accent:var(--glow-sky)">
+  <div class="glow"></div>
+  <div class="content">
+    <div class="part">Parte I — Marca</div>
+    <h2>El stack.</h2>
+    <p class="lead">Tres rombos apilados en perspectiva, cada uno en un pastel de marca. Capas de valor que se mueven y encajan. Único elemento gráfico obligatorio.</p>
+    <div class="grid2" style="margin-top:14px; align-items:center">
+      <div class="card" style="display:flex;align-items:center;justify-content:center;min-height:200px">
+        <svg width="140" viewBox="0 0 171 198" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 0 24px rgba(167,212,222,.3))">
+          <path d="M83.3377 0.820332L0.328533 58.6046L8.32585 64.2196L85.1075 118.216L162.136 64.6112L170.082 59.0738L87.3243 0.832505C86.0859 0.0162387 84.5791 0.00937285 83.3377 0.820332Z" fill="#A7D4DE"/>
+          <path d="M86.8349 125.155C85.7498 125.866 84.4312 125.863 83.3487 125.146L7.21886 72.2561L0.265018 67.4362L0.196435 98.6944L7.15101 103.514L85.0306 157.652L163.105 103.911L170.078 99.095L170.137 67.8895L163.164 72.6739L86.8349 125.155Z" fill="#DEA6BC"/>
+          <path d="M86.7497 164.587C85.6645 165.298 84.3459 165.295 83.2635 164.578L7.13366 111.688L0.179813 106.869L0.11123 138.127L7.0658 142.947L84.9454 197.085L163.02 143.344L169.993 138.527L170.052 107.322L163.079 112.106L86.7497 164.587Z" fill="#DED9A6"/>
+        </svg></div>
+      <div>
+        <div class="card"><h3>Capas</h3><p style="margin:0"><span style="color:var(--sky)">●</span> Sky <code>#A7D4DE</code> · <span style="color:var(--pink)">●</span> Pink <code>#DEA6BC</code> · <span style="color:var(--cream)">●</span> Cream <code>#DED9A6</code></p></div>
+        <div class="card" style="margin-top:12px"><h3>Specs</h3><p style="margin:0">SVG maestro · proporción ≈ 0.863:1 · mínimo 24px de alto · área de protección = altura de una capa.</p></div>
+        <div class="card" style="margin-top:12px"><h3>En la app</h3><p style="margin:0">Top bar (~28px), splash/onboarding (grande con glow), comprobantes y PayPage (sello de confianza).</p></div>
+      </div>
+    </div>
+    <div class="grid2" style="margin-top:12px">
+      <div class="card"><h3 style="color:var(--glow-sky)">Correcto</h3><ul><li>Sobre fondos oscuros, con glow sutil.</li><li>A todo color (los tres pasteles).</li><li>Tamaño que deje ver las tres capas.</li></ul></div>
+      <div class="card"><h3 style="color:var(--glow-pink)">Incorrecto</h3><ul><li>Recolorear fuera de la paleta.</li><li>Rotar, inclinar o deformar.</li><li>Sombras duras o relleno plano.</li></ul></div>
+    </div>
+  </div>
+  <div class="foot"><span>Parmelia — Manual de marca</span><span>Logo</span></div>
+</section>
+
+<!-- 4 · COLOR -->
+<section class="page" style="--accent:var(--glow-gold)">
+  <div class="glow"></div>
+  <div class="content">
+    <div class="part">Parte I — Marca</div>
+    <h2>Pasteles sobre cualquier superficie.</h2>
+    <p class="lead">La marca es <b style="color:var(--text)">agnóstica a la superficie</b>: los pasteles son la firma (constantes) y los neutros son el lienzo (de oscuro a claro). No hay "modo claro/oscuro" — hay una sola marca. Lo que cambia es la <b style="color:var(--text)">profundidad del acento</b>. Los pasteles son siempre acento, nunca bloque.</p>
+
+    <h4 style="margin-top:14px">Acentos de marca (constantes)</h4>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:#A7D4DE"></div><div class="meta"><div class="nm">Sky</div><div class="hex">#A7D4DE</div></div></div>
+      <div class="sw"><div class="chip" style="background:#DEA6BC"></div><div class="meta"><div class="nm">Pink</div><div class="hex">#DEA6BC</div></div></div>
+      <div class="sw"><div class="chip" style="background:#DED9A6"></div><div class="meta"><div class="nm">Cream</div><div class="hex">#DED9A6</div></div></div>
+    </div>
+
+    <h4 style="margin-top:14px">El acento se adapta · <span style="color:var(--faint);font-weight:500">luminoso sobre oscuro · profundo sobre claro</span></h4>
+    <div class="swatches">
+      <div class="sw"><div style="height:34px;background:#9CE3F4"></div><div style="height:34px;background:#2E8AA0"></div><div class="meta"><div class="nm">Sky</div><div class="hex">9CE3F4 · 2E8AA0</div></div></div>
+      <div class="sw"><div style="height:34px;background:#F4A9CF"></div><div style="height:34px;background:#C0608A"></div><div class="meta"><div class="nm">Pink</div><div class="hex">F4A9CF · C0608A</div></div></div>
+      <div class="sw"><div style="height:34px;background:#EFE08C"></div><div style="height:34px;background:#9A7E1F"></div><div class="meta"><div class="nm">Gold</div><div class="hex">EFE08C · 9A7E1F</div></div></div>
+    </div>
+
+    <h4 style="margin-top:14px">Gradiente de marca · <span style="color:var(--faint);font-weight:500">misma dirección, profundidad según superficie</span></h4>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+      <div>
+        <div style="height:32px;border-radius:8px;background:linear-gradient(100deg,#9CE3F4,#F4A9CF 52%,#EFE08C)"></div>
+        <div style="margin-top:5px;font-size:11px;color:var(--faint)">Sobre oscuro · 9CE3F4 → F4A9CF → EFE08C</div>
+      </div>
+      <div>
+        <div style="height:32px;border-radius:8px;background:linear-gradient(100deg,#2E8AA0,#C0608A 52%,#9A7E1F)"></div>
+        <div style="margin-top:5px;font-size:11px;color:var(--faint)">Sobre claro · 2E8AA0 → C0608A → 9A7E1F</div>
+      </div>
+    </div>
+
+    <h4 style="margin-top:14px">Neutros — una rampa, dos extremos</h4>
+    <div style="height:30px;border-radius:8px;border:1px solid var(--border);background:linear-gradient(90deg,#0A0A0B,#141417 18%,#1A1A1E 30%,#6B695F 55%,#F3F1EA 82%,#FAF8F3)"></div>
+    <div style="display:flex;justify-content:space-between;margin-top:6px;font-size:11px;color:var(--faint)"><span>Oscuro · #0A0A0B</span><span>surface / texto se invierten con la superficie</span><span>Claro · #FAF8F3</span></div>
+
+    <div class="grid2" style="margin-top:14px">
+      <div style="border:1px solid var(--border);border-radius:14px;background:#0A0A0B;padding:16px 18px">
+        <div style="font-family:var(--display);font-weight:600;color:#F5F5F3">Parmelia</div>
+        <div style="color:rgba(245,245,243,.64);font-size:14px;margin-top:4px">Mueve dinero <b style="color:#F4A9CF">sin fricción</b></div>
+      </div>
+      <div style="border:1px solid rgba(20,19,15,.12);border-radius:14px;background:#FAF8F3;padding:16px 18px">
+        <div style="font-family:var(--display);font-weight:600;color:#15140F">Parmelia</div>
+        <div style="color:#6B695F;font-size:14px;margin-top:4px">Mueve dinero <b style="color:#C0608A">sin fricción</b></div>
+      </div>
+    </div>
+
+    <p style="margin-top:14px;font-size:12px;color:var(--faint)"><b style="color:var(--text)">Estados</b> (sin verde/rojo de banca): recibido/éxito → Sky · enviado → neutro · atención/error → Pink · valor/rendimiento → Gold — en su versión luminosa o profunda según la superficie.</p>
+  </div>
+  <div class="foot"><span>Parmelia — Manual de marca</span><span>Color</span></div>
+</section>
+
+<!-- 5 · TIPOGRAFÍA -->
+<section class="page" style="--accent:var(--glow-sky)">
+  <div class="glow"></div>
+  <div class="content">
+    <div class="part">Parte I — Marca</div>
+    <h2>Dos familias, un trabajo cada una.</h2>
+    <div class="card" style="margin-top:12px">
+      <div class="row" style="justify-content:space-between"><h3 style="margin:0">Bricolage Grotesque · display</h3><span class="hex" style="color:var(--faint)">500 · 600 · 700</span></div>
+      <div class="specimen" style="margin:6px 0">Aa</div>
+      <p style="margin:0">Titulares, <b style="color:var(--text)">montos</b> y números. Peso 600, tracking -0.02 a -0.03em.</p></div>
+    <div class="card" style="margin-top:12px">
+      <div class="row" style="justify-content:space-between"><h3 style="margin:0">Inter · cuerpo / UI</h3><span class="hex" style="color:var(--faint)">400 · 500 · 600 · 700</span></div>
+      <p style="font-size:15px;color:var(--text);margin:8px 0 0">Cobra con links, paga con QR y envía a usernames.</p>
+      <p style="margin:5px 0 0">El cuerpo nunca va en negrita constante. Frases cortas, mucho aire. Saldos y listas con <code>tabular-nums</code>.</p></div>
+    <h4 style="margin-top:14px">Escala</h4>
+    <table>
+      <tr><th>Estilo</th><th>Tamaño</th><th>Peso</th><th>Familia</th></tr>
+      <tr><td>Display / monto</td><td>40–72px</td><td>600</td><td>Bricolage</td></tr>
+      <tr><td>Título de pantalla</td><td>24–32px</td><td>600</td><td>Bricolage</td></tr>
+      <tr><td>Título tarjeta / fila</td><td>17–20px</td><td>600</td><td>Bricolage</td></tr>
+      <tr><td>Cuerpo</td><td>15–17px</td><td>400</td><td>Inter</td></tr>
+      <tr><td>Label / botón</td><td>14–15px</td><td>500–600</td><td>Inter</td></tr>
+      <tr><td>Microcopy / metadato</td><td>12–13px</td><td>500</td><td>Inter</td></tr>
+    </table>
+  </div>
+  <div class="foot"><span>Parmelia — Manual de marca</span><span>Tipografía</span></div>
+</section>
+
+<!-- 6 · VOZ -->
+<section class="page" style="--accent:var(--glow-pink)">
+  <div class="glow"></div>
+  <div class="content">
+    <div class="part">Parte I — Marca</div>
+    <h2>Habla como una persona.</h2>
+    <p class="lead">Acciones, no tecnología. Cálida, tranquila, sin hype. Una idea por frase.</p>
+    <div class="grid2" style="margin-top:12px">
+      <div class="card"><h3 style="color:var(--glow-sky)">Sí usamos</h3><p style="margin:0">dinero digital · dólares digitales · cobra · paga · envía · link · QR · username · sin comisiones · tu dinero es tuyo · tu huella es tu llave · listo.</p></div>
+      <div class="card"><h3 style="color:var(--glow-pink)">No usamos</h3><p style="margin:0">ERC-4337 · Account Abstraction · Paymaster · Smart Account · Gas/Gasless · “100% on-chain” · stablecoin · frase semilla · bridge · yield farming · jerga DeFi · emojis.</p></div>
+    </div>
+    <h4 style="margin-top:14px">Traducción técnico → humano (usar en toda la app)</h4>
+    <table>
+      <tr><th>En vez de…</th><th>Di…</th></tr>
+      <tr><td>Gas / gasless</td><td>Sin comisiones de red</td></tr>
+      <tr><td>Smart Account / wallet</td><td>Tu cuenta</td></tr>
+      <tr><td>Firmar con passkey</td><td>Confirma con tu huella · Tu huella es tu llave</td></tr>
+      <tr><td>Transaction hash</td><td>Comprobante</td></tr>
+      <tr><td>On-chain / liquidando</td><td>Asegurando en la red</td></tr>
+      <tr><td>Stablecoin / USDC</td><td>Dólar digital (USDC)</td></tr>
+    </table>
+  </div>
+  <div class="foot"><span>Parmelia — Manual de marca</span><span>Voz y tono</span></div>
+</section>
+
+<!-- 7 · SISTEMA: TOKENS BASE -->
+<section class="page" style="--accent:var(--glow-gold)">
+  <div class="glow"></div>
+  <div class="content">
+    <div class="part">Parte II — Sistema de diseño</div>
+    <h2>Tokens base.</h2>
+    <div class="grid2" style="margin-top:12px">
+      <div class="card"><h3>Radios</h3><table>
+        <tr><td>sm</td><td><code>12px</code></td><td>chips, inputs compactos</td></tr>
+        <tr><td>md</td><td><code>16px</code></td><td>tarjetas, inputs, sheets</td></tr>
+        <tr><td>lg</td><td><code>22px</code></td><td>saldo, comprobantes</td></tr>
+        <tr><td>pill</td><td><code>999px</code></td><td>botones, avatares</td></tr>
+      </table></div>
+      <div class="card"><h3>Espaciado (4pt)</h3><p style="margin:0"><code>4·8·12·16·20·24·32·40·56·72</code></p>
+        <ul><li>Padding de tarjeta: 20–24</li><li>Entre filas/tarjetas: 12–16</li><li>Margen de pantalla: 20 (18 en chico)</li><li>Entre bloques: 32–56</li></ul></div>
+    </div>
+    <div class="grid2" style="margin-top:12px">
+      <div class="card"><h3>Elevación</h3><table>
+        <tr><td>e1</td><td class="mono" style="white-space:normal">0 8px 24px rgba(0,0,0,.35)</td></tr>
+        <tr><td>e2</td><td class="mono" style="white-space:normal">0 18px 50px rgba(0,0,0,.35)</td></tr>
+        <tr><td>e3</td><td class="mono" style="white-space:normal">0 30px 90px rgba(0,0,0,.5)</td></tr>
+        <tr><td>glow</td><td class="mono" style="white-space:normal">0 0 28px rgba(156,227,244,.22)</td></tr>
+      </table></div>
+      <div class="card"><h3>Motion</h3><ul>
+        <li>Curva: <code>cubic-bezier(.16,1,.3,1)</code></li>
+        <li>Micro 150–200ms · entradas 400–700ms · loops 2.5–6s</li>
+        <li>Entradas: opacity + leve translateY. Sin rotaciones ni rebotes.</li>
+        <li>Respetar <code>prefers-reduced-motion</code>.</li>
+      </ul></div>
+    </div>
+    <div class="card" style="margin-top:12px"><h3>Botones</h3>
+      <div class="row" style="gap:10px;margin-top:4px"><span class="btn btn-primary">Pagar</span><span class="btn btn-gradient">Crear link</span><span class="btn btn-ghost">Cancelar</span></div>
+      <p style="margin:12px 0 0">Primario claro de alto contraste · gradiente de marca para el CTA protagonista · ghost para secundario. Alto 52px (app: 56 full-width), peso 600.</p></div>
+  </div>
+  <div class="foot"><span>Parmelia — Manual de marca</span><span>Tokens base</span></div>
+</section>
+
+<!-- 8 · APP: MIGRACIÓN + SHELL -->
+<section class="page" style="--accent:var(--glow-sky)">
+  <div class="glow"></div>
+  <div class="content">
+    <div class="part">Parte III — Aplicar a la app</div>
+    <h2>Migración desde la app actual.</h2>
+    <p class="lead">La app hoy usa una variante temprana. Aplicar este mapeo 1:1 en su <code>index.css</code>.</p>
+    <table style="margin-top:8px">
+      <tr><th>Hoy</th><th>Cámbialo a</th></tr>
+      <tr><td>Shippori Antique (todo)</td><td>Bricolage (display) + Inter (cuerpo)</td></tr>
+      <tr><td>body <code>#000</code></td><td><code>#0A0A0B</code> (bg)</td></tr>
+      <tr><td>surface <code>#1a1a1a</code></td><td><code>#141417</code></td></tr>
+      <tr><td>surface-2 <code>#2a2a2a</code></td><td><code>#1A1A1E</code></td></tr>
+      <tr><td>muted <code>#888</code></td><td>text-muted .64 / faint .44</td></tr>
+      <tr><td>parmelia-blue/pink/gold</td><td>mantener + añadir glow-*</td></tr>
+      <tr><td>esquinas/ sombras varias</td><td>escalas radius-* / e1–e3</td></tr>
+    </table>
+    <h2 style="margin-top:16px">Estructura (shell).</h2>
+    <div class="grid2">
+      <div class="card"><ul>
+        <li>Mobile-first, columna <code>max-width 460px</code>, márgenes 20px, safe-areas.</li>
+        <li>Fondo <code>bg</code> + glows pastel muy sutiles (6–10%).</li>
+        <li>Top bar: logo (~28px) + <code>@usuario</code> · acción a la derecha.</li>
+        <li>Quick actions siempre accesibles desde Home.</li>
+        <li>Una pantalla = un objetivo. Bloques horizontales legibles.</li>
+      </ul></div>
+      <div class="mock">
+        <div class="row" style="justify-content:space-between"><div class="row" style="gap:7px"><svg width="20" viewBox="0 0 171 198"><path d="M83.3 .8 .3 58.6l8 5.6 76.8 54 77-53.6 8-5.5L87.3 .8a3 3 0 0 0-4 0Z" fill="#A7D4DE"/><path d="M86.8 125c-1 .7-2.4.7-3.5 0L7.2 72.3.3 67.4l-.1 31.3 7 4.8 77.8 54.2 78.1-53.7 7-4.8v-31.3l-7 4.8L86.8 125Z" fill="#DEA6BC"/><path d="M86.7 164.6c-1 .7-2.4.7-3.5 0L7.1 111.7.2 106.9l-.1 31.2 7 4.8 77.8 54.2 78.1-53.7 7-4.8v-31.2l-7 4.8-72.3 52.4Z" fill="#DED9A6"/></svg><span style="font-family:var(--display);font-weight:600;font-size:12px">@daniel</span></div><span style="color:var(--faint)">⋯</span></div>
+        <div class="balcard" style="margin-top:10px">
+          <div class="row" style="justify-content:space-between"><span style="font-size:11px;color:var(--faint)">Saldo</span><span class="seg"><span class="on">USDC</span><span>MON</span><span>WBTC</span></span></div>
+          <div class="amount" style="font-size:34px;margin-top:4px">$1,240<span style="color:var(--muted);font-size:18px">.00</span></div>
+        </div>
+        <div class="qa" style="margin-top:10px">
+          <div class="qa-item"><div class="qa-ic" style="background:rgba(244,169,207,.18);color:var(--glow-pink)">+</div><div class="lb">Cobrar</div></div>
+          <div class="qa-item"><div class="qa-ic" style="background:rgba(156,227,244,.18);color:var(--glow-sky)">↑</div><div class="lb">Pagar</div></div>
+          <div class="qa-item"><div class="qa-ic" style="background:rgba(156,227,244,.18);color:var(--glow-sky)">→</div><div class="lb">Enviar</div></div>
+          <div class="qa-item"><div class="qa-ic" style="background:rgba(239,224,140,.18);color:var(--glow-gold)">▣</div><div class="lb">Escanear</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Parmelia — Manual de marca</span><span>App · migración + shell</span></div>
+</section>
+
+<!-- 9 · APP: COMPONENTES -->
+<section class="page" style="--accent:var(--glow-pink)">
+  <div class="glow"></div>
+  <div class="content">
+    <div class="part">Parte III — Aplicar a la app</div>
+    <h2>Componentes de app.</h2>
+    <div class="grid2" style="margin-top:10px">
+      <div class="card"><h3>Historial (filas)</h3>
+        <div class="txrow"><div class="txic" style="color:var(--glow-sky)">↓</div><div><div class="nm">@maria</div><div class="dt">Hoy · 14:20</div></div><div class="txamt" style="color:var(--glow-sky)">+25.00</div></div>
+        <div class="txrow" style="border:none"><div class="txic">↑</div><div><div class="nm">Café del centro</div><div class="dt">Ayer · 09:05</div></div><div class="txamt">−8.50</div></div>
+        <p style="margin:10px 0 0">Recibido en Glow Sky, enviado en texto. Tap → comprobante.</p></div>
+      <div class="card"><h3>Activos</h3>
+        <div class="txrow"><div class="coin" style="background:#2775CA;color:#fff">$</div><div class="nm">USDC</div><div class="txamt">1,240.00</div></div>
+        <div class="txrow"><div class="coin" style="background:#836EF9;color:#fff">M</div><div class="nm">MON</div><div class="txamt">320.0</div></div>
+        <div class="txrow" style="border:none"><div class="coin" style="background:#F7931A;color:#fff">₿</div><div class="nm">WBTC</div><div class="txamt">0.014</div></div>
+        <p style="margin:8px 0 0">Logos oficiales a color, como “monedas”. Saldos tabulares.</p></div>
+    </div>
+    <div class="grid2" style="margin-top:12px">
+      <div class="card" style="text-align:center"><h3 style="text-align:left">Input de monto</h3>
+        <div class="amount" style="font-size:46px;margin:8px 0 2px">$25<span style="color:var(--muted);font-size:22px">.00</span></div>
+        <div style="font-size:11px;color:var(--faint)">para @maria · Sin comisiones de red</div>
+        <span class="btn btn-primary" style="margin-top:10px;width:100%">Pagar con tu huella</span></div>
+      <div class="card"><h3>Comprobante / QR</h3>
+        <div class="row" style="gap:12px;align-items:flex-start">
+          <div class="qrmock"></div>
+          <div><p style="margin:0">Placa <b style="color:var(--text)">blanca</b> siempre (escaneable), marco de marca + línea de escaneo. Comprobante exportable como pieza premium (logo, monto, de/para, fecha).</p></div>
+        </div></div>
+    </div>
+    <p style="margin-top:10px;color:var(--faint);font-size:12px">Sheets: bottom-sheet <code>bg-2</code>, radius-lg arriba, e3, overlay .6 · Toasts: pastilla surface + acento · Vacíos: motivo del stack + frase humana + botón.</p>
+  </div>
+  <div class="foot"><span>Parmelia — Manual de marca</span><span>App · componentes</span></div>
+</section>
+
+<!-- 10 · APP: LATENCIA + PANTALLAS -->
+<section class="page" style="--accent:var(--glow-sky)">
+  <div class="glow"></div>
+  <div class="content">
+    <div class="part">Parte III — Aplicar a la app</div>
+    <h2>Latencia de red → confianza.</h2>
+    <p class="lead">La red tarda 1–3s. Nunca un spinner mudo: encadena micro-estados honestos, traducidos a humano, cada uno con su micro-animación.</p>
+    <div class="stateflow" style="margin-top:8px">
+      <div class="state"><span class="num">1</span><b>Confirma con tu huella</b> — passkey.</div>
+      <div class="state"><span class="num">2</span><b>Preparando tu pago…</b></div>
+      <div class="state"><span class="num">3</span><b>Asegurando en la red…</b></div>
+      <div class="state" style="border-color:rgba(156,227,244,.4)"><span class="num" style="color:var(--glow-sky)">✓</span><b style="color:var(--glow-sky)">¡Listo!</b> — check que se dibuja + monto.</div>
+    </div>
+    <h2 style="margin-top:16px">Pantalla por pantalla.</h2>
+    <div class="screenlist">
+      <div class="screen"><div class="t">Login <span class="tag">— logo + 1 frase + botón social. “Sin contraseñas. Tu huella es tu llave.”</span></div></div>
+      <div class="screen"><div class="t">Onboarding <span class="tag">— crear @username + passkey, 2–3 pasos con progreso.</span></div></div>
+      <div class="screen"><div class="t">Home <span class="tag">— saldo · quick actions · activos · historial. El centro de control.</span></div></div>
+      <div class="screen"><div class="t">Cobrar (CreateLink) <span class="tag">— monto · referencia · link + QR + compartir (WhatsApp/Telegram/IG/X).</span></div></div>
+      <div class="screen"><div class="t">Escanear (ScanQR) <span class="tag">— cámara + marco de marca; al detectar, confirma quién y cuánto.</span></div></div>
+      <div class="screen" style="border-color:rgba(244,169,207,.35)"><div class="t" style="color:var(--glow-pink)">PayPage <span class="tag" style="color:var(--muted)">— máxima confianza anti-phishing: logo, “Pago seguro con Parmelia”, @quien cobra, monto, “Pagar con tu huella”.</span></div></div>
+      <div class="screen"><div class="t">PaymentStatus <span class="tag">— micro-estados → éxito con check + comprobante.</span></div></div>
+      <div class="screen"><div class="t">Settings <span class="tag">— filas: cuenta, seguridad, red, ayuda, salir. Lenguaje humano.</span></div></div>
+    </div>
+  </div>
+  <div class="foot"><span>Parmelia — Manual de marca</span><span>App · pantallas</span></div>
+</section>
+
+<!-- 11 · IMPLEMENTACIÓN -->
+<section class="page" style="--accent:var(--glow-gold)">
+  <div class="glow"></div>
+  <div class="content">
+    <div class="part">Parte IV — Implementación</div>
+    <h2>Tokens + checklist.</h2>
+    <div class="grid2" style="margin-top:10px; align-items:start">
+      <div class="card"><h3>Pegar en <code>@theme</code></h3>
+<div class="mono">--color-sky:#A7D4DE;
+--color-pink:#DEA6BC;
+--color-cream:#DED9A6;
+--glow-sky:#9CE3F4;
+--glow-pink:#F4A9CF;
+--glow-gold:#EFE08C;
+--color-bg:#0A0A0B;
+--color-bg-2:#101117;
+--color-surface:#141417;
+--color-surface-2:#1A1A1E;
+--color-border:rgba(255,255,255,.08);
+--color-border-strong:rgba(255,255,255,.16);
+--color-text:#F5F5F3;
+--color-text-muted:rgba(245,245,243,.64);
+--color-text-faint:rgba(245,245,243,.44);
+--font-display:'Bricolage Grotesque';
+--font-sans:'Inter';
+--radius-sm:12px; --radius-md:16px;
+--radius-lg:22px; --radius-pill:999px;</div></div>
+      <div class="card"><h3>Checklist (IA o humano)</h3>
+        <div class="check">
+          <div class="ci"><span class="n">1</span>Cargar Bricolage + Inter; quitar Shippori.</div>
+          <div class="ci"><span class="n">2</span>Reemplazar <code>@theme</code> por estos tokens.</div>
+          <div class="ci"><span class="n">3</span>Bajar titulares a 600, cuerpo a 400.</div>
+          <div class="ci"><span class="n">4</span>Aplicar escalas radius-* y e1–e3.</div>
+          <div class="ci"><span class="n">5</span>Reconstruir botones, inputs, tarjetas, filas.</div>
+          <div class="ci"><span class="n">6</span>Aplicar pantallas (empezar por Home y PayPage).</div>
+          <div class="ci"><span class="n">7</span>Pasar el copy por la tabla técnico→humano.</div>
+          <div class="ci"><span class="n">8</span>Implementar micro-estados de red.</div>
+          <div class="ci"><span class="n">9</span>Reforzar PayPage/comprobantes (confianza).</div>
+          <div class="ci"><span class="n">10</span>Contraste AA + reduced-motion.</div>
+        </div></div>
+    </div>
+    <div class="grid2" style="margin-top:12px">
+      <div class="card"><h3 style="color:var(--glow-sky)">Do</h3><ul><li>Acciones humanas, no tecnología.</li><li>Pasteles como acento; uno dominante por pantalla.</li><li>Montos en Bricolage, tabulares, alto contraste.</li><li>Micro-estados honestos en la latencia.</li><li>PayPage y comprobantes inconfundiblemente Parmelia.</li></ul></div>
+      <div class="card"><h3 style="color:var(--glow-pink)">Don't</h3><ul><li>Fondos pastel sólidos saturados.</li><li>Cuerpo en negrita constante.</li><li>Jerga cripto en la UI.</li><li>Verde/rojo de banca para estados.</li><li>Spinners mudos o animaciones “cute”.</li></ul></div>
+    </div>
+    <div style="text-align:center;margin-top:18px">
+      <svg width="34" viewBox="0 0 171 198" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:.9"><path d="M83.3 .8 .3 58.6l8 5.6 76.8 54 77-53.6 8-5.5L87.3 .8a3 3 0 0 0-4 0Z" fill="#A7D4DE"/><path d="M86.8 125c-1 .7-2.4.7-3.5 0L7.2 72.3.3 67.4l-.1 31.3 7 4.8 77.8 54.2 78.1-53.7 7-4.8v-31.3l-7 4.8L86.8 125Z" fill="#DEA6BC"/><path d="M86.7 164.6c-1 .7-2.4.7-3.5 0L7.1 111.7.2 106.9l-.1 31.2 7 4.8 77.8 54.2 78.1-53.7 7-4.8v-31.2l-7 4.8-72.3 52.4Z" fill="#DED9A6"/></svg>
+      <p style="margin:8px 0 0;font-size:12px;color:var(--faint)">Parmelia — Mueve dinero digital como mandar un mensaje.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Parmelia — Manual de marca</span><span>Implementación</span></div>
+</section>
+
+</body>
+</html>
