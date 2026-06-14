@@ -1,30 +1,34 @@
 ---
-const faqs = [
-  {
-    q: '¿Es seguro? ¿Dónde queda mi dinero?',
-    a: 'Tu dinero es tuyo y solo tú puedes moverlo. Parmelia no lo guarda por ti ni puede tocarlo. Entras con tu huella o tu cara, sin contraseñas ni frases raras que memorizar.',
+import { getLang } from '../i18n';
+
+const lang = getLang(Astro.currentLocale);
+const t = {
+  es: {
+    title: 'Preguntas frecuentes',
+    copy: 'Lo esencial, sin vueltas.',
+    faqs: [
+      { q: '¿Es seguro? ¿Dónde queda mi dinero?', a: 'Tu dinero es tuyo y solo tú puedes moverlo. Parmelia no lo guarda por ti ni puede tocarlo. Entras con tu huella o tu cara, sin contraseñas ni frases raras que memorizar.' },
+      { q: '¿Necesito saber de cripto para usarla?', a: 'No. Si sabes mandar un mensaje, sabes usar Parmelia. Cobras con un link, pagas con un QR y envías a un nombre de usuario. La parte técnica queda escondida.' },
+      { q: '¿Cuánto cuesta?', a: 'Enviar dinero entre usuarios de Parmelia no tiene comisiones. Si alguna vez hay un costo, lo ves claro antes de confirmar.' },
+      { q: '¿Qué es un dólar digital?', a: 'Es dinero que vale lo mismo que un dólar, pero vive en tu teléfono y se mueve al instante, sin bancos de por medio. En Parmelia usas USDC.' },
+      { q: '¿Necesito descargar algo?', a: 'No. Parmelia funciona desde el navegador: entras y empiezas, sin instalar ni actualizar nada.' },
+      { q: '¿Puedo sacar mi dinero cuando quiera?', a: 'Cuando quieras. Puedes enviarlo a otra wallet o retirarlo sin pedir permiso. No te quedas encerrado.' },
+    ],
   },
-  {
-    q: '¿Necesito saber de cripto para usarla?',
-    a: 'No. Si sabes mandar un mensaje, sabes usar Parmelia. Cobras con un link, pagas con un QR y envías a un nombre de usuario. La parte técnica queda escondida.',
+  en: {
+    title: 'Frequently asked questions',
+    copy: 'The essentials, no detours.',
+    faqs: [
+      { q: 'Is it safe? Where does my money sit?', a: 'Your money is yours and only you can move it. Parmelia doesn’t hold it for you and can’t touch it. You sign in with your fingerprint or face, no passwords or weird phrases to memorize.' },
+      { q: 'Do I need to know crypto to use it?', a: 'No. If you can send a message, you can use Parmelia. You charge with a link, pay with a QR and send to a username. The technical part stays hidden.' },
+      { q: 'How much does it cost?', a: 'Sending money between Parmelia users has no fees. If there’s ever a cost, you see it clearly before confirming.' },
+      { q: 'What is a digital dollar?', a: 'It’s money worth the same as a dollar, but it lives on your phone and moves instantly, without banks in between. In Parmelia you use USDC.' },
+      { q: 'Do I need to download anything?', a: 'No. Parmelia works from the browser: you open it and start, without installing or updating anything.' },
+      { q: 'Can I withdraw my money whenever I want?', a: 'Whenever you want. You can send it to another wallet or withdraw it without asking permission. You’re never locked in.' },
+    ],
   },
-  {
-    q: '¿Cuánto cuesta?',
-    a: 'Enviar dinero entre usuarios de Parmelia no tiene comisiones. Si alguna vez hay un costo, lo ves claro antes de confirmar.',
-  },
-  {
-    q: '¿Qué es un dólar digital?',
-    a: 'Es dinero que vale lo mismo que un dólar, pero vive en tu teléfono y se mueve al instante, sin bancos de por medio. En Parmelia usas USDC.',
-  },
-  {
-    q: '¿Necesito descargar algo?',
-    a: 'No. Parmelia funciona desde el navegador: entras y empiezas, sin instalar ni actualizar nada.',
-  },
-  {
-    q: '¿Puedo sacar mi dinero cuando quiera?',
-    a: 'Cuando quieras. Puedes enviarlo a otra wallet o retirarlo sin pedir permiso. No te quedas encerrado.',
-  },
-];
+}[lang];
+const faqs = t.faqs;
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -42,8 +46,8 @@ const faqSchema = {
 <section id="faq" class="landing-section">
   <div class="landing-shell">
     <div class="copy-stack" data-reveal>
-      <h2 class="section-title">Preguntas frecuentes</h2>
-      <p class="section-copy">Lo esencial, sin vueltas.</p>
+      <h2 class="section-title">{t.title}</h2>
+      <p class="section-copy">{t.copy}</p>
     </div>
 
     <div class="faq-list" data-reveal>

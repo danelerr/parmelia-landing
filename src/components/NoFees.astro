@@ -1,33 +1,54 @@
 ---
+import { getLang } from '../i18n';
+
+const lang = getLang(Astro.currentLocale);
+const t = {
+  es: {
+    title: 'Enviar dinero no debería sentirse caro.',
+    copy: 'Mueve tu saldo a otros usuarios de Parmelia sin comisiones. Y cuando quieras sacar tu dinero, lo haces desde la misma app.',
+    micro: 'Si alguna vez hay un costo, lo ves claro antes de confirmar.',
+    beforeLabel: 'Antes',
+    beforeTitle: 'Direcciones largas, comisiones y pasos de más.',
+    beforeCopy: 'Mandar dinero termina sintiéndose complicado, aunque solo quieras pagarle a alguien.',
+    afterLabel: 'Con Parmelia',
+    afterTitle: 'Username, monto y confirmar.',
+    afterCopy: 'El flujo se concentra en la acción, no en explicar la infraestructura.',
+    burn: 'Las comisiones se evaporan. Tu saldo se queda.',
+  },
+  en: {
+    title: 'Sending money shouldn’t feel expensive.',
+    copy: 'Move your balance to other Parmelia users with no fees. And when you want to cash out, you do it from the same app.',
+    micro: 'If there’s ever a cost, you see it clearly before confirming.',
+    beforeLabel: 'Before',
+    beforeTitle: 'Long addresses, fees and extra steps.',
+    beforeCopy: 'Sending money ends up feeling complicated, even when you just want to pay someone.',
+    afterLabel: 'With Parmelia',
+    afterTitle: 'Username, amount and confirm.',
+    afterCopy: 'The flow focuses on the action, not on explaining the infrastructure.',
+    burn: 'The fees evaporate. Your balance stays.',
+  },
+}[lang];
 ---
 
 <section id="no-fees" class="landing-section">
   <div class="landing-shell">
     <div class="copy-stack" data-reveal>
-      <h2 class="section-title">Enviar dinero no debería sentirse caro.</h2>
-      <p class="section-copy">
-        Mueve tu saldo a otros usuarios de Parmelia sin comisiones. Y cuando quieras sacar tu dinero, lo haces desde la misma app.
-      </p>
-      <p class="microcopy">
-        Si alguna vez hay un costo, lo ves claro antes de confirmar.
-      </p>
+      <h2 class="section-title">{t.title}</h2>
+      <p class="section-copy">{t.copy}</p>
+      <p class="microcopy">{t.micro}</p>
     </div>
 
     <div class="fee-compare" data-reveal-stagger>
       <article class="fee-panel">
-        <p class="text-sm font-semibold uppercase tracking-wide text-white/40">Antes</p>
-        <h3 class="mt-4 font-display text-2xl font-semibold leading-tight tracking-tight text-white">Direcciones largas, comisiones y pasos de más.</h3>
-        <p class="mt-4 text-base font-normal leading-relaxed text-white/60">
-          Mandar dinero termina sintiéndose complicado, aunque solo quieras pagarle a alguien.
-        </p>
+        <p class="text-sm font-semibold uppercase tracking-wide text-white/40">{t.beforeLabel}</p>
+        <h3 class="mt-4 font-display text-2xl font-semibold leading-tight tracking-tight text-white">{t.beforeTitle}</h3>
+        <p class="mt-4 text-base font-normal leading-relaxed text-white/60">{t.beforeCopy}</p>
       </article>
 
       <article class="fee-panel highlight">
-        <p class="text-sm font-semibold uppercase tracking-wide text-white/55">Con Parmelia</p>
-        <h3 class="mt-4 font-display text-2xl font-semibold leading-tight tracking-tight text-white">Username, monto y confirmar.</h3>
-        <p class="mt-4 text-base font-normal leading-relaxed text-white/70">
-          El flujo se concentra en la acción, no en explicar la infraestructura.
-        </p>
+        <p class="text-sm font-semibold uppercase tracking-wide text-white/55">{t.afterLabel}</p>
+        <h3 class="mt-4 font-display text-2xl font-semibold leading-tight tracking-tight text-white">{t.afterTitle}</h3>
+        <p class="mt-4 text-base font-normal leading-relaxed text-white/70">{t.afterCopy}</p>
       </article>
     </div>
 
@@ -40,7 +61,7 @@
         <!-- the value that stays -->
         <polygon points="100,96 138,115 100,134 62,115" fill="#A7D4DE" />
       </svg>
-      <p class="microcopy" style="margin-top:6px;">Las comisiones se evaporan. Tu saldo se queda.</p>
+      <p class="microcopy" style="margin-top:6px;">{t.burn}</p>
     </div>
   </div>
 </section>

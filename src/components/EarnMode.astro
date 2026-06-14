@@ -1,18 +1,37 @@
 ---
-const points = [
-  'Activas Earn cuando el saldo puede esperar.',
-  'Ves el movimiento sin salir de Parmelia.',
-  'Retiras cuando lo necesites para pagar o enviar.',
-];
+import { getLang } from '../i18n';
+
+const lang = getLang(Astro.currentLocale);
+const t = {
+  es: {
+    title: 'Haz que tu saldo trabaje por ti.',
+    copy: 'Tu dinero puede generar rendimiento mientras no lo usas, y vuelve a estar listo para pagar cuando lo necesites.',
+    micro: 'Rendimientos variables. Siempre bajo tu decisión.',
+    points: [
+      'Activas Earn cuando el saldo puede esperar.',
+      'Ves el movimiento sin salir de Parmelia.',
+      'Retiras cuando lo necesites para pagar o enviar.',
+    ],
+  },
+  en: {
+    title: 'Put your balance to work for you.',
+    copy: 'Your money can earn yield while you’re not using it, and it’s ready to pay again whenever you need it.',
+    micro: 'Variable yields. Always your decision.',
+    points: [
+      'You turn on Earn when your balance can wait.',
+      'You see the movement without leaving Parmelia.',
+      'You withdraw whenever you need to pay or send.',
+    ],
+  },
+}[lang];
+const points = t.points;
 ---
 
 <section id="earn" class="landing-section earn-gradient">
   <div class="landing-shell">
     <div class="copy-stack" data-reveal>
-      <h2 class="section-title">Haz que tu saldo trabaje por ti.</h2>
-      <p class="section-copy">
-        Tu dinero puede generar rendimiento mientras no lo usas, y vuelve a estar listo para pagar cuando lo necesites.
-      </p>
+      <h2 class="section-title">{t.title}</h2>
+      <p class="section-copy">{t.copy}</p>
     </div>
 
     <div class="earn-panel" data-reveal>
@@ -40,8 +59,6 @@ const points = [
       </div>
     </div>
 
-    <p class="microcopy mt-10" data-reveal>
-      Rendimientos variables. Siempre bajo tu decisión.
-    </p>
+    <p class="microcopy mt-10" data-reveal>{t.micro}</p>
   </div>
 </section>

@@ -1,0 +1,194 @@
+---
+import { getLang } from '../../i18n';
+
+const lang = getLang(Astro.currentLocale);
+
+const c = {
+  es: {
+    title: 'Política de Privacidad',
+    updated: 'Última actualización: 14 de junio de 2026',
+    lead:
+      'Parmelia es una aplicación de pagos no custodial que permite enviar, recibir y cobrar USDC mediante links de pago, códigos QR y nombres de usuario. Esta Política de Privacidad explica qué datos tratamos, cómo los usamos y qué control tienes sobre ellos. Parmelia es operada por Daniel Cueto (Bolivia). Para cualquier consulta de privacidad, escríbenos a privacy@parmelia.me.',
+    sections: [
+      {
+        h: 'Naturaleza no custodial',
+        p: [
+          'Parmelia no custodia tu dinero ni tus claves privadas. Tú mantienes el control de tu wallet y de tus fondos en todo momento. No podemos mover, congelar ni recuperar tus fondos, y las transacciones ocurren directamente en la red blockchain.',
+        ],
+      },
+      {
+        h: 'Información que recopilamos',
+        list: [
+          'Datos de cuenta de Google (Sign-In): cuando inicias sesión con Google, recibimos tu nombre, tu dirección de correo electrónico, tu foto de perfil y el identificador de tu cuenta de Google, para crear y autenticar tu cuenta.',
+          'Datos de perfil: el nombre de usuario (username) y la información de perfil que eliges dentro de Parmelia.',
+          'Datos on-chain: tu(s) dirección(es) de wallet y las transacciones asociadas, que son públicas por naturaleza en la blockchain.',
+          'Datos técnicos y de uso: tipo de dispositivo, navegador, dirección IP aproximada y métricas de uso anónimas o agregadas para mejorar el servicio.',
+          'Comunicaciones: la información que nos envías si nos contactas por correo.',
+        ],
+      },
+      {
+        h: 'Cómo usamos tu información',
+        list: [
+          'Crear tu cuenta, autenticarte y darte acceso al servicio.',
+          'Permitir las funciones de pago (links, QR y usernames).',
+          'Proteger la cuenta, prevenir fraude y abuso, y mantener la seguridad.',
+          'Brindar soporte y responder tus mensajes.',
+          'Mejorar y entender el uso del producto.',
+          'Cumplir obligaciones legales aplicables.',
+        ],
+      },
+      {
+        h: 'Datos de usuario de Google',
+        p: [
+          'El acceso, uso y transferencia de la información recibida de las APIs de Google se ajusta a la Política de Datos de Usuario de los Servicios de la API de Google, incluyendo los requisitos de Uso Limitado (Limited Use).',
+          'Solo accedemos a tu nombre, correo electrónico, foto de perfil e identificador de cuenta de Google, y únicamente con el fin de crear tu cuenta e iniciar sesión. No usamos estos datos para publicidad, no los vendemos, y no los compartimos con terceros salvo para operar el servicio o cuando la ley lo exija.',
+        ],
+      },
+      {
+        h: 'Cómo compartimos la información',
+        p: [
+          'No vendemos tus datos personales. Podemos compartir información con proveedores que nos ayudan a operar (por ejemplo, hosting, autenticación y analítica), bajo acuerdos que limitan su uso. Los datos on-chain son públicos por la naturaleza de la blockchain. También podemos divulgar información cuando la ley lo requiera o para proteger derechos y seguridad.',
+        ],
+      },
+      {
+        h: 'Conservación de datos',
+        p: [
+          'Conservamos tus datos mientras tu cuenta esté activa o según sea necesario para prestar el servicio y cumplir obligaciones legales. Puedes solicitar la eliminación de tu cuenta y datos asociados escribiéndonos.',
+        ],
+      },
+      {
+        h: 'Seguridad',
+        p: [
+          'Aplicamos medidas razonables para proteger tu información. Ningún sistema es 100% seguro, pero al ser no custodial, tus fondos permanecen bajo tu control y no en nuestros servidores.',
+        ],
+      },
+      {
+        h: 'Tus derechos',
+        p: [
+          'Puedes solicitar acceder, corregir o eliminar tus datos personales, así como revocar el acceso de Google desde la configuración de tu cuenta de Google. Para ejercer estos derechos, escríbenos a privacy@parmelia.me.',
+        ],
+      },
+      {
+        h: 'Menores de edad',
+        p: [
+          'Parmelia no está dirigida a menores de edad y no recopilamos conscientemente datos de personas que no tengan la mayoría de edad legal en su jurisdicción.',
+        ],
+      },
+      {
+        h: 'Cambios a esta política',
+        p: [
+          'Podemos actualizar esta Política de Privacidad. Publicaremos la versión vigente en esta página con su fecha de actualización.',
+        ],
+      },
+      {
+        h: 'Contacto',
+        p: [
+          'Si tienes preguntas sobre esta política o sobre tus datos, escríbenos a privacy@parmelia.me.',
+        ],
+      },
+    ],
+  },
+  en: {
+    title: 'Privacy Policy',
+    updated: 'Last updated: June 14, 2026',
+    lead:
+      'Parmelia is a non-custodial payment application that lets users send, receive and request USDC using payment links, QR codes and usernames. This Privacy Policy explains what data we process, how we use it and what control you have over it. Parmelia is operated by Daniel Cueto (Bolivia). For any privacy question, contact us at privacy@parmelia.me.',
+    sections: [
+      {
+        h: 'Non-custodial nature',
+        p: [
+          'Parmelia does not custody your money or your private keys. You keep control of your wallet and your funds at all times. We cannot move, freeze or recover your funds, and transactions happen directly on the blockchain.',
+        ],
+      },
+      {
+        h: 'Information we collect',
+        list: [
+          'Google account data (Sign-In): when you sign in with Google, we receive your name, email address, profile picture and your Google account identifier, to create and authenticate your account.',
+          'Profile data: the username and profile information you choose within Parmelia.',
+          'On-chain data: your wallet address(es) and associated transactions, which are public by nature on the blockchain.',
+          'Technical and usage data: device type, browser, approximate IP address and anonymous or aggregated usage metrics to improve the service.',
+          'Communications: the information you send us if you contact us by email.',
+        ],
+      },
+      {
+        h: 'How we use your information',
+        list: [
+          'Create your account, authenticate you and give you access to the service.',
+          'Enable the payment features (links, QR and usernames).',
+          'Protect your account, prevent fraud and abuse, and keep things secure.',
+          'Provide support and respond to your messages.',
+          'Improve and understand product usage.',
+          'Comply with applicable legal obligations.',
+        ],
+      },
+      {
+        h: 'Google user data',
+        p: [
+          'Parmelia’s use and transfer of information received from Google APIs adheres to the Google API Services User Data Policy, including the Limited Use requirements.',
+          'We only access your name, email, profile picture and Google account identifier, and solely for the purpose of creating your account and signing you in. We do not use this data for advertising, we do not sell it, and we do not share it with third parties except to operate the service or where required by law.',
+        ],
+      },
+      {
+        h: 'How we share information',
+        p: [
+          'We do not sell your personal data. We may share information with providers that help us operate (for example, hosting, authentication and analytics), under agreements that limit their use. On-chain data is public due to the nature of the blockchain. We may also disclose information when required by law or to protect rights and safety.',
+        ],
+      },
+      {
+        h: 'Data retention',
+        p: [
+          'We keep your data while your account is active or as needed to provide the service and meet legal obligations. You can request deletion of your account and associated data by contacting us.',
+        ],
+      },
+      {
+        h: 'Security',
+        p: [
+          'We apply reasonable measures to protect your information. No system is 100% secure, but because Parmelia is non-custodial, your funds stay under your control and not on our servers.',
+        ],
+      },
+      {
+        h: 'Your rights',
+        p: [
+          'You can request to access, correct or delete your personal data, and revoke Google access from your Google account settings. To exercise these rights, contact us at privacy@parmelia.me.',
+        ],
+      },
+      {
+        h: 'Children',
+        p: [
+          'Parmelia is not directed to minors and we do not knowingly collect data from people below the legal age of majority in their jurisdiction.',
+        ],
+      },
+      {
+        h: 'Changes to this policy',
+        p: [
+          'We may update this Privacy Policy. We will post the current version on this page along with its update date.',
+        ],
+      },
+      {
+        h: 'Contact',
+        p: [
+          'If you have questions about this policy or your data, contact us at privacy@parmelia.me.',
+        ],
+      },
+    ],
+  },
+}[lang];
+---
+
+<h1 class="legal-doc-title">{c.title}</h1>
+<p class="legal-updated">{c.updated}</p>
+<p class="legal-lead">{c.lead}</p>
+
+{
+  c.sections.map((s) => (
+    <section class="legal-section">
+      <h2>{s.h}</h2>
+      {s.p && s.p.map((para) => <p set:html={para.replace(/privacy@parmelia\.me/g, '<a href="mailto:privacy@parmelia.me">privacy@parmelia.me</a>')} />)}
+      {s.list && (
+        <ul>
+          {s.list.map((item) => <li>{item}</li>)}
+        </ul>
+      )}
+    </section>
+  ))
+}

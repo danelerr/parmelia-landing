@@ -1,16 +1,29 @@
 ---
 import { Image } from 'astro:assets';
-import appShot from '../assets/app.png';
+import appPhone from '../assets/app-phone.png';
+import { getLang } from '../i18n';
+
+const lang = getLang(Astro.currentLocale);
+const t = {
+  es: {
+    title: 'Sin descargar ninguna app.',
+    copy: 'Entra desde el navegador y empieza a usarla. No hay nada que descargar ni instalar.',
+    alt: 'Captura de la app de Parmelia en el móvil',
+  },
+  en: {
+    title: 'No app to download.',
+    copy: 'Open it from your browser and start using it. Nothing to download or install.',
+    alt: 'Screenshot of the Parmelia app on mobile',
+  },
+}[lang];
 ---
 
 <section id="browser-first" class="landing-section">
   <div class="landing-shell">
     <div class="browser-card" data-reveal>
       <div class="browser-copy">
-        <h2 class="section-title">Sin descargar ninguna app.</h2>
-        <p class="section-copy">
-          Entra desde el navegador y empieza a usarla. No hay nada que descargar ni instalar.
-        </p>
+        <h2 class="section-title">{t.title}</h2>
+        <p class="section-copy">{t.copy}</p>
 
         <svg class="bridge-cross" viewBox="0 0 260 170" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <polygon points="52,70 88,88 52,106 16,88" fill="#DEA6BC" />
@@ -21,7 +34,7 @@ import appShot from '../assets/app.png';
       </div>
 
       <div class="phone-shot" data-float>
-        <Image src={appShot} alt="Captura de Parmelia en móvil" width={1120} loading="lazy" decoding="async" />
+        <Image src={appPhone} alt={t.alt} width={461} height={922} loading="lazy" decoding="async" />
       </div>
     </div>
   </div>

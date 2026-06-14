@@ -1,8 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://parmelia.me/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://parmelia.me/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://parmelia.me/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://parmelia.me/en/" />
+  </url>
+  <url>
+    <loc>https://parmelia.me/en/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://parmelia.me/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://parmelia.me/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://parmelia.me/en/" />
+  </url>
+  <url>
+    <loc>https://parmelia.me/privacy/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://parmelia.me/privacy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://parmelia.me/en/privacy/" />
+  </url>
+  <url>
+    <loc>https://parmelia.me/en/privacy/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://parmelia.me/privacy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://parmelia.me/en/privacy/" />
+  </url>
+  <url>
+    <loc>https://parmelia.me/terms/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://parmelia.me/terms/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://parmelia.me/en/terms/" />
+  </url>
+  <url>
+    <loc>https://parmelia.me/en/terms/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://parmelia.me/terms/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://parmelia.me/en/terms/" />
   </url>
 </urlset>

@@ -1,20 +1,43 @@
 ---
 import TokenIcon from './TokenIcon.astro';
+import { getLang } from '../i18n';
+
+const lang = getLang(Astro.currentLocale);
+const t = {
+  es: {
+    title: 'Guarda, paga y mueve desde un solo lugar.',
+    copy: 'Ten tu dinero en un solo lugar y úsalo para pagar, recibir, enviar o cambiar. Sin saltar entre apps y pantallas.',
+    micro: 'Tu saldo está para moverse, no para quedarse atrapado.',
+    desc: {
+      USDC: 'Para cobrar, pagar y mantener valor estable.',
+      ETH: 'Para moverte por la red cuando lo necesites.',
+      WBTC: 'Para tener algo de Bitcoin sin salir de la app.',
+    },
+  },
+  en: {
+    title: 'Store, pay and move from one place.',
+    copy: 'Keep your money in one place and use it to pay, receive, send or swap. No jumping between apps and screens.',
+    micro: 'Your balance is meant to move, not to get stuck.',
+    desc: {
+      USDC: 'To charge, pay and hold stable value.',
+      ETH: 'To move around the network whenever you need.',
+      WBTC: 'To hold a bit of Bitcoin without leaving the app.',
+    },
+  },
+}[lang];
 
 const assets = [
-  { token: 'USDC', name: 'USDC', desc: 'Para cobrar, pagar y mantener valor estable.' },
-  { token: 'MON', name: 'MON', desc: 'Para moverte dentro de Monad.' },
-  { token: 'WBTC', name: 'WBTC', desc: 'Para tener algo de Bitcoin sin salir de la app.' },
+  { token: 'USDC', name: 'USDC', desc: t.desc.USDC },
+  { token: 'ETH', name: 'ETH', desc: t.desc.ETH },
+  { token: 'WBTC', name: 'WBTC', desc: t.desc.WBTC },
 ] as const;
 ---
 
 <section id="multi-asset" class="landing-section">
   <div class="landing-shell">
     <div class="copy-stack" data-reveal>
-      <h2 class="section-title">Guarda, paga y mueve desde un solo lugar.</h2>
-      <p class="section-copy">
-        Ten tu dinero en un solo lugar y úsalo para pagar, recibir, enviar o cambiar. Sin saltar entre apps y pantallas.
-      </p>
+      <h2 class="section-title">{t.title}</h2>
+      <p class="section-copy">{t.copy}</p>
     </div>
 
     <div class="feature-grid" data-reveal-stagger>
@@ -27,8 +50,6 @@ const assets = [
       ))}
     </div>
 
-    <p class="microcopy mt-10" data-reveal>
-      Tu saldo está para moverse, no para quedarse atrapado.
-    </p>
+    <p class="microcopy mt-10" data-reveal>{t.micro}</p>
   </div>
 </section>

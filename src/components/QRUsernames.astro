@@ -1,9 +1,28 @@
 ---
-const steps = [
-  { dot: 'var(--glow-sky)', title: 'Apunta la cámara', desc: 'El pago abre con el receptor y el monto correctos.' },
-  { dot: 'var(--glow-pink)', title: 'Escribe un nombre', desc: 'Pagas a una persona, no a una dirección imposible.' },
-  { dot: 'var(--glow-gold)', title: 'Pega el link', desc: 'Sirve para vender por DM, grupos, eventos o comunidades.' },
-];
+import { getLang } from '../i18n';
+
+const lang = getLang(Astro.currentLocale);
+const t = {
+  es: {
+    title: 'Pagar con QR, como ya lo haces.',
+    copy: 'El QR ya es parte del día a día en Bolivia. Parmelia lo lleva a dólares digitales: escanea, escribe un username o comparte tu perfil. Siempre queda claro quién recibe y cuánto.',
+    steps: [
+      { dot: 'var(--glow-sky)', title: 'Apunta la cámara', desc: 'El pago abre con el receptor y el monto correctos.' },
+      { dot: 'var(--glow-pink)', title: 'Escribe un nombre', desc: 'Pagas a una persona, no a una dirección imposible.' },
+      { dot: 'var(--glow-gold)', title: 'Pega el link', desc: 'Sirve para vender por DM, grupos, eventos o comunidades.' },
+    ],
+  },
+  en: {
+    title: 'Pay with QR, like you already do.',
+    copy: 'QR is already part of everyday life in Bolivia. Parmelia brings it to digital dollars: scan, type a username or share your profile. It’s always clear who receives and how much.',
+    steps: [
+      { dot: 'var(--glow-sky)', title: 'Point your camera', desc: 'The payment opens with the right recipient and amount.' },
+      { dot: 'var(--glow-pink)', title: 'Type a name', desc: 'You pay a person, not an impossible address.' },
+      { dot: 'var(--glow-gold)', title: 'Paste the link', desc: 'Great for selling by DM, groups, events or communities.' },
+    ],
+  },
+}[lang];
+const steps = t.steps;
 
 /* Decorative QR matrix — looks like a real QR (finders, timing, alignment,
    dense deterministic data). Not meant to be scannable. */
@@ -75,10 +94,8 @@ for (let r = 0; r < QR_N; r++)
       </div>
 
       <div class="split-copy">
-        <h2 class="section-title">Pagar con QR, como ya lo haces.</h2>
-        <p class="section-copy">
-          El QR ya es parte del día a día en Bolivia. Parmelia lo lleva a dólares digitales: escanea, escribe un username o comparte tu perfil. Siempre queda claro quién recibe y cuánto.
-        </p>
+        <h2 class="section-title">{t.title}</h2>
+        <p class="section-copy">{t.copy}</p>
 
         <div class="point-list" data-reveal-stagger>
           {steps.map((step) => (

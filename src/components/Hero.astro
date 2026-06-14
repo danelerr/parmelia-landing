@@ -1,6 +1,27 @@
 ---
 import ParmeliaStack from './ParmeliaStack.astro';
 import HeroBackdrop from './HeroBackdrop.astro';
+import { getLang } from '../i18n';
+
+const lang = getLang(Astro.currentLocale);
+const t = {
+  es: {
+    titleLead: 'Mueve dinero digital',
+    titleAccent: 'como mandar un mensaje.',
+    copy: 'Cobra con links, paga con QR y envía a usernames. Fácil para ti, fácil para quien recibe.',
+    cta: 'Probar Parmelia',
+    how: 'Ver cómo funciona',
+    proof: ['Sin descargar apps', 'sin frases raras', 'sin complicaciones'],
+  },
+  en: {
+    titleLead: 'Move digital money',
+    titleAccent: 'like sending a message.',
+    copy: 'Charge with links, pay with QR and send to usernames. Easy for you, easy for whoever receives it.',
+    cta: 'Try Parmelia',
+    how: 'See how it works',
+    proof: ['No app downloads', 'no weird phrases', 'no hassle'],
+  },
+}[lang];
 ---
 
 <section id="hero" class="hero-section hero-dark">
@@ -12,27 +33,25 @@ import HeroBackdrop from './HeroBackdrop.astro';
 
       <div class="relative w-full">
         <h1 class="hero-title hero-title-light">
-          Mueve dinero digital <span class="text-gradient">como mandar un mensaje.</span>
+          {t.titleLead} <span class="text-gradient">{t.titleAccent}</span>
         </h1>
       </div>
 
-      <p class="section-copy">
-        Cobra con links, paga con QR y envía a usernames. Fácil para ti, fácil para quien recibe.
-      </p>
+      <p class="section-copy">{t.copy}</p>
 
       <div class="button-row">
-        <a href="https://app.parmelia.me" target="_blank" rel="noopener noreferrer" class="btn-parmelia hero-cta">
-          Probar Parmelia
+        <a href="https://app.parmelia.me?ref=landing_hero" target="_blank" rel="noopener noreferrer" class="btn-parmelia hero-cta" data-cta="hero">
+          {t.cta}
         </a>
-        <a href="#payment-links" class="btn-ghost">Ver cómo funciona</a>
+        <a href="#payment-links" class="btn-ghost">{t.how}</a>
       </div>
 
       <p class="microcopy hero-proofline">
-        <span>Sin descargar apps</span>
+        <span>{t.proof[0]}</span>
         <span class="proof-dot proof-dot-sky" aria-hidden="true"></span>
-        <span>sin frases raras</span>
+        <span>{t.proof[1]}</span>
         <span class="proof-dot proof-dot-pink" aria-hidden="true"></span>
-        <span>sin complicaciones</span>
+        <span>{t.proof[2]}</span>
       </p>
     </div>
   </div>

@@ -1,0 +1,145 @@
+---
+import { getLang } from '../i18n';
+
+const lang = getLang(Astro.currentLocale);
+const t = {
+  es: {
+    links: [
+      { href: '#payment-links', label: 'Links de pago' },
+      { href: '#qr-usernames', label: 'QR y usernames' },
+      { href: '#earn', label: 'Earn' },
+      { href: '#coming', label: 'Tarjeta' },
+      { href: '#faq', label: 'FAQ' },
+    ],
+    cta: 'Probar Parmelia',
+    open: 'Abrir menú',
+    close: 'Cerrar menú',
+    altLangHref: '/en/',
+    altLangLabel: 'EN',
+    altLangTitle: 'Read in English',
+    altLang: 'en',
+  },
+  en: {
+    links: [
+      { href: '#payment-links', label: 'Payment links' },
+      { href: '#qr-usernames', label: 'QR & usernames' },
+      { href: '#earn', label: 'Earn' },
+      { href: '#coming', label: 'Card' },
+      { href: '#faq', label: 'FAQ' },
+    ],
+    cta: 'Try Parmelia',
+    open: 'Open menu',
+    close: 'Close menu',
+    altLangHref: '/',
+    altLangLabel: 'ES',
+    altLangTitle: 'Leer en español',
+    altLang: 'es',
+  },
+}[lang];
+const links = t.links;
+---
+
+<header class="site-nav">
+  <div class="site-nav-inner">
+    <a href="#hero" class="site-nav-brand" aria-label="Parmelia — inicio">
+      <svg viewBox="0 0 171 198" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M83.3377 0.820332L0.328533 58.6046L8.32585 64.2196L85.1075 118.216L162.136 64.6112L170.082 59.0738L87.3243 0.832505C86.0859 0.0162387 84.5791 0.00937285 83.3377 0.820332Z" fill="#A7D4DE"/>
+        <path d="M86.8349 125.155C85.7498 125.866 84.4312 125.863 83.3487 125.146L7.21886 72.2561L0.265018 67.4362L0.196435 98.6944L7.15101 103.514L85.0306 157.652L163.105 103.911L170.078 99.095L170.137 67.8895L163.164 72.6739L86.8349 125.155Z" fill="#DEA6BC"/>
+        <path d="M86.7497 164.587C85.6645 165.298 84.3459 165.295 83.2635 164.578L7.13366 111.688L0.179813 106.869L0.11123 138.127L7.0658 142.947L84.9454 197.085L163.02 143.344L169.993 138.527L170.052 107.322L163.079 112.106L86.7497 164.587Z" fill="#DED9A6"/>
+      </svg>
+      <span>Parmelia</span>
+    </a>
+
+    <nav class="site-nav-links" aria-label="Secciones">
+      {links.map((link) => (
+        <a href={link.href}>{link.label}</a>
+      ))}
+    </nav>
+
+    <div class="site-nav-actions">
+      <a
+        href={t.altLangHref}
+        class="site-nav-lang"
+        title={t.altLangTitle}
+        aria-label={t.altLangTitle}
+        data-locale-choice={t.altLang}
+      >
+        {t.altLangLabel}
+      </a>
+
+      <a href="https://app.parmelia.me?ref=landing_nav" target="_blank" rel="noopener noreferrer" class="site-nav-cta" data-cta="nav">
+        {t.cta}
+      </a>
+
+      <button
+        class="site-nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav-menu"
+        aria-label={t.open}
+        data-open={t.open}
+        data-close={t.close}
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line class="bar-top" x1="4" y1="8" x2="20" y2="8" />
+          <line class="bar-bottom" x1="4" y1="16" x2="20" y2="16" />
+        </svg>
+      </button>
+    </div>
+
+    <nav class="site-nav-menu" id="site-nav-menu" aria-label="Secciones" hidden>
+      {links.map((link) => (
+        <a href={link.href}>{link.label}</a>
+      ))}
+      <a href={t.altLangHref} class="site-nav-menu-lang" data-locale-choice={t.altLang}>{t.altLangTitle}</a>
+      <a href="https://app.parmelia.me?ref=landing_nav_menu" target="_blank" rel="noopener noreferrer" class="site-nav-cta menu-cta" data-cta="nav_menu">
+        {t.cta}
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>('.site-nav-toggle');
+  const menu = document.querySelector<HTMLElement>('.site-nav-menu');
+
+  if (toggle && menu) {
+    const openLabel = toggle.dataset.open || 'Open menu';
+    const closeLabel = toggle.dataset.close || 'Close menu';
+    const setOpen = (open: boolean) => {
+      menu.hidden = !open;
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? closeLabel : openLabel);
+      toggle.classList.toggle('is-open', open);
+    };
+
+    toggle.addEventListener('click', () => setOpen(!!menu.hidden));
+
+    menu.querySelectorAll('a').forEach((a) => {
+      a.addEventListener('click', () => setOpen(false));
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !menu.hidden) setOpen(false);
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!menu.hidden && e.target instanceof Node && !toggle.contains(e.target) && !menu.contains(e.target)) {
+        setOpen(false);
+      }
+    });
+  }
+
+  document.querySelectorAll<HTMLAnchorElement>('[data-locale-choice]').forEach((link) => {
+    link.addEventListener('click', () => {
+      const locale = link.dataset.localeChoice;
+      if (locale !== 'es' && locale !== 'en') return;
+
+      try {
+        window.localStorage.setItem('parmelia:preferred-locale', locale);
+      } catch {
+        // Ignore unavailable storage; the next page still loads normally.
+      }
+    });
+  });
+</script>

@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+import ParmeliaStack from '../components/ParmeliaStack.astro';
+---
+
+<Layout title="Página no encontrada — Parmelia" description="La página que buscas no existe o se movió.">
+  <main>
+    <section class="hero-section hero-dark notfound">
+      <div class="landing-shell">
+        <div class="copy-stack" data-reveal>
+          <ParmeliaStack className="hero-logo-glow" />
+
+          <p class="notfound-code text-gradient">404</p>
+          <h1 class="section-title">Esta página se fue a otra red.</h1>
+          <p class="section-copy">
+            El link que seguiste no existe o se movió. Volvamos a lo importante: mover dinero digital, fácil.
+          </p>
+
+          <div class="button-row">
+            <a href="/" class="btn-parmelia">Volver al inicio</a>
+            <a href="https://app.parmelia.me?ref=landing_404" target="_blank" rel="noopener noreferrer" class="btn-ghost" data-cta="notfound">
+              Abrir Parmelia
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .notfound {
+    min-height: 100svh;
+    text-align: center;
+  }
+  .notfound-code {
+    font-family: var(--font-display);
+    font-size: clamp(64px, 14vw, 132px);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.04em;
+  }
+</style>
+
+<script>
+  document.querySelectorAll('[data-reveal]').forEach((el) => el.classList.add('is-revealed'));
+</script>

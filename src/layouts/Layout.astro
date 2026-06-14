@@ -5,15 +5,43 @@ import '@fontsource-variable/bricolage-grotesque/opsz.css';
 interface Props {
   title?: string;
   description?: string;
+  autoLocaleRedirect?: boolean;
 }
 
+const lang = (Astro.currentLocale ?? 'es') as 'es' | 'en';
+
+const defaults = {
+  es: {
+    title: 'Parmelia — Mueve dinero digital como mandar un mensaje',
+    description:
+      'Cobra con links, paga con QR y envía a usernames. Mover dinero digital, fácil para ti y para quien recibe. Sin descargar apps, sin comisiones entre usuarios.',
+  },
+  en: {
+    title: 'Parmelia — Move digital money like sending a message',
+    description:
+      'Charge with links, pay with QR and send to usernames. Moving digital money, easy for you and whoever receives it. No app downloads, no fees between users.',
+  },
+} as const;
+
 const {
-  title = 'Parmelia — Mueve dinero digital como mandar un mensaje',
-  description = 'Cobra con links, paga con QR y envía a usernames. Mover dinero digital, fácil para ti y para quien recibe. Sin descargar apps, sin comisiones entre usuarios.'
+  title = defaults[lang].title,
+  description = defaults[lang].description,
+  autoLocaleRedirect = false,
 } = Astro.props;
 
 const siteUrl = 'https://parmelia.me/';
+const englishUrl = new URL('/en/', siteUrl).href;
+const canonical = new URL(Astro.url.pathname, siteUrl).href;
 const ogImage = new URL('/og.png', siteUrl).href;
+const ogLocale = lang === 'en' ? 'en_US' : 'es_ES';
+const ogImageAlt =
+  lang === 'en'
+    ? 'Parmelia — move digital money like sending a message'
+    : 'Parmelia — mueve dinero digital como mandar un mensaje';
+
+// Privacy-friendly analytics, off by default. Enable by setting
+// PUBLIC_PLAUSIBLE_DOMAIN (e.g. "parmelia.me") in the environment / .env.
+const plausibleDomain = import.meta.env.PUBLIC_PLAUSIBLE_DOMAIN;
 
 const structuredData = {
   '@context': 'https://schema.org',
@@ -31,7 +59,7 @@ const structuredData = {
       '@id': `${siteUrl}#website`,
       url: siteUrl,
       name: 'Parmelia',
-      inLanguage: 'es',
+      inLanguage: lang,
       publisher: { '@id': `${siteUrl}#org` },
     },
     {
@@ -48,29 +76,66 @@ const structuredData = {
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {
+      autoLocaleRedirect && (
+        <script
+          is:inline
+          set:html={`
+            (() => {
+              const preferenceKey = 'parmelia:preferred-locale';
+              const currentLocale = '${lang}';
+              const readPreference = () => {
+                try {
+                  const value = window.localStorage.getItem(preferenceKey);
+                  return value === 'es' || value === 'en' ? value : null;
+                } catch {
+                  return null;
+                }
+              };
+              const configuredLanguages =
+                Array.isArray(navigator.languages) && navigator.languages.length
+                  ? navigator.languages
+                  : [navigator.language || ''];
+              const primaryLanguage = String(configuredLanguages[0] || '').toLowerCase();
+              const targetLocale = readPreference() ?? (primaryLanguage.startsWith('es') ? 'es' : 'en');
+
+              if (targetLocale !== currentLocale) {
+                const nextUrl = new URL(targetLocale === 'es' ? '/' : '/en/', window.location.origin);
+                nextUrl.search = window.location.search;
+                nextUrl.hash = window.location.hash;
+                window.location.replace(nextUrl.href);
+              }
+            })();
+          `}
+        />
+      )
+    }
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="robots" content="index, follow" />
 
-    <!-- Canonical -->
-    <link rel="canonical" href={siteUrl} />
+    <!-- Canonical + language alternates -->
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="es" href={siteUrl} />
+    <link rel="alternate" hreflang="en" href={englishUrl} />
+    <link rel="alternate" hreflang="x-default" href={englishUrl} />
     <link rel="sitemap" href="/sitemap.xml" />
 
     <!-- Open Graph -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={siteUrl} />
+    <meta property="og:url" content={canonical} />
     <meta property="og:site_name" content="Parmelia" />
-    <meta property="og:locale" content="es_ES" />
+    <meta property="og:locale" content={ogLocale} />
     <meta property="og:image" content={ogImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Parmelia — mueve dinero digital como mandar un mensaje" />
+    <meta property="og:image:alt" content={ogImageAlt} />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -78,11 +143,12 @@ const structuredData = {
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
-    <meta name="twitter:image:alt" content="Parmelia — mueve dinero digital como mandar un mensaje" />
+    <meta name="twitter:image:alt" content={ogImageAlt} />
 
     <!-- Icons -->
-    <link rel="icon" type="image/svg+xml" href="/Logo_parmelia.svg" />
-    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
     <!-- Theme color for mobile browser chrome -->
@@ -90,6 +156,22 @@ const structuredData = {
 
     <!-- Structured data -->
     <script type="application/ld+json" set:html={JSON.stringify(structuredData)} is:inline />
+
+    {
+      plausibleDomain && (
+        <Fragment>
+          <script
+            defer
+            data-domain={plausibleDomain}
+            src="https://plausible.io/js/script.outbound-links.js"
+            is:inline
+          />
+          <script is:inline>
+            window.plausible = window.plausible || function () {(window.plausible.q = window.plausible.q || []).push(arguments)}
+          </script>
+        </Fragment>
+      )
+    }
 
     <!-- Gate scroll-reveal hiding behind JS availability: without JS the page stays fully visible -->
     <script is:inline>document.documentElement.classList.add('js');</script>

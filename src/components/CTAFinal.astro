@@ -1,4 +1,27 @@
 ---
+import { getLang } from '../i18n';
+
+const lang = getLang(Astro.currentLocale);
+const t = {
+  es: {
+    title: 'Empieza con tu primer link.',
+    copy: 'Abre Parmelia, comparte tu link y empieza a mover dinero digital tan fácil como mandar un mensaje.',
+    cta: 'Probar Parmelia',
+    ctaLink: 'Crear link de pago',
+    buildLead: 'Lo estamos construyendo en público.',
+    follow: 'Síguenos en X',
+    buildTail: 'y mira cómo avanza.',
+  },
+  en: {
+    title: 'Start with your first link.',
+    copy: 'Open Parmelia, share your link and start moving digital money as easily as sending a message.',
+    cta: 'Try Parmelia',
+    ctaLink: 'Create a payment link',
+    buildLead: 'We’re building it in public.',
+    follow: 'Follow us on X',
+    buildTail: 'and watch it progress.',
+  },
+}[lang];
 ---
 
 <section id="cta-final" class="landing-section relative" style="background-color: var(--color-black);">
@@ -18,19 +41,24 @@
 
   <div class="landing-shell">
     <div class="copy-stack" data-reveal>
-      <h2 class="section-title dark">Empieza con tu primer link.</h2>
-      <p class="section-copy dark">
-        Abre Parmelia, comparte tu link y empieza a mover dinero digital tan fácil como mandar un mensaje.
-      </p>
+      <h2 class="section-title dark">{t.title}</h2>
+      <p class="section-copy dark">{t.copy}</p>
 
       <div class="button-row">
-        <a href="https://app.parmelia.me" target="_blank" rel="noopener noreferrer" class="btn-primary light">
-          Probar Parmelia
+        <a href="https://app.parmelia.me?ref=landing_cta" target="_blank" rel="noopener noreferrer" class="btn-primary light" data-cta="cta_final_primary">
+          {t.cta}
         </a>
-        <a href="https://app.parmelia.me" target="_blank" rel="noopener noreferrer" class="btn-gradient">
-          Crear link de pago
+        <a href="https://app.parmelia.me?ref=landing_cta_link" target="_blank" rel="noopener noreferrer" class="btn-gradient" data-cta="cta_final_link">
+          {t.ctaLink}
         </a>
       </div>
+
+      <p class="build-note">
+        <span class="build-pulse" aria-hidden="true"></span>
+        {t.buildLead}
+        <a href="https://x.com/parmelia_" target="_blank" rel="noopener noreferrer" data-cta="follow_x">{t.follow}</a>
+        {t.buildTail}
+      </p>
     </div>
   </div>
 </section>

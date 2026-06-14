@@ -1,9 +1,22 @@
 ---
 import TokenIcon from './TokenIcon.astro';
+import { getLang } from '../i18n';
+
+const lang = getLang(Astro.currentLocale);
+const t = {
+  es: {
+    title: 'Cambia cuando el pago lo necesita.',
+    copy: 'Convierte entre activos sin salir de Parmelia. Menos pestañas, menos pasos y menos margen para equivocarte.',
+  },
+  en: {
+    title: 'Swap when the payment needs it.',
+    copy: 'Convert between assets without leaving Parmelia. Fewer tabs, fewer steps and less room for mistakes.',
+  },
+}[lang];
 
 const swaps = [
-  { from: 'USDC', to: 'MON' },
-  { from: 'MON', to: 'USDC' },
+  { from: 'USDC', to: 'ETH' },
+  { from: 'ETH', to: 'USDC' },
   { from: 'USDC', to: 'WBTC' },
 ] as const;
 ---
@@ -12,10 +25,8 @@ const swaps = [
   <div class="landing-shell">
     <div class="split" data-reveal>
       <div class="split-copy">
-        <h2 class="section-title">Cambia cuando el pago lo necesita.</h2>
-        <p class="section-copy">
-          Convierte entre activos sin salir de Parmelia. Menos pestañas, menos pasos y menos margen para equivocarte.
-        </p>
+        <h2 class="section-title">{t.title}</h2>
+        <p class="section-copy">{t.copy}</p>
       </div>
 
       <div class="split-visual">

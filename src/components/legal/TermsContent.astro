@@ -1,0 +1,156 @@
+---
+import { getLang } from '../../i18n';
+
+const lang = getLang(Astro.currentLocale);
+
+const c = {
+  es: {
+    title: 'Términos de Servicio',
+    updated: 'Última actualización: 14 de junio de 2026',
+    lead:
+      'Estos Términos de Servicio regulan el uso de Parmelia, una aplicación de pagos no custodial para enviar, recibir y cobrar USDC con links de pago, códigos QR y nombres de usuario. Parmelia es operada por Daniel Cueto (Bolivia). Al usar Parmelia, aceptas estos términos.',
+    sections: [
+      {
+        h: '1. Aceptación',
+        p: ['Al acceder o usar Parmelia, confirmas que has leído y aceptas estos Términos. Si no estás de acuerdo, no uses el servicio.'],
+      },
+      {
+        h: '2. Descripción del servicio',
+        p: ['Parmelia es una aplicación web que facilita pagos en USDC y otros activos compatibles mediante links, códigos QR y usernames. Parmelia se encuentra en desarrollo activo y sus funciones pueden cambiar o estar disponibles de forma gradual.'],
+      },
+      {
+        h: '3. Elegibilidad',
+        p: ['Debes tener la mayoría de edad legal en tu jurisdicción y capacidad para celebrar contratos. No debes usar Parmelia si te lo prohíben las leyes que te apliquen.'],
+      },
+      {
+        h: '4. Carácter no custodial y tu responsabilidad',
+        list: [
+          'Tú controlas tu wallet, tus claves y tus fondos. Parmelia no los custodia ni puede recuperarlos.',
+          'Las transacciones en blockchain son, por lo general, irreversibles. Verifica los datos antes de confirmar.',
+          'Eres responsable de mantener seguro el acceso a tu cuenta y a tu wallet.',
+          'No nos hacemos responsables de pérdidas derivadas de errores del usuario, accesos no autorizados a tu cuenta o fallos de redes de terceros.',
+        ],
+      },
+      {
+        h: '5. Uso aceptable',
+        p: ['Te comprometes a no usar Parmelia para actividades ilegales, fraude, lavado de dinero, financiamiento de actividades prohibidas o cualquier uso que infrinja la ley o derechos de terceros.'],
+      },
+      {
+        h: '6. Riesgos y ausencia de asesoría',
+        p: ['Los activos digitales son volátiles y conllevan riesgos. Parmelia no brinda asesoría financiera, legal ni fiscal. Las decisiones sobre tus activos son tuyas.'],
+      },
+      {
+        h: '7. Comisiones',
+        p: ['Enviar dinero entre usuarios de Parmelia no tiene comisiones. Si en algún momento existe un costo, lo verás claramente antes de confirmar. Las redes blockchain pueden cobrar costos propios.'],
+      },
+      {
+        h: '8. Servicios de terceros',
+        p: ['Parmelia puede integrar servicios de terceros (por ejemplo, inicio de sesión con Google, infraestructura y redes blockchain). El uso de esos servicios puede estar sujeto a sus propios términos y políticas.'],
+      },
+      {
+        h: '9. Sin garantías',
+        p: ['El servicio se ofrece “tal cual” y “según disponibilidad”, sin garantías de ningún tipo, en la medida permitida por la ley. No garantizamos que el servicio sea ininterrumpido o libre de errores.'],
+      },
+      {
+        h: '10. Limitación de responsabilidad',
+        p: ['En la máxima medida permitida por la ley, Parmelia y su operador no serán responsables por daños indirectos, incidentales o consecuentes, ni por pérdida de fondos derivada del uso del servicio o de redes de terceros.'],
+      },
+      {
+        h: '11. Cambios',
+        p: ['Podemos modificar el servicio o estos Términos. Publicaremos la versión vigente en esta página. El uso continuado implica la aceptación de los cambios.'],
+      },
+      {
+        h: '12. Ley aplicable',
+        p: ['Estos Términos se rigen por las leyes de Bolivia, sin perjuicio de los derechos que te correspondan como consumidor en tu jurisdicción.'],
+      },
+      {
+        h: '13. Contacto',
+        p: ['Para cualquier consulta sobre estos Términos, escríbenos a privacy@parmelia.me.'],
+      },
+    ],
+  },
+  en: {
+    title: 'Terms of Service',
+    updated: 'Last updated: June 14, 2026',
+    lead:
+      'These Terms of Service govern the use of Parmelia, a non-custodial payment application to send, receive and request USDC using payment links, QR codes and usernames. Parmelia is operated by Daniel Cueto (Bolivia). By using Parmelia, you accept these terms.',
+    sections: [
+      {
+        h: '1. Acceptance',
+        p: ['By accessing or using Parmelia, you confirm that you have read and accept these Terms. If you do not agree, do not use the service.'],
+      },
+      {
+        h: '2. Description of the service',
+        p: ['Parmelia is a web application that facilitates payments in USDC and other supported assets through links, QR codes and usernames. Parmelia is under active development and its features may change or roll out gradually.'],
+      },
+      {
+        h: '3. Eligibility',
+        p: ['You must be of legal age in your jurisdiction and able to enter into contracts. You must not use Parmelia if the laws that apply to you prohibit it.'],
+      },
+      {
+        h: '4. Non-custodial nature and your responsibility',
+        list: [
+          'You control your wallet, your keys and your funds. Parmelia does not custody them and cannot recover them.',
+          'Blockchain transactions are generally irreversible. Verify the details before confirming.',
+          'You are responsible for keeping access to your account and wallet secure.',
+          'We are not responsible for losses arising from user error, unauthorized access to your account, or failures of third-party networks.',
+        ],
+      },
+      {
+        h: '5. Acceptable use',
+        p: ['You agree not to use Parmelia for illegal activity, fraud, money laundering, financing of prohibited activities, or any use that infringes the law or the rights of others.'],
+      },
+      {
+        h: '6. Risks and no advice',
+        p: ['Digital assets are volatile and carry risk. Parmelia does not provide financial, legal or tax advice. Decisions about your assets are yours.'],
+      },
+      {
+        h: '7. Fees',
+        p: ['Sending money between Parmelia users has no fees. If there is ever a cost, you will see it clearly before confirming. Blockchain networks may charge their own costs.'],
+      },
+      {
+        h: '8. Third-party services',
+        p: ['Parmelia may integrate third-party services (for example, Google Sign-In, infrastructure and blockchain networks). Use of those services may be subject to their own terms and policies.'],
+      },
+      {
+        h: '9. No warranties',
+        p: ['The service is provided “as is” and “as available”, without warranties of any kind, to the extent permitted by law. We do not guarantee that the service will be uninterrupted or error-free.'],
+      },
+      {
+        h: '10. Limitation of liability',
+        p: ['To the maximum extent permitted by law, Parmelia and its operator will not be liable for indirect, incidental or consequential damages, nor for loss of funds arising from use of the service or third-party networks.'],
+      },
+      {
+        h: '11. Changes',
+        p: ['We may modify the service or these Terms. We will post the current version on this page. Continued use means acceptance of the changes.'],
+      },
+      {
+        h: '12. Governing law',
+        p: ['These Terms are governed by the laws of Bolivia, without prejudice to any consumer rights you may have in your jurisdiction.'],
+      },
+      {
+        h: '13. Contact',
+        p: ['For any question about these Terms, contact us at privacy@parmelia.me.'],
+      },
+    ],
+  },
+}[lang];
+---
+
+<h1 class="legal-doc-title">{c.title}</h1>
+<p class="legal-updated">{c.updated}</p>
+<p class="legal-lead">{c.lead}</p>
+
+{
+  c.sections.map((s) => (
+    <section class="legal-section">
+      <h2>{s.h}</h2>
+      {s.p && s.p.map((para) => <p set:html={para.replace(/privacy@parmelia\.me/g, '<a href="mailto:privacy@parmelia.me">privacy@parmelia.me</a>')} />)}
+      {s.list && (
+        <ul>
+          {s.list.map((item) => <li>{item}</li>)}
+        </ul>
+      )}
+    </section>
+  ))
+}

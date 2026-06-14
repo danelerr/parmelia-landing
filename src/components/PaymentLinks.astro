@@ -1,19 +1,34 @@
 ---
 import ShareChannels from './ShareChannels.astro';
+import { getLang } from '../i18n';
 
-const tags = ['Freelancers', 'Eventos', 'Comunidades', 'Ventas por DM'];
+const lang = getLang(Astro.currentLocale);
+const t = {
+  es: {
+    title: 'Cobra con un link.',
+    copy: 'Crea un link en segundos y compártelo por WhatsApp, Telegram, Instagram o donde quieras. La otra persona abre el link, paga y listo.',
+    tags: ['Freelancers', 'Eventos', 'Comunidades', 'Ventas por DM'],
+    amount: '25 USDC para cobrar ahora',
+    share: 'Compártelo donde ya hablas',
+  },
+  en: {
+    title: 'Charge with a link.',
+    copy: 'Create a link in seconds and share it on WhatsApp, Telegram, Instagram or wherever you want. The other person opens the link, pays and done.',
+    tags: ['Freelancers', 'Events', 'Communities', 'DM sales'],
+    amount: '25 USDC to collect now',
+    share: 'Share it where you already chat',
+  },
+}[lang];
 ---
 
 <section id="payment-links" class="landing-section">
   <div class="landing-shell">
     <div class="split" data-reveal>
       <div class="split-copy">
-        <h2 class="section-title">Cobra con un link.</h2>
-        <p class="section-copy">
-          Crea un link en segundos y compártelo por WhatsApp, Telegram, Instagram o donde quieras. La otra persona abre el link, paga y listo.
-        </p>
+        <h2 class="section-title">{t.title}</h2>
+        <p class="section-copy">{t.copy}</p>
         <div class="pill-row">
-          {tags.map((tag) => (
+          {t.tags.map((tag) => (
             <span class="pill">{tag}</span>
           ))}
         </div>
@@ -22,7 +37,7 @@ const tags = ['Freelancers', 'Eventos', 'Comunidades', 'Ventas por DM'];
       <div class="split-visual">
         <div class="stage glow-pink payment-panel">
           <p class="payment-url">app.parmelia.me/pay</p>
-          <p class="mx-auto text-center text-base font-medium text-white/55">25 USDC para cobrar ahora</p>
+          <p class="mx-auto text-center text-base font-medium text-white/55">{t.amount}</p>
 
           <svg class="payment-transfer" viewBox="0 0 360 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <g transform="translate(28 22) scale(.36)">
@@ -39,7 +54,7 @@ const tags = ['Freelancers', 'Eventos', 'Comunidades', 'Ventas por DM'];
             </g>
           </svg>
 
-          <ShareChannels />
+          <ShareChannels label={t.share} />
         </div>
       </div>
     </div>

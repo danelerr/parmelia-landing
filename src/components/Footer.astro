@@ -1,11 +1,48 @@
 ---
+import { getLang } from '../i18n';
+
+const lang = getLang(Astro.currentLocale);
+const prefix = lang === 'en' ? '/en' : '';
+const home = `${prefix}/`;
+const t = {
+  es: {
+    tagline: 'Parmelia es una app de pagos no custodial: envía, recibe y cobra USDC con links, QR y usernames.',
+    productHead: 'Producto',
+    app: 'App',
+    links: 'Links de pago',
+    qr: 'QR y usernames',
+    control: 'Control',
+    communityHead: 'Comunidad',
+    x: 'X de Parmelia',
+    cta: 'Probar Parmelia',
+    rights: '© 2026 Parmelia. Todos los derechos reservados.',
+    madeBy: 'Hecho con cariño por',
+    privacy: 'Privacidad',
+    terms: 'Términos',
+  },
+  en: {
+    tagline: 'Parmelia is a non-custodial payment app: send, receive and request USDC with links, QR and usernames.',
+    productHead: 'Product',
+    app: 'App',
+    links: 'Payment links',
+    qr: 'QR & usernames',
+    control: 'Control',
+    communityHead: 'Community',
+    x: 'Parmelia on X',
+    cta: 'Try Parmelia',
+    rights: '© 2026 Parmelia. All rights reserved.',
+    madeBy: 'Made with love by',
+    privacy: 'Privacy',
+    terms: 'Terms',
+  },
+}[lang];
 ---
 
 <footer class="site-footer">
   <div class="footer-shell">
     <div class="footer-main">
       <div class="footer-brand">
-        <a href="/" class="footer-logo-link" aria-label="Parmelia">
+        <a href={home} class="footer-logo-link" aria-label="Parmelia">
           <svg width="30" height="35" viewBox="0 0 171 198" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path d="M83.3377 0.820332L0.328533 58.6046L8.32585 64.2196L85.1075 118.216L162.136 64.6112L170.082 59.0738L87.3243 0.832505C86.0859 0.0162387 84.5791 0.00937285 83.3377 0.820332Z" fill="#A7D4DE"/>
             <path d="M86.8349 125.155C85.7498 125.866 84.4312 125.863 83.3487 125.146L7.21886 72.2561L0.265018 67.4362L0.196435 98.6944L7.15101 103.514L85.0306 157.652L163.105 103.911L170.078 99.095L170.137 67.8895L163.164 72.6739L86.8349 125.155Z" fill="#DEA6BC"/>
@@ -13,40 +50,42 @@
           </svg>
           <span>Parmelia</span>
         </a>
-        <p>
-          Mueve dinero digital con links, QR y usernames. Así de simple.
-        </p>
+        <p>{t.tagline}</p>
       </div>
 
       <nav class="footer-nav" aria-label="Footer">
         <div class="footer-column">
-          <h4>Producto</h4>
-          <a href="https://app.parmelia.me" target="_blank" rel="noopener noreferrer">App</a>
-          <a href="#payment-links">Links de pago</a>
-          <a href="#qr-usernames">QR y usernames</a>
-          <a href="#control">Control</a>
+          <h4>{t.productHead}</h4>
+          <a href="https://app.parmelia.me?ref=landing_footer" target="_blank" rel="noopener noreferrer" data-cta="footer_app">{t.app}</a>
+          <a href={`${home}#payment-links`}>{t.links}</a>
+          <a href={`${home}#qr-usernames`}>{t.qr}</a>
+          <a href={`${home}#control`}>{t.control}</a>
         </div>
 
         <div class="footer-column">
-          <h4>Comunidad</h4>
-          <a href="https://x.com/parmelia_" target="_blank" rel="noopener noreferrer">X de Parmelia</a>
-          <a href="https://deltav.monad.xyz/startup/parmelia" target="_blank" rel="noopener noreferrer">DeltaV</a>
+          <h4>{t.communityHead}</h4>
+          <a href="https://x.com/parmelia_" target="_blank" rel="noopener noreferrer">{t.x}</a>
           <a href="https://danielcueto.me" target="_blank" rel="noopener noreferrer">Daniel Cueto</a>
           <a href="https://x.com/danelerr" target="_blank" rel="noopener noreferrer">@danelerr</a>
         </div>
       </nav>
 
       <div class="footer-cta">
-        <a href="https://app.parmelia.me" target="_blank" rel="noopener noreferrer">
-          Probar Parmelia
+        <a href="https://app.parmelia.me?ref=landing_footer_cta" target="_blank" rel="noopener noreferrer" data-cta="footer_cta">
+          {t.cta}
         </a>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <p>© 2026 Parmelia. Todos los derechos reservados.</p>
+      <p class="footer-legal">
+        <a href={`${prefix}/privacy`}>{t.privacy}</a>
+        <span aria-hidden="true">·</span>
+        <a href={`${prefix}/terms`}>{t.terms}</a>
+      </p>
+      <p>{t.rights}</p>
       <p>
-        Made with love by <a href="https://danielcueto.me" target="_blank" rel="noopener noreferrer">Daniel Cueto</a>
+        {t.madeBy} <a href="https://danielcueto.me" target="_blank" rel="noopener noreferrer">Daniel Cueto</a>
       </p>
     </div>
   </div>

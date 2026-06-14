@@ -1,23 +1,44 @@
 ---
-const cards = [
-  { mark: '01', title: 'Sin puentes confusos' },
-  { mark: '02', title: 'Sin cambiar de app' },
-  { mark: '03', title: 'Sin estudiar cada red' },
-];
+import { getLang } from '../i18n';
+
+const lang = getLang(Astro.currentLocale);
+const t = {
+  es: {
+    title: 'Trae tu dinero desde otras redes, sin complicarte.',
+    copy: 'La idea es simple: traes dinero desde donde ya lo tienes y Parmelia lo deja listo para usar dentro de la app.',
+    ribbon1: 'Wallet externa a Parmelia',
+    ribbon2: 'Saldo listo para pagar',
+    cards: [
+      { mark: '01', title: 'Sin puentes confusos' },
+      { mark: '02', title: 'Sin cambiar de app' },
+      { mark: '03', title: 'Sin estudiar cada red' },
+    ],
+  },
+  en: {
+    title: 'Bring your money from other networks, without the hassle.',
+    copy: 'The idea is simple: you bring money from where you already have it and Parmelia leaves it ready to use inside the app.',
+    ribbon1: 'External wallet to Parmelia',
+    ribbon2: 'Balance ready to pay',
+    cards: [
+      { mark: '01', title: 'No confusing bridges' },
+      { mark: '02', title: 'No switching apps' },
+      { mark: '03', title: 'No studying each network' },
+    ],
+  },
+}[lang];
+const cards = t.cards;
 ---
 
 <section id="cross-chain" class="landing-section">
   <div class="landing-shell">
     <div class="copy-stack" data-reveal>
-      <h2 class="section-title">Trae tu dinero desde otras redes, sin complicarte.</h2>
-      <p class="section-copy">
-        La idea es simple: traes dinero desde donde ya lo tienes y Parmelia lo deja listo para usar dentro de la app.
-      </p>
+      <h2 class="section-title">{t.title}</h2>
+      <p class="section-copy">{t.copy}</p>
     </div>
 
     <div class="bridge-ribbons" data-reveal>
-      <div class="bridge-line"><span>Wallet externa a Parmelia</span></div>
-      <div class="bridge-line"><span>Saldo listo para pagar</span></div>
+      <div class="bridge-line"><span>{t.ribbon1}</span></div>
+      <div class="bridge-line"><span>{t.ribbon2}</span></div>
     </div>
 
     <div class="feature-grid" data-reveal-stagger>

@@ -61,13 +61,20 @@ $g.DrawString('Mueve dinero digital', $titleFont, $white, 270, 170)
 $skyBrush = New-Object System.Drawing.SolidBrush([System.Drawing.ColorTranslator]::FromHtml('#9CE3F4'))
 $g.DrawString('como mandar un mensaje.', $titleFont, $skyBrush, 270, 258)
 
-$subFont = New-Object System.Drawing.Font('Segoe UI', 26)
-$muted = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(176, 245, 245, 243))
-$g.DrawString('Cobra con links, paga con QR y envía a usernames.', $subFont, $muted, 274, 380)
+$subFont = New-Object System.Drawing.Font('Segoe UI', 25)
+$muted = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(180, 245, 245, 243))
+$g.DrawString('Cobra con links, paga con QR y envía a usernames.', $subFont, $muted, 274, 366)
+
+# Feature line — surfaces the card + QR Bolivia + no fees
+$featFont = New-Object System.Drawing.Font('Segoe UI Semibold', 21, [System.Drawing.FontStyle]::Bold)
+$cream = New-Object System.Drawing.SolidBrush([System.Drawing.ColorTranslator]::FromHtml('#DED9A6'))
+$g.DrawString('Tarjeta con stablecoins   ·   QR de Bolivia   ·   0% comisiones', $featFont, $cream, 274, 424)
 
 $urlFont = New-Object System.Drawing.Font('Segoe UI Semibold', 24, [System.Drawing.FontStyle]::Bold)
-$cream = New-Object System.Drawing.SolidBrush([System.Drawing.ColorTranslator]::FromHtml('#DED9A6'))
-$g.DrawString('parmelia.me', $urlFont, $cream, 274, 520)
+$g.DrawString('parmelia.me', $urlFont, $white, 274, 522)
+$tagFont = New-Object System.Drawing.Font('Segoe UI', 20)
+$faint = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(140, 245, 245, 243))
+$g.DrawString('Construido sobre Arbitrum', $tagFont, $faint, 470, 526)
 
 $g.Dispose()
 $bmp.Save("$PSScriptRoot\..\public\og.png", [System.Drawing.Imaging.ImageFormat]::Png)

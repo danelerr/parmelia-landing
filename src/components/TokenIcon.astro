@@ -1,11 +1,11 @@
 ---
 import { Image } from 'astro:assets';
 import usdcLogo from '../assets/Circle_USDC_Logo.svg.png';
-import monLogo from '../assets/monad-clean.png';
+import ethLogo from '../assets/eth-round.png';
 import wbtcLogo from '../assets/Bitcoin.svg.png';
 
 interface Props {
-  token: 'USDC' | 'MON' | 'WBTC';
+  token: 'USDC' | 'ETH' | 'WBTC';
   className?: string;
 }
 
@@ -13,7 +13,7 @@ const { token, className = '' } = Astro.props;
 
 const meta = {
   USDC: { src: usdcLogo, label: 'USDC' },
-  MON: { src: monLogo, label: 'Monad (MON)' },
+  ETH: { src: ethLogo, label: 'Ethereum (ETH)' },
   WBTC: { src: wbtcLogo, label: 'Wrapped Bitcoin (WBTC)' },
 } as const;
 

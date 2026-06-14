@@ -1,0 +1,81 @@
+---
+import '../styles/global.css';
+import Navbar from './Navbar.astro';
+import Hero from './Hero.astro';
+import ProofBar from './ProofBar.astro';
+import BrowserFirst from './BrowserFirst.astro';
+import PaymentLinks from './PaymentLinks.astro';
+import QRUsernames from './QRUsernames.astro';
+import NoFees from './NoFees.astro';
+import MultiAsset from './MultiAsset.astro';
+import Swaps from './Swaps.astro';
+import EarnMode from './EarnMode.astro';
+import CrossChain from './CrossChain.astro';
+import Control from './Control.astro';
+import ComingSoon from './ComingSoon.astro';
+import Faq from './Faq.astro';
+import CTAFinal from './CTAFinal.astro';
+import Footer from './Footer.astro';
+---
+
+<Navbar />
+
+<main>
+  <Hero />
+  <ProofBar />
+  <BrowserFirst />
+  <PaymentLinks />
+  <QRUsernames />
+  <NoFees />
+  <MultiAsset />
+  <Swaps />
+  <EarnMode />
+  <CrossChain />
+  <Control />
+  <ComingSoon />
+  <Faq />
+  <CTAFinal />
+</main>
+
+<Footer />
+
+<!-- Scroll reveal (IntersectionObserver + CSS) + CTA analytics — no JS animation library -->
+<script>
+  // ----- Scroll reveal -----
+  const revealEls = document.querySelectorAll<HTMLElement>('[data-reveal], [data-reveal-stagger]');
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (reduce || !('IntersectionObserver' in window)) {
+    revealEls.forEach((el) => el.classList.add('is-revealed'));
+  } else {
+    const io = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target as HTMLElement;
+          if (el.hasAttribute('data-reveal-stagger')) {
+            Array.from(el.children).forEach((child, i) => {
+              (child as HTMLElement).style.transitionDelay = `${i * 0.08}s`;
+            });
+          }
+          el.classList.add('is-revealed');
+          obs.unobserve(el);
+        });
+      },
+      { rootMargin: '0px 0px -10% 0px', threshold: 0.05 }
+    );
+    revealEls.forEach((el) => io.observe(el));
+  }
+
+  // ----- CTA analytics -----
+  // Vendor-agnostic: fires to Plausible / Umami / gtag if present, no-ops otherwise.
+  document.querySelectorAll<HTMLElement>('[data-cta]').forEach((el) => {
+    el.addEventListener('click', () => {
+      const location = el.dataset.cta || 'unknown';
+      const w = window as any;
+      w.plausible?.('CTA click', { props: { location } });
+      w.umami?.track?.('CTA click', { location });
+      w.gtag?.('event', 'cta_click', { location });
+    });
+  });
+</script>

@@ -1,27 +1,44 @@
 ---
 import { Image } from 'astro:assets';
-import monadLogo from '../assets/monad-clean.png';
+import arbitrumLogo from '../assets/arbitrum-arb-logo.png';
+import { getLang } from '../i18n';
 
-const stats = [
-  { value: '0%', label: 'Comisiones entre usuarios' },
-  { value: '100%', label: 'Tu dinero, siempre tuyo' },
-  { value: '3', label: 'Activos: USDC, MON y WBTC' },
-];
+const lang = getLang(Astro.currentLocale);
+const t = {
+  es: {
+    stats: [
+      { value: '0%', label: 'Comisiones entre usuarios' },
+      { value: '100%', label: 'Tu dinero, siempre tuyo' },
+      { value: '3', label: 'Activos: USDC, ETH y WBTC' },
+    ],
+    built: 'Construido sobre Arbitrum',
+    note: 'Pensado para mover dólares digitales en Bolivia y LATAM.',
+  },
+  en: {
+    stats: [
+      { value: '0%', label: 'Fees between users' },
+      { value: '100%', label: 'Your money, always yours' },
+      { value: '3', label: 'Assets: USDC, ETH and WBTC' },
+    ],
+    built: 'Built on Arbitrum',
+    note: 'Made to move digital dollars in Bolivia and LATAM.',
+  },
+}[lang];
 ---
 
 <section id="proof" class="proof-bar" data-reveal>
   <div class="proof-inner">
-    {stats.map((s) => (
+    {t.stats.map((s) => (
       <div class="proof-stat">
         <span class="proof-value">{s.value}</span>
         <span class="proof-label">{s.label}</span>
       </div>
     ))}
     <div class="proof-stat proof-built">
-      <Image src={monadLogo} alt="Monad" width={68} height={68} loading="lazy" decoding="async" />
-      <span class="proof-label">Construido sobre Monad</span>
+      <Image src={arbitrumLogo} alt="Arbitrum" width={68} height={68} loading="lazy" decoding="async" />
+      <span class="proof-label">{t.built}</span>
     </div>
   </div>
 
-  <p class="proof-note">Pensado para mover dólares digitales en Bolivia y LATAM.</p>
+  <p class="proof-note">{t.note}</p>
 </section>

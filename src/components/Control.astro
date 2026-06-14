@@ -1,9 +1,30 @@
 ---
-const points = [
-  { dot: 'var(--glow-sky)', title: 'Solo tú lo mueves', desc: 'Nadie más puede tocar tus fondos. Ni nosotros: Parmelia no los guarda por ti.' },
-  { dot: 'var(--glow-pink)', title: 'Entras con tu huella o tu cara', desc: 'Sin contraseñas ni frases raras que memorizar.' },
-  { dot: 'var(--glow-gold)', title: 'Verificable de verdad', desc: 'Cada movimiento queda registrado y lo puedes comprobar. Sin letra chica.' },
-];
+import { getLang } from '../i18n';
+
+const lang = getLang(Astro.currentLocale);
+const t = {
+  es: {
+    title: 'Tu dinero sigue siendo tuyo.',
+    copy: 'Aquí tu dinero es tuyo de verdad. Puedes enviarlo, cambiarlo o sacarlo cuando quieras, sin pedir permiso.',
+    micro: 'Lo técnico existe debajo. La experiencia no tiene que parecer técnica.',
+    points: [
+      { dot: 'var(--glow-sky)', title: 'Solo tú lo mueves', desc: 'Nadie más puede tocar tus fondos. Ni nosotros: Parmelia no los guarda por ti.' },
+      { dot: 'var(--glow-pink)', title: 'Entras con tu huella o tu cara', desc: 'Sin contraseñas ni frases raras que memorizar.' },
+      { dot: 'var(--glow-gold)', title: 'Verificable de verdad', desc: 'Cada movimiento queda registrado y lo puedes comprobar. Sin letra chica.' },
+    ],
+  },
+  en: {
+    title: 'Your money stays yours.',
+    copy: 'Here your money is truly yours. You can send it, swap it or withdraw it whenever you want, without asking permission.',
+    micro: 'The technical part lives underneath. The experience doesn’t have to feel technical.',
+    points: [
+      { dot: 'var(--glow-sky)', title: 'Only you move it', desc: 'No one else can touch your funds. Not even us: Parmelia doesn’t hold them for you.' },
+      { dot: 'var(--glow-pink)', title: 'You sign in with your fingerprint or face', desc: 'No passwords or weird phrases to memorize.' },
+      { dot: 'var(--glow-gold)', title: 'Truly verifiable', desc: 'Every movement is recorded and you can check it. No fine print.' },
+    ],
+  },
+}[lang];
+const points = t.points;
 ---
 
 <section id="control" class="landing-section">
@@ -24,10 +45,8 @@ const points = [
       </div>
 
       <div class="split-copy">
-        <h2 class="section-title">Tu dinero sigue siendo tuyo.</h2>
-        <p class="section-copy">
-          Aquí tu dinero es tuyo de verdad. Puedes enviarlo, cambiarlo o sacarlo cuando quieras, sin pedir permiso.
-        </p>
+        <h2 class="section-title">{t.title}</h2>
+        <p class="section-copy">{t.copy}</p>
 
         <div class="point-list" data-reveal-stagger>
           {points.map((point) => (
@@ -38,9 +57,7 @@ const points = [
           ))}
         </div>
 
-        <p class="microcopy" style="text-align:left; margin:6px 0 0;">
-          Lo técnico existe debajo. La experiencia no tiene que parecer técnica.
-        </p>
+        <p class="microcopy" style="text-align:left; margin:6px 0 0;">{t.micro}</p>
       </div>
     </div>
   </div>
