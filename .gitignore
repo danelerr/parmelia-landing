@@ -24,3 +24,18 @@ pnpm-debug.log*
 .idea/
 
 .vercel
+
+# Documents and assets
+*.pdf
+*.pptx
+*.log
+Captura de pantalla*
+screenshots/
+supeorpromt.txt
+elton_transcript.md
+avasettle.txt
+.cache/
+.playwright-cli/
+output/
+geoscan/
+
