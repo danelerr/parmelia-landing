@@ -4,10 +4,13 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
+// Covers are built separately by `scripts/build-covers.mjs` (Chrome render with
+// the real Bricolage display font). This script handles favicons (public/),
+// profiles and app icons (brand/social-assets/). It does NOT generate covers.
 const publicDir = path.join(root, 'public');
-const socialsDir = path.join(publicDir, 'socials');
-const socialOptionsDir = path.join(socialsDir, 'options');
-const parmeliaLinksIconsDir = path.join(publicDir, 'parmelia-links-icons');
+const brandAssetsDir = path.join(root, 'brand', 'social-assets');
+const socialsDir = path.join(brandAssetsDir, 'socials');
+const gatoPagoAppIconsDir = path.join(brandAssetsDir, 'gatopago-app-icons');
 const cacheDir = path.join(root, '.cache');
 const fontCacheDir = path.join(cacheDir, 'fontconfig');
 
@@ -22,24 +25,23 @@ const colors = {
   surface: '#101117',
   text: '#F5F5F3',
   muted: 'rgba(245,245,243,0.66)',
-  sky: '#A7D4DE',
-  pink: '#DEA6BC',
-  cream: '#DED9A6',
-  glowSky: '#9CE3F4',
-  glowPink: '#F4A9CF',
-  glowGold: '#EFE08C',
+  sky: '#F85239',
+  pink: '#CF3433',
+  cream: '#F6C65B',
+  glowSky: '#FF8A72',
+  glowPink: '#F85239',
+  glowGold: '#F6C65B',
 };
 
 const logoPaths = `
-  <path d="M83.3377 0.820332L0.328533 58.6046L8.32585 64.2196L85.1075 118.216L162.136 64.6112L170.082 59.0738L87.3243 0.832505C86.0859 0.0162387 84.5791 0.00937285 83.3377 0.820332Z" fill="${colors.sky}"/>
-  <path d="M86.8349 125.155C85.7498 125.866 84.4312 125.863 83.3487 125.146L7.21886 72.2561L0.265018 67.4362L0.196435 98.6944L7.15101 103.514L85.0306 157.652L163.105 103.911L170.078 99.095L170.137 67.8895L163.164 72.6739L86.8349 125.155Z" fill="${colors.pink}"/>
-  <path d="M86.7497 164.587C85.6645 165.298 84.3459 165.295 83.2635 164.578L7.13366 111.688L0.179813 106.869L0.11123 138.127L7.0658 142.947L84.9454 197.085L163.02 143.344L169.993 138.527L170.052 107.322L163.079 112.106L86.7497 164.587Z" fill="${colors.cream}"/>
+  <path fill="${colors.sky}" d="M8 20V8h12v4h4v4h16v-4h4V8h12v12h4v28h-4v4h-8v4H16v-4H8v-4H4V20h4Z"/>
+  <path fill="${colors.pink}" d="M12 12h8v4h4v8h-4v-4h-8V12Zm32 4h4v-4h8v8h-8v4h-4v-8ZM24 16h4v8h-4v-8Zm12 0h4v8h-4v-8ZM16 48h32v4h-4v4H20v-4h-4v-4Z"/>
+  <path fill="${colors.black}" d="M16 32h8v8h-8v-8Zm24 0h8v8h-8v-8ZM28 40h8v4h-8v-4Zm-4 4h4v4h-8v-4h4Zm12 0h4v4h-8v-4h4ZM4 36h12v4H4v-4Zm0 8h12v4H4v-4Zm44-8h12v4H48v-4Zm0 8h12v4H48v-4Z"/>
 `;
 
 function logoMark({ x, y, width, opacity = 1, shadow = true }) {
-  const height = width * (198 / 171);
   const filter = shadow ? ' filter="url(#logoShadow)"' : '';
-  return `<g transform="translate(${x} ${y}) scale(${width / 171})" opacity="${opacity}"${filter}>${logoPaths}</g>`;
+  return `<g transform="translate(${x} ${y}) scale(${width / 64})" opacity="${opacity}"${filter} shape-rendering="crispEdges">${logoPaths}</g>`;
 }
 
 function defs() {
@@ -81,18 +83,6 @@ function defs() {
   `;
 }
 
-function background(width, height) {
-  return `
-    <rect width="${width}" height="${height}" fill="${colors.black}"/>
-    <rect width="${width}" height="${height}" fill="url(#skyGlow)"/>
-    <rect width="${width}" height="${height}" fill="url(#pinkGlow)"/>
-    <rect width="${width}" height="${height}" fill="url(#goldGlow)"/>
-    <rect width="${width}" height="${height}" fill="url(#glyphs)" opacity=".32"/>
-    <path d="M ${-width * 0.08} ${height * 0.74} C ${width * 0.24} ${height * 0.5}, ${width * 0.45} ${height * 0.98}, ${width * 0.72} ${height * 0.62} S ${width * 1.04} ${height * 0.38}, ${width * 1.12} ${height * 0.26}" fill="none" stroke="url(#brandLine)" stroke-width="${Math.max(2, width * 0.0025)}" stroke-opacity=".18"/>
-    <path d="M ${width * 0.05} ${height * 0.2} C ${width * 0.36} ${height * 0.08}, ${width * 0.55} ${height * 0.42}, ${width * 0.9} ${height * 0.18}" fill="none" stroke="${colors.text}" stroke-width="${Math.max(1, width * 0.0012)}" stroke-opacity=".055"/>
-  `;
-}
-
 function avatarBackground(width, height) {
   return `
     <rect width="${width}" height="${height}" fill="${colors.black}"/>
@@ -100,50 +90,6 @@ function avatarBackground(width, height) {
     <rect width="${width}" height="${height}" fill="url(#pinkGlow)" opacity=".54"/>
     <rect width="${width}" height="${height}" fill="url(#goldGlow)" opacity=".42"/>
     <rect width="${width}" height="${height}" fill="url(#glyphs)" opacity=".18"/>
-  `;
-}
-
-function heroGlyphField(width, height, { opacity = 1, cell = 54 } = {}) {
-  const glyphs = ['+', '·', '/', '\\', 'x', '=', '*', 'o', ':'];
-  const brand = [
-    [167, 212, 222],
-    [222, 166, 188],
-    [222, 217, 166],
-  ];
-  const rows = Math.ceil(height / cell) + 1;
-  const cols = Math.ceil(width / cell) + 1;
-  let field = `<g opacity="${opacity}" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="${Math.round(cell * 0.22)}" text-anchor="middle" dominant-baseline="middle">`;
-
-  for (let y = 0; y < rows; y++) {
-    for (let x = 0; x < cols; x++) {
-      const wave = Math.sin(x * 0.32 + y * 0.22 - 0.9);
-      if (wave < -0.1) continue;
-
-      const glyph = glyphs[(x * 7 + y * 13) % glyphs.length];
-      const px = x * cell + cell / 2;
-      const py = y * cell + cell / 2;
-      const highlight = wave > 0.82;
-      const alpha = highlight ? 0.14 + (wave - 0.82) * 0.42 : 0.026 + Math.max(0, wave) * 0.036;
-      const rgb = highlight ? brand[(x + y) % brand.length] : [255, 255, 255];
-      field += `<text x="${px}" y="${py}" fill="rgba(${rgb[0]},${rgb[1]},${rgb[2]},${alpha.toFixed(3)})">${glyph}</text>`;
-    }
-  }
-
-  return `${field}</g>`;
-}
-
-function heroCoverBackground(width, height, { square = false } = {}) {
-  const stroke = Math.max(2, width * 0.0024);
-  const cell = square ? Math.max(48, width * 0.06) : Math.max(48, height * 0.12);
-
-  return `
-    <rect width="${width}" height="${height}" fill="${colors.black}"/>
-    <rect width="${width}" height="${height}" fill="url(#skyGlow)" opacity=".95"/>
-    <rect width="${width}" height="${height}" fill="url(#pinkGlow)" opacity=".9"/>
-    <rect width="${width}" height="${height}" fill="url(#goldGlow)" opacity=".75"/>
-    ${heroGlyphField(width, height, { opacity: 0.9, cell })}
-    <path d="M ${-width * 0.08} ${height * 0.73} C ${width * 0.19} ${height * 0.58}, ${width * 0.41} ${height * 0.96}, ${width * 0.69} ${height * 0.7} S ${width * 1.04} ${height * 0.34}, ${width * 1.12} ${height * 0.54}" fill="none" stroke="${colors.sky}" stroke-width="${stroke}" stroke-opacity=".24"/>
-    <path d="M ${width * 0.05} ${height * 0.24} C ${width * 0.34} ${height * 0.1}, ${width * 0.58} ${height * 0.38}, ${width * 0.92} ${height * 0.18}" fill="none" stroke="${colors.text}" stroke-width="${Math.max(1, stroke * 0.45)}" stroke-opacity=".07"/>
   `;
 }
 
@@ -156,14 +102,14 @@ function faviconSvg() {
   <rect width="${size}" height="${size}" rx="30" fill="${colors.black}"/>
   <rect width="${size}" height="${size}" rx="30" fill="url(#skyGlow)"/>
   <rect width="${size}" height="${size}" rx="30" fill="url(#pinkGlow)" opacity=".9"/>
-  ${logoMark({ x: (size - markWidth) / 2, y: 20, width: markWidth, shadow: false })}
+  ${logoMark({ x: (size - markWidth) / 2, y: (size - markWidth) / 2, width: markWidth, shadow: false })}
 </svg>
 `;
 }
 
 function appIconSvg({ size, maskable = false }) {
   const markWidth = Math.round(size * (maskable ? 0.48 : 0.58));
-  const markHeight = markWidth * (198 / 171);
+  const markHeight = markWidth;
   const corner = maskable ? 0 : Math.round(size * 0.18);
 
   return `<?xml version="1.0" encoding="UTF-8"?>
@@ -186,7 +132,7 @@ function appIconSvg({ size, maskable = false }) {
 
 function profileSvg({ width, height }) {
   const markWidth = Math.round(width * 0.54);
-  const markHeight = markWidth * (198 / 171);
+  const markHeight = markWidth;
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" fill="none">
   ${defs()}
@@ -201,78 +147,11 @@ function profileSvg({ width, height }) {
 `;
 }
 
-function coverSvg({ width, height, square = false, variant = 'try' }) {
-  const padX = Math.round(width * (square ? 0.09 : 0.073));
-  const titleSize = square ? Math.round(width * 0.105) : Math.round(height * 0.17);
-  const smallSize = square ? Math.round(width * 0.044) : Math.round(height * 0.065);
-  const logoWidth = square ? Math.round(width * 0.36) : Math.round(height * 0.52);
-  const logoHeight = logoWidth * (198 / 171);
-  const textX = square ? width / 2 : padX;
-  const anchor = square ? 'middle' : 'start';
-  const logoX = square ? (width - logoWidth) / 2 : width - padX - logoWidth;
-  const logoY = square ? Math.round(height * 0.1) : (height - logoHeight) / 2;
-  const textY = square ? Math.round(height * 0.62) : Math.round(height * 0.5);
-  const showLogo = variant !== 'wordmark';
-  const logoOpacity = variant === 'quiet' ? 0.92 : 0.96;
-
-  const copy = {
-    try: {
-      primary: 'try parmelia.me',
-      secondary: '',
-    },
-    domain: {
-      primary: 'parmelia.me',
-      secondary: '',
-    },
-    quiet: {
-      primary: '',
-      secondary: '',
-    },
-    wordmark: {
-      primary: 'Parmelia',
-      secondary: 'parmelia.me',
-    },
-  }[variant] ?? {
-    primary: 'try parmelia.me',
-    secondary: '',
-  };
-
-  return `<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" fill="none">
-  ${defs()}
-  ${heroCoverBackground(width, height, { square })}
-  <circle cx="${square ? width / 2 : width * 0.78}" cy="${square ? height * 0.33 : height * 0.52}" r="${square ? width * 0.34 : height * 0.56}" fill="rgba(255,255,255,.025)" filter="url(#softBlur)"/>
-  ${showLogo ? logoMark({ x: logoX, y: logoY, width: logoWidth, opacity: logoOpacity }) : ''}
-  ${
-    copy.primary
-      ? `<text x="${textX}" y="${textY}" text-anchor="${anchor}" fill="${colors.text}" font-family="'Bricolage Grotesque', 'Inter', 'Segoe UI', Arial, sans-serif" font-size="${titleSize}" font-weight="800" letter-spacing="-.03em">${copy.primary}</text>`
-      : ''
-  }
-  ${
-    copy.secondary
-      ? `<text x="${textX}" y="${textY + titleSize * 0.7}" text-anchor="${anchor}" fill="${colors.text}" fill-opacity=".6" font-family="'Inter', 'Segoe UI', Arial, sans-serif" font-size="${smallSize}" font-weight="650">${copy.secondary}</text>`
-      : ''
-  }
-</svg>
-`;
-}
-
 const socialTargets = [
   { network: 'x', kind: 'profile', width: 400, height: 400 },
-  { network: 'x', kind: 'cover', width: 1500, height: 500, variant: 'try' },
   { network: 'instagram', kind: 'profile', width: 1080, height: 1080 },
-  { network: 'instagram', kind: 'cover', width: 1080, height: 1080, square: true, variant: 'try' },
   { network: 'linkedin', kind: 'profile', width: 400, height: 400 },
-  { network: 'linkedin', kind: 'cover', width: 1584, height: 396, variant: 'try' },
   { network: 'facebook', kind: 'profile', width: 1080, height: 1080 },
-  { network: 'facebook', kind: 'cover', width: 1640, height: 624, variant: 'try' },
-];
-
-const coverOptions = [
-  { key: 'a-try', label: 'try parmelia.me', variant: 'try' },
-  { key: 'b-domain', label: 'parmelia.me', variant: 'domain' },
-  { key: 'c-logo-only', label: 'logo only', variant: 'quiet' },
-  { key: 'd-wordmark', label: 'wordmark', variant: 'wordmark' },
 ];
 
 async function renderSvgToPng(svg, outputPath, width, height) {
@@ -285,8 +164,7 @@ async function renderSvgToPng(svg, outputPath, width, height) {
 async function main() {
   await mkdir(fontCacheDir, { recursive: true });
   await mkdir(socialsDir, { recursive: true });
-  await mkdir(socialOptionsDir, { recursive: true });
-  await mkdir(parmeliaLinksIconsDir, { recursive: true });
+  await mkdir(gatoPagoAppIconsDir, { recursive: true });
   ({ default: sharp } = await import('sharp'));
 
   const favicon = faviconSvg();
@@ -304,54 +182,43 @@ async function main() {
   ];
   for (const icon of appIcons) {
     const svg = appIconSvg({ size: icon.size, maskable: icon.maskable });
-    await writeFile(path.join(parmeliaLinksIconsDir, `${icon.name}.svg`), svg, 'utf8');
-    await renderSvgToPng(svg, path.join(parmeliaLinksIconsDir, `${icon.name}.png`), icon.size, icon.size);
+    await writeFile(path.join(gatoPagoAppIconsDir, `${icon.name}.svg`), svg, 'utf8');
+    await renderSvgToPng(svg, path.join(gatoPagoAppIconsDir, `${icon.name}.png`), icon.size, icon.size);
   }
 
+  // Profiles only — covers are built by scripts/build-covers.mjs.
   for (const target of socialTargets) {
-    const svg =
-      target.kind === 'profile'
-        ? profileSvg(target)
-        : coverSvg({ ...target, square: Boolean(target.square), variant: target.variant });
+    const svg = profileSvg(target);
     const base = `${target.network}-${target.kind}`;
     await writeFile(path.join(socialsDir, `${base}.svg`), svg, 'utf8');
     await renderSvgToPng(svg, path.join(socialsDir, `${base}.png`), target.width, target.height);
   }
 
-  const coverTargets = socialTargets.filter((target) => target.kind === 'cover');
-  for (const target of coverTargets) {
-    for (const option of coverOptions) {
-      const svg = coverSvg({
-        ...target,
-        square: Boolean(target.square),
-        variant: option.variant,
-      });
-      const base = `${target.network}-cover-${option.key}`;
-      await writeFile(path.join(socialOptionsDir, `${base}.svg`), svg, 'utf8');
-      await renderSvgToPng(svg, path.join(socialOptionsDir, `${base}.png`), target.width, target.height);
-    }
-  }
+  const readme = `# GatoPago social assets
 
-  const readme = `# Parmelia social assets
+These assets live in \`brand/social-assets/\` (out of \`public/\`, so they are NOT
+deployed with the site).
 
-Generated from \`scripts/generate-brand-assets.mjs\`.
-
-Main profile assets are intentionally simple: Parmelia logo over a dark, lightly detailed background.
-Main cover assets use option A: \`try parmelia.me\`.
+- **Profiles + app icons:** generated by \`scripts/generate-brand-assets.mjs\` (sharp).
+  Profiles are intentionally simple: GatoPago logo over a dark, detailed background.
+- **Covers:** generated by \`scripts/build-covers.mjs\` (rendered via Chrome with the
+  real Recursive variable font). Current promise, 2nd line in the brand
+  gradient. Spanish for Facebook/Instagram, English for X/LinkedIn.
 
 | File | Size | Usage |
 | --- | ---: | --- |
 ${socialTargets
   .map((target) => `| \`${target.network}-${target.kind}.png\` | ${target.width}x${target.height} | ${target.network} ${target.kind} |`)
   .join('\n')}
+| \`x-cover.png\` | 1500x500 | x cover |
+| \`linkedin-cover.png\` | 1584x396 | linkedin cover |
+| \`facebook-cover.png\` | 1640x624 | facebook cover |
+| \`instagram-cover.png\` | 1080x1080 | instagram cover (square) |
 
-Cover alternatives live in \`public/socials/options/\`:
+GatoPago app icons live in \`gatopago-app-icons/\`.
 
-${coverOptions.map((option) => `- \`${option.key}\`: ${option.label}`).join('\n')}
-
-Parmelia Links app icons live in \`public/parmelia-links-icons/\`: \`icon-192.png\`, \`icon-512.png\`, \`maskable-512.png\`.
-
-Favicons generated in \`public/\`: \`favicon.svg\`, \`favicon-16x16.png\`, \`favicon-32x32.png\`, \`favicon-48x48.png\`, \`favicon.ico\`, \`apple-touch-icon.png\`.
+Favicons (used by the site) are generated into \`public/\`: \`favicon.svg\`,
+\`favicon-16x16.png\`, \`favicon-32x32.png\`, \`favicon-48x48.png\`, \`apple-touch-icon.png\`.
 `;
 
   await writeFile(path.join(socialsDir, 'README.md'), readme, 'utf8');

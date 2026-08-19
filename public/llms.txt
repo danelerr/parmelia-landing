@@ -1,0 +1,33 @@
+# GatoPago
+
+> Your dollars already know how to move. GatoPago is a programmable onchain account for receiving, using, and growing digital dollars without giving up custody. The current public version is an Alpha on Arbitrum Sepolia and uses test funds.
+
+GatoPago Personal organizes USDC around a simple money cycle: Receive, Available, Growing, and Use. Users can create charges with payment links, pay through QR codes, send to usernames, swap USDC and ETH, and choose to place part of their USDC in Aave V3 through a guided flow. Aave rates are variable and DeFi involves risk. Technical routes, costs, and contracts remain available for inspection.
+
+GatoPago uses self-custodial smart accounts secured by passkeys. Every movement requires an active key. Assisted recovery can initiate a key replacement with a 48-hour delay, during which an active key can cancel it. GatoPago charges a 0% fee between its users; networks, protocols, conversions, or external providers may charge their own costs.
+
+GatoPago Card is a strategic product under validation, not an active service. Provider, coverage, eligibility, pricing, and verification requirements are not final. The developer API supports payment intents, checkout, sandbox, signed webhooks, retries, and onchain payment status for pilot integrations.
+
+## Product
+
+- [Homepage — Spanish](https://parmelia.me/): The main GatoPago Personal story: receive, keep Available, move part to Growing, and use USDC while retaining control.
+- [Homepage — English](https://parmelia.me/en/): English version of the GatoPago Personal story.
+- [Try the public Alpha](https://app.parmelia.me/): Test GatoPago with test funds on Arbitrum Sepolia.
+- [Frequently asked questions](https://parmelia.me/#faq): Current status, custody and recovery, Aave risks, fees, withdrawals, Card status, and possible future verification requirements.
+
+## Developers
+
+- [Developer docs](https://parmelia.me/docs): Payment intents, hosted checkout, sandbox, signed webhooks, idempotency, errors, and onchain reference.
+- [Developer dashboard](https://dashboard.parmelia.me/): Manage API keys, test payment flows, and integration settings.
+
+## Company and legal
+
+- [Privacy policy — Spanish](https://parmelia.me/privacy/)
+- [Privacy policy — English](https://parmelia.me/en/privacy/)
+- [Terms of service — Spanish](https://parmelia.me/terms/)
+- [Terms of service — English](https://parmelia.me/en/terms/)
+
+## Follow
+
+- [GatoPago on X](https://x.com/parmelia_)
+- [Founder: Daniel Cueto](https://danielcueto.me/en/)

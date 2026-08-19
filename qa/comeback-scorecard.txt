@@ -1,11 +1,11 @@
-Parmelia definitive pitch QA
+GatoPago definitive pitch QA
 
 Output:
-- presentations/parmelia-pitch-definitivo-arbitrum.pptx
+- presentations/gatopago-pitch-definitivo-arbitrum.pptx
 - 11 slides, 1280x720, 185946 bytes
 
 Profile:
-- Product/platform pitch, modern Parmelia brand system.
+- Product/platform pitch, modern GatoPago brand system.
 - Final narrative corrects old Monad positioning to Arbitrum.
 
 Score: 46/50
