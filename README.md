@@ -1,6 +1,6 @@
-# Parmelia — landing
+# GatoPago — landing
 
-Landing page de Parmelia. Astro + Tailwind v4, sin librerías JS de animación
+Landing page de GatoPago. Astro + Tailwind v4, sin librerías JS de animación
 (los reveals usan IntersectionObserver + CSS) y con imágenes optimizadas vía
 `astro:assets`.
 

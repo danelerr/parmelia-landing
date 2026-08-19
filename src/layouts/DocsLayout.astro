@@ -1,0 +1,66 @@
+---
+import '@fontsource-variable/recursive/full.css';
+import '../styles/global.css';
+import GatoPagoMark from '../components/GatoPagoMark.astro';
+import { brand } from '../config/brand';
+
+const { frontmatter, headings = [] } = Astro.props;
+const title = frontmatter?.title ?? 'Docs';
+const description =
+  frontmatter?.description ?? 'Create stablecoin charges and receive signed onchain payment confirmations with the GatoPago API.';
+const pageTitle = `${title} — GatoPago`;
+const canonical = `${brand.siteUrl}/docs`;
+const ogImage = `${brand.siteUrl}/og.png`;
+
+// Sidebar from the page's H2 headings.
+const navHeadings = headings.filter((h: { depth: number }) => h.depth === 2);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/Logo_gatopago.svg" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <meta name="theme-color" content="#0A0A0B" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script is:inline>document.documentElement.classList.add('js');</script>
+  </head>
+  <body class="docs-body antialiased">
+    <header class="docs-top">
+      <a href="/" class="site-nav-brand" aria-label="GatoPago — home">
+        <GatoPagoMark decorative loading="eager" />
+        <span>GatoPago</span>
+        <span class="docs-top-tag">Docs</span>
+      </a>
+      <nav class="docs-top-links">
+        <a href={brand.dashboardUrl} target="_blank" rel="noopener noreferrer">Dashboard</a>
+        <a href="/" class="docs-top-back">← Back to site</a>
+      </nav>
+    </header>
+
+    <div class="docs-shell">
+      <aside class="docs-sidebar">
+        <nav aria-label="On this page">
+          <p class="docs-sidebar-label">On this page</p>
+          {navHeadings.map((h: { slug: string; text: string }) => (
+            <a href={`#${h.slug}`}>{h.text}</a>
+          ))}
+        </nav>
+      </aside>
+
+      <main class="docs-content">
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>

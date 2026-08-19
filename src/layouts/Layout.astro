@@ -1,6 +1,6 @@
 ---
-import '@fontsource-variable/inter/index.css';
-import '@fontsource-variable/bricolage-grotesque/opsz.css';
+import '@fontsource-variable/recursive/full.css';
+import { brand } from '../config/brand';
 
 interface Props {
   title?: string;
@@ -12,14 +12,14 @@ const lang = (Astro.currentLocale ?? 'es') as 'es' | 'en';
 
 const defaults = {
   es: {
-    title: 'Parmelia — Mueve dinero digital como mandar un mensaje',
+    title: 'GatoPago — Tus dólares ya saben moverse',
     description:
-      'Cobra con links, paga con QR y envía a usernames. Mover dinero digital, fácil para ti y para quien recibe. Sin descargar apps, sin comisiones entre usuarios.',
+      'Cobra, paga, cambia y haz crecer dólares digitales desde una cuenta que tú controlas. Alpha pública con fondos de prueba en Arbitrum Sepolia.',
   },
   en: {
-    title: 'Parmelia — Move digital money like sending a message',
+    title: 'GatoPago — Your dollars already know how to move',
     description:
-      'Charge with links, pay with QR and send to usernames. Moving digital money, easy for you and whoever receives it. No app downloads, no fees between users.',
+      'Get paid, pay, swap, and grow digital dollars from an account you control. Public alpha with test funds on Arbitrum Sepolia.',
   },
 } as const;
 
@@ -29,18 +29,18 @@ const {
   autoLocaleRedirect = false,
 } = Astro.props;
 
-const siteUrl = 'https://parmelia.me/';
+const siteUrl = `${brand.siteUrl}/`;
 const englishUrl = new URL('/en/', siteUrl).href;
 const canonical = new URL(Astro.url.pathname, siteUrl).href;
 const ogImage = new URL('/og.png', siteUrl).href;
 const ogLocale = lang === 'en' ? 'en_US' : 'es_ES';
 const ogImageAlt =
   lang === 'en'
-    ? 'Parmelia — move digital money like sending a message'
-    : 'Parmelia — mueve dinero digital como mandar un mensaje';
+    ? 'GatoPago — your dollars already know how to move'
+    : 'GatoPago — tus dólares ya saben moverse';
 
 // Privacy-friendly analytics, off by default. Enable by setting
-// PUBLIC_PLAUSIBLE_DOMAIN (e.g. "parmelia.me") in the environment / .env.
+// PUBLIC_PLAUSIBLE_DOMAIN (the canonical production domain) in the environment / .env.
 const plausibleDomain = import.meta.env.PUBLIC_PLAUSIBLE_DOMAIN;
 
 const structuredData = {
@@ -49,26 +49,81 @@ const structuredData = {
     {
       '@type': 'Organization',
       '@id': `${siteUrl}#org`,
-      name: 'Parmelia',
+      name: 'GatoPago',
+      alternateName: 'GatoPago Account',
       url: siteUrl,
-      logo: new URL('/Logo_parmelia.svg', siteUrl).href,
-      sameAs: ['https://x.com/parmelia_'],
+      logo: {
+        '@type': 'ImageObject',
+        url: new URL('/Logo_gatopago.svg', siteUrl).href,
+        caption: 'GatoPago',
+      },
+      description:
+        'Self-custodial programmable onchain account for Bolivia and Latin America. Receive, use and grow digital dollars (USDC), with payments and a developer API.',
+      slogan: lang === 'en' ? 'Your dollars already know how to move' : 'Tus dólares ya saben moverse',
+      founder: { '@id': `${siteUrl}#founder` },
+      areaServed: [{ '@type': 'Country', name: 'Bolivia' }, 'Latin America'],
+      knowsAbout: [
+        'Stablecoin payments',
+        'USDC',
+        'Digital dollars',
+        'Arbitrum',
+        'Programmable onchain accounts',
+        'Payment links',
+        'QR payments',
+        'Guided DeFi with Aave',
+      ],
+      sameAs: [brand.socialUrl],
+    },
+    {
+      '@type': 'Person',
+      '@id': `${siteUrl}#founder`,
+      name: 'Daniel Cueto',
+      jobTitle: 'Founder',
+      worksFor: { '@id': `${siteUrl}#org` },
+      url: 'https://danielcueto.me',
+      description:
+        'Founder of GatoPago and lead of the Ethereum Bolivia community.',
+      knowsAbout: [
+        'Stablecoin payments',
+        'Non-custodial wallets',
+        'Arbitrum',
+        'Fintech in Latin America',
+      ],
+      sameAs: ['https://x.com/danelerr', 'https://danielcueto.me'],
     },
     {
       '@type': 'WebSite',
       '@id': `${siteUrl}#website`,
       url: siteUrl,
-      name: 'Parmelia',
+      name: 'GatoPago',
       inLanguage: lang,
       publisher: { '@id': `${siteUrl}#org` },
     },
     {
       '@type': 'WebApplication',
-      name: 'Parmelia',
-      url: 'https://app.parmelia.me',
+      '@id': `${siteUrl}#app`,
+      name: 'GatoPago',
+      url: brand.appUrl,
       applicationCategory: 'FinanceApplication',
       operatingSystem: 'Web',
+      browserRequirements:
+        'Requires a modern web browser with passkey (WebAuthn) support. Requires JavaScript.',
+      inLanguage: ['es', 'en'],
       description,
+      publisher: { '@id': `${siteUrl}#org` },
+      featureList: [
+        'Receive USDC through payment links, QR codes and transfers',
+        'Pay and send to usernames',
+        'Swap USDC and ETH with quote and cost details before confirmation',
+        'Guided USDC deposits and withdrawals through Aave V3 with a variable rate and visible risks',
+        'Self-custodial smart account: each movement requires an active key',
+        'Passkey / biometric sign-in (fingerprint or face), no passwords or seed phrases',
+        'Works in the browser, no app to download',
+        '0% GatoPago fee between users; network, protocol, provider or conversion costs may apply',
+        'Withdraw to a compatible external wallet',
+        'Payment intents, checkout, sandbox and signed webhooks for pilot integrations',
+        'Public Alpha on Arbitrum Sepolia with test funds',
+      ],
       offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
     },
   ],
@@ -86,11 +141,17 @@ const structuredData = {
           is:inline
           set:html={`
             (() => {
-              const preferenceKey = 'parmelia:preferred-locale';
+              const preferenceKey = 'gatopago:preferred-locale';
+              const legacyPreferenceKey = 'parmelia:preferred-locale';
               const currentLocale = '${lang}';
               const readPreference = () => {
                 try {
-                  const value = window.localStorage.getItem(preferenceKey);
+                  const value =
+                    window.localStorage.getItem(preferenceKey) ??
+                    window.localStorage.getItem(legacyPreferenceKey);
+                  if (value === 'es' || value === 'en') {
+                    window.localStorage.setItem(preferenceKey, value);
+                  }
                   return value === 'es' || value === 'en' ? value : null;
                 } catch {
                   return null;
@@ -130,7 +191,7 @@ const structuredData = {
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
-    <meta property="og:site_name" content="Parmelia" />
+    <meta property="og:site_name" content="GatoPago" />
     <meta property="og:locale" content={ogLocale} />
     <meta property="og:image" content={ogImage} />
     <meta property="og:image:width" content="1200" />
@@ -139,7 +200,7 @@ const structuredData = {
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@parmelia_" />
+    {brand.socialHandle && <meta name="twitter:site" content={brand.socialHandle} />}
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
@@ -152,7 +213,7 @@ const structuredData = {
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
     <!-- Theme color for mobile browser chrome -->
-    <meta name="theme-color" content="#0A0A0B" />
+    <meta name="theme-color" content="#0B0B0F" />
 
     <!-- Structured data -->
     <script type="application/ld+json" set:html={JSON.stringify(structuredData)} is:inline />
