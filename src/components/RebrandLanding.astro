@@ -1,0 +1,993 @@
+---
+import { getLang } from '../i18n';
+import { appLink, brand, paymentLink } from '../config/brand';
+import CatGlyph from './CatGlyph.astro';
+import MeliSprite from './MeliSprite.astro';
+
+const lang = getLang(Astro.currentLocale);
+const isSpanish = lang === 'es';
+const localeHref = isSpanish ? '/en/' : '/';
+const localeLabel = isSpanish ? 'EN' : 'ES';
+const appHref = appLink(`landing-rebrand-${lang}`);
+const legalPrefix = isSpanish ? '' : '/en';
+const demoPaymentLink = paymentLink('cafe-norte');
+const demoPaymentPath = new URL(demoPaymentLink).pathname;
+const cardMailHref = `mailto:${brand.contactEmail}?subject=GatoPago%20Card%20early%20access`;
+const apiMailHref = `mailto:${brand.contactEmail}?subject=GatoPago%20API%20pilot`;
+
+const copy = {
+  es: {
+    skip: 'Saltar al contenido',
+    nav: {
+      aria: 'Navegación principal',
+      home: 'GatoPago — inicio',
+      cycle: 'El ciclo',
+      account: 'La cuenta',
+      grow: 'Crecer',
+      card: 'Card',
+      developers: 'Developers',
+      open: 'Abrir GatoPago',
+      menuOpen: 'Abrir menú',
+      menuClose: 'Cerrar menú',
+      language: 'Cambiar a inglés',
+    },
+    hero: {
+      eyebrow: 'GatoPago · dólares en movimiento',
+      titleLead: 'Tus dólares ya saben',
+      titleAccent: 'moverse.',
+      copy:
+        'Cobra, paga, cambia y haz crecer dólares digitales desde una cuenta que tú controlas. GatoPago se ocupa del camino; tú decides cada movimiento.',
+      primary: 'Probar la alpha',
+      secondary: 'Ver cómo funciona',
+      alpha: 'Alpha pública',
+      network: 'Arbitrum Sepolia',
+      funds: 'Fondos de prueba',
+      nap: 'Modo siesta',
+      napOn: 'Meli sueña con pagos que siempre llegan',
+      napOff: 'Meli sigue la pista de tu dinero',
+      visualLabel: 'Meli, el gato detrás de GatoPago',
+      visualNote: 'Tu cuenta se mueve cuando tú das la señal.',
+      packet: 'Pago en camino',
+    },
+    signals: [
+      ['Tú autorizas', 'Cada movimiento necesita una llave activa.'],
+      ['Entra con passkey', 'Biometría o PIN del dispositivo, sin frase semilla.'],
+      ['Gas patrocinado', 'Disponible durante la alpha y sujeto a límites.'],
+      ['Riesgos visibles', 'Rutas, costos y condiciones antes de confirmar.'],
+    ],
+    cycle: {
+      kicker: 'El recorrido de un pago',
+      title: 'Tu dinero no vive en una lista de tokens.',
+      accent: 'Vive en estados que entiendes.',
+      intro:
+        'Sigue el recorrido de un pago. Toca cada estado para ver qué cambia y qué permanece bajo tu control.',
+      demo: 'Explorador interactivo',
+      states: [
+        {
+          id: 'receive',
+          number: '01',
+          label: 'Recibir',
+          short: 'Alguien paga tu link, QR o usuario.',
+          detail:
+            'El pago entra a tu cuenta onchain. Ves de dónde llegó, el monto y la red antes de hacer cualquier otra cosa.',
+          status: 'Pago detectado',
+        },
+        {
+          id: 'available',
+          number: '02',
+          label: 'Disponible',
+          short: 'Listo para pagar, enviar o cambiar.',
+          detail:
+            'Disponible es la parte líquida de tu saldo. No necesitas aprender nombres de contratos para saber qué puedes usar ahora.',
+          status: 'Saldo listo',
+        },
+        {
+          id: 'growing',
+          number: '03',
+          label: 'Creciendo',
+          short: 'Una parte puede entrar a Aave V3.',
+          detail:
+            'Tú eliges cuánto mover. La tasa es variable y la app debe mostrar riesgos, protocolo y salida antes de confirmar.',
+          status: 'Ruta preparada',
+        },
+        {
+          id: 'use',
+          number: '04',
+          label: 'Usar',
+          short: 'Paga, envía, cambia o retira.',
+          detail:
+            'El dinero vuelve a moverse cuando tú decides. GatoPago presenta la ruta; tu llave autoriza el resultado.',
+          status: 'Tú decides el siguiente paso',
+        },
+      ],
+    },
+    account: {
+      kicker: 'La cuenta',
+      greeting: 'Hola, Meli',
+      title: 'Una cuenta, no un tablero de blockchain.',
+      copy:
+        'GatoPago traduce la infraestructura en decisiones cotidianas. El saldo tiene intención; las acciones hablan como tú.',
+      concept: 'Concepto visual · datos de ejemplo',
+      available: 'Disponible',
+      growing: 'Creciendo',
+      actions: ['Pagar', 'Enviar', 'Cambiar', 'Escanear'],
+      activity: 'Actividad reciente',
+      received: 'Pago recibido',
+      receivedFrom: 'de @cafe.norte',
+      productNotes: [
+        'Jerarquía clara antes que densidad',
+        'Montos y estados en lenguaje humano',
+        'Detalle técnico disponible, nunca impuesto',
+      ],
+    },
+    receive: {
+      kicker: 'Cobrar',
+      title: 'Cobra sin perseguir el pago.',
+      copy:
+        'Crea un link o un QR con monto y concepto. Compártelo donde ya conversas; la otra persona abre, revisa y firma el pago.',
+      linkLabel: 'Link de cobro',
+      amountLabel: 'Total',
+      item: '2 cafés + pan de queso',
+      status: 'Esperando pago',
+      copyLink: 'Copiar link',
+      copied: '¡Link copiado!',
+      note: 'Durante la alpha, quien paga también entra a GatoPago y usa fondos de prueba.',
+      channels: ['WhatsApp', 'QR', 'Mensaje', 'NFC · futuro'],
+    },
+    grow: {
+      kicker: 'Crecer',
+      titleLead: 'Una parte lista.',
+      titleAccent: 'Otra, creciendo.',
+      copy:
+        'Separa el dinero que usarás pronto del que quieres poner a trabajar. Sin ocultar protocolo, variabilidad ni riesgo.',
+      available: 'Disponible',
+      growing: 'Creciendo',
+      amount: 'USDC 280.00',
+      route: 'Ruta guiada',
+      routeValue: 'GatoPago → Aave V3',
+      rate: 'Tasa',
+      rateValue: 'Variable, no garantizada',
+      exit: 'Salida',
+      exitValue: 'Solicitada por ti',
+      risk: 'Antes de confirmar verás riesgos, costos y condiciones del protocolo.',
+      action: 'Ver cómo funciona',
+    },
+    move: {
+      kicker: 'Usar',
+      title: 'Mover dinero debería sentirse como elegir un camino.',
+      copy:
+        'Cuatro verbos reconocibles. Cada ruta termina en una vista previa que puedes entender antes de autorizar.',
+      paths: [
+        ['Pagar', 'Un link, un QR o una solicitud.', 'P'],
+        ['Enviar', 'A un usuario o una dirección compatible.', 'E'],
+        ['Cambiar', 'Cotización y costos antes de firmar.', 'C'],
+        ['Escanear', 'La cámara encuentra el siguiente paso.', 'Q'],
+      ],
+      preview: 'Siempre hay vista previa',
+    },
+    control: {
+      kicker: 'Control sin fricción',
+      title: 'La experiencia es simple. El control no desaparece.',
+      copy:
+        'La interfaz reduce ruido, no decisiones. Tu dispositivo guarda la llave de acceso y cada movimiento importante pide confirmación.',
+      items: [
+        ['Passkey', 'Entra con biometría o PIN del dispositivo. No memorizas una contraseña ni recibes una frase semilla.'],
+        ['Recuperación asistida', 'Una espera de 48 horas ayuda a evitar cambios impulsivos. Las condiciones se explican antes de iniciar.'],
+        ['Recibos y rutas', 'Monto, destino, red, costos y estado quedan visibles en el momento adecuado.'],
+      ],
+      demo: 'Probar diálogo de confirmación',
+      demoHint: 'Así se siente una decisión importante en Meli UI.',
+    },
+    dialog: {
+      eyebrow: 'Vista previa',
+      title: 'Revisa antes de mover',
+      amount: '18.00 USDC',
+      rows: [
+        ['Destino', '@cafe.norte'],
+        ['Concepto', 'Desayuno'],
+        ['Red', 'Arbitrum Sepolia'],
+        ['Costo estimado', 'Patrocinado en esta alpha'],
+      ],
+      disclaimer: 'Datos de ejemplo. Nada se enviará desde esta demostración.',
+      cancel: 'Volver',
+      confirm: 'Entendido',
+      close: 'Cerrar diálogo',
+    },
+    card: {
+      kicker: 'Próximo camino',
+      title: 'El siguiente paso conecta con el mundo cotidiano.',
+      copy:
+        'GatoPago Card está en exploración. La diseñamos como una extensión del mismo saldo, pero todavía no prometemos fecha, cobertura ni condiciones.',
+      badge: 'Acceso anticipado',
+      cardLabel: 'GATOPAGO · CONCEPTO',
+      cardName: 'MELI USER',
+      waitlist: 'Avisarme cuando exista',
+      notice: 'Sin cobros ni reservas. Solo interés.',
+    },
+    developers: {
+      kicker: 'GatoPago para Developers',
+      title: 'Dale más vidas a tus pagos.',
+      copy:
+        'Payment intents, checkout, sandbox y webhooks firmados para pilotos que necesitan mover USDC sin diseñar una wallet desde cero.',
+      features: ['Payment intents', 'Idempotencia', 'Webhooks firmados', 'Sandbox de prueba'],
+      docs: 'Explorar documentación',
+      pilot: 'Conversar sobre un piloto',
+      response: 'intent creada',
+      note: 'API para integraciones piloto. La disponibilidad puede cambiar durante la alpha.',
+    },
+    faq: {
+      kicker: 'Preguntas honestas',
+      title: 'Lo que conviene saber antes de entrar.',
+      items: [
+        ['¿GatoPago es un banco?', 'No. GatoPago es una interfaz para una cuenta onchain autocustodiada y programable. La experiencia, riesgos y protecciones no son los de una cuenta bancaria.'],
+        ['¿Ya usa dinero real?', 'La alpha pública funciona en Arbitrum Sepolia con fondos de prueba. No envíes fondos reales a direcciones de la alpha.'],
+        ['¿Quién controla la cuenta?', 'Tú autorizas los movimientos con una llave vinculada a tu dispositivo. GatoPago simplifica la interacción, pero no debería poder mover fondos por sí sola.'],
+        ['¿Qué significa “Creciendo”?', 'Es una ruta guiada para depositar USDC en Aave V3. La tasa es variable, el protocolo tiene riesgos y el rendimiento nunca está garantizado.'],
+        ['¿GatoPago cobra comisiones?', 'GatoPago muestra 0% de comisión propia entre usuarios en esta etapa. Aun pueden existir costos de red, protocolo, proveedor o conversión.'],
+        ['¿La tarjeta ya está disponible?', 'No. GatoPago Card es una dirección de producto en exploración. El acceso anticipado solo registra interés.'],
+      ],
+    },
+    final: {
+      eyebrow: 'Tu dinero, con siete vidas',
+      title: 'Haz que cada pago caiga de pie.',
+      copy: 'Prueba GatoPago con fondos de prueba y ayúdanos a construir una cuenta más clara, útil y bajo tu control.',
+      primary: 'Abrir la alpha',
+      secondary: 'Volver al ciclo',
+    },
+    footer: {
+      line: 'Tus dólares ya saben moverse. Tu cuenta sigue bajo tu control.',
+      product: 'Producto',
+      company: 'GatoPago',
+      legal: 'Legal',
+      links: ['El ciclo', 'La cuenta', 'Crecer', 'Developers'],
+      terms: 'Términos',
+      privacy: 'Privacidad',
+      status: 'Alpha pública · red de prueba',
+      rights: 'GatoPago. Construido con cuidado en Bolivia.',
+    },
+  },
+  en: {
+    skip: 'Skip to content',
+    nav: {
+      aria: 'Main navigation',
+      home: 'GatoPago — home',
+      cycle: 'The cycle',
+      account: 'The account',
+      grow: 'Grow',
+      card: 'Card',
+      developers: 'Developers',
+      open: 'Open GatoPago',
+      menuOpen: 'Open menu',
+      menuClose: 'Close menu',
+      language: 'Cambiar a español',
+    },
+    hero: {
+      eyebrow: 'GatoPago · dollars in motion',
+      titleLead: 'Your dollars already',
+      titleAccent: 'know how to move.',
+      copy:
+        'Get paid, pay, swap, and grow digital dollars from an account you control. GatoPago handles the path; you authorize every move.',
+      primary: 'Try the alpha',
+      secondary: 'See how it works',
+      alpha: 'Public alpha',
+      network: 'Arbitrum Sepolia',
+      funds: 'Test funds',
+      nap: 'Nap mode',
+      napOn: 'Meli is dreaming of payments that always arrive',
+      napOff: 'Meli is tracking your money',
+      visualLabel: 'Meli, the cat behind GatoPago',
+      visualNote: 'Your account moves when you give the signal.',
+      packet: 'Payment on the move',
+    },
+    signals: [
+      ['You authorize', 'Every movement needs an active key.'],
+      ['Sign in with a passkey', 'Device biometrics or PIN, no seed phrase.'],
+      ['Sponsored gas', 'Available during the alpha, subject to limits.'],
+      ['Visible risks', 'Routes, costs, and conditions before confirming.'],
+    ],
+    cycle: {
+      kicker: 'A payment’s journey',
+      title: 'Your money does not live in a token list.',
+      accent: 'It lives in states you understand.',
+      intro:
+        'Follow one payment through the product. Touch each state to see what changes and what remains under your control.',
+      demo: 'Interactive explorer',
+      states: [
+        { id: 'receive', number: '01', label: 'Receive', short: 'Someone pays your link, QR, or username.', detail: 'The payment reaches your onchain account. You see its source, amount, and network before doing anything else.', status: 'Payment detected' },
+        { id: 'available', number: '02', label: 'Available', short: 'Ready to pay, send, or swap.', detail: 'Available is the liquid part of your balance. You do not need to learn contract names to know what you can use now.', status: 'Balance ready' },
+        { id: 'growing', number: '03', label: 'Growing', short: 'A portion can enter Aave V3.', detail: 'You choose how much to move. The rate is variable, and the app must show risks, protocol, and exit before confirmation.', status: 'Route prepared' },
+        { id: 'use', number: '04', label: 'Use', short: 'Pay, send, swap, or withdraw.', detail: 'The money moves again when you decide. GatoPago presents the route; your key authorizes the outcome.', status: 'You choose the next step' },
+      ],
+    },
+    account: {
+      kicker: 'The account',
+      greeting: 'Hi, Meli',
+      title: 'An account, not a blockchain dashboard.',
+      copy: 'GatoPago translates infrastructure into everyday decisions. The balance has intent; actions speak like you do.',
+      concept: 'Visual concept · example data',
+      available: 'Available',
+      growing: 'Growing',
+      actions: ['Pay', 'Send', 'Swap', 'Scan'],
+      activity: 'Recent activity',
+      received: 'Payment received',
+      receivedFrom: 'from @cafe.norte',
+      productNotes: ['Clear hierarchy over density', 'Amounts and states in human language', 'Technical detail available, never imposed'],
+    },
+    receive: {
+      kicker: 'Get paid',
+      title: 'Get paid without chasing the payment.',
+      copy: 'Create a link or QR with an amount and note. Share it where you already talk; the other person opens, reviews, and signs the payment.',
+      linkLabel: 'Payment link',
+      amountLabel: 'Total',
+      item: '2 coffees + cheese bread',
+      status: 'Waiting for payment',
+      copyLink: 'Copy link',
+      copied: 'Link copied!',
+      note: 'During the alpha, the payer also signs into GatoPago and uses test funds.',
+      channels: ['WhatsApp', 'QR', 'Message', 'NFC · future'],
+    },
+    grow: {
+      kicker: 'Grow',
+      titleLead: 'One part ready.',
+      titleAccent: 'Another, growing.',
+      copy: 'Separate the money you will use soon from what you want to put to work. Without hiding protocol, variability, or risk.',
+      available: 'Available',
+      growing: 'Growing',
+      amount: 'USDC 280.00',
+      route: 'Guided route',
+      routeValue: 'GatoPago → Aave V3',
+      rate: 'Rate',
+      rateValue: 'Variable, not guaranteed',
+      exit: 'Exit',
+      exitValue: 'Requested by you',
+      risk: 'Before confirming, you will see protocol risks, costs, and conditions.',
+      action: 'See how it works',
+    },
+    move: {
+      kicker: 'Use',
+      title: 'Moving money should feel like choosing a path.',
+      copy: 'Four recognizable verbs. Every path ends in a preview you can understand before authorizing.',
+      paths: [['Pay', 'A link, QR, or request.', 'P'], ['Send', 'To a user or compatible address.', 'S'], ['Swap', 'Quote and costs before signing.', 'W'], ['Scan', 'The camera finds the next step.', 'Q']],
+      preview: 'There is always a preview',
+    },
+    control: {
+      kicker: 'Control without friction',
+      title: 'The experience is simple. Control does not disappear.',
+      copy: 'The interface reduces noise, not decisions. Your device holds the access key, and every important movement asks for confirmation.',
+      items: [['Passkey', 'Sign in with device biometrics or PIN. You do not memorize a password or receive a seed phrase.'], ['Assisted recovery', 'A 48-hour wait helps prevent impulsive changes. Conditions are explained before it starts.'], ['Receipts and routes', 'Amount, destination, network, costs, and status become visible at the right moment.']],
+      demo: 'Try the confirmation dialog',
+      demoHint: 'This is how an important decision feels in Meli UI.',
+    },
+    dialog: {
+      eyebrow: 'Preview', title: 'Review before moving', amount: '18.00 USDC',
+      rows: [['Destination', '@cafe.norte'], ['Note', 'Breakfast'], ['Network', 'Arbitrum Sepolia'], ['Estimated cost', 'Sponsored in this alpha']],
+      disclaimer: 'Example data. Nothing will be sent from this demo.', cancel: 'Go back', confirm: 'Got it', close: 'Close dialog',
+    },
+    card: {
+      kicker: 'Next path', title: 'The next step connects to everyday life.',
+      copy: 'GatoPago Card is being explored. We are designing it as an extension of the same balance, but we are not promising a date, coverage, or terms yet.',
+      badge: 'Early access', cardLabel: 'GATOPAGO · CONCEPT', cardName: 'MELI USER', waitlist: 'Tell me when it exists', notice: 'No charges or reservations. Just interest.',
+    },
+    developers: {
+      kicker: 'GatoPago for Developers', title: 'Give your payments more lives.',
+      copy: 'Payment intents, checkout, sandbox, and signed webhooks for pilots that need to move USDC without designing a wallet from scratch.',
+      features: ['Payment intents', 'Idempotency', 'Signed webhooks', 'Test sandbox'], docs: 'Explore documentation', pilot: 'Talk about a pilot', response: 'intent created',
+      note: 'API for pilot integrations. Availability may change during the alpha.',
+    },
+    faq: {
+      kicker: 'Honest questions', title: 'What you should know before entering.',
+      items: [['Is GatoPago a bank?', 'No. GatoPago is an interface for a self-custodial, programmable onchain account. Its experience, risks, and protections are not those of a bank account.'], ['Does it use real money yet?', 'The public alpha runs on Arbitrum Sepolia with test funds. Do not send real funds to alpha addresses.'], ['Who controls the account?', 'You authorize movements with a key linked to your device. GatoPago simplifies the interaction, but should not be able to move funds on its own.'], ['What does “Growing” mean?', 'It is a guided route to deposit USDC into Aave V3. The rate is variable, the protocol carries risks, and yield is never guaranteed.'], ['Does GatoPago charge fees?', 'GatoPago shows a 0% own fee between users at this stage. Network, protocol, provider, or conversion costs may still apply.'], ['Is the card available?', 'No. GatoPago Card is a product direction being explored. Early access only records interest.']],
+    },
+    final: {
+      eyebrow: 'Your money, with nine lives', title: 'Make every payment land on its feet.',
+      copy: 'Try GatoPago with test funds and help us build an account that is clearer, more useful, and under your control.', primary: 'Open the alpha', secondary: 'Back to the cycle',
+    },
+    footer: {
+      line: 'Your dollars already know how to move. Your account stays under your control.', product: 'Product', company: 'GatoPago', legal: 'Legal',
+      links: ['The cycle', 'The account', 'Grow', 'Developers'], terms: 'Terms', privacy: 'Privacy', status: 'Public alpha · test network', rights: 'GatoPago. Built with care in Bolivia.',
+    },
+  },
+} as const;
+
+const t = copy[lang];
+---
+
+<a class="meli-skip-link" href="#main-content">{t.skip}</a>
+
+<div class="meli-landing" data-locale={lang}>
+  <header class="meli-nav-shell" data-nav-shell>
+    <nav class="meli-nav" aria-label={t.nav.aria}>
+      <a class="meli-brand" href={isSpanish ? '/' : '/en/'} aria-label={t.nav.home}>
+        <CatGlyph className="meli-brand__glyph" decorative />
+        <span class="meli-brand__word">GatoPago</span>
+        <span class="meli-brand__alpha">alpha</span>
+      </a>
+
+      <div class="meli-nav__links" data-nav-menu>
+        <a href="#cycle">{t.nav.cycle}</a>
+        <a href="#account">{t.nav.account}</a>
+        <a href="#grow">{t.nav.grow}</a>
+        <a href="#card">{t.nav.card}</a>
+        <a href="#api">{t.nav.developers}</a>
+      </div>
+
+      <div class="meli-nav__actions">
+        <a
+          class="meli-locale"
+          href={localeHref}
+          hreflang={isSpanish ? 'en' : 'es'}
+          aria-label={t.nav.language}
+          data-locale-link
+        >{localeLabel}</a>
+        <a class="meli-button meli-button--brand meli-nav__cta" href={appHref} data-cta="nav" rel="external">
+          {t.nav.open}
+          <span aria-hidden="true">↗</span>
+        </a>
+        <button
+          class="meli-menu-button"
+          type="button"
+          aria-expanded="false"
+          aria-controls="meli-mobile-menu"
+          aria-label={t.nav.menuOpen}
+          data-menu-button
+          data-open-label={t.nav.menuOpen}
+          data-close-label={t.nav.menuClose}
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="meli-mobile-menu" id="meli-mobile-menu" data-mobile-menu hidden>
+      <a href="#cycle">{t.nav.cycle}</a>
+      <a href="#account">{t.nav.account}</a>
+      <a href="#grow">{t.nav.grow}</a>
+      <a href="#card">{t.nav.card}</a>
+      <a href="#api">{t.nav.developers}</a>
+      <a class="meli-button meli-button--brand" href={appHref} data-cta="mobile-nav" rel="external">{t.nav.open} <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="meli-hero meli-section--ink" id="hero" aria-labelledby="hero-title">
+      <div class="meli-ambient-grid" aria-hidden="true"></div>
+      <div class="meli-container meli-hero__grid">
+        <div class="meli-hero__copy" data-reveal>
+          <p class="meli-kicker meli-kicker--light"><span aria-hidden="true"></span>{t.hero.eyebrow}</p>
+          <h1 id="hero-title">
+            {t.hero.titleLead}<br />
+            <span>{t.hero.titleAccent}</span>
+          </h1>
+          <p class="meli-hero__lead">{t.hero.copy}</p>
+
+          <div class="meli-hero__actions">
+            <a class="meli-button meli-button--brand meli-button--large" href={appHref} data-cta="hero" rel="external">
+              {t.hero.primary}<span aria-hidden="true">↗</span>
+            </a>
+            <a class="meli-button meli-button--ghost-light meli-button--large" href="#cycle">
+              {t.hero.secondary}<span aria-hidden="true">↓</span>
+            </a>
+          </div>
+
+          <ul class="meli-alpha-list" aria-label={t.hero.alpha}>
+            <li><i aria-hidden="true"></i>{t.hero.alpha}</li>
+            <li>{t.hero.network}</li>
+            <li>{t.hero.funds}</li>
+          </ul>
+        </div>
+
+        <div class="meli-hero__visual" data-reveal data-reveal-delay="1">
+          <div class="meli-orbit-label meli-orbit-label--top"><span></span>{t.hero.packet}</div>
+          <figure class="meli-cat-stage" data-cat-stage>
+            <div class="meli-hero-character" role="img" aria-label={t.hero.visualLabel}>
+              <MeliSprite variant="head-neutral" className="meli-hero-sprite meli-hero-sprite--awake" loading="eager" />
+              <MeliSprite variant="body-sleeping" className="meli-hero-sprite meli-hero-sprite--sleeping" />
+              <span class="meli-dream-pixels" aria-hidden="true"><i>Z</i><i>z</i><i>·</i></span>
+            </div>
+            <figcaption>{t.hero.visualNote}</figcaption>
+          </figure>
+          <div class="meli-pixel-rail meli-pixel-rail--hero" aria-hidden="true"><span></span></div>
+          <button
+            class="meli-nap-toggle"
+            type="button"
+            aria-pressed="false"
+            data-nap-toggle
+            data-awake={t.hero.napOff}
+            data-asleep={t.hero.napOn}
+          >
+            <span class="meli-nap-toggle__pixel" aria-hidden="true">Z</span>
+            <span>{t.hero.nap}</span>
+          </button>
+          <p class="meli-nap-status" aria-live="polite" data-nap-status>{t.hero.napOff}</p>
+        </div>
+      </div>
+    </section>
+
+    <aside class="meli-signal-strip" aria-label={isSpanish ? 'Principios de producto' : 'Product principles'}>
+      <div class="meli-container meli-signal-strip__grid">
+        {t.signals.map(([title, text], index) => (
+          <div class="meli-signal" data-reveal>
+            <span class="meli-signal__number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+            <div><strong>{title}</strong><p>{text}</p></div>
+          </div>
+        ))}
+      </div>
+    </aside>
+
+    <section class="meli-section meli-section--milk meli-cycle" id="cycle" aria-labelledby="cycle-title">
+      <div class="meli-container">
+        <div class="meli-section-heading meli-section-heading--wide" data-reveal>
+          <p class="meli-kicker"><span aria-hidden="true"></span>{t.cycle.kicker}</p>
+          <h2 id="cycle-title">{t.cycle.title}<br /><em>{t.cycle.accent}</em></h2>
+          <p>{t.cycle.intro}</p>
+        </div>
+
+        <div class="meli-cycle-lab" data-cycle-lab data-reveal>
+          <div class="meli-cycle-lab__topline">
+            <span>{t.cycle.demo}</span>
+            <span class="meli-live-dot"><i aria-hidden="true"></i>LIVE PATH</span>
+          </div>
+          <div class="meli-cycle-track" role="list" aria-label={t.cycle.kicker}>
+            {t.cycle.states.map((state, index) => (
+              <button
+                class:list={['meli-cycle-state', { 'is-active': index === 0 }]}
+                type="button"
+                role="listitem"
+                aria-pressed={index === 0 ? 'true' : 'false'}
+                data-cycle-state={state.id}
+                data-detail={state.detail}
+                data-status={state.status}
+                data-expression={['focused', 'happy', 'cautious', 'excited'][index]}
+              >
+                <span class="meli-cycle-state__number">{state.number}</span>
+                <strong>{state.label}</strong>
+                <small>{state.short}</small>
+                <i aria-hidden="true"></i>
+              </button>
+            ))}
+            <div class="meli-cycle-packet" aria-hidden="true"><MeliSprite variant="body-courier" /></div>
+          </div>
+          <div class="meli-cycle-output">
+            <div class="meli-cycle-output__cat" data-cycle-expression data-expression="focused" aria-hidden="true">
+              <MeliSprite variant="head-focused" className="meli-cycle-face meli-cycle-face--focused" />
+              <MeliSprite variant="head-happy" className="meli-cycle-face meli-cycle-face--happy" />
+              <MeliSprite variant="head-cautious" className="meli-cycle-face meli-cycle-face--cautious" />
+              <MeliSprite variant="head-excited" className="meli-cycle-face meli-cycle-face--excited" />
+            </div>
+            <div>
+              <p data-cycle-status>{t.cycle.states[0].status}</p>
+              <strong data-cycle-detail>{t.cycle.states[0].detail}</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="meli-section meli-section--ink meli-account" id="account" aria-labelledby="account-title">
+      <div class="meli-container meli-split meli-split--account">
+        <div class="meli-section-heading" data-reveal>
+          <p class="meli-kicker meli-kicker--light"><span aria-hidden="true"></span>{t.account.kicker}</p>
+          <h2 id="account-title">{t.account.title}</h2>
+          <p>{t.account.copy}</p>
+          <ul class="meli-check-list">
+            {t.account.productNotes.map((note) => <li><span aria-hidden="true">✓</span>{note}</li>)}
+          </ul>
+          <MeliSprite variant="body-sitting" className="meli-account-mascot" />
+        </div>
+
+        <div class="meli-app-concept-wrap" data-reveal data-reveal-delay="1">
+          <p class="meli-concept-label"><span aria-hidden="true"></span>{t.account.concept}</p>
+          <div class="meli-app-frame">
+            <div class="meli-app-frame__header">
+              <div class="meli-avatar"><CatGlyph decorative /></div>
+              <div><strong>{t.account.greeting}</strong><small>@meli.user</small></div>
+              <button type="button" aria-label={isSpanish ? 'Notificaciones de ejemplo' : 'Example notifications'} disabled><span aria-hidden="true">•</span></button>
+            </div>
+            <div class="meli-balance-card">
+              <div class="meli-balance-card__meta"><span>{t.account.available}</span><span>USDC</span></div>
+              <strong>1,280<span>.00</span></strong>
+              <div class="meli-balance-card__rail" aria-hidden="true"><i></i></div>
+              <div class="meli-balance-card__growing"><span><i aria-hidden="true"></i>{t.account.growing}</span><b>420.00</b></div>
+            </div>
+            <div class="meli-quick-actions">
+              {t.account.actions.map((action, index) => (
+                <button type="button" disabled>
+                  <span aria-hidden="true">{['↗', '→', '⇄', '⌗'][index]}</span>
+                  {action}
+                </button>
+              ))}
+            </div>
+            <div class="meli-activity-card">
+              <div class="meli-activity-card__heading"><span>{t.account.activity}</span><span aria-hidden="true">···</span></div>
+              <div class="meli-activity-row">
+                <span class="meli-activity-row__icon" aria-hidden="true">↓</span>
+                <div><strong>{t.account.received}</strong><small>{t.account.receivedFrom}</small></div>
+                <b>+18.00</b>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="meli-section meli-section--ember meli-receive" id="receive" aria-labelledby="receive-title">
+      <div class="meli-container meli-split meli-split--receive">
+        <div class="meli-section-heading" data-reveal>
+          <p class="meli-kicker meli-kicker--dark"><span aria-hidden="true"></span>{t.receive.kicker}</p>
+          <h2 id="receive-title">{t.receive.title}</h2>
+          <p>{t.receive.copy}</p>
+          <div class="meli-channel-list" aria-label={isSpanish ? 'Canales para compartir' : 'Sharing channels'}>
+            {t.receive.channels.map((channel, index) => <span class:list={{ 'is-future': index === 3 }}>{channel}</span>)}
+          </div>
+          <p class="meli-honesty-note"><span aria-hidden="true">!</span>{t.receive.note}</p>
+        </div>
+
+        <div class="meli-receipt-stack" data-reveal data-reveal-delay="1">
+          <div class="meli-receipt-shadow" aria-hidden="true"></div>
+          <article class="meli-receipt-card">
+            <div class="meli-receipt-card__head">
+              <div class="meli-receipt-brand"><CatGlyph decorative /><span>GatoPago</span></div>
+              <span class="meli-pending-chip"><i aria-hidden="true"></i>{t.receive.status}</span>
+            </div>
+            <p class="meli-receipt-label">{t.receive.linkLabel}</p>
+            <code>{demoPaymentPath}</code>
+            <div class="meli-receipt-main">
+              <div>
+                <span>{t.receive.amountLabel}</span>
+                <strong>18.00 <small>USDC</small></strong>
+                <p>{t.receive.item}</p>
+              </div>
+              <MeliSprite variant="body-qr" className="meli-receipt-qr-mascot" />
+            </div>
+            <button
+              class="meli-button meli-button--ink meli-button--full"
+              type="button"
+              data-copy-payment
+              data-payment-link={demoPaymentLink}
+              data-default-label={t.receive.copyLink}
+              data-copied-label={t.receive.copied}
+            >
+              <span data-copy-label>{t.receive.copyLink}</span><span aria-hidden="true">⌁</span>
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="meli-section meli-section--ink meli-grow" id="grow" aria-labelledby="grow-title">
+      <div class="meli-container">
+        <div class="meli-grow__heading" data-reveal>
+          <div class="meli-section-heading">
+            <p class="meli-kicker meli-kicker--light"><span aria-hidden="true"></span>{t.grow.kicker}</p>
+            <h2 id="grow-title">{t.grow.titleLead}<br /><em>{t.grow.titleAccent}</em></h2>
+          </div>
+          <p>{t.grow.copy}</p>
+        </div>
+
+        <div class="meli-grow-route" data-reveal>
+          <div class="meli-grow-bucket meli-grow-bucket--available">
+            <span>{t.grow.available}</span><strong>USDC 1,000.00</strong><small>78%</small>
+          </div>
+          <div class="meli-grow-bridge" aria-hidden="true">
+            <div class="meli-grow-bridge__packet">280</div><span></span><i></i>
+          </div>
+          <div class="meli-grow-bucket meli-grow-bucket--active">
+            <span><i aria-hidden="true"></i>{t.grow.growing}</span><strong>{t.grow.amount}</strong><small>22%</small>
+          </div>
+        </div>
+
+        <div class="meli-grow-details" data-reveal>
+          <div><span>{t.grow.route}</span><strong>{t.grow.routeValue}</strong></div>
+          <div><span>{t.grow.rate}</span><strong>{t.grow.rateValue}</strong></div>
+          <div><span>{t.grow.exit}</span><strong>{t.grow.exitValue}</strong></div>
+          <p><span aria-hidden="true">!</span>{t.grow.risk}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="meli-section meli-section--milk meli-move" id="move" aria-labelledby="move-title">
+      <div class="meli-container">
+        <div class="meli-section-heading meli-section-heading--wide" data-reveal>
+          <p class="meli-kicker"><span aria-hidden="true"></span>{t.move.kicker}</p>
+          <h2 id="move-title">{t.move.title}</h2>
+          <p>{t.move.copy}</p>
+        </div>
+        <div class="meli-move-mascot" data-reveal data-reveal-delay="1" aria-hidden="true">
+          <MeliSprite variant="body-conveyor" />
+        </div>
+        <div class="meli-path-grid">
+          {t.move.paths.map(([title, description, glyph], index) => (
+            <article class="meli-path-card" data-reveal data-reveal-delay={String(index % 2)}>
+              <div class="meli-path-card__glyph" aria-hidden="true"><span>{glyph}</span></div>
+              <p>0{index + 1}</p>
+              <h3>{title}</h3>
+              <span>{description}</span>
+              <div class="meli-path-card__footer"><small>{t.move.preview}</small><i aria-hidden="true">→</i></div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="meli-section meli-section--ink meli-control" id="control" aria-labelledby="control-title">
+      <div class="meli-container meli-split meli-split--control">
+        <div class="meli-section-heading" data-reveal>
+          <p class="meli-kicker meli-kicker--light"><span aria-hidden="true"></span>{t.control.kicker}</p>
+          <h2 id="control-title">{t.control.title}</h2>
+          <p>{t.control.copy}</p>
+          <button class="meli-button meli-button--brand" type="button" data-dialog-open>
+            {t.control.demo}<span aria-hidden="true">↗</span>
+          </button>
+          <small class="meli-dialog-hint">{t.control.demoHint}</small>
+        </div>
+        <div class="meli-control-stack">
+          {t.control.items.map(([title, text], index) => (
+            <article class="meli-control-card" data-reveal data-reveal-delay={String(index % 2)}>
+              <span class="meli-control-card__index">0{index + 1}</span>
+              <div><h3>{title}</h3><p>{text}</p></div>
+              <span class="meli-control-card__status" aria-hidden="true">✓</span>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <dialog class="meli-dialog" data-transaction-dialog aria-labelledby="transaction-dialog-title">
+      <div class="meli-dialog__topline" aria-hidden="true"><span></span></div>
+      <form method="dialog" class="meli-dialog__content">
+        <button class="meli-dialog__close" value="cancel" aria-label={t.dialog.close}><span aria-hidden="true">×</span></button>
+        <p class="meli-kicker"><span aria-hidden="true"></span>{t.dialog.eyebrow}</p>
+        <h2 id="transaction-dialog-title">{t.dialog.title}</h2>
+        <div class="meli-dialog__amount"><MeliSprite variant="head-cautious" className="meli-dialog__mascot" /><strong>{t.dialog.amount}</strong></div>
+        <dl>
+          {t.dialog.rows.map(([term, value]) => <div><dt>{term}</dt><dd>{value}</dd></div>)}
+        </dl>
+        <p class="meli-dialog__disclaimer"><span aria-hidden="true">i</span>{t.dialog.disclaimer}</p>
+        <div class="meli-dialog__actions">
+          <button class="meli-button meli-button--secondary" value="cancel">{t.dialog.cancel}</button>
+          <button class="meli-button meli-button--brand" value="confirm">{t.dialog.confirm}<span aria-hidden="true">✓</span></button>
+        </div>
+      </form>
+    </dialog>
+
+    <section class="meli-section meli-section--milk meli-card-section" id="card" aria-labelledby="card-title">
+      <div class="meli-container meli-split meli-split--card">
+        <div class="meli-card-scene" data-reveal>
+          <div class="meli-card-orbit" aria-hidden="true"><span></span><i></i></div>
+          <article class="meli-concept-card">
+            <div class="meli-concept-card__head"><CatGlyph decorative /><span>{t.card.cardLabel}</span></div>
+            <div class="meli-concept-card__chip" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div class="meli-concept-card__number">•••• &nbsp; •••• &nbsp; 2048</div>
+            <div class="meli-concept-card__foot"><span>{t.card.cardName}</span><strong>GatoPago</strong></div>
+          </article>
+          <MeliSprite variant="body-peek-card" className="meli-card-mascot" />
+          <span class="meli-early-stamp">{t.card.badge}</span>
+        </div>
+        <div class="meli-section-heading" data-reveal data-reveal-delay="1">
+          <p class="meli-kicker"><span aria-hidden="true"></span>{t.card.kicker}</p>
+          <h2 id="card-title">{t.card.title}</h2>
+          <p>{t.card.copy}</p>
+          <a class="meli-button meli-button--ink" href={cardMailHref} data-cta="card-interest">
+            {t.card.waitlist}<span aria-hidden="true">↗</span>
+          </a>
+          <small class="meli-card-notice">{t.card.notice}</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="meli-section meli-section--ink meli-developers" id="api" aria-labelledby="developers-title">
+      <div class="meli-container meli-split meli-split--developers">
+        <div class="meli-section-heading" data-reveal>
+          <p class="meli-kicker meli-kicker--light"><span aria-hidden="true"></span>{t.developers.kicker}</p>
+          <h2 id="developers-title">{t.developers.title}</h2>
+          <p>{t.developers.copy}</p>
+          <ul class="meli-feature-pills">
+            {t.developers.features.map((feature) => <li>{feature}</li>)}
+          </ul>
+          <div class="meli-developer-actions">
+            <a class="meli-button meli-button--brand" href="/docs">{t.developers.docs}<span aria-hidden="true">→</span></a>
+            <a class="meli-text-link" href={apiMailHref}>{t.developers.pilot}<span aria-hidden="true">↗</span></a>
+          </div>
+          <small class="meli-api-note">{t.developers.note}</small>
+        </div>
+        <div class="meli-code-window" data-reveal data-reveal-delay="1" aria-label={isSpanish ? 'Ejemplo de API' : 'API example'}>
+          <div class="meli-code-window__bar"><span></span><span></span><span></span><small>payment-intent.js</small></div>
+          <pre><code><span class="code-muted">// {isSpanish ? 'crear un cobro' : 'create a payment'}</span>
+<span class="code-pink">const</span> intent = <span class="code-pink">await</span> gatopago
+  .paymentIntents.<span class="code-green">create</span>(&#123;
+    amount: <span class="code-yellow">"18.00"</span>,
+    asset: <span class="code-yellow">"USDC"</span>,
+    note: <span class="code-yellow">"cafe-norte"</span>,
+    returnUrl: <span class="code-yellow">"https://..."</span>
+  &#125;);</code></pre>
+          <div class="meli-code-response"><span>201</span><code>{`{ status: "${t.developers.response}" }`}</code></div>
+          <div class="meli-code-cat" aria-hidden="true"><MeliSprite variant="head-peek" /><span>webhook ✓</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="meli-section meli-section--milk meli-faq" id="faq" aria-labelledby="faq-title">
+      <div class="meli-container meli-split meli-split--faq">
+        <div class="meli-section-heading" data-reveal>
+          <p class="meli-kicker"><span aria-hidden="true"></span>{t.faq.kicker}</p>
+          <h2 id="faq-title">{t.faq.title}</h2>
+          <div class="meli-faq-cat" aria-hidden="true"><MeliSprite variant="head-curious" /><span>?</span></div>
+        </div>
+        <div class="meli-faq-list">
+          {t.faq.items.map(([question, answer], index) => (
+            <details class="meli-faq-item" open={index === 0} data-reveal>
+              <summary><span>{question}</span><i aria-hidden="true"></i></summary>
+              <p>{answer}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="meli-final" aria-labelledby="final-title">
+      <div class="meli-final__pixels" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+      <div class="meli-container meli-final__inner" data-reveal>
+        <MeliSprite variant="head-excited" className="meli-final__cat" />
+        <p class="meli-kicker meli-kicker--dark"><span aria-hidden="true"></span>{t.final.eyebrow}</p>
+        <h2 id="final-title">{t.final.title}</h2>
+        <p>{t.final.copy}</p>
+        <div class="meli-final__actions">
+          <a class="meli-button meli-button--ink meli-button--large" href={appHref} data-cta="final" rel="external">{t.final.primary}<span aria-hidden="true">↗</span></a>
+          <a class="meli-button meli-button--ember-ghost meli-button--large" href="#cycle">{t.final.secondary}<span aria-hidden="true">↑</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="meli-footer">
+    <div class="meli-container meli-footer__grid">
+      <div class="meli-footer__brand">
+        <a class="meli-brand" href={isSpanish ? '/' : '/en/'}><CatGlyph className="meli-brand__glyph" decorative /><span class="meli-brand__word">GatoPago</span></a>
+        <p>{t.footer.line}</p>
+        <span class="meli-footer__status"><i aria-hidden="true"></i>{t.footer.status}</span>
+      </div>
+      <div><strong>{t.footer.product}</strong><a href="#cycle">{t.footer.links[0]}</a><a href="#account">{t.footer.links[1]}</a><a href="#grow">{t.footer.links[2]}</a><a href="#api">{t.footer.links[3]}</a></div>
+      <div><strong>{t.footer.company}</strong><a href={brand.socialUrl} rel="me external">X / Twitter</a><a href={`mailto:${brand.contactEmail}`}>{isSpanish ? 'Contacto' : 'Contact'}</a><a href={localeHref} data-locale-link>{localeLabel}</a></div>
+      <div><strong>{t.footer.legal}</strong><a href={`${legalPrefix}/terms`}>{t.footer.terms}</a><a href={`${legalPrefix}/privacy`}>{t.footer.privacy}</a></div>
+    </div>
+    <div class="meli-container meli-footer__bottom"><span>© {new Date().getFullYear()} {t.footer.rights}</span><span class="meli-footer__pixels" aria-hidden="true">■ ■ □ ■</span></div>
+  </footer>
+</div>
+
+<script>
+  const SELECTOR = {
+    navShell: '[data-nav-shell]',
+    menuButton: '[data-menu-button]',
+    mobileMenu: '[data-mobile-menu]',
+    reveal: '[data-reveal]',
+    cycleState: '[data-cycle-state]',
+    cycleLab: '[data-cycle-lab]',
+    cycleDetail: '[data-cycle-detail]',
+    cycleStatus: '[data-cycle-status]',
+    cycleExpression: '[data-cycle-expression]',
+    napToggle: '[data-nap-toggle]',
+    napStatus: '[data-nap-status]',
+    catStage: '[data-cat-stage]',
+    dialog: '[data-transaction-dialog]',
+    dialogOpen: '[data-dialog-open]',
+    copyPayment: '[data-copy-payment]',
+    copyLabel: '[data-copy-label]',
+  } as const;
+
+  const navShell = document.querySelector<HTMLElement>(SELECTOR.navShell);
+  const menuButton = document.querySelector<HTMLButtonElement>(SELECTOR.menuButton);
+  const mobileMenu = document.querySelector<HTMLElement>(SELECTOR.mobileMenu);
+
+  const closeMenu = () => {
+    if (!menuButton || !mobileMenu) return;
+    menuButton.setAttribute('aria-expanded', 'false');
+    menuButton.setAttribute('aria-label', menuButton.dataset.openLabel ?? 'Open menu');
+    mobileMenu.hidden = true;
+    navShell?.classList.remove('is-menu-open');
+  };
+
+  menuButton?.addEventListener('click', () => {
+    if (!mobileMenu) return;
+    const isOpening = menuButton.getAttribute('aria-expanded') !== 'true';
+    menuButton.setAttribute('aria-expanded', String(isOpening));
+    menuButton.setAttribute('aria-label', isOpening ? (menuButton.dataset.closeLabel ?? 'Close menu') : (menuButton.dataset.openLabel ?? 'Open menu'));
+    mobileMenu.hidden = !isOpening;
+    navShell?.classList.toggle('is-menu-open', isOpening);
+  });
+  mobileMenu?.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && menuButton?.getAttribute('aria-expanded') === 'true') {
+      closeMenu();
+      menuButton.focus();
+    }
+  });
+
+  let previousScroll = window.scrollY;
+  const syncNav = () => {
+    const current = window.scrollY;
+    navShell?.classList.toggle('is-scrolled', current > 24);
+    navShell?.classList.toggle('is-hidden', current > previousScroll && current > 180 && !navShell.classList.contains('is-menu-open'));
+    previousScroll = current;
+  };
+  window.addEventListener('scroll', syncNav, { passive: true });
+  syncNav();
+
+  document.querySelectorAll<HTMLAnchorElement>('[data-locale-link]').forEach((link) => {
+    link.addEventListener('click', () => {
+      try {
+        window.localStorage.setItem('gatopago:preferred-locale', link.hreflang === 'en' || link.textContent?.trim() === 'EN' ? 'en' : 'es');
+      } catch {}
+    });
+  });
+
+  const revealElements = [...document.querySelectorAll<HTMLElement>(SELECTOR.reveal)];
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        (entry.target as HTMLElement).classList.add('is-visible');
+        observer.unobserve(entry.target);
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+    revealElements.forEach((element) => observer.observe(element));
+  } else {
+    revealElements.forEach((element) => element.classList.add('is-visible'));
+  }
+
+  document.querySelectorAll<HTMLElement>(SELECTOR.cycleLab).forEach((lab) => {
+    const states = [...lab.querySelectorAll<HTMLButtonElement>(SELECTOR.cycleState)];
+    const detail = lab.querySelector<HTMLElement>(SELECTOR.cycleDetail);
+    const status = lab.querySelector<HTMLElement>(SELECTOR.cycleStatus);
+    const expression = lab.querySelector<HTMLElement>(SELECTOR.cycleExpression);
+    states.forEach((button, index) => {
+      button.addEventListener('click', () => {
+        states.forEach((state) => {
+          state.classList.remove('is-active');
+          state.setAttribute('aria-pressed', 'false');
+        });
+        button.classList.add('is-active');
+        button.setAttribute('aria-pressed', 'true');
+        lab.style.setProperty('--cycle-index', String(index));
+        if (detail) detail.textContent = button.dataset.detail ?? '';
+        if (status) status.textContent = button.dataset.status ?? '';
+        if (expression) expression.dataset.expression = button.dataset.expression ?? 'focused';
+      });
+    });
+  });
+
+  const napToggle = document.querySelector<HTMLButtonElement>(SELECTOR.napToggle);
+  const napStatus = document.querySelector<HTMLElement>(SELECTOR.napStatus);
+  const catStage = document.querySelector<HTMLElement>(SELECTOR.catStage);
+  napToggle?.addEventListener('click', () => {
+    const sleeping = napToggle.getAttribute('aria-pressed') !== 'true';
+    napToggle.setAttribute('aria-pressed', String(sleeping));
+    catStage?.classList.toggle('is-sleeping', sleeping);
+    if (napStatus) napStatus.textContent = sleeping ? (napToggle.dataset.asleep ?? '') : (napToggle.dataset.awake ?? '');
+  });
+
+  const dialog = document.querySelector<HTMLDialogElement>(SELECTOR.dialog);
+  document.querySelector<HTMLButtonElement>(SELECTOR.dialogOpen)?.addEventListener('click', () => dialog?.showModal());
+  dialog?.addEventListener('click', (event) => {
+    if (event.target === dialog) dialog.close('cancel');
+  });
+
+  document.querySelectorAll<HTMLButtonElement>(SELECTOR.copyPayment).forEach((button) => {
+    button.addEventListener('click', async () => {
+      const label = button.querySelector<HTMLElement>(SELECTOR.copyLabel);
+      try { await navigator.clipboard.writeText(button.dataset.paymentLink ?? ''); } catch {}
+      if (label) label.textContent = button.dataset.copiedLabel ?? 'Copied';
+      button.classList.add('is-copied');
+      window.setTimeout(() => {
+        if (label) label.textContent = button.dataset.defaultLabel ?? 'Copy link';
+        button.classList.remove('is-copied');
+      }, 1800);
+    });
+  });
+
+  document.querySelectorAll<HTMLAnchorElement>('[data-cta]').forEach((link) => {
+    link.addEventListener('click', () => {
+      const plausible = (window as Window & { plausible?: (event: string, options?: unknown) => void }).plausible;
+      plausible?.('Open App', { props: { placement: link.dataset.cta ?? 'unknown' } });
+    });
+  });
+</script>

@@ -1,0 +1,90 @@
+---
+import { Code } from 'astro:components';
+import { getLang } from '../i18n';
+import { brand } from '../config/brand';
+
+const lang = getLang(Astro.currentLocale);
+const t = {
+  es: {
+    badge: 'Para desarrolladores',
+    title: 'Crea cobros y recibe confirmaciones onchain con una API.',
+    copy: 'Crea un payment intent, abre un checkout y recibe un webhook firmado cuando el pago se confirma. Es la misma infraestructura que mueve GatoPago Personal, disponible para integraciones piloto.',
+    points: [
+      { dot: 'var(--glow-sky)', title: 'Payment intents + checkout', desc: 'Define monto, moneda y estado del cobro desde un flujo reutilizable.' },
+      { dot: 'var(--glow-pink)', title: 'Webhooks firmados', desc: 'Eventos firmados, reintentos e idempotencia para conciliar cada pago.' },
+      { dot: 'var(--glow-gold)', title: 'Sandbox', desc: 'Construye y prueba la integración sin mover fondos reales.' },
+      { dot: 'var(--glow-sky)', title: 'Settlement transparente', desc: 'Consulta el estado onchain y la cuenta que recibe los fondos.' },
+    ],
+    response: 'Respuesta',
+    docs: 'Ver la documentación',
+    dashboard: 'Abrir el dashboard',
+  },
+  en: {
+    badge: 'For developers',
+    title: 'Create charges and receive onchain confirmations through an API.',
+    copy: 'Create a payment intent, open a checkout, and receive a signed webhook when the payment is confirmed. It is the same infrastructure behind GatoPago Personal, available for pilot integrations.',
+    points: [
+      { dot: 'var(--glow-sky)', title: 'Payment intents + checkout', desc: 'Define amount, currency, and charge status through a reusable flow.' },
+      { dot: 'var(--glow-pink)', title: 'Signed webhooks', desc: 'Signed events, retries, and idempotency to reconcile every payment.' },
+      { dot: 'var(--glow-gold)', title: 'Sandbox', desc: 'Build and test the integration without moving real funds.' },
+      { dot: 'var(--glow-sky)', title: 'Transparent settlement', desc: 'Inspect the onchain state and the account receiving the funds.' },
+    ],
+    response: 'Response',
+    docs: 'Read the docs',
+    dashboard: 'Open the dashboard',
+  },
+}[lang];
+
+const reqCode = `curl ${brand.apiUrl}/v1/payment_intents \\
+  -H "Authorization: Bearer sk_test_…" \\
+  -H "Content-Type: application/json" \\
+  -d '{ "amount": "25.00", "currency": "USDC" }'`;
+
+const resCode = `{
+  "id": "pi_3b1c…",
+  "status": "awaiting_payment",
+  "amount": "25.00",
+  "currency": "USDC",
+  "checkout_url": "${brand.appUrl}/pay?id=…"
+}`;
+---
+
+<section id="api" class="landing-section">
+  <div class="landing-shell">
+    <div class="split" data-reveal>
+      <div class="split-copy">
+        <span class="soon-badge"><span class="soon-dot" aria-hidden="true"></span> {t.badge}</span>
+        <h2 class="section-title">{t.title}</h2>
+        <p class="section-copy">{t.copy}</p>
+
+        <div class="point-list" data-reveal-stagger>
+          {t.points.map((p) => (
+            <div class="point-row">
+              <span class="dot" style={`background:${p.dot}; color:${p.dot};`}></span>
+              <p><strong style="color:var(--color-text); font-weight:600;">{p.title}.</strong> {p.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        <div class="button-row">
+          <a href="/docs" class="btn-gatopago" data-cta="api_docs">{t.docs}</a>
+          <a href={brand.dashboardUrl} target="_blank" rel="noopener noreferrer" class="btn-ghost" data-cta="api_dashboard">{t.dashboard}</a>
+        </div>
+      </div>
+
+      <div class="split-visual">
+        <div class="code-card" data-float>
+          <div class="code-card__bar">
+            <span class="code-dot"></span><span class="code-dot"></span><span class="code-dot"></span>
+            <em>POST /v1/payment_intents</em>
+          </div>
+          <div class="code-card__body">
+            <Code code={reqCode} lang="bash" theme="github-dark" />
+            <div class="code-card__label">{t.response}</div>
+            <Code code={resCode} lang="json" theme="github-dark" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

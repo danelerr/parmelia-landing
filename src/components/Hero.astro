@@ -1,25 +1,29 @@
 ---
-import ParmeliaStack from './ParmeliaStack.astro';
+import GatoPagoMark from './GatoPagoMark.astro';
 import HeroBackdrop from './HeroBackdrop.astro';
 import { getLang } from '../i18n';
+import { appLink } from '../config/brand';
 
 const lang = getLang(Astro.currentLocale);
+const heroAppHref = appLink('landing_hero');
 const t = {
   es: {
-    titleLead: 'Mueve dinero digital',
-    titleAccent: 'como mandar un mensaje.',
-    copy: 'Cobra con links, paga con QR y envía a usernames. Fácil para ti, fácil para quien recibe.',
-    cta: 'Probar Parmelia',
-    how: 'Ver cómo funciona',
-    proof: ['Sin descargar apps', 'sin frases raras', 'sin complicaciones'],
+    titleLead: 'Recibe, usa y haz crecer',
+    titleAccent: 'tus dólares digitales.',
+    copy: 'Cobra, paga, cambia y pon a trabajar una parte de tus USDC desde una cuenta que controlas.',
+    cta: 'Probar la alpha',
+    how: 'Ver el ciclo',
+    proof: ['Tu dinero sigue siendo tuyo', 'USDC primero', 'sin frases semilla'],
+		alpha: 'Alpha pública · Arbitrum Sepolia · fondos de prueba',
   },
   en: {
-    titleLead: 'Move digital money',
-    titleAccent: 'like sending a message.',
-    copy: 'Charge with links, pay with QR and send to usernames. Easy for you, easy for whoever receives it.',
-    cta: 'Try Parmelia',
-    how: 'See how it works',
-    proof: ['No app downloads', 'no weird phrases', 'no hassle'],
+    titleLead: 'Receive, use and grow',
+    titleAccent: 'your digital dollars.',
+    copy: 'Get paid, pay, swap, and put part of your USDC to work from an account you control.',
+    cta: 'Try the alpha',
+    how: 'See the cycle',
+    proof: ['Your money stays yours', 'USDC first', 'no seed phrase'],
+		alpha: 'Public alpha · Arbitrum Sepolia · test funds',
   },
 }[lang];
 ---
@@ -29,7 +33,7 @@ const t = {
 
   <div class="landing-shell">
     <div class="copy-stack wide" data-reveal>
-      <ParmeliaStack className="hero-logo-glow" />
+      <GatoPagoMark className="hero-logo-glow" loading="eager" />
 
       <div class="relative w-full">
         <h1 class="hero-title hero-title-light">
@@ -38,12 +42,13 @@ const t = {
       </div>
 
       <p class="section-copy">{t.copy}</p>
+			<p class="microcopy">{t.alpha}</p>
 
       <div class="button-row">
-        <a href="https://app.parmelia.me?ref=landing_hero" target="_blank" rel="noopener noreferrer" class="btn-parmelia hero-cta" data-cta="hero">
+        <a href={heroAppHref} target="_blank" rel="noopener noreferrer" class="btn-gatopago hero-cta" data-cta="hero">
           {t.cta}
         </a>
-        <a href="#payment-links" class="btn-ghost">{t.how}</a>
+        <a href="#money-cycle" class="btn-ghost">{t.how}</a>
       </div>
 
       <p class="microcopy hero-proofline">

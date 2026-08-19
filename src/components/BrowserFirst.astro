@@ -1,19 +1,19 @@
 ---
 import { Image } from 'astro:assets';
-import appPhone from '../assets/app-phone.png';
+import dashboardShot from '../assets/shot-dashboard.png';
 import { getLang } from '../i18n';
 
 const lang = getLang(Astro.currentLocale);
 const t = {
   es: {
-    title: 'Sin descargar ninguna app.',
-    copy: 'Entra desde el navegador y empieza a usarla. No hay nada que descargar ni instalar.',
-    alt: 'Captura de la app de Parmelia en el móvil',
+    title: 'Una cuenta que empieza fácil.',
+    copy: 'La abres desde el navegador y entras con tu huella o tu cara. Sin descargar otra app ni guardar una frase semilla.',
+    alt: 'Cuenta GatoPago con USDC disponible, saldo creciendo y actividad reciente',
   },
   en: {
-    title: 'No app to download.',
-    copy: 'Open it from your browser and start using it. Nothing to download or install.',
-    alt: 'Screenshot of the Parmelia app on mobile',
+    title: 'An account that starts simple.',
+    copy: 'Open it in your browser and sign in with your fingerprint or face. No extra app to download and no seed phrase to store.',
+    alt: 'GatoPago account with available USDC, growing balance, and recent activity',
   },
 }[lang];
 ---
@@ -33,8 +33,8 @@ const t = {
         </svg>
       </div>
 
-      <div class="phone-shot" data-float>
-        <Image src={appPhone} alt={t.alt} width={461} height={922} loading="lazy" decoding="async" />
+      <div class="app-screen" data-float>
+        <Image src={dashboardShot} alt={t.alt} width={1080} height={2400} loading="lazy" decoding="async" />
       </div>
     </div>
   </div>

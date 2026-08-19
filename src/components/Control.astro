@@ -1,26 +1,27 @@
 ---
 import { getLang } from '../i18n';
+import GatoPagoMark from './GatoPagoMark.astro';
 
 const lang = getLang(Astro.currentLocale);
 const t = {
   es: {
-    title: 'Tu dinero sigue siendo tuyo.',
-    copy: 'Aquí tu dinero es tuyo de verdad. Puedes enviarlo, cambiarlo o sacarlo cuando quieras, sin pedir permiso.',
-    micro: 'Lo técnico existe debajo. La experiencia no tiene que parecer técnica.',
+    title: 'Tu dinero sigue siendo tuyo. Ahora puede hacer más.',
+    copy: 'GatoPago simplifica pagos, cambios y crecimiento sin quedarse con tus fondos. Tú autorizas cada movimiento desde tu cuenta.',
+    micro: 'Abstracción sin opacidad: la experiencia es simple, pero las rutas, riesgos y comprobantes siguen disponibles.',
     points: [
-      { dot: 'var(--glow-sky)', title: 'Solo tú lo mueves', desc: 'Nadie más puede tocar tus fondos. Ni nosotros: Parmelia no los guarda por ti.' },
-      { dot: 'var(--glow-pink)', title: 'Entras con tu huella o tu cara', desc: 'Sin contraseñas ni frases raras que memorizar.' },
-      { dot: 'var(--glow-gold)', title: 'Verificable de verdad', desc: 'Cada movimiento queda registrado y lo puedes comprobar. Sin letra chica.' },
+      { dot: 'var(--glow-sky)', title: 'Tú autorizas', desc: 'Cada movimiento requiere una llave activa de tu cuenta. GatoPago no custodia el saldo.' },
+      { dot: 'var(--glow-pink)', title: 'Recuperación con tiempo', desc: 'Un cambio asistido de llaves espera 48 horas y una llave activa puede cancelarlo.' },
+      { dot: 'var(--glow-gold)', title: 'Todo deja rastro', desc: 'Puedes consultar actividad, comprobantes y transacciones onchain.' },
     ],
   },
   en: {
-    title: 'Your money stays yours.',
-    copy: 'Here your money is truly yours. You can send it, swap it or withdraw it whenever you want, without asking permission.',
-    micro: 'The technical part lives underneath. The experience doesn’t have to feel technical.',
+    title: 'Your money stays yours. Now it can do more.',
+    copy: 'GatoPago simplifies payments, swaps, and growth without taking custody of your funds. You authorize every movement from your account.',
+    micro: 'Abstraction without opacity: the experience stays simple while routes, risks, and receipts remain available.',
     points: [
-      { dot: 'var(--glow-sky)', title: 'Only you move it', desc: 'No one else can touch your funds. Not even us: Parmelia doesn’t hold them for you.' },
-      { dot: 'var(--glow-pink)', title: 'You sign in with your fingerprint or face', desc: 'No passwords or weird phrases to memorize.' },
-      { dot: 'var(--glow-gold)', title: 'Truly verifiable', desc: 'Every movement is recorded and you can check it. No fine print.' },
+      { dot: 'var(--glow-sky)', title: 'You authorize', desc: 'Every movement requires an active key from your account. GatoPago does not custody the balance.' },
+      { dot: 'var(--glow-pink)', title: 'Recovery with time to react', desc: 'An assisted key change waits 48 hours and an active key can cancel it.' },
+      { dot: 'var(--glow-gold)', title: 'Everything leaves a trail', desc: 'You can review activity, receipts, and onchain transactions.' },
     ],
   },
 }[lang];
@@ -32,15 +33,16 @@ const points = t.points;
     <div class="split is-reverse" data-reveal>
       <div class="split-visual">
         <div class="stage glow-sky vault-visual" style="margin:0;">
-          <svg viewBox="0 0 220 220" class="h-[230px] w-[230px]" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <g opacity=".9">
-              <path d="M106.6 22.1L28 76.8L35.6 82.1L108.3 133.2L181.3 82.5L188.8 77.2L110.4 22.1C109.2 21.4 107.8 21.4 106.6 22.1Z" fill="#A7D4DE"/>
-              <path d="M110 139.8C108.9 140.5 107.7 140.5 106.7 139.8L34.5 89.7L27.9 85.1L27.8 114.7L34.4 119.3L108.2 170.6L182.1 119.7L188.7 115.1L188.8 85.6L182.2 90.1L110 139.8Z" fill="#DEA6BC"/>
-              <path d="M109.9 177.1C108.9 177.8 107.6 177.8 106.6 177.1L34.4 127L27.8 122.4L27.8 152L34.3 156.6L108.1 207.9L182 157L188.6 152.4L188.7 122.9L182.1 127.4L109.9 177.1Z" fill="#DED9A6"/>
-            </g>
-            <path class="vault-shield" d="M110 72L150 91V126C150 156 110 174 110 174C110 174 70 156 70 126V91L110 72Z" fill="rgba(255,255,255,.07)" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
-            <path class="check-path" d="M92 124L105 137L131 106" stroke="#9CE3F4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+          <div class="vault-mark-frame" aria-hidden="true">
+            <GatoPagoMark className="vault-mark" decorative />
+            <span class="vault-lock">
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 28V22C18 14.3 24.3 8 32 8C39.7 8 46 14.3 46 22V28" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+                <rect x="11" y="27" width="42" height="31" rx="12" fill="rgba(255,255,255,.1)" stroke="currentColor" stroke-width="4"/>
+                <path class="check-path" d="M23 42L29 48L42 35" stroke="#9CE3F4" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </div>
         </div>
       </div>
 

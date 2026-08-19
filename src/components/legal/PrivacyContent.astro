@@ -1,26 +1,28 @@
 ---
 import { getLang } from '../../i18n';
+import { brand } from '../../config/brand';
 
 const lang = getLang(Astro.currentLocale);
 
 const c = {
   es: {
     title: 'Política de Privacidad',
-    updated: 'Última actualización: 14 de junio de 2026',
+    updated: 'Última actualización: 18 de agosto de 2026',
     lead:
-      'Parmelia es una aplicación de pagos no custodial que permite enviar, recibir y cobrar USDC mediante links de pago, códigos QR y nombres de usuario. Esta Política de Privacidad explica qué datos tratamos, cómo los usamos y qué control tienes sobre ellos. Parmelia es operada por Daniel Cueto (Bolivia). Para cualquier consulta de privacidad, escríbenos a privacy@parmelia.me.',
+      'GatoPago es una aplicación de pagos no custodial que permite enviar, recibir y cobrar USDC mediante links de pago, códigos QR y nombres de usuario. Esta Política de Privacidad explica qué datos tratamos, cómo los usamos y qué control tienes sobre ellos. GatoPago es operada por Daniel Cueto (Bolivia). Para cualquier consulta de privacidad, escríbenos a {{privacyEmail}}.',
     sections: [
       {
         h: 'Naturaleza no custodial',
         p: [
-          'Parmelia no custodia tu dinero ni tus claves privadas. Tú mantienes el control de tu wallet y de tus fondos en todo momento. No podemos mover, congelar ni recuperar tus fondos, y las transacciones ocurren directamente en la red blockchain.',
+          'GatoPago no custodia tu dinero ni puede gastarlo. Tú mantienes el control de tu cuenta y fondos. Como guardian de recuperación, GatoPago puede iniciar un reemplazo de llaves con una espera de 48 horas; una llave activa puede cancelarlo. Las transacciones ocurren directamente en blockchain.',
         ],
       },
       {
         h: 'Información que recopilamos',
         list: [
           'Datos de cuenta de Google (Sign-In): cuando inicias sesión con Google, recibimos tu nombre, tu dirección de correo electrónico, tu foto de perfil y el identificador de tu cuenta de Google, para crear y autenticar tu cuenta.',
-          'Datos de perfil: el nombre de usuario (username) y la información de perfil que eliges dentro de Parmelia.',
+          'Datos de perfil: el nombre de usuario (username) y la información de perfil que eliges dentro de GatoPago.',
+					'Datos de investigación de producto: si expresas interés en GatoPago Card, guardamos el país, casos de uso y preferencias que respondes. Esto no constituye una solicitud de tarjeta ni datos de KYC.',
           'Datos on-chain: tu(s) dirección(es) de wallet y las transacciones asociadas, que son públicas por naturaleza en la blockchain.',
           'Datos técnicos y de uso: tipo de dispositivo, navegador, dirección IP aproximada y métricas de uso anónimas o agregadas para mejorar el servicio.',
           'Comunicaciones: la información que nos envías si nos contactas por correo.',
@@ -65,13 +67,13 @@ const c = {
       {
         h: 'Tus derechos',
         p: [
-          'Puedes solicitar acceder, corregir o eliminar tus datos personales, así como revocar el acceso de Google desde la configuración de tu cuenta de Google. Para ejercer estos derechos, escríbenos a privacy@parmelia.me.',
+          'Puedes solicitar acceder, corregir o eliminar tus datos personales, así como revocar el acceso de Google desde la configuración de tu cuenta de Google. Para ejercer estos derechos, escríbenos a {{privacyEmail}}.',
         ],
       },
       {
         h: 'Menores de edad',
         p: [
-          'Parmelia no está dirigida a menores de edad y no recopilamos conscientemente datos de personas que no tengan la mayoría de edad legal en su jurisdicción.',
+          'GatoPago no está dirigida a menores de edad y no recopilamos conscientemente datos de personas que no tengan la mayoría de edad legal en su jurisdicción.',
         ],
       },
       {
@@ -83,28 +85,29 @@ const c = {
       {
         h: 'Contacto',
         p: [
-          'Si tienes preguntas sobre esta política o sobre tus datos, escríbenos a privacy@parmelia.me.',
+          'Si tienes preguntas sobre esta política o sobre tus datos, escríbenos a {{privacyEmail}}.',
         ],
       },
     ],
   },
   en: {
     title: 'Privacy Policy',
-    updated: 'Last updated: June 14, 2026',
+    updated: 'Last updated: August 18, 2026',
     lead:
-      'Parmelia is a non-custodial payment application that lets users send, receive and request USDC using payment links, QR codes and usernames. This Privacy Policy explains what data we process, how we use it and what control you have over it. Parmelia is operated by Daniel Cueto (Bolivia). For any privacy question, contact us at privacy@parmelia.me.',
+      'GatoPago is a non-custodial payment application that lets users send, receive and request USDC using payment links, QR codes and usernames. This Privacy Policy explains what data we process, how we use it and what control you have over it. GatoPago is operated by Daniel Cueto (Bolivia). For any privacy question, contact us at {{privacyEmail}}.',
     sections: [
       {
         h: 'Non-custodial nature',
         p: [
-          'Parmelia does not custody your money or your private keys. You keep control of your wallet and your funds at all times. We cannot move, freeze or recover your funds, and transactions happen directly on the blockchain.',
+          'GatoPago does not custody or spend your money. You keep control of your account and funds. As recovery guardian, GatoPago can initiate a key replacement with a 48-hour delay; an active key can cancel it. Transactions happen directly on the blockchain.',
         ],
       },
       {
         h: 'Information we collect',
         list: [
           'Google account data (Sign-In): when you sign in with Google, we receive your name, email address, profile picture and your Google account identifier, to create and authenticate your account.',
-          'Profile data: the username and profile information you choose within Parmelia.',
+          'Profile data: the username and profile information you choose within GatoPago.',
+					'Product research data: if you express interest in GatoPago Card, we store the country, use cases and preferences you submit. This is not a card application or KYC data.',
           'On-chain data: your wallet address(es) and associated transactions, which are public by nature on the blockchain.',
           'Technical and usage data: device type, browser, approximate IP address and anonymous or aggregated usage metrics to improve the service.',
           'Communications: the information you send us if you contact us by email.',
@@ -124,7 +127,7 @@ const c = {
       {
         h: 'Google user data',
         p: [
-          'Parmelia’s use and transfer of information received from Google APIs adheres to the Google API Services User Data Policy, including the Limited Use requirements.',
+          'GatoPago’s use and transfer of information received from Google APIs adheres to the Google API Services User Data Policy, including the Limited Use requirements.',
           'We only access your name, email, profile picture and Google account identifier, and solely for the purpose of creating your account and signing you in. We do not use this data for advertising, we do not sell it, and we do not share it with third parties except to operate the service or where required by law.',
         ],
       },
@@ -143,19 +146,19 @@ const c = {
       {
         h: 'Security',
         p: [
-          'We apply reasonable measures to protect your information. No system is 100% secure, but because Parmelia is non-custodial, your funds stay under your control and not on our servers.',
+          'We apply reasonable measures to protect your information. No system is 100% secure, but because GatoPago is non-custodial, your funds stay under your control and not on our servers.',
         ],
       },
       {
         h: 'Your rights',
         p: [
-          'You can request to access, correct or delete your personal data, and revoke Google access from your Google account settings. To exercise these rights, contact us at privacy@parmelia.me.',
+          'You can request to access, correct or delete your personal data, and revoke Google access from your Google account settings. To exercise these rights, contact us at {{privacyEmail}}.',
         ],
       },
       {
         h: 'Children',
         p: [
-          'Parmelia is not directed to minors and we do not knowingly collect data from people below the legal age of majority in their jurisdiction.',
+          'GatoPago is not directed to minors and we do not knowingly collect data from people below the legal age of majority in their jurisdiction.',
         ],
       },
       {
@@ -167,7 +170,7 @@ const c = {
       {
         h: 'Contact',
         p: [
-          'If you have questions about this policy or your data, contact us at privacy@parmelia.me.',
+          'If you have questions about this policy or your data, contact us at {{privacyEmail}}.',
         ],
       },
     ],
@@ -177,13 +180,26 @@ const c = {
 
 <h1 class="legal-doc-title">{c.title}</h1>
 <p class="legal-updated">{c.updated}</p>
-<p class="legal-lead">{c.lead}</p>
+<p class="legal-lead">
+  {c.lead.split('{{privacyEmail}}')[0]}
+  {c.lead.includes('{{privacyEmail}}') && <a href={`mailto:${brand.privacyEmail}`}>{brand.privacyEmail}</a>}
+  {c.lead.split('{{privacyEmail}}')[1]}
+</p>
 
 {
   c.sections.map((s) => (
     <section class="legal-section">
       <h2>{s.h}</h2>
-      {s.p && s.p.map((para) => <p set:html={para.replace(/privacy@parmelia\.me/g, '<a href="mailto:privacy@parmelia.me">privacy@parmelia.me</a>')} />)}
+      {s.p && s.p.map((para) => {
+        const [before, after] = para.split('{{privacyEmail}}');
+        return (
+          <p>
+            {before}
+            {after !== undefined && <a href={`mailto:${brand.privacyEmail}`}>{brand.privacyEmail}</a>}
+            {after}
+          </p>
+        );
+      })}
       {s.list && (
         <ul>
           {s.list.map((item) => <li>{item}</li>)}

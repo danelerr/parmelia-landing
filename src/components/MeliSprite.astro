@@ -1,0 +1,71 @@
+---
+import { Image } from 'astro:assets';
+import bodyConveyor from '../assets/meli/body-conveyor.webp';
+import bodyCourier from '../assets/meli/body-courier.webp';
+import bodyPeekCard from '../assets/meli/body-peek-card.webp';
+import bodyQr from '../assets/meli/body-qr.webp';
+import bodySitting from '../assets/meli/body-sitting.webp';
+import bodySleeping from '../assets/meli/body-sleeping.webp';
+import headCautious from '../assets/meli/head-cautious.webp';
+import headCurious from '../assets/meli/head-curious.webp';
+import headExcited from '../assets/meli/head-excited.webp';
+import headFocused from '../assets/meli/head-focused.webp';
+import headHappy from '../assets/meli/head-happy.webp';
+import headNeutral from '../assets/meli/head-neutral.webp';
+import headPeek from '../assets/meli/head-peek.webp';
+import headSleepy from '../assets/meli/head-sleepy.webp';
+
+const sprites = {
+  'body-conveyor': bodyConveyor,
+  'body-courier': bodyCourier,
+  'body-peek-card': bodyPeekCard,
+  'body-qr': bodyQr,
+  'body-sitting': bodySitting,
+  'body-sleeping': bodySleeping,
+  'head-cautious': headCautious,
+  'head-curious': headCurious,
+  'head-excited': headExcited,
+  'head-focused': headFocused,
+  'head-happy': headHappy,
+  'head-neutral': headNeutral,
+  'head-peek': headPeek,
+  'head-sleepy': headSleepy,
+} as const;
+
+type SpriteVariant = keyof typeof sprites;
+
+interface Props {
+  variant: SpriteVariant;
+  className?: string;
+  title?: string;
+  decorative?: boolean;
+  loading?: 'eager' | 'lazy';
+}
+
+const {
+  variant,
+  className = '',
+  title = 'Meli, la mascota de GatoPago',
+  decorative = true,
+  loading = 'lazy',
+} = Astro.props;
+
+const sprite = sprites[variant];
+---
+
+<span
+  class={`meli-sprite meli-sprite--${variant} ${className}`}
+  data-meli-variant={variant}
+  aria-hidden={decorative ? 'true' : undefined}
+>
+  <Image
+    class="meli-sprite__image"
+    src={sprite}
+    alt={decorative ? '' : title}
+    format="webp"
+    quality="max"
+    loading={loading}
+    decoding="async"
+    fetchpriority={loading === 'eager' ? 'high' : 'auto'}
+  />
+</span>

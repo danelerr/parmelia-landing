@@ -1,43 +1,38 @@
 ---
-import { Image } from 'astro:assets';
-import arbitrumLogo from '../assets/arbitrum-arb-logo.png';
 import { getLang } from '../i18n';
 
 const lang = getLang(Astro.currentLocale);
 const t = {
   es: {
-    stats: [
-      { value: '0%', label: 'Comisiones entre usuarios' },
-      { value: '100%', label: 'Tu dinero, siempre tuyo' },
-      { value: '3', label: 'Activos: USDC, ETH y WBTC' },
+    stages: [
+      { step: '01', value: 'Recibe', label: 'Links, QR o transferencias en USDC' },
+      { step: '02', value: 'Disponible', label: 'Listo para pagar, enviar o cambiar' },
+      { step: '03', value: 'Creciendo', label: 'Una parte puede generar rendimiento con Aave' },
+      { step: '04', value: 'Usa', label: 'Paga, envía o retira cuando la necesites' },
     ],
-    built: 'Construido sobre Arbitrum',
-    note: 'Pensado para mover dólares digitales en Bolivia y LATAM.',
+    note: 'Un solo ciclo para tu dinero. Hoy puedes probarlo con fondos de prueba en Arbitrum Sepolia.',
   },
   en: {
-    stats: [
-      { value: '0%', label: 'Fees between users' },
-      { value: '100%', label: 'Your money, always yours' },
-      { value: '3', label: 'Assets: USDC, ETH and WBTC' },
+    stages: [
+      { step: '01', value: 'Receive', label: 'Links, QR, or USDC transfers' },
+      { step: '02', value: 'Available', label: 'Ready to pay, send, or swap' },
+      { step: '03', value: 'Growing', label: 'Part of it can earn through Aave' },
+      { step: '04', value: 'Use', label: 'Pay, send, or withdraw when needed' },
     ],
-    built: 'Built on Arbitrum',
-    note: 'Made to move digital dollars in Bolivia and LATAM.',
+    note: 'One cycle for your money. You can try it today with test funds on Arbitrum Sepolia.',
   },
 }[lang];
 ---
 
-<section id="proof" class="proof-bar" data-reveal>
+<section id="money-cycle" class="proof-bar proof-cycle" data-reveal>
   <div class="proof-inner">
-    {t.stats.map((s) => (
+    {t.stages.map((stage) => (
       <div class="proof-stat">
-        <span class="proof-value">{s.value}</span>
-        <span class="proof-label">{s.label}</span>
+        <span class="proof-step">{stage.step}</span>
+        <span class="proof-value">{stage.value}</span>
+        <span class="proof-label">{stage.label}</span>
       </div>
     ))}
-    <div class="proof-stat proof-built">
-      <Image src={arbitrumLogo} alt="Arbitrum" width={68} height={68} loading="lazy" decoding="async" />
-      <span class="proof-label">{t.built}</span>
-    </div>
   </div>
 
   <p class="proof-note">{t.note}</p>

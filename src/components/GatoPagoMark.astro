@@ -1,0 +1,37 @@
+---
+import { Image } from 'astro:assets';
+import catMark from '../../d54017bf-565f-49e0-8192-bd0f47bfc050.png';
+
+interface Props {
+  className?: string;
+  title?: string;
+  decorative?: boolean;
+  loading?: 'eager' | 'lazy';
+}
+
+const {
+  className = '',
+  title = 'GatoPago',
+  decorative = false,
+  loading = 'lazy',
+} = Astro.props;
+---
+
+<span
+  class={`gatopago-mark ${className}`}
+  role={decorative ? undefined : 'img'}
+  aria-label={decorative ? undefined : title}
+  aria-hidden={decorative ? 'true' : undefined}
+>
+  <Image
+    class="gatopago-mark__image"
+    src={catMark}
+    alt=""
+    width={768}
+    height={512}
+    format="webp"
+    quality={90}
+    loading={loading}
+    decoding="async"
+  />
+</span>

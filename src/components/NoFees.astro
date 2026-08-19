@@ -4,28 +4,28 @@ import { getLang } from '../i18n';
 const lang = getLang(Astro.currentLocale);
 const t = {
   es: {
-    title: 'Enviar dinero no debería sentirse caro.',
-    copy: 'Mueve tu saldo a otros usuarios de Parmelia sin comisiones. Y cuando quieras sacar tu dinero, lo haces desde la misma app.',
-    micro: 'Si alguna vez hay un costo, lo ves claro antes de confirmar.',
-    beforeLabel: 'Antes',
-    beforeTitle: 'Direcciones largas, comisiones y pasos de más.',
-    beforeCopy: 'Mandar dinero termina sintiéndose complicado, aunque solo quieras pagarle a alguien.',
-    afterLabel: 'Con Parmelia',
-    afterTitle: 'Username, monto y confirmar.',
-    afterCopy: 'El flujo se concentra en la acción, no en explicar la infraestructura.',
-    burn: 'Las comisiones se evaporan. Tu saldo se queda.',
+    title: 'El costo también debe ser fácil de entender.',
+    copy: 'GatoPago cobra 0% de comisión por mover saldo entre sus usuarios. Una red, un protocolo o un proveedor externo pueden tener costos propios.',
+    micro: 'Cualquier costo conocido aparece antes de que autorices el movimiento.',
+    beforeLabel: 'Lo que cansa',
+    beforeTitle: 'Cambiar de app y adivinar costos.',
+    beforeCopy: 'El problema no es solo cuánto pagas: es no saberlo hasta el final.',
+    afterLabel: 'Con GatoPago',
+    afterTitle: 'Monto, destinatario y costo a la vista.',
+    afterCopy: 'Primero entiendes el movimiento. Después decides si confirmarlo.',
+    burn: '0% de GatoPago entre usuarios. Otros costos, siempre visibles.',
   },
   en: {
-    title: 'Sending money shouldn’t feel expensive.',
-    copy: 'Move your balance to other Parmelia users with no fees. And when you want to cash out, you do it from the same app.',
-    micro: 'If there’s ever a cost, you see it clearly before confirming.',
-    beforeLabel: 'Before',
-    beforeTitle: 'Long addresses, fees and extra steps.',
-    beforeCopy: 'Sending money ends up feeling complicated, even when you just want to pay someone.',
-    afterLabel: 'With Parmelia',
-    afterTitle: 'Username, amount and confirm.',
-    afterCopy: 'The flow focuses on the action, not on explaining the infrastructure.',
-    burn: 'The fees evaporate. Your balance stays.',
+    title: 'Cost should be easy to understand too.',
+    copy: 'GatoPago charges a 0% fee to move balances between its users. A network, protocol, or external provider may have costs of its own.',
+    micro: 'Any known cost appears before you authorize the movement.',
+    beforeLabel: 'What gets tiring',
+    beforeTitle: 'Switching apps and guessing costs.',
+    beforeCopy: 'The problem is not only what you pay. It is finding out at the end.',
+    afterLabel: 'With GatoPago',
+    afterTitle: 'Amount, recipient, and cost in view.',
+    afterCopy: 'First you understand the movement. Then you decide whether to confirm it.',
+    burn: '0% GatoPago fee between users. Other costs, always visible.',
   },
 }[lang];
 ---
@@ -41,13 +41,13 @@ const t = {
     <div class="fee-compare" data-reveal-stagger>
       <article class="fee-panel">
         <p class="text-sm font-semibold uppercase tracking-wide text-white/40">{t.beforeLabel}</p>
-        <h3 class="mt-4 font-display text-2xl font-semibold leading-tight tracking-tight text-white">{t.beforeTitle}</h3>
+        <h3 class="mt-4 font-display text-2xl font-extrabold leading-tight tracking-tight text-white">{t.beforeTitle}</h3>
         <p class="mt-4 text-base font-normal leading-relaxed text-white/60">{t.beforeCopy}</p>
       </article>
 
       <article class="fee-panel highlight">
         <p class="text-sm font-semibold uppercase tracking-wide text-white/55">{t.afterLabel}</p>
-        <h3 class="mt-4 font-display text-2xl font-semibold leading-tight tracking-tight text-white">{t.afterTitle}</h3>
+        <h3 class="mt-4 font-display text-2xl font-extrabold leading-tight tracking-tight text-white">{t.afterTitle}</h3>
         <p class="mt-4 text-base font-normal leading-relaxed text-white/70">{t.afterCopy}</p>
       </article>
     </div>

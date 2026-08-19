@@ -1,23 +1,26 @@
 ---
+import { Image } from 'astro:assets';
 import TokenIcon from './TokenIcon.astro';
+import swapShot from '../assets/shot-swap.png';
 import { getLang } from '../i18n';
 
 const lang = getLang(Astro.currentLocale);
 const t = {
   es: {
-    title: 'Cambia cuando el pago lo necesita.',
-    copy: 'Convierte entre activos sin salir de Parmelia. Menos pestañas, menos pasos y menos margen para equivocarte.',
+    title: 'Cambia sin salir del ciclo.',
+    copy: 'Convierte entre USDC y ETH dentro de GatoPago. Ves la cotización, el mínimo que recibirás y los costos conocidos antes de confirmar.',
+    alt: 'Pantalla de cambio en GatoPago con cotización, mínimo recibido y costos visibles',
   },
   en: {
-    title: 'Swap when the payment needs it.',
-    copy: 'Convert between assets without leaving Parmelia. Fewer tabs, fewer steps and less room for mistakes.',
+    title: 'Swap without leaving the cycle.',
+    copy: 'Convert between USDC and ETH inside GatoPago. See the quote, minimum received, and known costs before confirming.',
+    alt: 'GatoPago swap screen with quote, minimum received, and visible costs',
   },
 }[lang];
 
 const swaps = [
   { from: 'USDC', to: 'ETH' },
   { from: 'ETH', to: 'USDC' },
-  { from: 'USDC', to: 'WBTC' },
 ] as const;
 ---
 
@@ -27,10 +30,8 @@ const swaps = [
       <div class="split-copy">
         <h2 class="section-title">{t.title}</h2>
         <p class="section-copy">{t.copy}</p>
-      </div>
 
-      <div class="split-visual">
-        <div class="w-full max-w-[420px] flex flex-col gap-3" data-reveal-stagger>
+        <div class="swap-pairs" data-reveal-stagger>
           {swaps.map((swap) => (
             <article class="feature-card swap-row">
               <span class="flex items-center gap-3">
@@ -46,6 +47,14 @@ const swaps = [
               </span>
             </article>
           ))}
+        </div>
+      </div>
+
+      <div class="split-visual">
+        <div class="stage glow-pink">
+          <div class="app-screen">
+            <Image src={swapShot} alt={t.alt} width={1080} height={2301} loading="lazy" decoding="async" />
+          </div>
         </div>
       </div>
     </div>

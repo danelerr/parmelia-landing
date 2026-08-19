@@ -4,23 +4,23 @@ import { getLang } from '../i18n';
 const lang = getLang(Astro.currentLocale);
 const t = {
   es: {
-    title: 'Haz que tu saldo trabaje por ti.',
-    copy: 'Tu dinero puede generar rendimiento mientras no lo usas, y vuelve a estar listo para pagar cuando lo necesites.',
-    micro: 'Rendimientos variables. Siempre bajo tu decisión.',
+    title: 'Una parte disponible. Otra, creciendo.',
+    copy: 'Tú decides cuánto USDC queda listo para usar y cuánto pasa a Creciendo con Aave V3. Cuando lo necesites, puedes retirarlo para volver a usarlo.',
+    micro: 'La tasa es variable y existen riesgos. Aave, la red, el contrato y la salida permanecen visibles.',
     points: [
-      'Activas Earn cuando el saldo puede esperar.',
-      'Ves el movimiento sin salir de Parmelia.',
-      'Retiras cuando lo necesites para pagar o enviar.',
+      'Eliges cuánto USDC mover a Creciendo.',
+      'Ves la tasa y los riesgos antes de confirmar.',
+      'Puedes retirarlo para volver a dejarlo Disponible.',
     ],
   },
   en: {
-    title: 'Put your balance to work for you.',
-    copy: 'Your money can earn yield while you’re not using it, and it’s ready to pay again whenever you need it.',
-    micro: 'Variable yields. Always your decision.',
+    title: 'Part available. Part growing.',
+    copy: 'You decide how much USDC stays ready to use and how much moves to Growing through Aave V3. When needed, you can withdraw it to use it again.',
+    micro: 'The rate is variable and risks exist. Aave, the network, the contract, and the exit route remain visible.',
     points: [
-      'You turn on Earn when your balance can wait.',
-      'You see the movement without leaving Parmelia.',
-      'You withdraw whenever you need to pay or send.',
+      'You choose how much USDC to move into Growing.',
+      'You see the rate and risks before confirming.',
+      'You can withdraw it to make it Available again.',
     ],
   },
 }[lang];

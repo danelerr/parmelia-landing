@@ -5,23 +5,21 @@ import { getLang } from '../i18n';
 const lang = getLang(Astro.currentLocale);
 const t = {
   es: {
-    title: 'Guarda, paga y mueve desde un solo lugar.',
-    copy: 'Ten tu dinero en un solo lugar y úsalo para pagar, recibir, enviar o cambiar. Sin saltar entre apps y pantallas.',
-    micro: 'Tu saldo está para moverse, no para quedarse atrapado.',
+    title: 'USDC para el día a día. Web3 cuando lo buscas.',
+    copy: 'Tu dinero principal se organiza en dólares digitales. ETH y otras posiciones aparecen solo cuando forman parte de lo que haces.',
+    micro: 'USDC primero no significa USDC solamente: significa una experiencia que empieza por lo útil.',
     desc: {
       USDC: 'Para cobrar, pagar y mantener valor estable.',
       ETH: 'Para moverte por la red cuando lo necesites.',
-      WBTC: 'Para tener algo de Bitcoin sin salir de la app.',
     },
   },
   en: {
-    title: 'Store, pay and move from one place.',
-    copy: 'Keep your money in one place and use it to pay, receive, send or swap. No jumping between apps and screens.',
-    micro: 'Your balance is meant to move, not to get stuck.',
+    title: 'USDC for everyday money. Web3 when you look for it.',
+    copy: 'Your main money is organized in digital dollars. ETH and other positions appear only when they are part of what you do.',
+    micro: 'USDC first does not mean USDC only. It means an experience that starts with what is useful.',
     desc: {
       USDC: 'To charge, pay and hold stable value.',
       ETH: 'To move around the network whenever you need.',
-      WBTC: 'To hold a bit of Bitcoin without leaving the app.',
     },
   },
 }[lang];
@@ -29,7 +27,6 @@ const t = {
 const assets = [
   { token: 'USDC', name: 'USDC', desc: t.desc.USDC },
   { token: 'ETH', name: 'ETH', desc: t.desc.ETH },
-  { token: 'WBTC', name: 'WBTC', desc: t.desc.WBTC },
 ] as const;
 ---
 

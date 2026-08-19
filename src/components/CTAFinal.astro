@@ -1,23 +1,26 @@
 ---
 import { getLang } from '../i18n';
+import { appLink, brand } from '../config/brand';
 
 const lang = getLang(Astro.currentLocale);
+const primaryHref = appLink('landing_cta');
+const chargeHref = appLink('landing_cta_link');
 const t = {
   es: {
-    title: 'Empieza con tu primer link.',
-    copy: 'Abre Parmelia, comparte tu link y empieza a mover dinero digital tan fácil como mandar un mensaje.',
-    cta: 'Probar Parmelia',
-    ctaLink: 'Crear link de pago',
-    buildLead: 'Lo estamos construyendo en público.',
+    title: 'Haz que tus USDC hagan más.',
+    copy: 'Prueba el ciclo con fondos de prueba: recibe, decide cuánto dejar Disponible y cuánto poner a Creciendo, y úsalo cuando lo necesites.',
+    cta: 'Probar la alpha',
+    ctaLink: 'Crear un cobro',
+    buildLead: 'Seguimos construyendo en público.',
     follow: 'Síguenos en X',
     buildTail: 'y mira cómo avanza.',
   },
   en: {
-    title: 'Start with your first link.',
-    copy: 'Open Parmelia, share your link and start moving digital money as easily as sending a message.',
-    cta: 'Try Parmelia',
-    ctaLink: 'Create a payment link',
-    buildLead: 'We’re building it in public.',
+    title: 'Make your USDC do more.',
+    copy: 'Try the cycle with test funds: receive, decide how much stays Available and how much moves to Growing, and use it when needed.',
+    cta: 'Try the alpha',
+    ctaLink: 'Create a charge',
+    buildLead: 'We are still building in public.',
     follow: 'Follow us on X',
     buildTail: 'and watch it progress.',
   },
@@ -45,10 +48,10 @@ const t = {
       <p class="section-copy dark">{t.copy}</p>
 
       <div class="button-row">
-        <a href="https://app.parmelia.me?ref=landing_cta" target="_blank" rel="noopener noreferrer" class="btn-primary light" data-cta="cta_final_primary">
+        <a href={primaryHref} target="_blank" rel="noopener noreferrer" class="btn-primary light" data-cta="cta_final_primary">
           {t.cta}
         </a>
-        <a href="https://app.parmelia.me?ref=landing_cta_link" target="_blank" rel="noopener noreferrer" class="btn-gradient" data-cta="cta_final_link">
+        <a href={chargeHref} target="_blank" rel="noopener noreferrer" class="btn-gradient" data-cta="cta_final_link">
           {t.ctaLink}
         </a>
       </div>
@@ -56,7 +59,7 @@ const t = {
       <p class="build-note">
         <span class="build-pulse" aria-hidden="true"></span>
         {t.buildLead}
-        <a href="https://x.com/parmelia_" target="_blank" rel="noopener noreferrer" data-cta="follow_x">{t.follow}</a>
+        <a href={brand.socialUrl} target="_blank" rel="noopener noreferrer" data-cta="follow_x">{t.follow}</a>
         {t.buildTail}
       </p>
     </div>
