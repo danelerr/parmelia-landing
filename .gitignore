@@ -29,13 +29,22 @@ pnpm-debug.log*
 *.pdf
 *.pptx
 *.log
+*.tmp
 Captura de pantalla*
 screenshots/
 supeorpromt.txt
 elton_transcript.md
 avasettle.txt
+spritesmeli*.png
+
+# Testing, Playwright & Caches
 .cache/
 .playwright-cli/
+.playwright/
+playwright-report/
+test-results/
+blob-report/
+playwright/.cache/
 output/
 geoscan/
 
