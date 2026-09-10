@@ -43,9 +43,9 @@ const copy = {
       network: 'Arbitrum Sepolia',
       funds: 'Fondos de prueba',
       nap: 'Modo siesta',
-      napOn: 'Meli sueña con pagos que siempre llegan',
-      napOff: 'Meli sigue la pista de tu dinero',
-      visualLabel: 'Meli, el gato detrás de GatoPago',
+      napOn: 'Modo siesta activado',
+      napOff: 'Seguimos la pista de tu dinero',
+      visualLabel: 'Gato pixelado de GatoPago',
       visualNote: 'Tu cuenta se mueve cuando tú das la señal.',
       packet: 'Pago en camino',
     },
@@ -103,7 +103,7 @@ const copy = {
     },
     account: {
       kicker: 'La cuenta',
-      greeting: 'Hola, Meli',
+      greeting: 'Hola, Dani',
       title: 'Una cuenta, no un tablero de blockchain.',
       copy:
         'GatoPago traduce la infraestructura en decisiones cotidianas. El saldo tiene intención; las acciones hablan como tú.',
@@ -176,7 +176,7 @@ const copy = {
         ['Recibos y rutas', 'Monto, destino, red, costos y estado quedan visibles en el momento adecuado.'],
       ],
       demo: 'Probar diálogo de confirmación',
-      demoHint: 'Así se siente una decisión importante en Meli UI.',
+      demoHint: 'Así se ve una decisión importante en GatoPago.',
     },
     dialog: {
       eyebrow: 'Vista previa',
@@ -200,7 +200,7 @@ const copy = {
         'GatoPago Card está en exploración. La diseñamos como una extensión del mismo saldo, pero todavía no prometemos fecha, cobertura ni condiciones.',
       badge: 'Acceso anticipado',
       cardLabel: 'GATOPAGO · CONCEPTO',
-      cardName: 'MELI USER',
+      cardName: 'DANI',
       waitlist: 'Avisarme cuando exista',
       notice: 'Sin cobros ni reservas. Solo interés.',
     },
@@ -273,9 +273,9 @@ const copy = {
       network: 'Arbitrum Sepolia',
       funds: 'Test funds',
       nap: 'Nap mode',
-      napOn: 'Meli is dreaming of payments that always arrive',
-      napOff: 'Meli is tracking your money',
-      visualLabel: 'Meli, the cat behind GatoPago',
+      napOn: 'Nap mode is on',
+      napOff: 'We are tracking your money',
+      visualLabel: 'GatoPago pixel cat',
       visualNote: 'Your account moves when you give the signal.',
       packet: 'Payment on the move',
     },
@@ -301,7 +301,7 @@ const copy = {
     },
     account: {
       kicker: 'The account',
-      greeting: 'Hi, Meli',
+      greeting: 'Hi, Dani',
       title: 'An account, not a blockchain dashboard.',
       copy: 'GatoPago translates infrastructure into everyday decisions. The balance has intent; actions speak like you do.',
       concept: 'Visual concept · example data',
@@ -356,7 +356,7 @@ const copy = {
       copy: 'The interface reduces noise, not decisions. Your device holds the access key, and every important movement asks for confirmation.',
       items: [['Passkey', 'Sign in with device biometrics or PIN. You do not memorize a password or receive a seed phrase.'], ['Assisted recovery', 'A 48-hour wait helps prevent impulsive changes. Conditions are explained before it starts.'], ['Receipts and routes', 'Amount, destination, network, costs, and status become visible at the right moment.']],
       demo: 'Try the confirmation dialog',
-      demoHint: 'This is how an important decision feels in Meli UI.',
+      demoHint: 'This is how an important decision looks in GatoPago.',
     },
     dialog: {
       eyebrow: 'Preview', title: 'Review before moving', amount: '18.00 USDC',
@@ -366,7 +366,7 @@ const copy = {
     card: {
       kicker: 'Next path', title: 'The next step connects to everyday life.',
       copy: 'GatoPago Card is being explored. We are designing it as an extension of the same balance, but we are not promising a date, coverage, or terms yet.',
-      badge: 'Early access', cardLabel: 'GATOPAGO · CONCEPT', cardName: 'MELI USER', waitlist: 'Tell me when it exists', notice: 'No charges or reservations. Just interest.',
+      badge: 'Early access', cardLabel: 'GATOPAGO · CONCEPT', cardName: 'DANI', waitlist: 'Tell me when it exists', notice: 'No charges or reservations. Just interest.',
     },
     developers: {
       kicker: 'GatoPago for Developers', title: 'Give your payments more lives.',
@@ -580,7 +580,7 @@ const t = copy[lang];
           <div class="meli-app-frame">
             <div class="meli-app-frame__header">
               <div class="meli-avatar"><CatGlyph decorative /></div>
-              <div><strong>{t.account.greeting}</strong><small>@meli.user</small></div>
+              <div><strong>{t.account.greeting}</strong><small>@dani</small></div>
               <button type="button" aria-label={isSpanish ? 'Notificaciones de ejemplo' : 'Example notifications'} disabled><span aria-hidden="true">•</span></button>
             </div>
             <div class="meli-balance-card">
