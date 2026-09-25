@@ -36,7 +36,11 @@ Los planes largos contienen propuestas que no coinciden totalmente con lo implem
 
 ## Antes de entregar a otra persona
 
-- Comparte la carpeta completa: mover únicamente `index.html` rompe las rutas de imágenes y fuentes.
+Para regenerar desde este repositorio: `npm ci`, `npm run brandkit:build` y `npm run brandkit:verify`. No hace falta el repositorio de la app ni recuperar nada de `output/`. Animaciones, originales, tipografía e iconos PWA tienen su fuente oficial versionada dentro del kit; no borres esas carpetas.
+
+Para entregar: `npm run brandkit:zip`. El ZIP excluye QA y herramientas de procesamiento y contiene su propio inventario. La carpeta de trabajo completa conserva ese material para revisión interna.
+
+- Comparte el ZIP de entrega completo: mover únicamente `index.html` rompe las rutas de imágenes y fuentes.
 - Consulta [CONTROL-DE-CALIDAD.md](./CONTROL-DE-CALIDAD.md) para conocer el alcance de la verificación.
 - [manifest.json](./manifest.json) registra archivo, procedencia, peso, SHA-256 y metadatos de imágenes.
 - La licencia OFL cubre la fuente, no el logo ni los dibujos. No hay una licencia pública de reutilización de la marca concedida por este kit.

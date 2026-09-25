@@ -10,15 +10,22 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "assets:og": "node scripts/make-og.mjs"
+    "assets:og": "node scripts/make-og.mjs",
+    "brandkit:build": "node scripts/build-brandkit.mjs",
+    "brandkit:verify": "node scripts/verify-brandkit.mjs",
+    "brandkit:zip": "node scripts/package-brandkit.mjs",
+    "brandkit:test": "node --test scripts/brandkit/pipeline.test.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.9",
     "@fontsource-variable/recursive": "^5.3.0",
     "@tailwindcss/vite": "^4.3.0",
     "astro": "^6.3.5",
+    "sharp": "^0.34.5",
     "tailwindcss": "^4.3.0",
-    "typescript": "^6.0.3",
-    "sharp": "^0.34.5"
+    "typescript": "^6.0.3"
+  },
+  "devDependencies": {
+    "fflate": "0.8.3"
   }
 }

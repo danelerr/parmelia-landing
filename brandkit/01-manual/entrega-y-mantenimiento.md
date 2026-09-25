@@ -1,22 +1,24 @@
 # Entrega, procedencia y mantenimiento
 
-Edición 2026-09-24 · Paquete local, sin publicación.
+Edición 2026-09-24 · Fuentes versionadas y generación reproducible.
 
 ## Fuentes
 
 | Grupo | Origen |
 |---|---|
 | Símbolo y favicons | Landing: `public/` |
-| Iconos PWA y manifiesto | App: `client/public/` |
+| Iconos PWA y manifiesto | Fuente versionada: `brandkit/02-logos/pwa/`; actualización desde la app solo con `--app-dir` |
 | Ilustraciones estáticas | Landing: `src/assets/meli/` |
-| Animaciones procesadas | Landing: `output/meli-animation-kit-2026-08-19/` |
-| Dibujos originales | PNG entregados en la raíz de la landing |
-| Fuente | Paquete instalado `@fontsource-variable/recursive` |
+| Animaciones procesadas | Fuente versionada: `brandkit/03-mascota/animaciones/` |
+| Dibujos originales | Fuente única versionada: `brandkit/06-originales/`; sin duplicados en la raíz |
+| Fuente tipográfica | Fuente versionada: `brandkit/04-tipografia/recursive/`, con licencia y versión de origen |
 | Paleta, geometría y tipografía observadas | `src/styles/rebrand.css`, `global.css` y componentes de la landing |
 | Narrativa y planes | `documentacion/nuevos/` de la landing |
 | Imagen social | `public/og.png`; las capturas de la interfaz anterior fueron retiradas |
 
-Las imágenes se copian sin alteraciones. El procesador de frames se conserva con una única adaptación de ruta para leer `06-originales/`; no se ha ejecutado para regenerar el arte en esta entrega.
+Estas cuatro carpetas del kit son fuentes oficiales, no copias descartables. Los manuales también se editan dentro de `brandkit/`. Los snapshots de CSS, componentes y planes sí se regeneran desde `src/` y `documentacion/`: no editarlos como única fuente.
+
+Los PNG, WebP, JPG e ICO se conservan byte a byte. En los snapshots SVG solo se normalizan saltos de línea a LF, sin cambiar el dibujo. El procesador de frames lee `06-originales/` y permanece como herramienta opcional de producción; el build normal reutiliza los frames aprobados, sin ejecutar Python ni generar dibujos. No depende de ningún archivo en `output/`, de imágenes sueltas ni del checkout de la app.
 
 ## Derechos y distribución
 
@@ -29,17 +31,37 @@ Las imágenes se copian sin alteraciones. El procesador de frames se conserva co
 
 `manifest.json` contiene un registro por archivo: ruta, peso, huella SHA-256 y procedencia. Para imágenes compatibles también registra formato, dimensiones, transparencia y páginas/frames.
 
-El propio manifiesto y `CONTROL-DE-CALIDAD.md` quedan fuera del listado de hashes para evitar una autorreferencia y permitir registrar la verificación final. Los originales y las copias de uso se mantienen separados, aunque compartan contenido.
+El propio manifiesto y `CONTROL-DE-CALIDAD.md` quedan fuera del listado de hashes para evitar una autorreferencia y permitir registrar la verificación final. Los snapshots de texto generados normalizan saltos de línea a LF; los recursos canónicos se preservan. No se inserta la hora del build en el inventario: con las mismas fuentes, el resultado es idéntico. `.gitattributes` preserva los bytes del kit al clonar.
 
 ## Actualizar sin crear otra versión paralela
 
-1. Cambiar primero la fuente correcta: documentación editorial en `documentacion/`, código visual en `src/`, arte aprobado en su carpeta de producción.
-2. Actualizar las reglas del manual si cambió una decisión de marca.
-3. Desde la raíz de la landing, ejecutar `node scripts/build-brandkit.mjs --app-dir <ruta-del-repositorio-de-la-app>`. Requiere las dependencias del proyecto. También acepta la variable `GATOPAGO_APP_DIR`; no supone un nombre ni una ubicación para el checkout de la app.
-4. El script vuelve a copiar snapshots y generar catálogo, paleta e inventario. No cambia `src/`, `public/` ni la app. Sobrescribe los archivos generados de `brandkit/`; no usar esas copias como única fuente editable.
-5. Ejecutar `node scripts/verify-brandkit.mjs --app-dir <ruta-del-repositorio-de-la-app>`, revisar visualmente el catálogo y actualizar el registro de calidad.
-6. Si se retira un asset de la fuente, revisar expresamente su copia: el generador no borra archivos sobrantes. Aprobar el objetivo antes de eliminarlo.
-7. Distribuir la carpeta completa o un ZIP de ella. No hace falta desplegar para consultar el catálogo.
+Desde un clon limpio, con Node compatible con `package.json`:
+
+```sh
+npm ci
+npm run brandkit:verify
+npm run brandkit:build
+npm run brandkit:verify -- --sources
+npm run brandkit:test
+npm run brandkit:zip
+```
+
+`npm ci` instala las dependencias fijadas en el lockfile. Ignorar `node_modules/` es correcto; no se requiere versionarlo. La tipografía del kit se toma de su carpeta canónica, no del paquete instalado para la landing.
+
+1. Editar la fuente indicada en la tabla; mantener la licencia al actualizar una fuente tipográfica.
+2. Ejecutar el build. Primero comprueba entradas y rechaza enlaces simbólicos; después prepara y valida una copia temporal. Solo tras la validación sustituye el kit, con restauración del anterior si falla el intercambio. Un error de entrada o generación no sobrescribe el kit actual.
+3. `brandkit:verify` comprueba inventario exacto, hashes, enlaces, fuentes locales, frames y tiempos sin consultar fuentes externas. También admite `--kit <carpeta>` para validar un paquete extraído fuera del checkout.
+4. `brandkit:verify -- --sources` añade la comparación con `src/`, `public/` y `documentacion/`. Es opcional, no una dependencia del paquete entregado.
+5. Para refrescar únicamente los iconos PWA desde otra app: `npm run brandkit:build -- --app-dir <ruta-app>`. Para compararlos sin modificarlos: `npm run brandkit:verify -- --app-dir <ruta-app>`. La variable ambiental antigua ya no controla el proceso.
+6. Revisar y aprobar cualquier retirada de assets. El build no elimina recursos canónicos por considerarlos sobrantes.
+
+No borres `brandkit/` para regenerarlo: contiene fuentes versionadas. Si falta un original, recupera el archivo correspondiente desde Git. Los tests cubren entradas ausentes, fallos posteriores al preflight, builds idénticos y la conservación del ZIP previo cuando falla una validación.
+
+## ZIP de entrega
+
+`npm run brandkit:zip` crea `output/gatopago-brandkit-2026-09-24.zip`, tras validar el kit. No empaqueta `03-mascota/animaciones/qa/` ni `03-mascota/animaciones/tools/`; por tanto, tampoco incluye `raw-problem-sequences/`. Esos recursos permanecen versionados para trabajo interno.
+
+El ZIP tiene un manifiesto propio con `profile: delivery` y los hashes de sus archivos reales. Se valida antes de reemplazar el ZIP anterior y se genera con metadatos de fecha fijos. Puede abrirse sin conexión. El catálogo y sus assets siguen incluidos; los planes de referencia permanecen identificados como contexto, no como assets de producción.
 
 El template editable del catálogo es `scripts/brandkit/catalogo.html`. Los manuales cortos dentro de `01-manual/` se editan directamente; no los sobreescribe el generador.
 
@@ -49,5 +71,5 @@ El template editable del catálogo es `scripts/brandkit/catalogo.html`. Los manu
 - No inventa un wordmark trazado, logos monocromáticos o versiones CMYK/Pantone.
 - Incluye fuentes WOFF2 para web, no una distribución TTF/OTF de escritorio.
 - No prueba ejecución financiera, disponibilidad comercial ni instalación PWA.
-- No migra ni elimina los documentos originales de los repositorios.
+- No elimina originales canónicos: los duplicados de la raíz se retiraron tras verificar sus hashes.
 - No implementa el kit en pantallas ni corrige los dibujos: ordena lo existente y documenta las diferencias.

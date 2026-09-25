@@ -4,6 +4,8 @@ Edición 2026-09-24 · Familia tipográfica comprobada en la landing.
 
 Una sola familia, con tres registros: **Linear** para lectura, **Casual** para personalidad y **Mono** para datos. No se añaden Hub 191 Rounded, Bricolage u otras fuentes exploradas anteriormente.
 
+`recursive/` es la fuente canónica versionada para este kit. Los metadatos documentan su origen Fontsource; el generador no necesita leer `node_modules/@fontsource-variable/recursive`. Cualquier actualización de estos archivos y su licencia debe ser explícita y seguida de build y verificación.
+
 ## Archivos
 
 - `recursive/files/`: cuatro WOFF2 variables para latin, latin-ext, vietnamese y cyrillic-ext.
