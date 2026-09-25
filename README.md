@@ -47,5 +47,21 @@ Los correos pasan a `hola@gatopago.com` y `privacy@gatopago.com`. Este cambio lo
 
 ## Assets generados
 
+### Brandkit reproducible
+
+```sh
+npm ci
+npm run brandkit:build
+npm run brandkit:verify
+npm run brandkit:test
+npm run brandkit:zip
+```
+
+Las fuentes canónicas están versionadas dentro de `brandkit/`: no se requieren archivos ignorados ni otro repositorio. No borres el kit para regenerarlo. El build prepara y valida una copia temporal antes de sustituir el resultado; el ZIP de `output/` excluye QA y herramientas internas.
+
+Ver [fuentes y mantenimiento](./brandkit/01-manual/entrega-y-mantenimiento.md). La comparación adicional con fuentes actuales usa `npm run brandkit:verify -- --sources`; la app solo interviene si se proporciona explícitamente `--app-dir`.
+
+### Imágenes sociales
+
 - `scripts/make-og.ps1` → `public/og.png` (1200×630) y `public/apple-touch-icon.png`.
   Regenerar con: `pwsh scripts/make-og.ps1`.

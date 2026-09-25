@@ -3,6 +3,8 @@
 Fecha: 19 de agosto de 2026  
 Estado: paquete de recursos únicamente; no integrado en la landing ni en la app.
 
+Esta carpeta es la fuente oficial versionada de las animaciones procesadas. El build del kit la conserva y no lee una copia externa en `output/`. `qa/` y `tools/` son internos: permanecen en Git, pero `npm run brandkit:zip` los excluye del paquete de entrega.
+
 ## Resultado
 
 - 20 animaciones.

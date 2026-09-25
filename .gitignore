@@ -47,5 +47,7 @@ test-results/
 blob-report/
 playwright/.cache/
 output/
+.brandkit-work-*/
+.brandkit-build.lock
 geoscan/
 

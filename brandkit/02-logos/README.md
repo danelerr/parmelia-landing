@@ -15,3 +15,5 @@ La composición horizontal combina símbolo y texto vivo Recursive. Está repres
 No recortar, estirar ni eliminar fondos automáticamente. Para fondos oscuros, comprobar la silueta Ink y preferir un contenedor claro cuando haga falta. Este kit no declara que el símbolo tricolor sea una versión inversa o monocromática.
 
 El manifiesto PWA conserva sus rutas de aplicación: sirve de referencia y no debe instalarse desde esta carpeta. Los iconos no se han regenerado ni redeplegado.
+
+`pwa/` es el snapshot canónico versionado para el kit. Solo se refresca desde la app cuando se indica explícitamente `--app-dir`; un build normal no necesita otro repositorio.

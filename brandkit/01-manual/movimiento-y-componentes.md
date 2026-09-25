@@ -66,6 +66,8 @@ Se incluyen **20 secuencias / 152 PNG** con canvas 320 × 256 y ancla (160, 244)
 
 La carpeta `animaciones/qa/raw-problem-sequences/` preserva material problemático previo como comparación. No utilizarlo en producción. Los frames seleccionados están en `animaciones/frames/`.
 
+QA y herramientas permanecen únicamente en la carpeta de trabajo versionada. El comando `npm run brandkit:zip` los excluye del ZIP de entrega.
+
 **Los WebP de previsualización repiten en bucle para facilitar la revisión**, incluso en secuencias cuyo manifiesto indica `once`. Para respetar la reproducción única en producto, usar los frames y su manifiesto o controlar expresamente la reproducción. No insertar el WebP en un resultado de pago suponiendo que se detendrá solo.
 
 El catálogo muestra el primer frame quieto y exige una acción para reproducir. Detiene la animación anterior al activar otra y al ocultar la pestaña. En producto, respetar `prefers-reduced-motion`, proporcionar estado textual y mantener una alternativa estática.
