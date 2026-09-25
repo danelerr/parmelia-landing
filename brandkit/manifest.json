@@ -1,0 +1,3891 @@
+{
+  "schemaVersion": 1,
+  "brand": "GatoPago",
+  "edition": "2026-09-24",
+  "generatedAt": "2026-09-25T02:31:32.192Z",
+  "copyPolicy": "Images are copied byte-for-byte; no cropping, recoloring or regeneration.",
+  "files": [
+    {
+      "path": "01-manual/entrega-y-mantenimiento.md",
+      "bytes": 3935,
+      "sha256": "90bbe6d6477d6bd1dbe30c720ebd97579b99d0ad0cf1ea0cdbc0d3212b6742dd",
+      "source": "brandkit editorial / generated"
+    },
+    {
+      "path": "01-manual/identidad-y-voz.md",
+      "bytes": 4041,
+      "sha256": "e4ebe007c54845e14aee4a8f6958b883a45af065423f31654a582483d5201517",
+      "source": "brandkit editorial / generated"
+    },
+    {
+      "path": "01-manual/movimiento-y-componentes.md",
+      "bytes": 6252,
+      "sha256": "82824b595a5f475c9eabcd9bb6064c838f2c816cae0f1717f1cba57375aab361",
+      "source": "brandkit editorial / generated"
+    },
+    {
+      "path": "01-manual/sistema-visual.md",
+      "bytes": 6373,
+      "sha256": "596aa3e36d1e601cf57504461e3917de4fa55cc6ac28abfecb17cc4e8b65d7fb",
+      "source": "brandkit editorial / generated"
+    },
+    {
+      "path": "02-logos/README.md",
+      "bytes": 1365,
+      "sha256": "0c5dd5a84ba878895150337949bb5239cb78d0d5743110f458758aff469e5711",
+      "source": "brandkit editorial / generated"
+    },
+    {
+      "path": "02-logos/iconos-web/apple-touch-icon.png",
+      "bytes": 1364,
+      "sha256": "80ac17c8fbdf33740b9054fcbbf002a924b22ac689e48204841a0e52e362d45d",
+      "source": "landing/public/apple-touch-icon.png",
+      "image": {
+        "format": "png",
+        "width": 180,
+        "height": 180,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "02-logos/iconos-web/favicon-16x16.png",
+      "bytes": 499,
+      "sha256": "ab6818269f4bd957e4927467a499495a84a74c2d3814fc80a1a73a2be6846582",
+      "source": "landing/public/favicon-16x16.png",
+      "image": {
+        "format": "png",
+        "width": 16,
+        "height": 16,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "02-logos/iconos-web/favicon-32x32.png",
+      "bytes": 1041,
+      "sha256": "bec5027e82a6290e22a59c36ce2aa52d0de9c537ce0dc96fb5dd02ed52f9758b",
+      "source": "landing/public/favicon-32x32.png",
+      "image": {
+        "format": "png",
+        "width": 32,
+        "height": 32,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "02-logos/iconos-web/favicon-48x48.png",
+      "bytes": 1667,
+      "sha256": "1f542247198306db651556453c487230e21ee876398aa05c3647ce01d7889339",
+      "source": "landing/public/favicon-48x48.png",
+      "image": {
+        "format": "png",
+        "width": 48,
+        "height": 48,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "02-logos/iconos-web/favicon.ico",
+      "bytes": 15086,
+      "sha256": "ba4169330e04ec801e7eba5fe0fc11916c7570c844ab07ef637237776a400b58",
+      "source": "landing/public/favicon.ico"
+    },
+    {
+      "path": "02-logos/iconos-web/favicon.svg",
+      "bytes": 2956,
+      "sha256": "b811a9d2a5740e772ee6fe3b01694e707ead31fe914dcac7a001b9c42e60fc08",
+      "source": "landing/public/favicon.svg",
+      "image": {
+        "format": "svg",
+        "width": 128,
+        "height": 128,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "02-logos/pwa/apple-touch-icon.png",
+      "bytes": 26847,
+      "sha256": "2246c3cfa06c4940630c43ce4fc40d79e611ee314ebd539b7bf589bce3622b98",
+      "source": "app/client/public/apple-touch-icon.png",
+      "image": {
+        "format": "png",
+        "width": 180,
+        "height": 180,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "02-logos/pwa/icon-192.png",
+      "bytes": 30041,
+      "sha256": "91b3cbaae29ae0d65133ae2ef843485040cbc0e2cec8dc4cf753025bc040caab",
+      "source": "app/client/public/icon-192.png",
+      "image": {
+        "format": "png",
+        "width": 192,
+        "height": 192,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "02-logos/pwa/icon-512.png",
+      "bytes": 88219,
+      "sha256": "0d337e9a85f23ab073886ea76ef6eb85f60cf40e2dff3b022462bc7dc70f8a5a",
+      "source": "app/client/public/icon-512.png",
+      "image": {
+        "format": "png",
+        "width": 512,
+        "height": 512,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "02-logos/pwa/manifest.webmanifest",
+      "bytes": 1813,
+      "sha256": "3636e5655816c291e9babeecf41b0c9dfb289354c42d6c6e86e904426573870b",
+      "source": "app/client/public/manifest.webmanifest"
+    },
+    {
+      "path": "02-logos/simbolo/gatopago.svg",
+      "bytes": 614,
+      "sha256": "3b55eb9fea6d3f06f85c559c3b6b637f98679ed9352a375dc4e588d7201f3129",
+      "source": "landing/public/Logo_gatopago.svg",
+      "image": {
+        "format": "svg",
+        "width": 64,
+        "height": 64,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/CATALOGO.md",
+      "bytes": 3153,
+      "sha256": "d0fe2187bc8a3d3da0ae28124fd0865b196f8393a6747a3b3a509ed471b11564",
+      "source": "brandkit editorial / generated"
+    },
+    {
+      "path": "03-mascota/animaciones/README.md",
+      "bytes": 3354,
+      "sha256": "8aefb0bfeaed83c6e6f9e48c43852ecb9e3ef9942f7147a5d50a6a4af47c238a",
+      "source": "landing/output/meli-animation-kit-2026-08-19/README.md"
+    },
+    {
+      "path": "03-mascota/animaciones/frames/asomarse/frame-001.png",
+      "bytes": 12999,
+      "sha256": "7a0e5388cc0f10917534ba8e962af37be09b798b860ee2ecef8781ff904323fe",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/asomarse/frame-001.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/asomarse/frame-002.png",
+      "bytes": 15159,
+      "sha256": "bc9e3c58ca80a46100f41b3ed28685dd9fb70fd6726b8a9bdb8d8c55f82cdd33",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/asomarse/frame-002.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/asomarse/frame-003.png",
+      "bytes": 19017,
+      "sha256": "f4a5efe95142f8aae26729befc9bd98995ed9416595be5a51a9acc2b90d8927c",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/asomarse/frame-003.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/asomarse/frame-004.png",
+      "bytes": 26833,
+      "sha256": "8b2cb768237647d803e2484913eef408a556c341789753c2d3d825bab3ad750e",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/asomarse/frame-004.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/asomarse/frame-005.png",
+      "bytes": 33576,
+      "sha256": "400e31e8486e8734998dbcb7e2f1113af0161af6ce7756f1ab90309362877395",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/asomarse/frame-005.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/asomarse/frame-006.png",
+      "bytes": 31044,
+      "sha256": "b651da0e86dc88db567265211ecc70d372e695c958c5ced798fe67e311b0ab4a",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/asomarse/frame-006.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/asomarse/frame-007.png",
+      "bytes": 26833,
+      "sha256": "8b2cb768237647d803e2484913eef408a556c341789753c2d3d825bab3ad750e",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/asomarse/frame-007.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/asomarse/frame-008.png",
+      "bytes": 12999,
+      "sha256": "7a0e5388cc0f10917534ba8e962af37be09b798b860ee2ecef8781ff904323fe",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/asomarse/frame-008.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/caminata/frame-001.png",
+      "bytes": 41128,
+      "sha256": "3aceb1a1acd08ab9fd9cadf606a19b505a79f58cad49fa879b5c2a1254bd76cc",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/caminata/frame-001.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/caminata/frame-002.png",
+      "bytes": 37307,
+      "sha256": "4644a8577dbee0c303c4cf37dcb10c11573013509ea63eddd445c984b34fead0",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/caminata/frame-002.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/caminata/frame-003.png",
+      "bytes": 40661,
+      "sha256": "2e848513f54dabf60d0ee3de2b1b907fca42433bf871513437ecb329b666a7ea",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/caminata/frame-003.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/caminata/frame-004.png",
+      "bytes": 41277,
+      "sha256": "a1dac2e3f297c14ff5069cfe3b82c41ccbc3ffcaffeef35f6d55374e7156a346",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/caminata/frame-004.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/caminata/frame-005.png",
+      "bytes": 39162,
+      "sha256": "49183c954487cc00529dc8f3a721ad3d9458cbadd7919d325da31441cce98f2f",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/caminata/frame-005.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/caminata/frame-006.png",
+      "bytes": 40830,
+      "sha256": "a07361dc7aafbd123561d8adbfa13131985c8ba6b5e0ae10e8f4cae31fea4448",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/caminata/frame-006.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/card/frame-001.png",
+      "bytes": 43512,
+      "sha256": "338162c93fccb1c2b395f13c396b1ebd41cd70cc31160c91b1be3065153cb5f0",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/card/frame-001.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/card/frame-002.png",
+      "bytes": 44351,
+      "sha256": "428e6adf97e55306d2983834437ea44dfa3c97e5022f9186009f5d1ec16f6f50",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/card/frame-002.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/card/frame-003.png",
+      "bytes": 43706,
+      "sha256": "cbcff96b1cc50ddbc688298b010a2e161ce18a69322f3cc6b556faa670b4910e",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/card/frame-003.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/card/frame-004.png",
+      "bytes": 43372,
+      "sha256": "3585e8a37cf869f2127a5bab7c638e43a89639996a306973301fe77a8f1a5fdd",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/card/frame-004.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/card/frame-005.png",
+      "bytes": 37327,
+      "sha256": "d4de9749cf445abf87e03ca9cb2ca67d283cec6283abde86f261e0b1ccd57c51",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/card/frame-005.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/card/frame-006.png",
+      "bytes": 41091,
+      "sha256": "0d0eb5d9a122af39c18a83a06b862fdc2da144dc6b593a09f76c9a2284f62769",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/card/frame-006.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/card/frame-007.png",
+      "bytes": 43168,
+      "sha256": "db7b51408d0d2828bd8cd5563cef4cd679a2830674e32ee67b7222f63f3bf27f",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/card/frame-007.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/card/frame-008.png",
+      "bytes": 43174,
+      "sha256": "46c4a128ade74c80e2203df9315a360e48f533fe8c9db66402b93c3058f3cad5",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/card/frame-008.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/cola/frame-001.png",
+      "bytes": 46940,
+      "sha256": "efbbd741a4f6c84227a1d9d3bcdb04353e64f011780f9b98fc134bdcacd87cdb",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/cola/frame-001.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/cola/frame-002.png",
+      "bytes": 47724,
+      "sha256": "f09ed6550d0a907fb177cf6aa32734287f9761efc5db8e15d9283b8a3552ae4b",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/cola/frame-002.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/cola/frame-003.png",
+      "bytes": 49077,
+      "sha256": "aa4d667f275d4449fb924e8911e00fd59d32c9e833a9c9f2c3b04572ca362962",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/cola/frame-003.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/cola/frame-004.png",
+      "bytes": 47454,
+      "sha256": "5af846867c5ef02df8246f1751a9ec5c09eaf74f0e960fef3a2e0f0d767973ed",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/cola/frame-004.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/cola/frame-005.png",
+      "bytes": 46862,
+      "sha256": "fb33a8364f64a38e8dbf7df5ab5685f54fc1194870cd7ca524c68476be67012b",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/cola/frame-005.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/cola/frame-006.png",
+      "bytes": 47945,
+      "sha256": "7fcccc40060a9ead416a86b56cccdb873f7cfa17d04163232046a09b37905e02",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/cola/frame-006.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/cola/frame-007.png",
+      "bytes": 48661,
+      "sha256": "e5a0d77894709258bdd5faac5d664f5454da21dd59c3930745b5f3efb720525a",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/cola/frame-007.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/cola/frame-008.png",
+      "bytes": 48823,
+      "sha256": "8988a0cc81387e341e6c93bb78e324cf0455d2b1a9f376ee855f4ce95d2369d9",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/cola/frame-008.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/comprobante/frame-001.png",
+      "bytes": 36096,
+      "sha256": "579d3b64dd52ca912ba0f06af65bcaef8123a68e267271ac34c61cbcbd587c9d",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/comprobante/frame-001.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/comprobante/frame-002.png",
+      "bytes": 40906,
+      "sha256": "15040df466ddb067aaaae1fdc05dd9bbf9d75f76aeead1ef7e070e1ba614df9b",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/comprobante/frame-002.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/comprobante/frame-003.png",
+      "bytes": 38774,
+      "sha256": "ba84398a1e04e8e38f5f266ba726720cc523e4ed8d1cd5bc31c98a10b647a987",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/comprobante/frame-003.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/comprobante/frame-004.png",
+      "bytes": 43223,
+      "sha256": "97baea76a6b4bf74d17225f958a0de5d8491bc41ee1f2d1fc4ae42ca414f3bae",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/comprobante/frame-004.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/comprobante/frame-005.png",
+      "bytes": 45118,
+      "sha256": "6db53553b4d65369f5297f5ab4ad1cf4494df016f9378f9c6ff10e2c02ea92e4",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/comprobante/frame-005.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/comprobante/frame-006.png",
+      "bytes": 43754,
+      "sha256": "82c792fc330d7e526162e85f15f4a3ac1d2ed01984b5f5dcdbb6733b20586a91",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/comprobante/frame-006.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/comprobante/frame-007.png",
+      "bytes": 43769,
+      "sha256": "7333d3b6a247d6b9b068e262d6a3be58be8a05a012a18a4742a279a13ec3a27a",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/comprobante/frame-007.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/comprobante/frame-008.png",
+      "bytes": 39271,
+      "sha256": "8300065846988854ce5222bbe58dadfcb4d4565f041c2487bd4e2be9a7047ee2",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/comprobante/frame-008.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/creciendo/frame-001.png",
+      "bytes": 31094,
+      "sha256": "2f09f21066b7e106aaaf5c29f6c653304c0c21245dc090f492b5afadd67606ca",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/creciendo/frame-001.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/creciendo/frame-002.png",
+      "bytes": 29631,
+      "sha256": "c8fb834fe30a0754d90a6388c30a58813b634edc52233e5bf8ab1eb73eb0f1dd",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/creciendo/frame-002.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/creciendo/frame-003.png",
+      "bytes": 34196,
+      "sha256": "646ffdd7af8ad742361485456d074c7a63e69e61c17f689625bd129ed1aa8f0e",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/creciendo/frame-003.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/creciendo/frame-004.png",
+      "bytes": 33310,
+      "sha256": "8dbaf02023d0bc69c1e5db86715993fc1e7187885d041366070ae44fd8c5a886",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/creciendo/frame-004.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/creciendo/frame-005.png",
+      "bytes": 34516,
+      "sha256": "90fe288b8010d1c90a7bec20b6f3de7d1a01dde1116cfb9db58f467ae0832b17",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/creciendo/frame-005.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/creciendo/frame-006.png",
+      "bytes": 32539,
+      "sha256": "4a9f3e4aacbb18e02148db5c86f65ed6aa5bb192654415725bfc316dc0164aa6",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/creciendo/frame-006.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/creciendo/frame-007.png",
+      "bytes": 34327,
+      "sha256": "25eace5eee68d68423ccb6fdd1219934af3d2462cf068b7038be365b4af379ea",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/creciendo/frame-007.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/creciendo/frame-008.png",
+      "bytes": 29087,
+      "sha256": "5d437642bffaa41dde2bc5d9cd444265cfee291957b9ad16e004b26a4623bd56",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/creciendo/frame-008.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/creciendo/frame-009.png",
+      "bytes": 34838,
+      "sha256": "23023287586930f8c075222612ea215bef7939c8de54ab1b61657b28c2374d45",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/creciendo/frame-009.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/creciendo/frame-010.png",
+      "bytes": 32059,
+      "sha256": "0f7ffd6d407d8f47242903276b9b6fa366f3e3b78e729d3cdded438737f1463e",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/creciendo/frame-010.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/idle-sentada/frame-001.png",
+      "bytes": 46940,
+      "sha256": "efbbd741a4f6c84227a1d9d3bcdb04353e64f011780f9b98fc134bdcacd87cdb",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/idle-sentada/frame-001.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/idle-sentada/frame-002.png",
+      "bytes": 47724,
+      "sha256": "f09ed6550d0a907fb177cf6aa32734287f9761efc5db8e15d9283b8a3552ae4b",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/idle-sentada/frame-002.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/idle-sentada/frame-003.png",
+      "bytes": 49077,
+      "sha256": "aa4d667f275d4449fb924e8911e00fd59d32c9e833a9c9f2c3b04572ca362962",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/idle-sentada/frame-003.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/idle-sentada/frame-004.png",
+      "bytes": 47454,
+      "sha256": "5af846867c5ef02df8246f1751a9ec5c09eaf74f0e960fef3a2e0f0d767973ed",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/idle-sentada/frame-004.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/idle-sentada/frame-005.png",
+      "bytes": 46862,
+      "sha256": "fb33a8364f64a38e8dbf7df5ab5685f54fc1194870cd7ca524c68476be67012b",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/idle-sentada/frame-005.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/idle-sentada/frame-006.png",
+      "bytes": 47945,
+      "sha256": "7fcccc40060a9ead416a86b56cccdb873f7cfa17d04163232046a09b37905e02",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/idle-sentada/frame-006.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/idle-sentada/frame-007.png",
+      "bytes": 48661,
+      "sha256": "e5a0d77894709258bdd5faac5d664f5454da21dd59c3930745b5f3efb720525a",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/idle-sentada/frame-007.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/idle-sentada/frame-008.png",
+      "bytes": 48823,
+      "sha256": "8988a0cc81387e341e6c93bb78e324cf0455d2b1a9f376ee855f4ce95d2369d9",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/idle-sentada/frame-008.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/linterna/frame-001.png",
+      "bytes": 38195,
+      "sha256": "dbed258cd97c5c4bb4ce21940d21a4701ffbb7855bd6e19c755c6ab4486e48be",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/linterna/frame-001.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/linterna/frame-002.png",
+      "bytes": 39787,
+      "sha256": "8daa3cae63d35e8bc8af5578f744e94722645bf5e19364cd07ea378d7972d0fb",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/linterna/frame-002.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/linterna/frame-003.png",
+      "bytes": 40552,
+      "sha256": "452b3cf121b589933bd56ecdcdd458a7301e35a734d5f173d8fb5e20807e822f",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/linterna/frame-003.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/linterna/frame-004.png",
+      "bytes": 46026,
+      "sha256": "9f28e63768f451e9078aefc40c7b909e0cbeebf79f158b4ca0f006bd68abbb4a",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/linterna/frame-004.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/linterna/frame-005.png",
+      "bytes": 35566,
+      "sha256": "ea0908056f6f7e1ad7d029da2203de48279ffa4b1cc1e1fe498f4baf2573d7d8",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/linterna/frame-005.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/linterna/frame-006.png",
+      "bytes": 43848,
+      "sha256": "e787d7ee4416f000c4538e9270ed69a4e34760c9ded77bc92c45661ec2945d63",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/linterna/frame-006.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/linterna/frame-007.png",
+      "bytes": 46465,
+      "sha256": "efcf4ffcb2b8a3d0c0d54923bef686d5101594a46b57474dee9114db251b6add",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/linterna/frame-007.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/linterna/frame-008.png",
+      "bytes": 45060,
+      "sha256": "569daf88b2cbd7ca383cd7b92fdf62ee0973ddb2deb520f40e4280d342fac8ef",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/linterna/frame-008.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/mantenimiento/frame-001.png",
+      "bytes": 35331,
+      "sha256": "a0dc8485124bbf06d03fda49e5a4782f14ca2e8d125502ec1a1343f5ba46461b",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/mantenimiento/frame-001.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/mantenimiento/frame-002.png",
+      "bytes": 38772,
+      "sha256": "e4e2c804f21da69cd5a6299cfd647a34b0b97dc0d1a04a8a34dcb2f7ca8297f9",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/mantenimiento/frame-002.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/mantenimiento/frame-003.png",
+      "bytes": 36241,
+      "sha256": "52dffdfc194618b94103afcc9f3b4c80858c9860537e457fee0b5edcfc53f478",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/mantenimiento/frame-003.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/mantenimiento/frame-004.png",
+      "bytes": 37536,
+      "sha256": "9f8bacbea65b0502cbe643ac5c3f5c5d9125975c4120bd8333d5b8e025d4c9fd",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/mantenimiento/frame-004.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/mantenimiento/frame-005.png",
+      "bytes": 40094,
+      "sha256": "cac07464e685756ea1abae5a9f288647241fea3295c2c72ac8228daec08c0bdc",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/mantenimiento/frame-005.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/mantenimiento/frame-006.png",
+      "bytes": 40753,
+      "sha256": "1c16aec35838e1615faf4435077d1cde22cb2c3a2a4fc04b8d865073984e2974",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/mantenimiento/frame-006.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/mantenimiento/frame-007.png",
+      "bytes": 43106,
+      "sha256": "0c1e947c3114879a2d67ffb1da2466d5de2793c95125bfaf45b698b36f73337d",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/mantenimiento/frame-007.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/mantenimiento/frame-008.png",
+      "bytes": 37650,
+      "sha256": "91a301748a863f920a8e75323e041a03c8f20aa064d3bd448b53f66f2757fc0c",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/mantenimiento/frame-008.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/mantenimiento/frame-009.png",
+      "bytes": 29833,
+      "sha256": "21ea5c80fe7283aeddf4f5ca364f5546ca29130382b8319ed79570003102d0f2",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/mantenimiento/frame-009.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/mantenimiento/frame-010.png",
+      "bytes": 27076,
+      "sha256": "b3c566cce0f735d7ac53f3170f05b5062bd0e953a3d5a9cb6969335d1e6de390",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/mantenimiento/frame-010.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/meti-la-pata/frame-001.png",
+      "bytes": 41364,
+      "sha256": "5960a85a509634cf01fdc0873587b3dca9a6fd5a347c08f4fe5da115f358a2f3",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/meti-la-pata/frame-001.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/meti-la-pata/frame-002.png",
+      "bytes": 41826,
+      "sha256": "24fc576304906df4f54c9222e3f17ae9b4cbc249af95b118714a0ef50afa3eff",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/meti-la-pata/frame-002.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/meti-la-pata/frame-003.png",
+      "bytes": 40252,
+      "sha256": "7879d1ea1caf3507c135a490fffd40a70bcde22114a400750d67c67faa6815b9",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/meti-la-pata/frame-003.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/meti-la-pata/frame-004.png",
+      "bytes": 42105,
+      "sha256": "483a68a9203c0e1be510e1d94aa5060d46d0e2f23f3e5c8c5062dc9bd59fcab1",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/meti-la-pata/frame-004.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/meti-la-pata/frame-005.png",
+      "bytes": 40350,
+      "sha256": "7a989c6f5b4f13317c6b34f129959900fa6c25c175897bccb629f80978063392",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/meti-la-pata/frame-005.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/meti-la-pata/frame-006.png",
+      "bytes": 41961,
+      "sha256": "bc49ef50fbff038e9639bf0b92a857651f993e0f927ea09bef1fd274915e2268",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/meti-la-pata/frame-006.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/ojos/frame-001.png",
+      "bytes": 35005,
+      "sha256": "5c08c41c6ad9d45d676700c61bcf69523823ea79aacc18ead84f04137b72bd6f",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/ojos/frame-001.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/ojos/frame-002.png",
+      "bytes": 34913,
+      "sha256": "217352b197d08d948b31a38200319d56d190b8d7099bba2d67139680f4e2eb51",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/ojos/frame-002.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/ojos/frame-003.png",
+      "bytes": 35567,
+      "sha256": "2d26d0efa5f8cf1e730fc60ef5591427a2f46dd894ca8faca0e6e12c24f369f1",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/ojos/frame-003.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/ojos/frame-004.png",
+      "bytes": 35570,
+      "sha256": "d198a1e070f80b36b2110f2008ceb352279c058c3b9628ef618d5426aa6293f0",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/ojos/frame-004.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/ojos/frame-005.png",
+      "bytes": 35788,
+      "sha256": "ab0a82ac9cb9e694814a543bfba55559d0a5e6c64888d823d77389dedbc03ccd",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/ojos/frame-005.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/ojos/frame-006.png",
+      "bytes": 35103,
+      "sha256": "d5c9acad476c7243515dd6af1fd267bdea7c8053df046e2103abc6da81ecaba4",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/ojos/frame-006.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/oreja/frame-001.png",
+      "bytes": 36551,
+      "sha256": "30efc0a5541c3d85b2a837039418b48e43ab71c169ac26ee653f4cec94a9b690",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/oreja/frame-001.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/oreja/frame-002.png",
+      "bytes": 37327,
+      "sha256": "c5eebbcd9732a2194290598b2b0e0e6d400e48efb9e98979fca66ae284935928",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/oreja/frame-002.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/oreja/frame-003.png",
+      "bytes": 36289,
+      "sha256": "41c33fa1b2829732cda5847020bf30c005ca30c7b6fe22c3cd441a70d49c560f",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/oreja/frame-003.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/oreja/frame-004.png",
+      "bytes": 37424,
+      "sha256": "c4845f9abfc466618b59e49392bc06a250f5def61ddf8ea0fab97d66d2ac2ddb",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/oreja/frame-004.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/parpadeo/frame-001.png",
+      "bytes": 35790,
+      "sha256": "5a4cb0761941601e25f9323cdf5d25cc372cf22a10b22a584828437f5fcc95d4",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/parpadeo/frame-001.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/parpadeo/frame-002.png",
+      "bytes": 36269,
+      "sha256": "1d3b0c71b63f76447aed05e63aae369cd39c27038b470788b6d772a385203c76",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/parpadeo/frame-002.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/parpadeo/frame-003.png",
+      "bytes": 38466,
+      "sha256": "717b41b3f827d6460a4e2e06845819a80767d387b99f4aa7fdbdf84d44d0ebea",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/parpadeo/frame-003.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/parpadeo/frame-004.png",
+      "bytes": 37206,
+      "sha256": "8efb8d0ca84cf21b13b185425154bac95b89dca861756b55d73882f10c41c090",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/parpadeo/frame-004.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/preparando-pago/frame-001.png",
+      "bytes": 35036,
+      "sha256": "16949e04808f97e8139e194be82ae495ee6fe4f64d1d203e74df6d32d1b1105e",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/preparando-pago/frame-001.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/preparando-pago/frame-002.png",
+      "bytes": 43357,
+      "sha256": "42a17f5679e64875b7e645ba7606a57ef38efb78a74295b4e3a5ef2d8d1bdc8a",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/preparando-pago/frame-002.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/preparando-pago/frame-003.png",
+      "bytes": 40657,
+      "sha256": "799017642795e2ba0302563b1ae9fa2a30ce0459eb4e04b2360f91d23fd2021f",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/preparando-pago/frame-003.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/preparando-pago/frame-004.png",
+      "bytes": 41452,
+      "sha256": "3a26c92e75d6f49735f44dda10046b6dfb79fab9bd954bef9cf4db1370cdf1b2",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/preparando-pago/frame-004.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/preparando-pago/frame-005.png",
+      "bytes": 41421,
+      "sha256": "51aca9dbde53ede1cfc4a340eb7b9cbf1b51b1ff023dd08ce39302754c997dce",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/preparando-pago/frame-005.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/preparando-pago/frame-006.png",
+      "bytes": 42751,
+      "sha256": "9db4eef957801cf5bf9965f08fccdc10fdf13c988307bcf5b3e45953d7f07146",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/preparando-pago/frame-006.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/preparando-pago/frame-007.png",
+      "bytes": 50006,
+      "sha256": "991c0f8dbb740d32171d6b570123d0d68a2f76d5681283ca78b4ecec45f7d113",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/preparando-pago/frame-007.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/preparando-pago/frame-008.png",
+      "bytes": 38576,
+      "sha256": "86dbc241580766d8dc8ef935d023d20ffe2370fe3947ab039fd67ff68c29cd02",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/preparando-pago/frame-008.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/reparar-rail/frame-001.png",
+      "bytes": 34736,
+      "sha256": "222cd8e6d0bb2b1591ff859e5e66b153649fb7f02c5434c89b3b50496be3b18d",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/reparar-rail/frame-001.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/reparar-rail/frame-002.png",
+      "bytes": 36403,
+      "sha256": "fe8f0454ef6655dcb5b01a0065929f53bc827f012e8b8bf5a8cadf2da0a5e6e6",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/reparar-rail/frame-002.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/reparar-rail/frame-003.png",
+      "bytes": 26839,
+      "sha256": "4ff1de2202dda7a6b300d9afb5ecf5005e6d901babb0d1b6f3793282699fb000",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/reparar-rail/frame-003.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/reparar-rail/frame-004.png",
+      "bytes": 28519,
+      "sha256": "9fca89cb9e1fe235fcf3f5c23a9815bee36fb7d5a097b20498d1c7a583bf50e3",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/reparar-rail/frame-004.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/reparar-rail/frame-005.png",
+      "bytes": 34658,
+      "sha256": "6c8f8a6cb1d2b5993ca85239d79e83dd0d355c5327b8df3efa9367d4ea376c4c",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/reparar-rail/frame-005.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/reparar-rail/frame-006.png",
+      "bytes": 31929,
+      "sha256": "88dddff0abf64591be08e6dbec9b75b1b24210ec81754a74ab6d031f2942b23c",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/reparar-rail/frame-006.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/reparar-rail/frame-007.png",
+      "bytes": 27584,
+      "sha256": "9eaef71204ba4b20e14fed47e6a6a7b5ac7edbeea6b13489e90751989acd203c",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/reparar-rail/frame-007.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/reparar-rail/frame-008.png",
+      "bytes": 38136,
+      "sha256": "85ecfbf6a9c5402092cda9e2daf5f10947853da03f2cd0c6e518c3d95777fea5",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/reparar-rail/frame-008.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/reparar-rail/frame-009.png",
+      "bytes": 32105,
+      "sha256": "11b78d9c54cbd374f93a35c32b0cec0abbe756a056d9c5738828ce581e2addfc",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/reparar-rail/frame-009.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/reparar-rail/frame-010.png",
+      "bytes": 36838,
+      "sha256": "9ae663883033a9504d7b2299b91da1e838ab4c1adec7aa4bf78f638fc59ab6bd",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/reparar-rail/frame-010.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/salto-feliz/frame-001.png",
+      "bytes": 34287,
+      "sha256": "974bb39259a3cc1cd8097d8388cccf65da02093ebda21bb3cf493fc7f9bccd5b",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/salto-feliz/frame-001.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/salto-feliz/frame-002.png",
+      "bytes": 30882,
+      "sha256": "425e80d1446a949c414a82c2da61899c4fd11c95e0500e3f114edf8b619a81fa",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/salto-feliz/frame-002.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/salto-feliz/frame-003.png",
+      "bytes": 32302,
+      "sha256": "98c09e2c89f1d88a3acd449c497ee876c42743af4efabe1db41c50905e1aa1bf",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/salto-feliz/frame-003.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/salto-feliz/frame-004.png",
+      "bytes": 32719,
+      "sha256": "74db956e59943395a4cef07657879d80242299769ecc0d2eedfea93e50a7fff5",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/salto-feliz/frame-004.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/salto-feliz/frame-005.png",
+      "bytes": 35233,
+      "sha256": "60905cb0de3be04e09959a2f2b34c90edc47c3380dee7168317023f30682ff9d",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/salto-feliz/frame-005.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/salto-feliz/frame-006.png",
+      "bytes": 31002,
+      "sha256": "be78f43840fa9a4ea41f2b8de4429ac3ad7d041b6898d97945a7fe864aa3aab6",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/salto-feliz/frame-006.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/salto-feliz/frame-007.png",
+      "bytes": 32867,
+      "sha256": "a19775d393523c5f14a45f713fcc72c7355258a759eaac75211dce45908bf3ea",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/salto-feliz/frame-007.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/salto-feliz/frame-008.png",
+      "bytes": 35531,
+      "sha256": "7e38069b377f7a85b8623e438e35f03742b7ba66ca29f10e2906004617a1fa38",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/salto-feliz/frame-008.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/saludo/frame-001.png",
+      "bytes": 34662,
+      "sha256": "b3d4bd9a011d6da2486557dd63148d30c120ccd38230c3a92852bc4df10ca6f2",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/saludo/frame-001.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/saludo/frame-002.png",
+      "bytes": 34516,
+      "sha256": "1fdba68a578f0a83eef4e236d5b4ce449d15f8b46f6bf444474679c9451acf56",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/saludo/frame-002.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/saludo/frame-003.png",
+      "bytes": 36245,
+      "sha256": "d8f7a9336219d92f072944c31555b1ba1d036fc49e031f62462dc6f0ff7c6b5f",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/saludo/frame-003.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/saludo/frame-004.png",
+      "bytes": 40678,
+      "sha256": "6a0ca2ee0884d1b6609484d27c926d47f7a5cdccb4af75061dcef1b5cf29c0ee",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/saludo/frame-004.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/saludo/frame-005.png",
+      "bytes": 39031,
+      "sha256": "1e22ab7bca8b5245ccaccdcb61d9434ead1db46ed414fe181690866ba359d6ec",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/saludo/frame-005.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/saludo/frame-006.png",
+      "bytes": 35016,
+      "sha256": "d6da9ba48cee15884d7800710029f07f5a2d10e22079a03731da1568f35e4d44",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/saludo/frame-006.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/seguridad/frame-001.png",
+      "bytes": 36648,
+      "sha256": "7efc422a4a09f28abfa4b3995310fe8c15350aec67ed35f69f704b8463201509",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/seguridad/frame-001.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/seguridad/frame-002.png",
+      "bytes": 37139,
+      "sha256": "60a7c5042b302feddd6435dc401fdc48eacfb9ce33e6a40d176df2f1ed7a7fcd",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/seguridad/frame-002.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/seguridad/frame-003.png",
+      "bytes": 42624,
+      "sha256": "45e0eaa706fbb8d7e2b175ed0a0cfdb53bc33fdf1a88dcf9bb311afcb1680823",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/seguridad/frame-003.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/seguridad/frame-004.png",
+      "bytes": 54059,
+      "sha256": "83b5ac88de2ed8fe3141310c76efa266f21fae59761c808d511a1f476df3017a",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/seguridad/frame-004.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/seguridad/frame-005.png",
+      "bytes": 62069,
+      "sha256": "d0aa0c807db91e7b9f3e8725787d2e981814ef7100c48dbb6c05b6ff01d35e45",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/seguridad/frame-005.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/seguridad/frame-006.png",
+      "bytes": 52829,
+      "sha256": "e5787f1157d13a6446c9b78cfcfcb972f504215f09f9f91df550046d4b7d6dbb",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/seguridad/frame-006.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/seguridad/frame-007.png",
+      "bytes": 43240,
+      "sha256": "9d863a510e5fc1499cd8a274f24a00c0f575bec795183eeb0e8a99f3c0df64b5",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/seguridad/frame-007.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/seguridad/frame-008.png",
+      "bytes": 61462,
+      "sha256": "80983c035c7317c1369c903a8ec27bf5e0708025844e7a3792e433f20a38bcb3",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/seguridad/frame-008.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/siesta/frame-001.png",
+      "bytes": 35014,
+      "sha256": "b0138a55bbf2cd0e7bc9e8d113abb47652662da36f01092100cc622de7ef9d60",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/siesta/frame-001.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/siesta/frame-002.png",
+      "bytes": 34375,
+      "sha256": "e1f21047de6620d8d6dd3003698cfb4714c180d80294efa5f7e66bd79ad09b47",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/siesta/frame-002.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/siesta/frame-003.png",
+      "bytes": 35635,
+      "sha256": "b6188ff6ab41c29b8b7b061666e0b40fb11e512ba56ab30a9fe8fa1b644a7025",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/siesta/frame-003.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/siesta/frame-004.png",
+      "bytes": 34291,
+      "sha256": "017f2558490f080e56c304eae162705dd13e00ec1512191768d573070c839860",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/siesta/frame-004.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/siesta/frame-005.png",
+      "bytes": 37955,
+      "sha256": "18032565c68100a4d20572934ad1998be4a39056281a654db4b1e9bf79b2d73b",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/siesta/frame-005.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/siesta/frame-006.png",
+      "bytes": 41309,
+      "sha256": "b8d1ac31b26c5eab4cd2586b251e0b0a818228b566b9e9d0cf60427611eb0c83",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/siesta/frame-006.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/siesta/frame-007.png",
+      "bytes": 37238,
+      "sha256": "e32bf7cc0cd67801a9de58e94b1b12166f6865b98564f397c8c838272a331d70",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/siesta/frame-007.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/siesta/frame-008.png",
+      "bytes": 35014,
+      "sha256": "b0138a55bbf2cd0e7bc9e8d113abb47652662da36f01092100cc622de7ef9d60",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/siesta/frame-008.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/swap/frame-001.png",
+      "bytes": 29272,
+      "sha256": "5e8039894b85101b5fe64541dec7a2fc06b16af088cb620b5292403094dfdccb",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/swap/frame-001.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/swap/frame-002.png",
+      "bytes": 27979,
+      "sha256": "bbc84fbae079145f42758c1f30732404dabdd96c829f619205c24919f27047a0",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/swap/frame-002.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/swap/frame-003.png",
+      "bytes": 24414,
+      "sha256": "363da400a5002089462fa309f359a9847bd8cf19f328ebc3facec789ef1ebe94",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/swap/frame-003.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/swap/frame-004.png",
+      "bytes": 29442,
+      "sha256": "2fd476c875adf4270497fed8fc783a51c04df5de790be84b8fd35e05664a5729",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/swap/frame-004.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/swap/frame-005.png",
+      "bytes": 32710,
+      "sha256": "232b208bb685f6f27cabf860d0777425cb6998dbe3bbc9bb804c11e51e7b9126",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/swap/frame-005.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/swap/frame-006.png",
+      "bytes": 28733,
+      "sha256": "6fd5c48138040440af172f71a199bba60bb50711fb3cd05a00cdac30287c9e47",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/swap/frame-006.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/swap/frame-007.png",
+      "bytes": 32194,
+      "sha256": "af8973066c5636c1e99ea20cf4a6d94f1cdc6532626739489b17aae04ff108dc",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/swap/frame-007.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/swap/frame-008.png",
+      "bytes": 28189,
+      "sha256": "8d475b19f7ca29758ab06a9851e606d6be22a00a7c8aa13c18e224e10c087fc6",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/swap/frame-008.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/swap/frame-009.png",
+      "bytes": 31627,
+      "sha256": "77662cfc55d216ffa87dd907c8d146387c2b6b16a29d4dca6b2a762d74ee27b7",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/swap/frame-009.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/frames/swap/frame-010.png",
+      "bytes": 26381,
+      "sha256": "def8f768be570737347de59686679c6a7d9370b5bbf802e6c6c11f9e8e10958f",
+      "source": "landing/output/meli-animation-kit-2026-08-19/frames/swap/frame-010.png",
+      "image": {
+        "format": "png",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/manifest.json",
+      "bytes": 5594,
+      "sha256": "10f8eadb5a7c61cee045157ebb0e095d0abbf800b6163cface811bbfdf941196",
+      "source": "landing/output/meli-animation-kit-2026-08-19/manifest.json"
+    },
+    {
+      "path": "03-mascota/animaciones/manifests/asomarse.json",
+      "bytes": 7458,
+      "sha256": "0a9f61ab8b91282d3c0ec41e8fdf418a3861d5f82494d5fd6317265da532e1a2",
+      "source": "landing/output/meli-animation-kit-2026-08-19/manifests/asomarse.json"
+    },
+    {
+      "path": "03-mascota/animaciones/manifests/caminata.json",
+      "bytes": 5483,
+      "sha256": "1fdf2fdeb785929f206fcbf887c0eaadf7b0224a3595784d79bea55775c79966",
+      "source": "landing/output/meli-animation-kit-2026-08-19/manifests/caminata.json"
+    },
+    {
+      "path": "03-mascota/animaciones/manifests/card.json",
+      "bytes": 7115,
+      "sha256": "1616d07962977c502045d1d0c630d631e08cf454ecf448348de1b47fc13e11a5",
+      "source": "landing/output/meli-animation-kit-2026-08-19/manifests/card.json"
+    },
+    {
+      "path": "03-mascota/animaciones/manifests/cola.json",
+      "bytes": 7339,
+      "sha256": "65c4365a95fb36a3a86d995f2188d2f265594d2dcd0d7aa505bb95572e18ead5",
+      "source": "landing/output/meli-animation-kit-2026-08-19/manifests/cola.json"
+    },
+    {
+      "path": "03-mascota/animaciones/manifests/comprobante.json",
+      "bytes": 7202,
+      "sha256": "ace5f7f90debffee0464e185082874eb17f2d102560247b6cf69e5622e604baf",
+      "source": "landing/output/meli-animation-kit-2026-08-19/manifests/comprobante.json"
+    },
+    {
+      "path": "03-mascota/animaciones/manifests/creciendo.json",
+      "bytes": 8890,
+      "sha256": "44599013c2501c8891e45ebd891f9104950c609d857b597588e02bd220829f50",
+      "source": "landing/output/meli-animation-kit-2026-08-19/manifests/creciendo.json"
+    },
+    {
+      "path": "03-mascota/animaciones/manifests/idle-sentada.json",
+      "bytes": 7214,
+      "sha256": "48a80f6b18286fdfce9e598774ceaaa5b2bda705fd15449976f8dcf2d039323f",
+      "source": "landing/output/meli-animation-kit-2026-08-19/manifests/idle-sentada.json"
+    },
+    {
+      "path": "03-mascota/animaciones/manifests/linterna.json",
+      "bytes": 7160,
+      "sha256": "524c1c5cd4179b192dab2b7fd8e38212c75419ae71be6717b90c2f807d10b4ca",
+      "source": "landing/output/meli-animation-kit-2026-08-19/manifests/linterna.json"
+    },
+    {
+      "path": "03-mascota/animaciones/manifests/mantenimiento.json",
+      "bytes": 8938,
+      "sha256": "7171dec5924bca862b75475e45c589cc10263536a43a8ad8b42d3b8aec541a12",
+      "source": "landing/output/meli-animation-kit-2026-08-19/manifests/mantenimiento.json"
+    },
+    {
+      "path": "03-mascota/animaciones/manifests/meti-la-pata.json",
+      "bytes": 5533,
+      "sha256": "aa63cd2b8a57a0ccbd2dda9b01312cb4f78100ac37ed2dbf7b3dd81120da485d",
+      "source": "landing/output/meli-animation-kit-2026-08-19/manifests/meti-la-pata.json"
+    },
+    {
+      "path": "03-mascota/animaciones/manifests/ojos.json",
+      "bytes": 5440,
+      "sha256": "edd2d2a000c6a9cf7ce224a143c139706ef60bbe4ea0239b3cfb58a92bd0542a",
+      "source": "landing/output/meli-animation-kit-2026-08-19/manifests/ojos.json"
+    },
+    {
+      "path": "03-mascota/animaciones/manifests/oreja.json",
+      "bytes": 3778,
+      "sha256": "377ab012ac4bdf33d76d4f0e68f70a982b8fd13efb91038a6e743063840b4b39",
+      "source": "landing/output/meli-animation-kit-2026-08-19/manifests/oreja.json"
+    },
+    {
+      "path": "03-mascota/animaciones/manifests/parpadeo.json",
+      "bytes": 3796,
+      "sha256": "b88f27b01ff7b2568b777c1cd8583567c6ef87771cc185b06bb12513be1e609b",
+      "source": "landing/output/meli-animation-kit-2026-08-19/manifests/parpadeo.json"
+    },
+    {
+      "path": "03-mascota/animaciones/manifests/preparando-pago.json",
+      "bytes": 7260,
+      "sha256": "e3523ef9ad44c9d8d633a0208606db12559fa56c1e629dea8f8582b77fb57eb5",
+      "source": "landing/output/meli-animation-kit-2026-08-19/manifests/preparando-pago.json"
+    },
+    {
+      "path": "03-mascota/animaciones/manifests/reparar-rail.json",
+      "bytes": 9094,
+      "sha256": "0de760d9268636f2ec3a6ecea25d72b70509d7a57539ac65ec5d081b85154854",
+      "source": "landing/output/meli-animation-kit-2026-08-19/manifests/reparar-rail.json"
+    },
+    {
+      "path": "03-mascota/animaciones/manifests/salto-feliz.json",
+      "bytes": 7198,
+      "sha256": "3fa390ea33b7baf7656a8a35a1ae41b3a1fe9881835124398745386328dffb14",
+      "source": "landing/output/meli-animation-kit-2026-08-19/manifests/salto-feliz.json"
+    },
+    {
+      "path": "03-mascota/animaciones/manifests/saludo.json",
+      "bytes": 5461,
+      "sha256": "f5183e2175597e13b7a596a0879b75c149be861b1660d0e201982dd825561a6d",
+      "source": "landing/output/meli-animation-kit-2026-08-19/manifests/saludo.json"
+    },
+    {
+      "path": "03-mascota/animaciones/manifests/seguridad.json",
+      "bytes": 7179,
+      "sha256": "482ff40c79f8963e6b7781fcd0c7f6d2863a42dff5e26e9ca3a62a68f8000092",
+      "source": "landing/output/meli-animation-kit-2026-08-19/manifests/seguridad.json"
+    },
+    {
+      "path": "03-mascota/animaciones/manifests/siesta.json",
+      "bytes": 7354,
+      "sha256": "2f7c96ee8e2232c3ca3fca1df77a7f4ef6206bc49b63d336d360ff35a99fae0f",
+      "source": "landing/output/meli-animation-kit-2026-08-19/manifests/siesta.json"
+    },
+    {
+      "path": "03-mascota/animaciones/manifests/swap.json",
+      "bytes": 9272,
+      "sha256": "e40e6dfdd74fbba77f97e0c0c457f4233e79ecb01ae0defd83c6166738bbcd09",
+      "source": "landing/output/meli-animation-kit-2026-08-19/manifests/swap.json"
+    },
+    {
+      "path": "03-mascota/animaciones/previews/asomarse.webp",
+      "bytes": 140494,
+      "sha256": "825ea649de3a77b3c73e7608344aadfde677772ef900c201e1a35b0d0f46aa09",
+      "source": "landing/output/meli-animation-kit-2026-08-19/previews/asomarse.webp",
+      "image": {
+        "format": "webp",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 8
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/previews/caminata.webp",
+      "bytes": 197494,
+      "sha256": "7028b7bca24379077cc67f19a7240a68f2aabbf7511c16cf45c36f47972abbce",
+      "source": "landing/output/meli-animation-kit-2026-08-19/previews/caminata.webp",
+      "image": {
+        "format": "webp",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 6
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/previews/card.webp",
+      "bytes": 279962,
+      "sha256": "03413973a7867f03781d1617e5d6396204af65f9586259c57160b885fd3c2c84",
+      "source": "landing/output/meli-animation-kit-2026-08-19/previews/card.webp",
+      "image": {
+        "format": "webp",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 8
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/previews/cola.webp",
+      "bytes": 310140,
+      "sha256": "be391e0646a5046e3e4599c5bb9b001da9b4405d8c16692a908e206e1b203140",
+      "source": "landing/output/meli-animation-kit-2026-08-19/previews/cola.webp",
+      "image": {
+        "format": "webp",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 8
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/previews/comprobante.webp",
+      "bytes": 271826,
+      "sha256": "e57b069a10a95269eb1702617ba3640048928bc49331f9c4525eb22b4d5315e3",
+      "source": "landing/output/meli-animation-kit-2026-08-19/previews/comprobante.webp",
+      "image": {
+        "format": "webp",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 8
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/previews/creciendo.webp",
+      "bytes": 268188,
+      "sha256": "4c6f1fce962aa13b04707b8a5a40bdc6452bb62c7479c4bd5e3eb81aaebd7128",
+      "source": "landing/output/meli-animation-kit-2026-08-19/previews/creciendo.webp",
+      "image": {
+        "format": "webp",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 10
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/previews/idle-sentada.webp",
+      "bytes": 310140,
+      "sha256": "0a7fb83dd9ca852bebf1c0ed2cec9782b75dd40728cb479bd6bc023a7d551c78",
+      "source": "landing/output/meli-animation-kit-2026-08-19/previews/idle-sentada.webp",
+      "image": {
+        "format": "webp",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 8
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/previews/linterna.webp",
+      "bytes": 280578,
+      "sha256": "aff1fba3c5888a1833b14d446cd6271ceedb9f5cc6f41a656680a3a08560ef72",
+      "source": "landing/output/meli-animation-kit-2026-08-19/previews/linterna.webp",
+      "image": {
+        "format": "webp",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 8
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/previews/mantenimiento.webp",
+      "bytes": 305736,
+      "sha256": "a6552a25d25d7728c33aa01eb482413727fd340a2bf5849d4763c75a35843e68",
+      "source": "landing/output/meli-animation-kit-2026-08-19/previews/mantenimiento.webp",
+      "image": {
+        "format": "webp",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 10
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/previews/meti-la-pata.webp",
+      "bytes": 203292,
+      "sha256": "3de480d79ffff5ae4101c02c5c1f986f1b4a58ac4d07ef76701fdb772769b50c",
+      "source": "landing/output/meli-animation-kit-2026-08-19/previews/meti-la-pata.webp",
+      "image": {
+        "format": "webp",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 6
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/previews/ojos.webp",
+      "bytes": 170392,
+      "sha256": "bb2e7030ea6250488161762b7098f29e19d14a1874e5463fcdd624e0cfbc5a61",
+      "source": "landing/output/meli-animation-kit-2026-08-19/previews/ojos.webp",
+      "image": {
+        "format": "webp",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 6
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/previews/oreja.webp",
+      "bytes": 118742,
+      "sha256": "8725042eee5bc903df51acff551f93fd463a1f84f444fdc5ff2298d0c2d201f2",
+      "source": "landing/output/meli-animation-kit-2026-08-19/previews/oreja.webp",
+      "image": {
+        "format": "webp",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 4
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/previews/parpadeo.webp",
+      "bytes": 116336,
+      "sha256": "1979e274a4c1357c761caf8a4c996e7f48d1fb2956980a7ad9093164c34e1e75",
+      "source": "landing/output/meli-animation-kit-2026-08-19/previews/parpadeo.webp",
+      "image": {
+        "format": "webp",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 4
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/previews/preparando-pago.webp",
+      "bytes": 277004,
+      "sha256": "063640b0962419789e757d7a6164bd2ce6990b358246edd5943a722aad0c13b1",
+      "source": "landing/output/meli-animation-kit-2026-08-19/previews/preparando-pago.webp",
+      "image": {
+        "format": "webp",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 8
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/previews/reparar-rail.webp",
+      "bytes": 272122,
+      "sha256": "0c8c09c18b5b152efcffe4ce31d727ad0c33ebc43a433fb286e2c6450e1b2a04",
+      "source": "landing/output/meli-animation-kit-2026-08-19/previews/reparar-rail.webp",
+      "image": {
+        "format": "webp",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 10
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/previews/salto-feliz.webp",
+      "bytes": 219440,
+      "sha256": "03695e985808a232647219ca2df9e92f09a57fd85300f0d42ed99359d8057658",
+      "source": "landing/output/meli-animation-kit-2026-08-19/previews/salto-feliz.webp",
+      "image": {
+        "format": "webp",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 8
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/previews/saludo.webp",
+      "bytes": 182120,
+      "sha256": "7ca60df164cc7f439b45a32c8d539542edc2ac2e995fae45e4fe56c86c0860d5",
+      "source": "landing/output/meli-animation-kit-2026-08-19/previews/saludo.webp",
+      "image": {
+        "format": "webp",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 6
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/previews/seguridad.webp",
+      "bytes": 325990,
+      "sha256": "4c773b47afb0f71584e0ce69ce6e8812ebae2e5afdf909bdb0c7d17272a43e50",
+      "source": "landing/output/meli-animation-kit-2026-08-19/previews/seguridad.webp",
+      "image": {
+        "format": "webp",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 8
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/previews/siesta.webp",
+      "bytes": 239952,
+      "sha256": "6aa52628b998c9ac17604ead3886c59a60674231d10cd191c183504258044d35",
+      "source": "landing/output/meli-animation-kit-2026-08-19/previews/siesta.webp",
+      "image": {
+        "format": "webp",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 8
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/previews/swap.webp",
+      "bytes": 239642,
+      "sha256": "68d68c2938b5672cd09e8f7d578ac5a3814b4641e2ad613d9e6374c44e0f961d",
+      "source": "landing/output/meli-animation-kit-2026-08-19/previews/swap.webp",
+      "image": {
+        "format": "webp",
+        "width": 320,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 10
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/qa/all-animations-numbered.jpg",
+      "bytes": 1842097,
+      "sha256": "b27ffe41d6c8828464e93674543a4748fed3b566b76f170cf681d21994fc27e9",
+      "source": "landing/output/meli-animation-kit-2026-08-19/qa/all-animations-numbered.jpg",
+      "image": {
+        "format": "jpeg",
+        "width": 1200,
+        "height": 9168,
+        "hasAlpha": false,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/qa/asomarse-numbered.png",
+      "bytes": 94996,
+      "sha256": "b0b44f8533d82baffe2204d0498fbb421894833b4e23a0f0631acdc645d5b735",
+      "source": "landing/output/meli-animation-kit-2026-08-19/qa/asomarse-numbered.png",
+      "image": {
+        "format": "png",
+        "width": 1200,
+        "height": 480,
+        "hasAlpha": false,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/qa/caminata-numbered.png",
+      "bytes": 124131,
+      "sha256": "3d6f353641159a26505a81af80e63507b5204b625ed644ed51dc3f27d2c58277",
+      "source": "landing/output/meli-animation-kit-2026-08-19/qa/caminata-numbered.png",
+      "image": {
+        "format": "png",
+        "width": 1200,
+        "height": 480,
+        "hasAlpha": false,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/qa/card-numbered.png",
+      "bytes": 170189,
+      "sha256": "8962998fca8b20a9cdee2b7fd45267657969f198b292f251ccd4d438e913e9ac",
+      "source": "landing/output/meli-animation-kit-2026-08-19/qa/card-numbered.png",
+      "image": {
+        "format": "png",
+        "width": 1200,
+        "height": 480,
+        "hasAlpha": false,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/qa/cola-numbered.png",
+      "bytes": 197987,
+      "sha256": "0fab09be57ef82abdfaae3994d596c72cf6e94bb446c128b0824c0468c06e894",
+      "source": "landing/output/meli-animation-kit-2026-08-19/qa/cola-numbered.png",
+      "image": {
+        "format": "png",
+        "width": 1200,
+        "height": 480,
+        "hasAlpha": false,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/qa/comprobante-numbered.png",
+      "bytes": 169284,
+      "sha256": "7d707d4ffe3f9c3bd875633c85916283b9739029458dbd379ff13c5199bcb5bb",
+      "source": "landing/output/meli-animation-kit-2026-08-19/qa/comprobante-numbered.png",
+      "image": {
+        "format": "png",
+        "width": 1200,
+        "height": 480,
+        "hasAlpha": false,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/qa/creciendo-numbered.png",
+      "bytes": 160062,
+      "sha256": "76e05a65cb58955275ecce6276c078bbb53d962f4af1c192f0528e1be6b3e848",
+      "source": "landing/output/meli-animation-kit-2026-08-19/qa/creciendo-numbered.png",
+      "image": {
+        "format": "png",
+        "width": 1200,
+        "height": 480,
+        "hasAlpha": false,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/qa/edge-pixel-report.json",
+      "bytes": 8393,
+      "sha256": "ca56c01460cc54f5022000d8fa6d52dd1ebe48d4f50991ed3abd98fb7bae2b66",
+      "source": "landing/output/meli-animation-kit-2026-08-19/qa/edge-pixel-report.json"
+    },
+    {
+      "path": "03-mascota/animaciones/qa/idle-sentada-numbered.png",
+      "bytes": 198290,
+      "sha256": "42955d316bee820e56017d15eda3f881116f4751ae460ba7f31ec75f6c33465c",
+      "source": "landing/output/meli-animation-kit-2026-08-19/qa/idle-sentada-numbered.png",
+      "image": {
+        "format": "png",
+        "width": 1200,
+        "height": 480,
+        "hasAlpha": false,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/qa/linterna-numbered.png",
+      "bytes": 166140,
+      "sha256": "a0dcd78aca4f28a3733a4a8aab240813ea06545587964c154a03ac18e2e8db3a",
+      "source": "landing/output/meli-animation-kit-2026-08-19/qa/linterna-numbered.png",
+      "image": {
+        "format": "png",
+        "width": 1200,
+        "height": 480,
+        "hasAlpha": false,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/qa/mantenimiento-numbered.png",
+      "bytes": 182774,
+      "sha256": "6ac37392a75f63ce1caaa2951ecb6a90f2fb511513bdfa4dbb76fe8d6d7fa831",
+      "source": "landing/output/meli-animation-kit-2026-08-19/qa/mantenimiento-numbered.png",
+      "image": {
+        "format": "png",
+        "width": 1200,
+        "height": 480,
+        "hasAlpha": false,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/qa/meti-la-pata-numbered.png",
+      "bytes": 129246,
+      "sha256": "17b166ca2eb1229a1db1ba5bf47d90f4b60ea4c08146ced6854c3821d2a2bd19",
+      "source": "landing/output/meli-animation-kit-2026-08-19/qa/meti-la-pata-numbered.png",
+      "image": {
+        "format": "png",
+        "width": 1200,
+        "height": 480,
+        "hasAlpha": false,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/qa/ojos-numbered.png",
+      "bytes": 116797,
+      "sha256": "4a5c135bd113097bc72dd54e89916f7a495d467e360aee2558f70971104797b3",
+      "source": "landing/output/meli-animation-kit-2026-08-19/qa/ojos-numbered.png",
+      "image": {
+        "format": "png",
+        "width": 1200,
+        "height": 480,
+        "hasAlpha": false,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/qa/oreja-numbered.png",
+      "bytes": 80621,
+      "sha256": "2b4da5288e2912db360a12d2c9baacde50bd81f417a1e529b383eef5a6620cf4",
+      "source": "landing/output/meli-animation-kit-2026-08-19/qa/oreja-numbered.png",
+      "image": {
+        "format": "png",
+        "width": 1200,
+        "height": 264,
+        "hasAlpha": false,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/qa/parpadeo-numbered.png",
+      "bytes": 81303,
+      "sha256": "f08c6f790a0efbba13c8f6e47f7c4d0faed34e5aef50345ee2dda03bf3ddd129",
+      "source": "landing/output/meli-animation-kit-2026-08-19/qa/parpadeo-numbered.png",
+      "image": {
+        "format": "png",
+        "width": 1200,
+        "height": 264,
+        "hasAlpha": false,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/qa/preparando-pago-numbered.png",
+      "bytes": 169498,
+      "sha256": "75b69b0bb4723f1b8a344f8d1bfbb24f8c452440ebb1e21ee80414d31bb54038",
+      "source": "landing/output/meli-animation-kit-2026-08-19/qa/preparando-pago-numbered.png",
+      "image": {
+        "format": "png",
+        "width": 1200,
+        "height": 480,
+        "hasAlpha": false,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/qa/raw-problem-sequences/asomarse-raw.png",
+      "bytes": 106696,
+      "sha256": "ce0ce172d3ed2add8a9578ecb493075c46c51fa7964b5d46d7d2057b9be88bb1",
+      "source": "landing/output/meli-animation-kit-2026-08-19/qa/raw-problem-sequences/asomarse-raw.png",
+      "image": {
+        "format": "png",
+        "width": 1200,
+        "height": 480,
+        "hasAlpha": false,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/qa/raw-problem-sequences/cola-raw.png",
+      "bytes": 165115,
+      "sha256": "6c953c50f51f51a6b4c21e8b5567ce9242cad50e92e35edb5f5fe63f132df0cb",
+      "source": "landing/output/meli-animation-kit-2026-08-19/qa/raw-problem-sequences/cola-raw.png",
+      "image": {
+        "format": "png",
+        "width": 1200,
+        "height": 480,
+        "hasAlpha": false,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/qa/raw-problem-sequences/reparar-rail-raw.png",
+      "bytes": 154406,
+      "sha256": "437e4c4493abc2eb5955d70846f6ad5c766c07f9fda9b2361fdade2c0b51b355",
+      "source": "landing/output/meli-animation-kit-2026-08-19/qa/raw-problem-sequences/reparar-rail-raw.png",
+      "image": {
+        "format": "png",
+        "width": 1200,
+        "height": 480,
+        "hasAlpha": false,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/qa/raw-problem-sequences/siesta-raw.png",
+      "bytes": 150635,
+      "sha256": "881dcfb4a504f100f9a4b7b4ae78b702dedee15c9010a99ddab9e4bb97ab318c",
+      "source": "landing/output/meli-animation-kit-2026-08-19/qa/raw-problem-sequences/siesta-raw.png",
+      "image": {
+        "format": "png",
+        "width": 1200,
+        "height": 480,
+        "hasAlpha": false,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/qa/raw-problem-sequences/swap-raw.png",
+      "bytes": 149485,
+      "sha256": "67e52694d7e6443a26a876e5688a080a620bcd9ca27818b54b0e353a8ed09a97",
+      "source": "landing/output/meli-animation-kit-2026-08-19/qa/raw-problem-sequences/swap-raw.png",
+      "image": {
+        "format": "png",
+        "width": 1200,
+        "height": 480,
+        "hasAlpha": false,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/qa/reparar-rail-numbered.png",
+      "bytes": 154680,
+      "sha256": "ed77597c1ca3154f76bf529f9b940487dee8448832d4c111f1273babe0316554",
+      "source": "landing/output/meli-animation-kit-2026-08-19/qa/reparar-rail-numbered.png",
+      "image": {
+        "format": "png",
+        "width": 1200,
+        "height": 480,
+        "hasAlpha": false,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/qa/salto-feliz-numbered.png",
+      "bytes": 137196,
+      "sha256": "99143e2b55c668beb1f3cae512c4e78a1ff9cc6073ac4041947032a467624df6",
+      "source": "landing/output/meli-animation-kit-2026-08-19/qa/salto-feliz-numbered.png",
+      "image": {
+        "format": "png",
+        "width": 1200,
+        "height": 480,
+        "hasAlpha": false,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/qa/saludo-numbered.png",
+      "bytes": 112997,
+      "sha256": "2c21dd25ea067a2a9458e2955bb3fb10b68b15a38629fa89902f012f521e15a5",
+      "source": "landing/output/meli-animation-kit-2026-08-19/qa/saludo-numbered.png",
+      "image": {
+        "format": "png",
+        "width": 1200,
+        "height": 480,
+        "hasAlpha": false,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/qa/seguridad-numbered.png",
+      "bytes": 191260,
+      "sha256": "1816915b793af2b15f41a0bdac54659ac371df39ddae418accf5f45bae1ca6d4",
+      "source": "landing/output/meli-animation-kit-2026-08-19/qa/seguridad-numbered.png",
+      "image": {
+        "format": "png",
+        "width": 1200,
+        "height": 480,
+        "hasAlpha": false,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/qa/siesta-numbered.png",
+      "bytes": 150172,
+      "sha256": "a5cd8a7503250aa68389bded19f9774d57feef103aba3ad171fdbfdb92b0c179",
+      "source": "landing/output/meli-animation-kit-2026-08-19/qa/siesta-numbered.png",
+      "image": {
+        "format": "png",
+        "width": 1200,
+        "height": 480,
+        "hasAlpha": false,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/qa/swap-numbered.png",
+      "bytes": 144270,
+      "sha256": "34a8e24c3fd246f080eb47b9759fadd2a52c6c00cd4b970aa3e48993962620eb",
+      "source": "landing/output/meli-animation-kit-2026-08-19/qa/swap-numbered.png",
+      "image": {
+        "format": "png",
+        "width": 1200,
+        "height": 480,
+        "hasAlpha": false,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/qa/validation-report.json",
+      "bytes": 601,
+      "sha256": "674dd024cc68518a3864dcec00f6717765d4d2c15d4d9f4dd6b1b47e2336afd5",
+      "source": "landing/output/meli-animation-kit-2026-08-19/qa/validation-report.json"
+    },
+    {
+      "path": "03-mascota/animaciones/spritesheets/asomarse-grid.png",
+      "bytes": 180867,
+      "sha256": "0261f33477cf5f0936b637b903bd126a5b9d21233b4653187ee573dd00586304",
+      "source": "landing/output/meli-animation-kit-2026-08-19/spritesheets/asomarse-grid.png",
+      "image": {
+        "format": "png",
+        "width": 1600,
+        "height": 512,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/spritesheets/asomarse-strip.png",
+      "bytes": 141487,
+      "sha256": "52fa51d39a92f17d58f4ca0444624aac813b6ae3f7a7a4b6eefb6355c34397e2",
+      "source": "landing/output/meli-animation-kit-2026-08-19/spritesheets/asomarse-strip.png",
+      "image": {
+        "format": "png",
+        "width": 2560,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/spritesheets/caminata-grid.png",
+      "bytes": 241685,
+      "sha256": "c3362d0c08190d43c9b99860e12a2fd707b717ac5a0a0427bf7449697badc84a",
+      "source": "landing/output/meli-animation-kit-2026-08-19/spritesheets/caminata-grid.png",
+      "image": {
+        "format": "png",
+        "width": 1600,
+        "height": 512,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/spritesheets/caminata-strip.png",
+      "bytes": 236091,
+      "sha256": "af082ab53c0eda46c6405d63ac909b179ecc894e8ab245c7d55ecffa07626d92",
+      "source": "landing/output/meli-animation-kit-2026-08-19/spritesheets/caminata-strip.png",
+      "image": {
+        "format": "png",
+        "width": 1920,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/spritesheets/card-grid.png",
+      "bytes": 338605,
+      "sha256": "be6107a43b9a6cf2ed0a811fda22961e0ffe7002e38aac3c5bba011c0c8e797d",
+      "source": "landing/output/meli-animation-kit-2026-08-19/spritesheets/card-grid.png",
+      "image": {
+        "format": "png",
+        "width": 1600,
+        "height": 512,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/spritesheets/card-strip.png",
+      "bytes": 332719,
+      "sha256": "b7745e8ff2a6bc74735e15247a0b03d47ded95b1c012394a53004530a7303ea0",
+      "source": "landing/output/meli-animation-kit-2026-08-19/spritesheets/card-strip.png",
+      "image": {
+        "format": "png",
+        "width": 2560,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/spritesheets/cola-grid.png",
+      "bytes": 383172,
+      "sha256": "c65c9e1d794b647d2e223fc8eec368bc14a9625d09d3957a603e00e2d852eea9",
+      "source": "landing/output/meli-animation-kit-2026-08-19/spritesheets/cola-grid.png",
+      "image": {
+        "format": "png",
+        "width": 1600,
+        "height": 512,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/spritesheets/cola-strip.png",
+      "bytes": 377161,
+      "sha256": "dd2f9f6512a04c2a112ae8d943e01e9e4b6385eedd3fdd74168f0c1406f7910e",
+      "source": "landing/output/meli-animation-kit-2026-08-19/spritesheets/cola-strip.png",
+      "image": {
+        "format": "png",
+        "width": 2560,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/spritesheets/comprobante-grid.png",
+      "bytes": 331785,
+      "sha256": "6407b1e685df7a26f844f11726dae99c2a59f2dbb83534b2ad134d06cf63d287",
+      "source": "landing/output/meli-animation-kit-2026-08-19/spritesheets/comprobante-grid.png",
+      "image": {
+        "format": "png",
+        "width": 1600,
+        "height": 512,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/spritesheets/comprobante-strip.png",
+      "bytes": 327675,
+      "sha256": "7bdc0407cea32e96f30b830da370c4ff998194d7194ba9cf67770fe1d0471dff",
+      "source": "landing/output/meli-animation-kit-2026-08-19/spritesheets/comprobante-strip.png",
+      "image": {
+        "format": "png",
+        "width": 2560,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/spritesheets/creciendo-grid.png",
+      "bytes": 319620,
+      "sha256": "6f739b07fed0a0f825969a9ae573b6e8eeb232b6479769c99539bf8d61cff7d8",
+      "source": "landing/output/meli-animation-kit-2026-08-19/spritesheets/creciendo-grid.png",
+      "image": {
+        "format": "png",
+        "width": 1600,
+        "height": 512,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/spritesheets/creciendo-strip.png",
+      "bytes": 318688,
+      "sha256": "881886da9c4785dbd541d26ee09bad535dfb3068c847c1fdfe99f2dc4382bd3a",
+      "source": "landing/output/meli-animation-kit-2026-08-19/spritesheets/creciendo-strip.png",
+      "image": {
+        "format": "png",
+        "width": 3200,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/spritesheets/idle-sentada-grid.png",
+      "bytes": 383172,
+      "sha256": "c65c9e1d794b647d2e223fc8eec368bc14a9625d09d3957a603e00e2d852eea9",
+      "source": "landing/output/meli-animation-kit-2026-08-19/spritesheets/idle-sentada-grid.png",
+      "image": {
+        "format": "png",
+        "width": 1600,
+        "height": 512,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/spritesheets/idle-sentada-strip.png",
+      "bytes": 377161,
+      "sha256": "dd2f9f6512a04c2a112ae8d943e01e9e4b6385eedd3fdd74168f0c1406f7910e",
+      "source": "landing/output/meli-animation-kit-2026-08-19/spritesheets/idle-sentada-strip.png",
+      "image": {
+        "format": "png",
+        "width": 2560,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/spritesheets/linterna-grid.png",
+      "bytes": 335450,
+      "sha256": "ab4a72238d69558ea117f7c5f7b7fd45553028edddebde4f8b908cf5c33cb733",
+      "source": "landing/output/meli-animation-kit-2026-08-19/spritesheets/linterna-grid.png",
+      "image": {
+        "format": "png",
+        "width": 1600,
+        "height": 512,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/spritesheets/linterna-strip.png",
+      "bytes": 331146,
+      "sha256": "ab67474dec99e46d7a9777214228426f650d5f00dfb8d697b6b8aa470912bce3",
+      "source": "landing/output/meli-animation-kit-2026-08-19/spritesheets/linterna-strip.png",
+      "image": {
+        "format": "png",
+        "width": 2560,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/spritesheets/mantenimiento-grid.png",
+      "bytes": 362027,
+      "sha256": "76917d52758808e417e670c634370b2e1855765334ca04ef9b605bfa6d8efd52",
+      "source": "landing/output/meli-animation-kit-2026-08-19/spritesheets/mantenimiento-grid.png",
+      "image": {
+        "format": "png",
+        "width": 1600,
+        "height": 512,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/spritesheets/mantenimiento-strip.png",
+      "bytes": 361415,
+      "sha256": "13cc336945a8f681804509f4f7faa670d04fb5bcd7a0ddcbc46835849eb28baa",
+      "source": "landing/output/meli-animation-kit-2026-08-19/spritesheets/mantenimiento-strip.png",
+      "image": {
+        "format": "png",
+        "width": 3200,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/spritesheets/meti-la-pata-grid.png",
+      "bytes": 249525,
+      "sha256": "4e7283f3814517fc1b62bd678332471f5f2bab11c34f564502bf57ef1b83b93e",
+      "source": "landing/output/meli-animation-kit-2026-08-19/spritesheets/meti-la-pata-grid.png",
+      "image": {
+        "format": "png",
+        "width": 1600,
+        "height": 512,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/spritesheets/meti-la-pata-strip.png",
+      "bytes": 243463,
+      "sha256": "7aba2f3384e458f689aee7558eef62438bc7a21a31346d10b8efc639312cc91d",
+      "source": "landing/output/meli-animation-kit-2026-08-19/spritesheets/meti-la-pata-strip.png",
+      "image": {
+        "format": "png",
+        "width": 1920,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/spritesheets/ojos-grid.png",
+      "bytes": 214028,
+      "sha256": "f2d379e2d41235aa1bba07918de21a414ead5a8ae4c171342fcc1dc4c7b905fe",
+      "source": "landing/output/meli-animation-kit-2026-08-19/spritesheets/ojos-grid.png",
+      "image": {
+        "format": "png",
+        "width": 1600,
+        "height": 512,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/spritesheets/ojos-strip.png",
+      "bytes": 206833,
+      "sha256": "1e822921aae4b02f16e1be40b6b0754c8766ac052ae769b3d52853a2d2af9133",
+      "source": "landing/output/meli-animation-kit-2026-08-19/spritesheets/ojos-strip.png",
+      "image": {
+        "format": "png",
+        "width": 1920,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/spritesheets/oreja-grid.png",
+      "bytes": 147742,
+      "sha256": "f611e9932b533a87064479946931dd93b8e1a95e04b50c49e9859d3e027ab963",
+      "source": "landing/output/meli-animation-kit-2026-08-19/spritesheets/oreja-grid.png",
+      "image": {
+        "format": "png",
+        "width": 1600,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/spritesheets/oreja-strip.png",
+      "bytes": 144923,
+      "sha256": "4fac2fd48455e0a4547c561643c67adb76b4e07233cf618f207313c3a72c81c0",
+      "source": "landing/output/meli-animation-kit-2026-08-19/spritesheets/oreja-strip.png",
+      "image": {
+        "format": "png",
+        "width": 1280,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/spritesheets/parpadeo-grid.png",
+      "bytes": 147921,
+      "sha256": "96f44b468dbadd82b00fdf910c98269f4cf50a1c385a338b5c5c37b2997468d3",
+      "source": "landing/output/meli-animation-kit-2026-08-19/spritesheets/parpadeo-grid.png",
+      "image": {
+        "format": "png",
+        "width": 1600,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/spritesheets/parpadeo-strip.png",
+      "bytes": 145110,
+      "sha256": "e0bb273d87990da0d1b6a2086c418639d37b1839e51e0b9a4cb8417ef93e1ae9",
+      "source": "landing/output/meli-animation-kit-2026-08-19/spritesheets/parpadeo-strip.png",
+      "image": {
+        "format": "png",
+        "width": 1280,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/spritesheets/preparando-pago-grid.png",
+      "bytes": 332343,
+      "sha256": "72a40e74bb5fd50dfb5eecac4c488cd9132175f9e3a735527e4146700a3580be",
+      "source": "landing/output/meli-animation-kit-2026-08-19/spritesheets/preparando-pago-grid.png",
+      "image": {
+        "format": "png",
+        "width": 1600,
+        "height": 512,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/spritesheets/preparando-pago-strip.png",
+      "bytes": 326675,
+      "sha256": "15885bc3049e38da38a9ce57a39f4d500088715fefd0f050a423de7ad1f678dc",
+      "source": "landing/output/meli-animation-kit-2026-08-19/spritesheets/preparando-pago-strip.png",
+      "image": {
+        "format": "png",
+        "width": 2560,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/spritesheets/reparar-rail-grid.png",
+      "bytes": 306281,
+      "sha256": "b02ecc04cba0aaa07e7d3de20242cd7057be4c839d13e8856648f654743136bd",
+      "source": "landing/output/meli-animation-kit-2026-08-19/spritesheets/reparar-rail-grid.png",
+      "image": {
+        "format": "png",
+        "width": 1600,
+        "height": 512,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/spritesheets/reparar-rail-strip.png",
+      "bytes": 304524,
+      "sha256": "030d7556805638d9d61d88d9ccaa987a1e3e9cd0abd6e9ed7727a9fa0f42ed02",
+      "source": "landing/output/meli-animation-kit-2026-08-19/spritesheets/reparar-rail-strip.png",
+      "image": {
+        "format": "png",
+        "width": 3200,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/spritesheets/salto-feliz-grid.png",
+      "bytes": 266184,
+      "sha256": "4e018ca60c404d5ab7cc18314862a3d0e33a796f15616e6fe91f1f248fb4e1ae",
+      "source": "landing/output/meli-animation-kit-2026-08-19/spritesheets/salto-feliz-grid.png",
+      "image": {
+        "format": "png",
+        "width": 1600,
+        "height": 512,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/spritesheets/salto-feliz-strip.png",
+      "bytes": 262502,
+      "sha256": "a242e53205b1b68ac8047efecad4ac0e4f4ac3078165dd9272a123a19e4a4f47",
+      "source": "landing/output/meli-animation-kit-2026-08-19/spritesheets/salto-feliz-strip.png",
+      "image": {
+        "format": "png",
+        "width": 2560,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/spritesheets/saludo-grid.png",
+      "bytes": 221074,
+      "sha256": "3ce60251ea5db94cee8262492b6c5f391647e78de0b31d6ab049d710388fdd63",
+      "source": "landing/output/meli-animation-kit-2026-08-19/spritesheets/saludo-grid.png",
+      "image": {
+        "format": "png",
+        "width": 1600,
+        "height": 512,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/spritesheets/saludo-strip.png",
+      "bytes": 216110,
+      "sha256": "75afbeb33898c928e75af4cec61bf1dc4636337e9c932c7a4ccd3a27847eb31f",
+      "source": "landing/output/meli-animation-kit-2026-08-19/spritesheets/saludo-strip.png",
+      "image": {
+        "format": "png",
+        "width": 1920,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/spritesheets/seguridad-grid.png",
+      "bytes": 391865,
+      "sha256": "cd32e9ae08968301d7ba5623028a87bb76ec2d8b07d4d9cfa796dd6ecdb3652f",
+      "source": "landing/output/meli-animation-kit-2026-08-19/spritesheets/seguridad-grid.png",
+      "image": {
+        "format": "png",
+        "width": 1600,
+        "height": 512,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/spritesheets/seguridad-strip.png",
+      "bytes": 387600,
+      "sha256": "26cd13c4fbb0d349069cceb46c44469e29738a0ebadddd1ee7d38968b6cd4a9b",
+      "source": "landing/output/meli-animation-kit-2026-08-19/spritesheets/seguridad-strip.png",
+      "image": {
+        "format": "png",
+        "width": 2560,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/spritesheets/siesta-grid.png",
+      "bytes": 287741,
+      "sha256": "1d1ed2ab0c11a327439c1a15e1543dc997ffbb6d28c8a4ea7faffe7f21540733",
+      "source": "landing/output/meli-animation-kit-2026-08-19/spritesheets/siesta-grid.png",
+      "image": {
+        "format": "png",
+        "width": 1600,
+        "height": 512,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/spritesheets/siesta-strip.png",
+      "bytes": 250413,
+      "sha256": "a171a3aacd98b4961e53e6fdf4f81d23439455eda06bb7237e5989cdf594e8fc",
+      "source": "landing/output/meli-animation-kit-2026-08-19/spritesheets/siesta-strip.png",
+      "image": {
+        "format": "png",
+        "width": 2560,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/spritesheets/swap-grid.png",
+      "bytes": 286733,
+      "sha256": "f4c329b6121674b6228dacde7ec7e10b260d07305b3a7683be0ceba3dc09ab4f",
+      "source": "landing/output/meli-animation-kit-2026-08-19/spritesheets/swap-grid.png",
+      "image": {
+        "format": "png",
+        "width": 1600,
+        "height": 512,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/spritesheets/swap-strip.png",
+      "bytes": 286252,
+      "sha256": "9e655b5d42c856819055321c976675374e93986a46848f588ab0199032573874",
+      "source": "landing/output/meli-animation-kit-2026-08-19/spritesheets/swap-strip.png",
+      "image": {
+        "format": "png",
+        "width": 3200,
+        "height": 256,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/animaciones/tools/process_meli_frames.py",
+      "bytes": 26594,
+      "sha256": "2cce7ac3a9ccbc0f356c63b2a23cef5485554503597054a2df143d1f09474926",
+      "source": "landing/output/meli-animation-kit-2026-08-19/tools/process_meli_frames.py"
+    },
+    {
+      "path": "03-mascota/estaticos/body-conveyor.webp",
+      "bytes": 102218,
+      "sha256": "ec51ffe1f60ee3da819524c4a2fc326ffdf231190cfdafc11e68da2ca50915c7",
+      "source": "landing/src/assets/meli/body-conveyor.webp",
+      "image": {
+        "format": "webp",
+        "width": 477,
+        "height": 420,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/estaticos/body-courier.webp",
+      "bytes": 100424,
+      "sha256": "f134f09d1c907220a6d418b72880688e0d92e04ccfc052507e0c8ccfddd525a0",
+      "source": "landing/src/assets/meli/body-courier.webp",
+      "image": {
+        "format": "webp",
+        "width": 430,
+        "height": 428,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/estaticos/body-peek-card.webp",
+      "bytes": 115586,
+      "sha256": "9a596a98ff6e81933f1212dad4e5d01db6c5d84fda294c15968a297045624830",
+      "source": "landing/src/assets/meli/body-peek-card.webp",
+      "image": {
+        "format": "webp",
+        "width": 435,
+        "height": 443,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/estaticos/body-qr.webp",
+      "bytes": 99722,
+      "sha256": "b8cde374d8e9e74e61c70b8f5f8775ec1f3bd9fe4d914aea5e56ab3a12225825",
+      "source": "landing/src/assets/meli/body-qr.webp",
+      "image": {
+        "format": "webp",
+        "width": 348,
+        "height": 466,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/estaticos/body-sitting.webp",
+      "bytes": 78314,
+      "sha256": "75e930325894a6c52a3d9da6907519bf7a6f2c34d163b4937b23727dcb93c86c",
+      "source": "landing/src/assets/meli/body-sitting.webp",
+      "image": {
+        "format": "webp",
+        "width": 304,
+        "height": 429,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/estaticos/body-sleeping.webp",
+      "bytes": 85184,
+      "sha256": "a677727dece1f52359ab33f46816aca07fc5de683d06aadd4e7f6cf3937cff02",
+      "source": "landing/src/assets/meli/body-sleeping.webp",
+      "image": {
+        "format": "webp",
+        "width": 427,
+        "height": 343,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/estaticos/head-cautious.webp",
+      "bytes": 51920,
+      "sha256": "e94a414d97da795825a976bd70b2a60531e1c1953e17b98b1babf70bb104ab8b",
+      "source": "landing/src/assets/meli/head-cautious.webp",
+      "image": {
+        "format": "webp",
+        "width": 376,
+        "height": 280,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/estaticos/head-curious.webp",
+      "bytes": 72996,
+      "sha256": "7de5c97f1efdba43ce5df66c2d272b2107d8df7d832ea07f8418d6de45608db0",
+      "source": "landing/src/assets/meli/head-curious.webp",
+      "image": {
+        "format": "webp",
+        "width": 366,
+        "height": 349,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/estaticos/head-excited.webp",
+      "bytes": 60196,
+      "sha256": "e30fea042cc19d91b781af780f324adc754dcdd6d29b4d65b18229de4737fe18",
+      "source": "landing/src/assets/meli/head-excited.webp",
+      "image": {
+        "format": "webp",
+        "width": 332,
+        "height": 332,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/estaticos/head-focused.webp",
+      "bytes": 53228,
+      "sha256": "54907a9012b3094180116ffdc3589853392ffe16f59887d1783d12bd379afe9c",
+      "source": "landing/src/assets/meli/head-focused.webp",
+      "image": {
+        "format": "webp",
+        "width": 330,
+        "height": 314,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/estaticos/head-happy.webp",
+      "bytes": 54714,
+      "sha256": "401146fd5395057c092e1cddbde57c4fe33b7d503e15f081005caedb346f0b8b",
+      "source": "landing/src/assets/meli/head-happy.webp",
+      "image": {
+        "format": "webp",
+        "width": 329,
+        "height": 314,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/estaticos/head-neutral.webp",
+      "bytes": 52024,
+      "sha256": "cdd35047715b38adde3bfb5b60cde41c2fcbf2011902c7bc354df7a0f6888872",
+      "source": "landing/src/assets/meli/head-neutral.webp",
+      "image": {
+        "format": "webp",
+        "width": 330,
+        "height": 314,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/estaticos/head-peek.webp",
+      "bytes": 34108,
+      "sha256": "a257869a80b1e14ce313146f4e7c9972bda3022ee3f562daccf5579da3284fc1",
+      "source": "landing/src/assets/meli/head-peek.webp",
+      "image": {
+        "format": "webp",
+        "width": 204,
+        "height": 343,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "03-mascota/estaticos/head-sleepy.webp",
+      "bytes": 52760,
+      "sha256": "5d6c7af0cfcd30a346c8b2509ccbaa7921ef930807251a59d06deef6aef21e95",
+      "source": "landing/src/assets/meli/head-sleepy.webp",
+      "image": {
+        "format": "webp",
+        "width": 343,
+        "height": 314,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "04-tipografia/README.md",
+      "bytes": 1944,
+      "sha256": "8552cd2fcddb78fa80d775d5e8d7c33cc72e33aa26837a073c1c4a5ac9d94c1e",
+      "source": "brandkit editorial / generated"
+    },
+    {
+      "path": "04-tipografia/recursive/LICENSE.txt",
+      "bytes": 4380,
+      "sha256": "b4160a38a0fb152c167fada709bd6757a5785cfa4670c3106d386d5558626ce3",
+      "source": "landing/node_modules/@fontsource-variable/recursive/LICENSE"
+    },
+    {
+      "path": "04-tipografia/recursive/files/recursive-cyrillic-ext-full-normal.woff2",
+      "bytes": 5564,
+      "sha256": "f0c477ced747cc3224792ba0fe884a9e8e5406ce0a9e487ead2fc9426fb68206",
+      "source": "landing/node_modules/@fontsource-variable/recursive/files/recursive-cyrillic-ext-full-normal.woff2"
+    },
+    {
+      "path": "04-tipografia/recursive/files/recursive-latin-ext-full-normal.woff2",
+      "bytes": 310024,
+      "sha256": "2f888e0fde56aeba4e22693acf2f7608783f261bc31247909573dc2d12f5554f",
+      "source": "landing/node_modules/@fontsource-variable/recursive/files/recursive-latin-ext-full-normal.woff2"
+    },
+    {
+      "path": "04-tipografia/recursive/files/recursive-latin-full-normal.woff2",
+      "bytes": 304988,
+      "sha256": "14ef41458aeba3d812284c4e32ee956910b88845062c61e91cc8578c2b78bccb",
+      "source": "landing/node_modules/@fontsource-variable/recursive/files/recursive-latin-full-normal.woff2"
+    },
+    {
+      "path": "04-tipografia/recursive/files/recursive-vietnamese-full-normal.woff2",
+      "bytes": 61816,
+      "sha256": "19a0b495aed1471f301247933d7e34c462a5a9f3b5fb2313a5ddf5a76fa65eed",
+      "source": "landing/node_modules/@fontsource-variable/recursive/files/recursive-vietnamese-full-normal.woff2"
+    },
+    {
+      "path": "04-tipografia/recursive/full.css",
+      "bytes": 1642,
+      "sha256": "e0808c686aa41839cff004cfd44b4714cf54f60e560543313eb5f3152f3aa756",
+      "source": "landing/node_modules/@fontsource-variable/recursive/full.css"
+    },
+    {
+      "path": "04-tipografia/recursive/metadata.json",
+      "bytes": 918,
+      "sha256": "c2b2ef09f69b94d7fb9bc9ff15805fc4a892bbf78f872a7c6f5b69c0f127c5fe",
+      "source": "landing/node_modules/@fontsource-variable/recursive/metadata.json"
+    },
+    {
+      "path": "04-tipografia/recursive/package.json",
+      "bytes": 1481,
+      "sha256": "dc74b48348965444370e6f3b1a787312b052a2907ae467853ba0ecae14c24dcb",
+      "source": "landing/node_modules/@fontsource-variable/recursive/package.json"
+    },
+    {
+      "path": "04-tipografia/uso.css",
+      "bytes": 454,
+      "sha256": "303a2847689828a47889d498f6978d1abea15199853576cf7d531a16f55b3f2a",
+      "source": "brandkit editorial / generated"
+    },
+    {
+      "path": "05-colores/README.md",
+      "bytes": 1104,
+      "sha256": "be1966ba80157bf67c6680aa40b3f4f502decc4d0cc3b53a537e7e18397a7908",
+      "source": "brandkit editorial / generated"
+    },
+    {
+      "path": "05-colores/contraste.json",
+      "bytes": 667,
+      "sha256": "10c13cf4245815df2f84fbfc1a2534570f640af17e4873c534b33d43a73b98a1",
+      "source": "brandkit editorial / generated"
+    },
+    {
+      "path": "05-colores/gatopago.gpl",
+      "bytes": 311,
+      "sha256": "db8beb5466276735ec2bcf4865c143064442c7be2d6ec278de9cc7c3d2fafe2e",
+      "source": "brandkit editorial / generated"
+    },
+    {
+      "path": "05-colores/paleta.csv",
+      "bytes": 381,
+      "sha256": "5e09ad2ffafe9ed755b5b3b958390e4c87969edb6764a371fa8f0bf14bd0bffb",
+      "source": "brandkit editorial / generated"
+    },
+    {
+      "path": "05-colores/tokens-landing.css",
+      "bytes": 994,
+      "sha256": "d82888db1edf28c8a4fa0130f9723db629c63fe989c04c2f81577835a0325655",
+      "source": "brandkit editorial / generated"
+    },
+    {
+      "path": "05-colores/tokens-landing.json",
+      "bytes": 1239,
+      "sha256": "03f12da4de4845ff5694097b054586c0d7b1e564bce0773dc3fd8b0da702e79b",
+      "source": "brandkit editorial / generated"
+    },
+    {
+      "path": "06-originales/Image Aug 19, 2026, 01_47_20 AM (1).png",
+      "bytes": 999556,
+      "sha256": "a055c8246be3dc8ab1f969f64fa692ee89729bebc3bc6f6a27999643cc5ffea5",
+      "source": "landing/Image Aug 19, 2026, 01_47_20 AM (1).png",
+      "image": {
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "06-originales/Image Aug 19, 2026, 01_47_21 AM (2).png",
+      "bytes": 1147237,
+      "sha256": "57539566225234bcfbc7611c8d5bee5b154af6bac519782b879c6b349148eaca",
+      "source": "landing/Image Aug 19, 2026, 01_47_21 AM (2).png",
+      "image": {
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "06-originales/Image Aug 19, 2026, 01_47_21 AM (3).png",
+      "bytes": 1278982,
+      "sha256": "3c574aa9518d5547056f2894022fb00a512652695ec75431e4fce8c61ee7887d",
+      "source": "landing/Image Aug 19, 2026, 01_47_21 AM (3).png",
+      "image": {
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "06-originales/Image Aug 19, 2026, 01_47_21 AM (4).png",
+      "bytes": 1336196,
+      "sha256": "0bf1518671a69efe6fbfaec8e9e994d18ff390af80ac4b6a471d4f83f3f51583",
+      "source": "landing/Image Aug 19, 2026, 01_47_21 AM (4).png",
+      "image": {
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "06-originales/Image Aug 19, 2026, 01_47_21 AM (5).png",
+      "bytes": 1441492,
+      "sha256": "bdc0c65139623189e7bc9492ab08d6fbb10a7db6cb53aa066071d7dae630a190",
+      "source": "landing/Image Aug 19, 2026, 01_47_21 AM (5).png",
+      "image": {
+        "format": "png",
+        "width": 1672,
+        "height": 941,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "06-originales/README.md",
+      "bytes": 832,
+      "sha256": "5c761bfb2a861000838eb617661f0f6de3a5b5fec2f706be6e73b7f6b0a77ee8",
+      "source": "brandkit editorial / generated"
+    },
+    {
+      "path": "06-originales/d54017bf-565f-49e0-8192-bd0f47bfc050.png",
+      "bytes": 872905,
+      "sha256": "af4b6c88c2d4f273010d3d8d70ca7b87268d7b176eb6dd26ca9147a4ed982caf",
+      "source": "landing/d54017bf-565f-49e0-8192-bd0f47bfc050.png",
+      "image": {
+        "format": "png",
+        "width": 1536,
+        "height": 1024,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "06-originales/spritesmeli1.png",
+      "bytes": 636442,
+      "sha256": "9da636053d3dbb8076d06c59517596103dbeb62c5af771b249c27fe284d4b99e",
+      "source": "landing/spritesmeli1.png",
+      "image": {
+        "format": "png",
+        "width": 1448,
+        "height": 1086,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "06-originales/spritesmeli2.png",
+      "bytes": 820914,
+      "sha256": "af7b0b5730e7e348f4e412949c1a0fd81dc8d87ac52c1a29f14a1dfe6a712c60",
+      "source": "landing/spritesmeli2.png",
+      "image": {
+        "format": "png",
+        "width": 1448,
+        "height": 1086,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "07-referencias/README.md",
+      "bytes": 1560,
+      "sha256": "b293108504c03fcdbf097ac6bd6e541016a13c7567e7c0b914566da2ef07725c",
+      "source": "brandkit editorial / generated"
+    },
+    {
+      "path": "07-referencias/documentos/gatopago-plan-marca-experiencia-2026.md",
+      "bytes": 19945,
+      "sha256": "11e0cc544caf337e8b6bb1a7b27d4168ca4f85cd3ffcda61c3cd87e8bee2953d",
+      "source": "landing/documentacion/nuevos/gatopago-plan-marca-experiencia-2026.md"
+    },
+    {
+      "path": "07-referencias/documentos/gatopago-rebranding-maestro-2026.md",
+      "bytes": 61230,
+      "sha256": "8c443c225474467f2c931a030940833d3fea3e94a236cfa96cf7f81ccc3aad40",
+      "source": "landing/documentacion/nuevos/gatopago-rebranding-maestro-2026.md"
+    },
+    {
+      "path": "07-referencias/documentos/gatopago_nueva_narrativa_contexto_completo_2026-08-18.txt",
+      "bytes": 46192,
+      "sha256": "7c6965bc43feed0bad3e98bf9bf6c52c042437239a0219c6a23ae526e6ce94d7",
+      "source": "landing/documentacion/nuevos/gatopago_nueva_narrativa_contexto_completo_2026-08-18.txt"
+    },
+    {
+      "path": "07-referencias/implementacion/CatGlyph.astro",
+      "bytes": 951,
+      "sha256": "ed370ea7d859942ec1190e5024d5ebaf1ace53d43298fab438be29a0dc2b6138",
+      "source": "landing/src/components/CatGlyph.astro"
+    },
+    {
+      "path": "07-referencias/implementacion/MeliSprite.astro",
+      "bytes": 2071,
+      "sha256": "8327128bc2d7e926e25c7f2c830c1e2da0e68ef74fcc60d062489dde934f9758",
+      "source": "landing/src/components/MeliSprite.astro"
+    },
+    {
+      "path": "07-referencias/implementacion/brand.ts",
+      "bytes": 1173,
+      "sha256": "648b829fae2c0dc1e5f559660a78936c4b79d323f30f4f7866bb91f488b04771",
+      "source": "landing/src/config/brand.ts"
+    },
+    {
+      "path": "07-referencias/implementacion/global.css",
+      "bytes": 62815,
+      "sha256": "3752f6ae2c6c9962a249bd29a0f2ce0b2cb09a8f42d741bfdc389e5bb42af21f",
+      "source": "landing/src/styles/global.css"
+    },
+    {
+      "path": "07-referencias/implementacion/rebrand.css",
+      "bytes": 68347,
+      "sha256": "325cd7351d739449ef407e60dec9d21bfde9d54053683786f4ccd0c77706f1de",
+      "source": "landing/src/styles/rebrand.css"
+    },
+    {
+      "path": "08-imagenes/README.md",
+      "bytes": 675,
+      "sha256": "535d1153db1ffc120293ea071925e0b21198357fca369732a8f0a2fb3fdbebc7",
+      "source": "brandkit editorial / generated"
+    },
+    {
+      "path": "08-imagenes/open-graph/og.png",
+      "bytes": 164271,
+      "sha256": "cab96b58c6d180b126bca641fc597103185671b0623d09eb501d746b1854f9b0",
+      "source": "landing/public/og.png",
+      "image": {
+        "format": "png",
+        "width": 1200,
+        "height": 630,
+        "hasAlpha": true,
+        "pages": 1
+      }
+    },
+    {
+      "path": "README.md",
+      "bytes": 3683,
+      "sha256": "3ec4c2653a0f3a350834368821fedf0029c20fe39f1856b4b6ca256835b1df8f",
+      "source": "brandkit editorial / generated"
+    },
+    {
+      "path": "index.html",
+      "bytes": 34686,
+      "sha256": "39c5b2db73feee0bb66b15b01be377f0b629216c12419f52887aeab17fe0ca21",
+      "source": "brandkit editorial / generated"
+    }
+  ]
+}

@@ -73,7 +73,7 @@ const t = {
 
         <div class="footer-column">
           <h4>{t.communityHead}</h4>
-          <a href={brand.socialUrl} target="_blank" rel="noopener noreferrer">{t.x}</a>
+          {brand.socialUrl && <a href={brand.socialUrl} target="_blank" rel="noopener noreferrer">{t.x}</a>}
           <a href="https://danielcueto.me" target="_blank" rel="noopener noreferrer">Daniel Cueto</a>
           <a href="https://x.com/danelerr" target="_blank" rel="noopener noreferrer">@danelerr</a>
         </div>

@@ -1,0 +1,375 @@
+{
+  "id": "idle-sentada",
+  "name": "Idle sentada",
+  "frameCount": 8,
+  "canvas": {
+    "width": 320,
+    "height": 256
+  },
+  "anchor": {
+    "x": 160,
+    "y": 244
+  },
+  "playback": "loop",
+  "totalDurationMs": 1440,
+  "sourceSheet": 1,
+  "note": "",
+  "repairsApplied": [],
+  "strip": "../spritesheets/idle-sentada-strip.png",
+  "grid": "../spritesheets/idle-sentada-grid.png",
+  "preview": "../previews/idle-sentada.webp",
+  "frames": [
+    {
+      "sourceRect": {
+        "x": 255,
+        "y": 630,
+        "width": 171,
+        "height": 295
+      },
+      "sourceAnchor": {
+        "x": 351.0,
+        "baselineY": 878
+      },
+      "destinationOffset": {
+        "x": 64,
+        "y": -4
+      },
+      "contentBox": [
+        69,
+        24,
+        228,
+        241
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 0,
+      "durationMs": 180,
+      "file": "../frames/idle-sentada/frame-001.png",
+      "finalProvenance": "raw-frame-001",
+      "finalContentBox": [
+        69,
+        24,
+        228,
+        241
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 426,
+        "y": 630,
+        "width": 171,
+        "height": 295
+      },
+      "sourceAnchor": {
+        "x": 523.0,
+        "baselineY": 878
+      },
+      "destinationOffset": {
+        "x": 63,
+        "y": -4
+      },
+      "contentBox": [
+        70,
+        25,
+        227,
+        241
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 1,
+      "durationMs": 180,
+      "file": "../frames/idle-sentada/frame-002.png",
+      "finalProvenance": "raw-frame-002",
+      "finalContentBox": [
+        70,
+        25,
+        227,
+        241
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 597,
+        "y": 630,
+        "width": 176,
+        "height": 295
+      },
+      "sourceAnchor": {
+        "x": 698.0,
+        "baselineY": 878
+      },
+      "destinationOffset": {
+        "x": 59,
+        "y": -4
+      },
+      "contentBox": [
+        66,
+        19,
+        229,
+        241
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 2,
+      "durationMs": 180,
+      "file": "../frames/idle-sentada/frame-003.png",
+      "finalProvenance": "raw-frame-003",
+      "finalContentBox": [
+        66,
+        19,
+        229,
+        241
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 773,
+        "y": 630,
+        "width": 175,
+        "height": 295
+      },
+      "sourceAnchor": {
+        "x": 870.0,
+        "baselineY": 878
+      },
+      "destinationOffset": {
+        "x": 63,
+        "y": -4
+      },
+      "contentBox": [
+        70,
+        28,
+        229,
+        243
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 3,
+      "durationMs": 180,
+      "file": "../frames/idle-sentada/frame-004.png",
+      "finalProvenance": "raw-frame-004",
+      "finalContentBox": [
+        70,
+        28,
+        229,
+        243
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 948,
+        "y": 630,
+        "width": 172,
+        "height": 295
+      },
+      "sourceAnchor": {
+        "x": 1047.0,
+        "baselineY": 878
+      },
+      "destinationOffset": {
+        "x": 61,
+        "y": -4
+      },
+      "contentBox": [
+        70,
+        26,
+        228,
+        242
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 4,
+      "durationMs": 180,
+      "file": "../frames/idle-sentada/frame-005.png",
+      "finalProvenance": "raw-frame-005",
+      "finalContentBox": [
+        70,
+        26,
+        228,
+        242
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 1120,
+        "y": 630,
+        "width": 187,
+        "height": 295
+      },
+      "sourceAnchor": {
+        "x": 1236.0,
+        "baselineY": 878
+      },
+      "destinationOffset": {
+        "x": 44,
+        "y": -4
+      },
+      "contentBox": [
+        50,
+        32,
+        230,
+        244
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 5,
+      "durationMs": 180,
+      "file": "../frames/idle-sentada/frame-006.png",
+      "finalProvenance": "raw-frame-006",
+      "finalContentBox": [
+        50,
+        32,
+        230,
+        244
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 1307,
+        "y": 630,
+        "width": 163,
+        "height": 295
+      },
+      "sourceAnchor": {
+        "x": 1399.0,
+        "baselineY": 878
+      },
+      "destinationOffset": {
+        "x": 68,
+        "y": -4
+      },
+      "contentBox": [
+        71,
+        25,
+        223,
+        244
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 6,
+      "durationMs": 180,
+      "file": "../frames/idle-sentada/frame-007.png",
+      "finalProvenance": "raw-frame-007",
+      "finalContentBox": [
+        71,
+        25,
+        223,
+        244
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 1470,
+        "y": 630,
+        "width": 195,
+        "height": 295
+      },
+      "sourceAnchor": {
+        "x": 1570.0,
+        "baselineY": 878
+      },
+      "destinationOffset": {
+        "x": 60,
+        "y": -4
+      },
+      "contentBox": [
+        69,
+        29,
+        230,
+        244
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 7,
+      "durationMs": 180,
+      "file": "../frames/idle-sentada/frame-008.png",
+      "finalProvenance": "raw-frame-008",
+      "finalContentBox": [
+        69,
+        29,
+        230,
+        244
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    }
+  ]
+}

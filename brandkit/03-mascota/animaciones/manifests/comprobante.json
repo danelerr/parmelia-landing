@@ -1,0 +1,375 @@
+{
+  "id": "comprobante",
+  "name": "Comprobante",
+  "frameCount": 8,
+  "canvas": {
+    "width": 320,
+    "height": 256
+  },
+  "anchor": {
+    "x": 160,
+    "y": 244
+  },
+  "playback": "once",
+  "totalDurationMs": 1120,
+  "sourceSheet": 3,
+  "note": "",
+  "repairsApplied": [],
+  "strip": "../spritesheets/comprobante-strip.png",
+  "grid": "../spritesheets/comprobante-grid.png",
+  "preview": "../previews/comprobante.webp",
+  "frames": [
+    {
+      "sourceRect": {
+        "x": 170,
+        "y": 685,
+        "width": 180,
+        "height": 256
+      },
+      "sourceAnchor": {
+        "x": 266.0,
+        "baselineY": 912
+      },
+      "destinationOffset": {
+        "x": 64,
+        "y": 17
+      },
+      "contentBox": [
+        72,
+        93,
+        226,
+        245
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 0,
+      "durationMs": 140,
+      "file": "../frames/comprobante/frame-001.png",
+      "finalProvenance": "raw-frame-001",
+      "finalContentBox": [
+        72,
+        93,
+        226,
+        245
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 350,
+        "y": 685,
+        "width": 185,
+        "height": 256
+      },
+      "sourceAnchor": {
+        "x": 446.0,
+        "baselineY": 912
+      },
+      "destinationOffset": {
+        "x": 64,
+        "y": 17
+      },
+      "contentBox": [
+        86,
+        46,
+        241,
+        225
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 1,
+      "durationMs": 140,
+      "file": "../frames/comprobante/frame-002.png",
+      "finalProvenance": "raw-frame-002",
+      "finalContentBox": [
+        86,
+        46,
+        241,
+        225
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 535,
+        "y": 685,
+        "width": 170,
+        "height": 256
+      },
+      "sourceAnchor": {
+        "x": 625.0,
+        "baselineY": 912
+      },
+      "destinationOffset": {
+        "x": 70,
+        "y": 17
+      },
+      "contentBox": [
+        79,
+        53,
+        222,
+        229
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 2,
+      "durationMs": 140,
+      "file": "../frames/comprobante/frame-003.png",
+      "finalProvenance": "raw-frame-003",
+      "finalContentBox": [
+        79,
+        53,
+        222,
+        229
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 705,
+        "y": 685,
+        "width": 188,
+        "height": 256
+      },
+      "sourceAnchor": {
+        "x": 805.0,
+        "baselineY": 912
+      },
+      "destinationOffset": {
+        "x": 60,
+        "y": 17
+      },
+      "contentBox": [
+        78,
+        59,
+        240,
+        229
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 3,
+      "durationMs": 140,
+      "file": "../frames/comprobante/frame-004.png",
+      "finalProvenance": "raw-frame-004",
+      "finalContentBox": [
+        78,
+        59,
+        240,
+        229
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 893,
+        "y": 685,
+        "width": 189,
+        "height": 256
+      },
+      "sourceAnchor": {
+        "x": 982.0,
+        "baselineY": 912
+      },
+      "destinationOffset": {
+        "x": 71,
+        "y": 17
+      },
+      "contentBox": [
+        80,
+        46,
+        253,
+        229
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 4,
+      "durationMs": 140,
+      "file": "../frames/comprobante/frame-005.png",
+      "finalProvenance": "raw-frame-005",
+      "finalContentBox": [
+        80,
+        46,
+        253,
+        229
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 1082,
+        "y": 685,
+        "width": 187,
+        "height": 256
+      },
+      "sourceAnchor": {
+        "x": 1169.0,
+        "baselineY": 912
+      },
+      "destinationOffset": {
+        "x": 73,
+        "y": 17
+      },
+      "contentBox": [
+        81,
+        50,
+        251,
+        229
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 5,
+      "durationMs": 140,
+      "file": "../frames/comprobante/frame-006.png",
+      "finalProvenance": "raw-frame-006",
+      "finalContentBox": [
+        81,
+        50,
+        251,
+        229
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 1269,
+        "y": 685,
+        "width": 197,
+        "height": 256
+      },
+      "sourceAnchor": {
+        "x": 1352.0,
+        "baselineY": 912
+      },
+      "destinationOffset": {
+        "x": 77,
+        "y": 17
+      },
+      "contentBox": [
+        87,
+        51,
+        254,
+        229
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 6,
+      "durationMs": 140,
+      "file": "../frames/comprobante/frame-007.png",
+      "finalProvenance": "raw-frame-007",
+      "finalContentBox": [
+        87,
+        51,
+        254,
+        229
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 1466,
+        "y": 685,
+        "width": 184,
+        "height": 256
+      },
+      "sourceAnchor": {
+        "x": 1542.0,
+        "baselineY": 912
+      },
+      "destinationOffset": {
+        "x": 84,
+        "y": 17
+      },
+      "contentBox": [
+        105,
+        51,
+        243,
+        226
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 7,
+      "durationMs": 140,
+      "file": "../frames/comprobante/frame-008.png",
+      "finalProvenance": "raw-frame-008",
+      "finalContentBox": [
+        105,
+        51,
+        243,
+        226
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    }
+  ]
+}

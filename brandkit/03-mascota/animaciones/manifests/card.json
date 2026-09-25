@@ -1,0 +1,375 @@
+{
+  "id": "card",
+  "name": "Card",
+  "frameCount": 8,
+  "canvas": {
+    "width": 320,
+    "height": 256
+  },
+  "anchor": {
+    "x": 160,
+    "y": 244
+  },
+  "playback": "once",
+  "totalDurationMs": 1120,
+  "sourceSheet": 4,
+  "note": "",
+  "repairsApplied": [],
+  "strip": "../spritesheets/card-strip.png",
+  "grid": "../spritesheets/card-grid.png",
+  "preview": "../previews/card.webp",
+  "frames": [
+    {
+      "sourceRect": {
+        "x": 0,
+        "y": 740,
+        "width": 220,
+        "height": 201
+      },
+      "sourceAnchor": {
+        "x": 92.0,
+        "baselineY": 905
+      },
+      "destinationOffset": {
+        "x": 68,
+        "y": 79
+      },
+      "contentBox": [
+        82,
+        79,
+        281,
+        244
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 5,
+        "bottom": 0
+      },
+      "index": 0,
+      "durationMs": 140,
+      "file": "../frames/card/frame-001.png",
+      "finalProvenance": "raw-frame-001",
+      "finalContentBox": [
+        82,
+        79,
+        281,
+        244
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 220,
+        "y": 740,
+        "width": 223,
+        "height": 201
+      },
+      "sourceAnchor": {
+        "x": 308.0,
+        "baselineY": 905
+      },
+      "destinationOffset": {
+        "x": 72,
+        "y": 79
+      },
+      "contentBox": [
+        79,
+        94,
+        285,
+        243
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 1,
+      "durationMs": 140,
+      "file": "../frames/card/frame-002.png",
+      "finalProvenance": "raw-frame-002",
+      "finalContentBox": [
+        79,
+        94,
+        285,
+        243
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 443,
+        "y": 740,
+        "width": 210,
+        "height": 201
+      },
+      "sourceAnchor": {
+        "x": 529.0,
+        "baselineY": 905
+      },
+      "destinationOffset": {
+        "x": 74,
+        "y": 79
+      },
+      "contentBox": [
+        84,
+        100,
+        270,
+        245
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 2,
+      "durationMs": 140,
+      "file": "../frames/card/frame-003.png",
+      "finalProvenance": "raw-frame-003",
+      "finalContentBox": [
+        84,
+        100,
+        270,
+        245
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 653,
+        "y": 740,
+        "width": 217,
+        "height": 201
+      },
+      "sourceAnchor": {
+        "x": 748.0,
+        "baselineY": 905
+      },
+      "destinationOffset": {
+        "x": 65,
+        "y": 79
+      },
+      "contentBox": [
+        80,
+        101,
+        266,
+        245
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 3,
+      "durationMs": 140,
+      "file": "../frames/card/frame-004.png",
+      "finalProvenance": "raw-frame-004",
+      "finalContentBox": [
+        80,
+        101,
+        266,
+        245
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 870,
+        "y": 740,
+        "width": 197,
+        "height": 201
+      },
+      "sourceAnchor": {
+        "x": 973.0,
+        "baselineY": 905
+      },
+      "destinationOffset": {
+        "x": 57,
+        "y": 79
+      },
+      "contentBox": [
+        74,
+        91,
+        245,
+        245
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 4,
+      "durationMs": 140,
+      "file": "../frames/card/frame-005.png",
+      "finalProvenance": "raw-frame-005",
+      "finalContentBox": [
+        74,
+        91,
+        245,
+        245
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 1067,
+        "y": 740,
+        "width": 185,
+        "height": 201
+      },
+      "sourceAnchor": {
+        "x": 1152.0,
+        "baselineY": 905
+      },
+      "destinationOffset": {
+        "x": 75,
+        "y": 79
+      },
+      "contentBox": [
+        85,
+        103,
+        253,
+        245
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 5,
+      "durationMs": 140,
+      "file": "../frames/card/frame-006.png",
+      "finalProvenance": "raw-frame-006",
+      "finalContentBox": [
+        85,
+        103,
+        253,
+        245
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 1252,
+        "y": 740,
+        "width": 198,
+        "height": 201
+      },
+      "sourceAnchor": {
+        "x": 1344.0,
+        "baselineY": 905
+      },
+      "destinationOffset": {
+        "x": 68,
+        "y": 79
+      },
+      "contentBox": [
+        76,
+        93,
+        263,
+        245
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 6,
+      "durationMs": 140,
+      "file": "../frames/card/frame-007.png",
+      "finalProvenance": "raw-frame-007",
+      "finalContentBox": [
+        76,
+        93,
+        263,
+        245
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 1450,
+        "y": 740,
+        "width": 222,
+        "height": 201
+      },
+      "sourceAnchor": {
+        "x": 1525.0,
+        "baselineY": 905
+      },
+      "destinationOffset": {
+        "x": 85,
+        "y": 79
+      },
+      "contentBox": [
+        85,
+        101,
+        282,
+        244
+      ],
+      "edgePixels": {
+        "left": 15,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 7,
+      "durationMs": 140,
+      "file": "../frames/card/frame-008.png",
+      "finalProvenance": "raw-frame-008",
+      "finalContentBox": [
+        85,
+        101,
+        282,
+        244
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    }
+  ]
+}

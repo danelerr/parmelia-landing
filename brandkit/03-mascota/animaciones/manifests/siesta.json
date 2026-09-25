@@ -1,0 +1,377 @@
+{
+  "id": "siesta",
+  "name": "Siesta",
+  "frameCount": 8,
+  "canvas": {
+    "width": 320,
+    "height": 256
+  },
+  "anchor": {
+    "x": 160,
+    "y": 244
+  },
+  "playback": "loop",
+  "totalDurationMs": 2900,
+  "sourceSheet": 2,
+  "note": "Se conservaron completas las Z y se sustituyó la silueta inconsistente del cierre.",
+  "repairsApplied": [
+    "Se preservaron completas las Z y el último frame incoherente se sustituyó por el cierre neutral del ciclo."
+  ],
+  "strip": "../spritesheets/siesta-strip.png",
+  "grid": "../spritesheets/siesta-grid.png",
+  "preview": "../previews/siesta.webp",
+  "frames": [
+    {
+      "sourceRect": {
+        "x": 20,
+        "y": 255,
+        "width": 210,
+        "height": 201
+      },
+      "sourceAnchor": {
+        "x": 118.0,
+        "baselineY": 452
+      },
+      "destinationOffset": {
+        "x": 62,
+        "y": 47
+      },
+      "contentBox": [
+        83,
+        115,
+        258,
+        246
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 0,
+      "durationMs": 420,
+      "file": "../frames/siesta/frame-001.png",
+      "finalProvenance": "raw-frame-001",
+      "finalContentBox": [
+        83,
+        115,
+        258,
+        246
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 230,
+        "y": 255,
+        "width": 200,
+        "height": 201
+      },
+      "sourceAnchor": {
+        "x": 321.0,
+        "baselineY": 452
+      },
+      "destinationOffset": {
+        "x": 69,
+        "y": 47
+      },
+      "contentBox": [
+        83,
+        115,
+        256,
+        243
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 1,
+      "durationMs": 420,
+      "file": "../frames/siesta/frame-002.png",
+      "finalProvenance": "raw-frame-002",
+      "finalContentBox": [
+        83,
+        115,
+        256,
+        243
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 430,
+        "y": 255,
+        "width": 206,
+        "height": 201
+      },
+      "sourceAnchor": {
+        "x": 523.0,
+        "baselineY": 452
+      },
+      "destinationOffset": {
+        "x": 67,
+        "y": 47
+      },
+      "contentBox": [
+        80,
+        115,
+        261,
+        245
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 2,
+      "durationMs": 360,
+      "file": "../frames/siesta/frame-003.png",
+      "finalProvenance": "raw-frame-003",
+      "finalContentBox": [
+        80,
+        115,
+        261,
+        245
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 636,
+        "y": 255,
+        "width": 203,
+        "height": 201
+      },
+      "sourceAnchor": {
+        "x": 726.0,
+        "baselineY": 452
+      },
+      "destinationOffset": {
+        "x": 70,
+        "y": 47
+      },
+      "contentBox": [
+        82,
+        117,
+        255,
+        244
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 3,
+      "durationMs": 320,
+      "file": "../frames/siesta/frame-004.png",
+      "finalProvenance": "raw-frame-004",
+      "finalContentBox": [
+        82,
+        117,
+        255,
+        244
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 839,
+        "y": 255,
+        "width": 207,
+        "height": 201
+      },
+      "sourceAnchor": {
+        "x": 937.0,
+        "baselineY": 452
+      },
+      "destinationOffset": {
+        "x": 62,
+        "y": 47
+      },
+      "contentBox": [
+        81,
+        95,
+        256,
+        245
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 4,
+      "durationMs": 280,
+      "file": "../frames/siesta/frame-005.png",
+      "finalProvenance": "raw-frame-005",
+      "finalContentBox": [
+        81,
+        95,
+        256,
+        245
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 1046,
+        "y": 255,
+        "width": 200,
+        "height": 201
+      },
+      "sourceAnchor": {
+        "x": 1144.0,
+        "baselineY": 452
+      },
+      "destinationOffset": {
+        "x": 62,
+        "y": 47
+      },
+      "contentBox": [
+        76,
+        66,
+        252,
+        244
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 5,
+      "durationMs": 320,
+      "file": "../frames/siesta/frame-006.png",
+      "finalProvenance": "raw-frame-006",
+      "finalContentBox": [
+        76,
+        66,
+        252,
+        244
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 1246,
+        "y": 255,
+        "width": 206,
+        "height": 201
+      },
+      "sourceAnchor": {
+        "x": 1341.0,
+        "baselineY": 452
+      },
+      "destinationOffset": {
+        "x": 65,
+        "y": 47
+      },
+      "contentBox": [
+        77,
+        96,
+        253,
+        244
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 6,
+      "durationMs": 360,
+      "file": "../frames/siesta/frame-007.png",
+      "finalProvenance": "raw-frame-007",
+      "finalContentBox": [
+        77,
+        96,
+        253,
+        244
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 1452,
+        "y": 255,
+        "width": 203,
+        "height": 201
+      },
+      "sourceAnchor": {
+        "x": 1545.0,
+        "baselineY": 452
+      },
+      "destinationOffset": {
+        "x": 67,
+        "y": 47
+      },
+      "contentBox": [
+        85,
+        116,
+        254,
+        245
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 7,
+      "durationMs": 420,
+      "file": "../frames/siesta/frame-008.png",
+      "finalProvenance": "siesta/raw-frame-001",
+      "finalContentBox": [
+        83,
+        115,
+        258,
+        246
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    }
+  ]
+}

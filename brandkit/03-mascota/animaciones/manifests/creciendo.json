@@ -1,0 +1,463 @@
+{
+  "id": "creciendo",
+  "name": "Creciendo",
+  "frameCount": 10,
+  "canvas": {
+    "width": 320,
+    "height": 256
+  },
+  "anchor": {
+    "x": 160,
+    "y": 244
+  },
+  "playback": "loop",
+  "totalDurationMs": 1700,
+  "sourceSheet": 4,
+  "note": "",
+  "repairsApplied": [],
+  "strip": "../spritesheets/creciendo-strip.png",
+  "grid": "../spritesheets/creciendo-grid.png",
+  "preview": "../previews/creciendo.webp",
+  "frames": [
+    {
+      "sourceRect": {
+        "x": 0,
+        "y": 518,
+        "width": 190,
+        "height": 162
+      },
+      "sourceAnchor": {
+        "x": 87.0,
+        "baselineY": 661
+      },
+      "destinationOffset": {
+        "x": 73,
+        "y": 101
+      },
+      "contentBox": [
+        89,
+        118,
+        263,
+        241
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 22,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 0,
+      "durationMs": 170,
+      "file": "../frames/creciendo/frame-001.png",
+      "finalProvenance": "raw-frame-001",
+      "finalContentBox": [
+        89,
+        118,
+        263,
+        241
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 190,
+        "y": 518,
+        "width": 155,
+        "height": 162
+      },
+      "sourceAnchor": {
+        "x": 246.0,
+        "baselineY": 661
+      },
+      "destinationOffset": {
+        "x": 104,
+        "y": 101
+      },
+      "contentBox": [
+        104,
+        113,
+        242,
+        239
+      ],
+      "edgePixels": {
+        "left": 25,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 1,
+      "durationMs": 170,
+      "file": "../frames/creciendo/frame-002.png",
+      "finalProvenance": "raw-frame-002",
+      "finalContentBox": [
+        104,
+        113,
+        242,
+        239
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 345,
+        "y": 518,
+        "width": 167,
+        "height": 162
+      },
+      "sourceAnchor": {
+        "x": 412.0,
+        "baselineY": 661
+      },
+      "destinationOffset": {
+        "x": 93,
+        "y": 101
+      },
+      "contentBox": [
+        95,
+        112,
+        260,
+        245
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 15,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 2,
+      "durationMs": 170,
+      "file": "../frames/creciendo/frame-003.png",
+      "finalProvenance": "raw-frame-003",
+      "finalContentBox": [
+        95,
+        112,
+        260,
+        245
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 512,
+        "y": 518,
+        "width": 161,
+        "height": 162
+      },
+      "sourceAnchor": {
+        "x": 593.0,
+        "baselineY": 661
+      },
+      "destinationOffset": {
+        "x": 79,
+        "y": 101
+      },
+      "contentBox": [
+        79,
+        108,
+        240,
+        245
+      ],
+      "edgePixels": {
+        "left": 14,
+        "right": 7,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 3,
+      "durationMs": 170,
+      "file": "../frames/creciendo/frame-004.png",
+      "finalProvenance": "raw-frame-004",
+      "finalContentBox": [
+        79,
+        108,
+        240,
+        245
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 673,
+        "y": 518,
+        "width": 158,
+        "height": 162
+      },
+      "sourceAnchor": {
+        "x": 746.0,
+        "baselineY": 661
+      },
+      "destinationOffset": {
+        "x": 87,
+        "y": 101
+      },
+      "contentBox": [
+        87,
+        109,
+        244,
+        245
+      ],
+      "edgePixels": {
+        "left": 7,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 4,
+      "durationMs": 170,
+      "file": "../frames/creciendo/frame-005.png",
+      "finalProvenance": "raw-frame-005",
+      "finalContentBox": [
+        87,
+        109,
+        244,
+        245
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 831,
+        "y": 518,
+        "width": 164,
+        "height": 162
+      },
+      "sourceAnchor": {
+        "x": 909.0,
+        "baselineY": 661
+      },
+      "destinationOffset": {
+        "x": 82,
+        "y": 101
+      },
+      "contentBox": [
+        90,
+        118,
+        246,
+        245
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 11,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 5,
+      "durationMs": 170,
+      "file": "../frames/creciendo/frame-006.png",
+      "finalProvenance": "raw-frame-006",
+      "finalContentBox": [
+        90,
+        118,
+        246,
+        245
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 995,
+        "y": 518,
+        "width": 171,
+        "height": 162
+      },
+      "sourceAnchor": {
+        "x": 1063.0,
+        "baselineY": 661
+      },
+      "destinationOffset": {
+        "x": 92,
+        "y": 101
+      },
+      "contentBox": [
+        92,
+        114,
+        250,
+        242
+      ],
+      "edgePixels": {
+        "left": 12,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 6,
+      "durationMs": 170,
+      "file": "../frames/creciendo/frame-007.png",
+      "finalProvenance": "raw-frame-007",
+      "finalContentBox": [
+        92,
+        114,
+        250,
+        242
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 1166,
+        "y": 518,
+        "width": 152,
+        "height": 162
+      },
+      "sourceAnchor": {
+        "x": 1245.0,
+        "baselineY": 661
+      },
+      "destinationOffset": {
+        "x": 81,
+        "y": 101
+      },
+      "contentBox": [
+        95,
+        121,
+        230,
+        245
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 7,
+      "durationMs": 170,
+      "file": "../frames/creciendo/frame-008.png",
+      "finalProvenance": "raw-frame-008",
+      "finalContentBox": [
+        95,
+        121,
+        230,
+        245
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 1318,
+        "y": 518,
+        "width": 177,
+        "height": 162
+      },
+      "sourceAnchor": {
+        "x": 1391.0,
+        "baselineY": 661
+      },
+      "destinationOffset": {
+        "x": 87,
+        "y": 101
+      },
+      "contentBox": [
+        92,
+        116,
+        253,
+        245
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 8,
+      "durationMs": 170,
+      "file": "../frames/creciendo/frame-009.png",
+      "finalProvenance": "raw-frame-009",
+      "finalContentBox": [
+        92,
+        116,
+        253,
+        245
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 1495,
+        "y": 518,
+        "width": 177,
+        "height": 162
+      },
+      "sourceAnchor": {
+        "x": 1574.0,
+        "baselineY": 661
+      },
+      "destinationOffset": {
+        "x": 81,
+        "y": 101
+      },
+      "contentBox": [
+        93,
+        117,
+        241,
+        244
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 9,
+      "durationMs": 170,
+      "file": "../frames/creciendo/frame-010.png",
+      "finalProvenance": "raw-frame-010",
+      "finalContentBox": [
+        93,
+        117,
+        241,
+        244
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    }
+  ]
+}

@@ -43,7 +43,7 @@ const navHeadings = headings.filter((h: { depth: number }) => h.depth === 2);
         <span class="docs-top-tag">Docs</span>
       </a>
       <nav class="docs-top-links">
-        <a href={brand.dashboardUrl} target="_blank" rel="noopener noreferrer">Dashboard</a>
+        {brand.dashboardUrl && <a href={brand.dashboardUrl} target="_blank" rel="noopener noreferrer">Dashboard</a>}
         <a href="/" class="docs-top-back">← Back to site</a>
       </nav>
     </header>

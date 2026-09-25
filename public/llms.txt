@@ -10,24 +10,23 @@ GatoPago Card is a strategic product under validation, not an active service. Pr
 
 ## Product
 
-- [Homepage — Spanish](https://parmelia.me/): The main GatoPago Personal story: receive, keep Available, move part to Growing, and use USDC while retaining control.
-- [Homepage — English](https://parmelia.me/en/): English version of the GatoPago Personal story.
-- [Try the public Alpha](https://app.parmelia.me/): Test GatoPago with test funds on Arbitrum Sepolia.
-- [Frequently asked questions](https://parmelia.me/#faq): Current status, custody and recovery, Aave risks, fees, withdrawals, Card status, and possible future verification requirements.
+- [Homepage — Spanish](https://gatopago.com/): The main GatoPago Personal story: receive, keep Available, move part to Growing, and use USDC while retaining control.
+- [Homepage — English](https://gatopago.com/en/): English version of the GatoPago Personal story.
+- [Try the public Alpha](https://app.gatopago.com/): Test GatoPago with test funds on Arbitrum Sepolia.
+- [Frequently asked questions](https://gatopago.com/#faq): Current status, custody and recovery, Aave risks, fees, withdrawals, Card status, and possible future verification requirements.
 
 ## Developers
 
-- [Developer docs](https://parmelia.me/docs): Payment intents, hosted checkout, sandbox, signed webhooks, idempotency, errors, and onchain reference.
-- [Developer dashboard](https://dashboard.parmelia.me/): Manage API keys, test payment flows, and integration settings.
+- [Developer docs](https://gatopago.com/docs): Payment intents, hosted checkout, sandbox, signed webhooks, idempotency, errors, and onchain reference.
+- [Developer dashboard](https://dashboard.gatopago.com/): Manage API keys, test payment flows, and integration settings.
 
 ## Company and legal
 
-- [Privacy policy — Spanish](https://parmelia.me/privacy/)
-- [Privacy policy — English](https://parmelia.me/en/privacy/)
-- [Terms of service — Spanish](https://parmelia.me/terms/)
-- [Terms of service — English](https://parmelia.me/en/terms/)
+- [Privacy policy — Spanish](https://gatopago.com/privacy/)
+- [Privacy policy — English](https://gatopago.com/en/privacy/)
+- [Terms of service — Spanish](https://gatopago.com/terms/)
+- [Terms of service — English](https://gatopago.com/en/terms/)
 
 ## Follow
 
-- [GatoPago on X](https://x.com/parmelia_)
 - [Founder: Daniel Cueto](https://danielcueto.me/en/)

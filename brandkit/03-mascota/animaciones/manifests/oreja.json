@@ -1,0 +1,199 @@
+{
+  "id": "oreja",
+  "name": "Oreja",
+  "frameCount": 4,
+  "canvas": {
+    "width": 320,
+    "height": 256
+  },
+  "anchor": {
+    "x": 160,
+    "y": 244
+  },
+  "playback": "loop",
+  "totalDurationMs": 1270,
+  "sourceSheet": 1,
+  "note": "",
+  "repairsApplied": [],
+  "strip": "../spritesheets/oreja-strip.png",
+  "grid": "../spritesheets/oreja-grid.png",
+  "preview": "../previews/oreja.webp",
+  "frames": [
+    {
+      "sourceRect": {
+        "x": 280,
+        "y": 220,
+        "width": 240,
+        "height": 205
+      },
+      "sourceAnchor": {
+        "x": 396.0,
+        "baselineY": 410
+      },
+      "destinationOffset": {
+        "x": 44,
+        "y": 54
+      },
+      "contentBox": [
+        70,
+        77,
+        252,
+        245
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 0,
+      "durationMs": 850,
+      "file": "../frames/oreja/frame-001.png",
+      "finalProvenance": "raw-frame-001",
+      "finalContentBox": [
+        70,
+        77,
+        252,
+        245
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 520,
+        "y": 220,
+        "width": 252,
+        "height": 205
+      },
+      "sourceAnchor": {
+        "x": 653.0,
+        "baselineY": 410
+      },
+      "destinationOffset": {
+        "x": 27,
+        "y": 54
+      },
+      "contentBox": [
+        61,
+        78,
+        246,
+        245
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 1,
+      "durationMs": 120,
+      "file": "../frames/oreja/frame-002.png",
+      "finalProvenance": "raw-frame-002",
+      "finalContentBox": [
+        61,
+        78,
+        246,
+        245
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 772,
+        "y": 220,
+        "width": 256,
+        "height": 205
+      },
+      "sourceAnchor": {
+        "x": 908.0,
+        "baselineY": 410
+      },
+      "destinationOffset": {
+        "x": 24,
+        "y": 54
+      },
+      "contentBox": [
+        58,
+        93,
+        250,
+        245
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 2,
+      "durationMs": 120,
+      "file": "../frames/oreja/frame-003.png",
+      "finalProvenance": "raw-frame-003",
+      "finalContentBox": [
+        58,
+        93,
+        250,
+        245
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 1028,
+        "y": 220,
+        "width": 242,
+        "height": 205
+      },
+      "sourceAnchor": {
+        "x": 1150.0,
+        "baselineY": 410
+      },
+      "destinationOffset": {
+        "x": 38,
+        "y": 54
+      },
+      "contentBox": [
+        69,
+        77,
+        253,
+        245
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 3,
+      "durationMs": 180,
+      "file": "../frames/oreja/frame-004.png",
+      "finalProvenance": "raw-frame-004",
+      "finalContentBox": [
+        69,
+        77,
+        253,
+        245
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    }
+  ]
+}

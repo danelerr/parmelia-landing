@@ -1,0 +1,37 @@
+[
+  {
+    "foreground": "ink",
+    "background": "milk",
+    "ratio": 18.65,
+    "normalTextAA": true,
+    "largeTextAA": true
+  },
+  {
+    "foreground": "ink",
+    "background": "cat-fire",
+    "ratio": 5.85,
+    "normalTextAA": true,
+    "largeTextAA": true
+  },
+  {
+    "foreground": "milk",
+    "background": "ink",
+    "ratio": 18.65,
+    "normalTextAA": true,
+    "largeTextAA": true
+  },
+  {
+    "foreground": "milk",
+    "background": "cat-fire",
+    "ratio": 3.19,
+    "normalTextAA": false,
+    "largeTextAA": true
+  },
+  {
+    "foreground": "cat-shadow",
+    "background": "milk",
+    "ratio": 4.76,
+    "normalTextAA": true,
+    "largeTextAA": true
+  }
+]

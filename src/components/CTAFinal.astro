@@ -59,8 +59,7 @@ const t = {
       <p class="build-note">
         <span class="build-pulse" aria-hidden="true"></span>
         {t.buildLead}
-        <a href={brand.socialUrl} target="_blank" rel="noopener noreferrer" data-cta="follow_x">{t.follow}</a>
-        {t.buildTail}
+        {brand.socialUrl && <><a href={brand.socialUrl} target="_blank" rel="noopener noreferrer" data-cta="follow_x">{t.follow}</a> {t.buildTail}</>}
       </p>
     </div>
   </div>

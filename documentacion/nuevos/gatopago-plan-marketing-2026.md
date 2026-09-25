@@ -149,7 +149,7 @@ GatoPago habla como una persona que entiende la tecnología y no necesita presum
 
 **Probar la Alpha**
 
-Debe llevar a `app.parmelia.me` y dejar claro que se usan fondos de prueba.
+Debe llevar a `app.gatopago.com` y dejar claro que se usan fondos de prueba.
 
 ### CTA secundaria
 

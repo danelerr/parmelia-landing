@@ -847,7 +847,7 @@ const t = copy[lang];
         <span class="meli-footer__status"><i aria-hidden="true"></i>{t.footer.status}</span>
       </div>
       <div><strong>{t.footer.product}</strong><a href="#cycle">{t.footer.links[0]}</a><a href="#account">{t.footer.links[1]}</a><a href="#grow">{t.footer.links[2]}</a><a href="#api">{t.footer.links[3]}</a></div>
-      <div><strong>{t.footer.company}</strong><a href={brand.socialUrl} rel="me external">X / Twitter</a><a href={`mailto:${brand.contactEmail}`}>{isSpanish ? 'Contacto' : 'Contact'}</a><a href={localeHref} data-locale-link>{localeLabel}</a></div>
+      <div><strong>{t.footer.company}</strong>{brand.socialUrl && <a href={brand.socialUrl} rel="me external">X / Twitter</a>}<a href={`mailto:${brand.contactEmail}`}>{isSpanish ? 'Contacto' : 'Contact'}</a><a href={localeHref} data-locale-link>{localeLabel}</a></div>
       <div><strong>{t.footer.legal}</strong><a href={`${legalPrefix}/terms`}>{t.footer.terms}</a><a href={`${legalPrefix}/privacy`}>{t.footer.privacy}</a></div>
     </div>
     <div class="meli-container meli-footer__bottom"><span>© {new Date().getFullYear()} {t.footer.rights}</span><span class="meli-footer__pixels" aria-hidden="true">■ ■ □ ■</span></div>

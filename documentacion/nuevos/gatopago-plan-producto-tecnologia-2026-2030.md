@@ -4,8 +4,9 @@
 > **Fecha de corte:** 19 de agosto de 2026.  
 > **Alcance:** arquitectura de Personal, Embedded y Platform, roadmap técnico, APIs, integraciones y calidad operativa.  
 > **No es:** certificación de seguridad, declaración de producción ni compromiso de fechas.  
-> **Arquitectura actual detallada:** [ARCHITECTURE.md](https://github.com/danelerr/parmelia-links/blob/main/ARCHITECTURE.md).  
-> **Contrato API actual:** [API_DESIGN.md](https://github.com/danelerr/parmelia-links/blob/main/API_DESIGN.md).  
+> **Arquitectura actual detallada:** consultar el índice `docs/README.md` del repositorio de la app.
+>
+> **Contrato API actual:** consultar el mismo índice técnico.
 > **Plan B2C:** [GatoPago Personal](./gatopago-plan-maestro-b2c-2026.md).  
 > **Plan B2B2C:** [GatoPago Embedded](./gatopago-playbook-b2b2c-embedded-2026.md).  
 > **Plan B2B:** [GatoPago Platform](./gatopago-estrategia-b2b-pagos-transfronterizos-2026.md).

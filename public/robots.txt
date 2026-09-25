@@ -1,4 +1,4 @@
-# GatoPago - https://parmelia.me
+# GatoPago - https://gatopago.com
 # All crawlers, including AI assistants, are welcome.
 
 User-agent: *
@@ -26,4 +26,4 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
-Sitemap: https://parmelia.me/sitemap.xml
+Sitemap: https://gatopago.com/sitemap.xml

@@ -1,0 +1,287 @@
+{
+  "id": "saludo",
+  "name": "Saludo",
+  "frameCount": 6,
+  "canvas": {
+    "width": 320,
+    "height": 256
+  },
+  "anchor": {
+    "x": 160,
+    "y": 244
+  },
+  "playback": "once",
+  "totalDurationMs": 900,
+  "sourceSheet": 5,
+  "note": "",
+  "repairsApplied": [],
+  "strip": "../spritesheets/saludo-strip.png",
+  "grid": "../spritesheets/saludo-grid.png",
+  "preview": "../previews/saludo.webp",
+  "frames": [
+    {
+      "sourceRect": {
+        "x": 0,
+        "y": 300,
+        "width": 218,
+        "height": 165
+      },
+      "sourceAnchor": {
+        "x": 109.0,
+        "baselineY": 456
+      },
+      "destinationOffset": {
+        "x": 51,
+        "y": 88
+      },
+      "contentBox": [
+        72,
+        93,
+        218,
+        243
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 0,
+      "durationMs": 150,
+      "file": "../frames/saludo/frame-001.png",
+      "finalProvenance": "raw-frame-001",
+      "finalContentBox": [
+        72,
+        93,
+        218,
+        243
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 218,
+        "y": 300,
+        "width": 222,
+        "height": 165
+      },
+      "sourceAnchor": {
+        "x": 313.0,
+        "baselineY": 456
+      },
+      "destinationOffset": {
+        "x": 65,
+        "y": 88
+      },
+      "contentBox": [
+        99,
+        88,
+        242,
+        243
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 13,
+        "bottom": 0
+      },
+      "index": 1,
+      "durationMs": 150,
+      "file": "../frames/saludo/frame-002.png",
+      "finalProvenance": "raw-frame-002",
+      "finalContentBox": [
+        99,
+        88,
+        242,
+        243
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 440,
+        "y": 300,
+        "width": 215,
+        "height": 165
+      },
+      "sourceAnchor": {
+        "x": 539.0,
+        "baselineY": 456
+      },
+      "destinationOffset": {
+        "x": 61,
+        "y": 88
+      },
+      "contentBox": [
+        69,
+        88,
+        229,
+        242
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 28,
+        "bottom": 0
+      },
+      "index": 2,
+      "durationMs": 150,
+      "file": "../frames/saludo/frame-003.png",
+      "finalProvenance": "raw-frame-003",
+      "finalContentBox": [
+        69,
+        88,
+        229,
+        242
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 655,
+        "y": 300,
+        "width": 220,
+        "height": 165
+      },
+      "sourceAnchor": {
+        "x": 754.0,
+        "baselineY": 456
+      },
+      "destinationOffset": {
+        "x": 61,
+        "y": 88
+      },
+      "contentBox": [
+        79,
+        88,
+        250,
+        242
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 26,
+        "bottom": 0
+      },
+      "index": 3,
+      "durationMs": 150,
+      "file": "../frames/saludo/frame-004.png",
+      "finalProvenance": "raw-frame-004",
+      "finalContentBox": [
+        79,
+        88,
+        250,
+        242
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 875,
+        "y": 300,
+        "width": 215,
+        "height": 165
+      },
+      "sourceAnchor": {
+        "x": 979.0,
+        "baselineY": 456
+      },
+      "destinationOffset": {
+        "x": 56,
+        "y": 88
+      },
+      "contentBox": [
+        75,
+        88,
+        246,
+        243
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 16,
+        "bottom": 0
+      },
+      "index": 4,
+      "durationMs": 150,
+      "file": "../frames/saludo/frame-005.png",
+      "finalProvenance": "raw-frame-005",
+      "finalContentBox": [
+        75,
+        88,
+        246,
+        243
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 1090,
+        "y": 300,
+        "width": 210,
+        "height": 165
+      },
+      "sourceAnchor": {
+        "x": 1182.0,
+        "baselineY": 456
+      },
+      "destinationOffset": {
+        "x": 68,
+        "y": 88
+      },
+      "contentBox": [
+        80,
+        88,
+        217,
+        245
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 30,
+        "bottom": 0
+      },
+      "index": 5,
+      "durationMs": 150,
+      "file": "../frames/saludo/frame-006.png",
+      "finalProvenance": "raw-frame-006",
+      "finalContentBox": [
+        80,
+        88,
+        217,
+        245
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    }
+  ]
+}

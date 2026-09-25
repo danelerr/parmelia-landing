@@ -1,0 +1,375 @@
+{
+  "id": "linterna",
+  "name": "Linterna",
+  "frameCount": 8,
+  "canvas": {
+    "width": 320,
+    "height": 256
+  },
+  "anchor": {
+    "x": 160,
+    "y": 244
+  },
+  "playback": "loop",
+  "totalDurationMs": 1120,
+  "sourceSheet": 5,
+  "note": "",
+  "repairsApplied": [],
+  "strip": "../spritesheets/linterna-strip.png",
+  "grid": "../spritesheets/linterna-grid.png",
+  "preview": "../previews/linterna.webp",
+  "frames": [
+    {
+      "sourceRect": {
+        "x": 0,
+        "y": 57,
+        "width": 208,
+        "height": 190
+      },
+      "sourceAnchor": {
+        "x": 116.0,
+        "baselineY": 246
+      },
+      "destinationOffset": {
+        "x": 44,
+        "y": 55
+      },
+      "contentBox": [
+        63,
+        69,
+        223,
+        245
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 3
+      },
+      "index": 0,
+      "durationMs": 140,
+      "file": "../frames/linterna/frame-001.png",
+      "finalProvenance": "raw-frame-001",
+      "finalContentBox": [
+        63,
+        69,
+        223,
+        245
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 208,
+        "y": 57,
+        "width": 190,
+        "height": 190
+      },
+      "sourceAnchor": {
+        "x": 303.0,
+        "baselineY": 246
+      },
+      "destinationOffset": {
+        "x": 65,
+        "y": 55
+      },
+      "contentBox": [
+        68,
+        68,
+        240,
+        227
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 1,
+      "durationMs": 140,
+      "file": "../frames/linterna/frame-002.png",
+      "finalProvenance": "raw-frame-002",
+      "finalContentBox": [
+        68,
+        68,
+        240,
+        227
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 398,
+        "y": 57,
+        "width": 224,
+        "height": 190
+      },
+      "sourceAnchor": {
+        "x": 478.0,
+        "baselineY": 246
+      },
+      "destinationOffset": {
+        "x": 80,
+        "y": 55
+      },
+      "contentBox": [
+        108,
+        72,
+        283,
+        226
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 2,
+      "durationMs": 140,
+      "file": "../frames/linterna/frame-003.png",
+      "finalProvenance": "raw-frame-003",
+      "finalContentBox": [
+        108,
+        72,
+        283,
+        226
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 622,
+        "y": 57,
+        "width": 228,
+        "height": 190
+      },
+      "sourceAnchor": {
+        "x": 751.0,
+        "baselineY": 246
+      },
+      "destinationOffset": {
+        "x": 31,
+        "y": 55
+      },
+      "contentBox": [
+        34,
+        68,
+        258,
+        227
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 3,
+      "durationMs": 140,
+      "file": "../frames/linterna/frame-004.png",
+      "finalProvenance": "raw-frame-004",
+      "finalContentBox": [
+        34,
+        68,
+        258,
+        227
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 850,
+        "y": 57,
+        "width": 188,
+        "height": 190
+      },
+      "sourceAnchor": {
+        "x": 945.0,
+        "baselineY": 246
+      },
+      "destinationOffset": {
+        "x": 65,
+        "y": 55
+      },
+      "contentBox": [
+        103,
+        69,
+        216,
+        245
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 57
+      },
+      "index": 4,
+      "durationMs": 140,
+      "file": "../frames/linterna/frame-005.png",
+      "finalProvenance": "raw-frame-005",
+      "finalContentBox": [
+        103,
+        69,
+        216,
+        245
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 1038,
+        "y": 57,
+        "width": 204,
+        "height": 190
+      },
+      "sourceAnchor": {
+        "x": 1142.0,
+        "baselineY": 246
+      },
+      "destinationOffset": {
+        "x": 56,
+        "y": 55
+      },
+      "contentBox": [
+        69,
+        70,
+        260,
+        228
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 48,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 5,
+      "durationMs": 140,
+      "file": "../frames/linterna/frame-006.png",
+      "finalProvenance": "raw-frame-006",
+      "finalContentBox": [
+        69,
+        70,
+        260,
+        228
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 1242,
+        "y": 57,
+        "width": 220,
+        "height": 190
+      },
+      "sourceAnchor": {
+        "x": 1353.0,
+        "baselineY": 246
+      },
+      "destinationOffset": {
+        "x": 49,
+        "y": 55
+      },
+      "contentBox": [
+        49,
+        68,
+        269,
+        227
+      ],
+      "edgePixels": {
+        "left": 45,
+        "right": 42,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 6,
+      "durationMs": 140,
+      "file": "../frames/linterna/frame-007.png",
+      "finalProvenance": "raw-frame-007",
+      "finalContentBox": [
+        49,
+        68,
+        269,
+        227
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 1462,
+        "y": 57,
+        "width": 210,
+        "height": 190
+      },
+      "sourceAnchor": {
+        "x": 1569.0,
+        "baselineY": 246
+      },
+      "destinationOffset": {
+        "x": 53,
+        "y": 55
+      },
+      "contentBox": [
+        53,
+        62,
+        260,
+        227
+      ],
+      "edgePixels": {
+        "left": 41,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 7,
+      "durationMs": 140,
+      "file": "../frames/linterna/frame-008.png",
+      "finalProvenance": "raw-frame-008",
+      "finalContentBox": [
+        53,
+        62,
+        260,
+        227
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    }
+  ]
+}

@@ -75,7 +75,6 @@ GatoPago is a programmable onchain account for receiving, using, and growing dig
 
 ## Links
 
-- Website: `https://parmelia.me`
-- Alpha: `https://app.parmelia.me`
-- Docs: `https://parmelia.me/docs`
-- X: `https://x.com/parmelia_`
+- Website: `https://gatopago.com`
+- Alpha: `https://app.gatopago.com`
+- Docs: `https://gatopago.com/docs`

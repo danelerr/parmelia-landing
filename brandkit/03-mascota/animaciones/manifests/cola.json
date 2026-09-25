@@ -1,0 +1,377 @@
+{
+  "id": "cola",
+  "name": "Cola",
+  "frameCount": 8,
+  "canvas": {
+    "width": 320,
+    "height": 256
+  },
+  "anchor": {
+    "x": 160,
+    "y": 244
+  },
+  "playback": "loop",
+  "totalDurationMs": 1040,
+  "sourceSheet": 2,
+  "note": "La versión final corrige la lectura de cola duplicada.",
+  "repairsApplied": [
+    "Se reemplazó la fila con doble cola por la secuencia sentada limpia suministrada en la lámina 1."
+  ],
+  "strip": "../spritesheets/cola-strip.png",
+  "grid": "../spritesheets/cola-grid.png",
+  "preview": "../previews/cola.webp",
+  "frames": [
+    {
+      "sourceRect": {
+        "x": 40,
+        "y": 70,
+        "width": 198,
+        "height": 185
+      },
+      "sourceAnchor": {
+        "x": 129.0,
+        "baselineY": 248
+      },
+      "destinationOffset": {
+        "x": 71,
+        "y": 66
+      },
+      "contentBox": [
+        71,
+        66,
+        239,
+        244
+      ],
+      "edgePixels": {
+        "left": 1,
+        "right": 0,
+        "top": 134,
+        "bottom": 0
+      },
+      "index": 0,
+      "durationMs": 130,
+      "file": "../frames/cola/frame-001.png",
+      "finalProvenance": "idle-sentada/frame-001",
+      "finalContentBox": [
+        69,
+        24,
+        228,
+        241
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 238,
+        "y": 70,
+        "width": 212,
+        "height": 185
+      },
+      "sourceAnchor": {
+        "x": 335.0,
+        "baselineY": 248
+      },
+      "destinationOffset": {
+        "x": 63,
+        "y": 66
+      },
+      "contentBox": [
+        93,
+        72,
+        255,
+        244
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 1,
+      "durationMs": 130,
+      "file": "../frames/cola/frame-002.png",
+      "finalProvenance": "idle-sentada/frame-002",
+      "finalContentBox": [
+        70,
+        25,
+        227,
+        241
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 450,
+        "y": 70,
+        "width": 206,
+        "height": 185
+      },
+      "sourceAnchor": {
+        "x": 542.0,
+        "baselineY": 248
+      },
+      "destinationOffset": {
+        "x": 68,
+        "y": 66
+      },
+      "contentBox": [
+        90,
+        71,
+        259,
+        245
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 2,
+      "durationMs": 130,
+      "file": "../frames/cola/frame-003.png",
+      "finalProvenance": "idle-sentada/frame-003",
+      "finalContentBox": [
+        66,
+        19,
+        229,
+        241
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 656,
+        "y": 70,
+        "width": 209,
+        "height": 185
+      },
+      "sourceAnchor": {
+        "x": 746.0,
+        "baselineY": 248
+      },
+      "destinationOffset": {
+        "x": 70,
+        "y": 66
+      },
+      "contentBox": [
+        87,
+        72,
+        263,
+        245
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 3,
+      "durationMs": 130,
+      "file": "../frames/cola/frame-004.png",
+      "finalProvenance": "idle-sentada/frame-004",
+      "finalContentBox": [
+        70,
+        28,
+        229,
+        243
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 865,
+        "y": 70,
+        "width": 207,
+        "height": 185
+      },
+      "sourceAnchor": {
+        "x": 953.0,
+        "baselineY": 248
+      },
+      "destinationOffset": {
+        "x": 72,
+        "y": 66
+      },
+      "contentBox": [
+        89,
+        71,
+        270,
+        245
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 4,
+      "durationMs": 130,
+      "file": "../frames/cola/frame-005.png",
+      "finalProvenance": "idle-sentada/frame-005",
+      "finalContentBox": [
+        70,
+        26,
+        228,
+        242
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 1072,
+        "y": 70,
+        "width": 193,
+        "height": 185
+      },
+      "sourceAnchor": {
+        "x": 1152.0,
+        "baselineY": 248
+      },
+      "destinationOffset": {
+        "x": 80,
+        "y": 66
+      },
+      "contentBox": [
+        90,
+        70,
+        261,
+        245
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 5,
+      "durationMs": 130,
+      "file": "../frames/cola/frame-006.png",
+      "finalProvenance": "idle-sentada/frame-006",
+      "finalContentBox": [
+        50,
+        32,
+        230,
+        244
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 1265,
+        "y": 70,
+        "width": 200,
+        "height": 185
+      },
+      "sourceAnchor": {
+        "x": 1348.0,
+        "baselineY": 248
+      },
+      "destinationOffset": {
+        "x": 77,
+        "y": 66
+      },
+      "contentBox": [
+        91,
+        68,
+        260,
+        245
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 6,
+      "durationMs": 130,
+      "file": "../frames/cola/frame-007.png",
+      "finalProvenance": "idle-sentada/frame-007",
+      "finalContentBox": [
+        71,
+        25,
+        223,
+        244
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 1465,
+        "y": 70,
+        "width": 185,
+        "height": 185
+      },
+      "sourceAnchor": {
+        "x": 1546.0,
+        "baselineY": 248
+      },
+      "destinationOffset": {
+        "x": 79,
+        "y": 66
+      },
+      "contentBox": [
+        96,
+        72,
+        239,
+        245
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 7,
+      "durationMs": 130,
+      "file": "../frames/cola/frame-008.png",
+      "finalProvenance": "idle-sentada/frame-008",
+      "finalContentBox": [
+        69,
+        29,
+        230,
+        244
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    }
+  ]
+}

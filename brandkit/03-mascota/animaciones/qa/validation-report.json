@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "checks": {
+    "animationCount": 20,
+    "frameCount": 152,
+    "rgbaFrames": 152,
+    "nonEmptyFrames": 152,
+    "framesWithoutCanvasClipping": 152,
+    "validStrips": 20,
+    "validGrids": 20,
+    "validAnimatedWebp": 20,
+    "validAnimationManifests": 20
+  },
+  "expected": {
+    "animationCount": 20,
+    "frameCount": 152,
+    "rgbaFrames": 152,
+    "nonEmptyFrames": 152,
+    "framesWithoutCanvasClipping": 152,
+    "validStrips": 20,
+    "validGrids": 20,
+    "validAnimatedWebp": 20,
+    "validAnimationManifests": 20
+  },
+  "errors": []
+}

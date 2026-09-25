@@ -656,7 +656,7 @@ Checklist:
 - regulatory counsel;
 - conflict policies.
 
-Naming decision Parmelia → GatoPago requires:
+Consolidating the GatoPago identity requires:
 
 - trademark/domain search;
 - entity/DBA review;

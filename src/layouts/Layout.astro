@@ -72,7 +72,7 @@ const structuredData = {
         'QR payments',
         'Guided DeFi with Aave',
       ],
-      sameAs: [brand.socialUrl],
+      ...(brand.socialUrl ? { sameAs: [brand.socialUrl] } : {}),
     },
     {
       '@type': 'Person',
@@ -142,13 +142,10 @@ const structuredData = {
           set:html={`
             (() => {
               const preferenceKey = 'gatopago:preferred-locale';
-              const legacyPreferenceKey = 'parmelia:preferred-locale';
               const currentLocale = '${lang}';
               const readPreference = () => {
                 try {
-                  const value =
-                    window.localStorage.getItem(preferenceKey) ??
-                    window.localStorage.getItem(legacyPreferenceKey);
+                  const value = window.localStorage.getItem(preferenceKey);
                   if (value === 'es' || value === 'en') {
                     window.localStorage.setItem(preferenceKey, value);
                   }

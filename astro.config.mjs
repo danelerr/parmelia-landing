@@ -4,9 +4,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  // Existing production host. Change this canonical build value together with
-  // PUBLIC_SITE_URL when the GatoPago domain cutover is scheduled.
-  site: 'https://parmelia.me',
+  // Canonical domain approved for the GatoPago landing.
+  site: 'https://gatopago.com',
   markdown: {
     shikiConfig: {
       theme: 'github-dark',

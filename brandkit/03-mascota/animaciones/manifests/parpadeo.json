@@ -1,0 +1,199 @@
+{
+  "id": "parpadeo",
+  "name": "Parpadeo",
+  "frameCount": 4,
+  "canvas": {
+    "width": 320,
+    "height": 256
+  },
+  "anchor": {
+    "x": 160,
+    "y": 244
+  },
+  "playback": "loop",
+  "totalDurationMs": 1390,
+  "sourceSheet": 1,
+  "note": "",
+  "repairsApplied": [],
+  "strip": "../spritesheets/parpadeo-strip.png",
+  "grid": "../spritesheets/parpadeo-grid.png",
+  "preview": "../previews/parpadeo.webp",
+  "frames": [
+    {
+      "sourceRect": {
+        "x": 280,
+        "y": 0,
+        "width": 242,
+        "height": 215
+      },
+      "sourceAnchor": {
+        "x": 397.0,
+        "baselineY": 194
+      },
+      "destinationOffset": {
+        "x": 43,
+        "y": 50
+      },
+      "contentBox": [
+        70,
+        75,
+        252,
+        245
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 0,
+      "durationMs": 1100,
+      "file": "../frames/parpadeo/frame-001.png",
+      "finalProvenance": "raw-frame-001",
+      "finalContentBox": [
+        70,
+        75,
+        252,
+        245
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 522,
+        "y": 0,
+        "width": 250,
+        "height": 215
+      },
+      "sourceAnchor": {
+        "x": 647.0,
+        "baselineY": 194
+      },
+      "destinationOffset": {
+        "x": 35,
+        "y": 50
+      },
+      "contentBox": [
+        69,
+        75,
+        253,
+        245
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 1,
+      "durationMs": 90,
+      "file": "../frames/parpadeo/frame-002.png",
+      "finalProvenance": "raw-frame-002",
+      "finalContentBox": [
+        69,
+        75,
+        253,
+        245
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 772,
+        "y": 0,
+        "width": 255,
+        "height": 215
+      },
+      "sourceAnchor": {
+        "x": 900.0,
+        "baselineY": 194
+      },
+      "destinationOffset": {
+        "x": 32,
+        "y": 50
+      },
+      "contentBox": [
+        68,
+        75,
+        255,
+        245
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 2,
+      "durationMs": 110,
+      "file": "../frames/parpadeo/frame-003.png",
+      "finalProvenance": "raw-frame-003",
+      "finalContentBox": [
+        68,
+        75,
+        255,
+        245
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 1027,
+        "y": 0,
+        "width": 243,
+        "height": 215
+      },
+      "sourceAnchor": {
+        "x": 1150.0,
+        "baselineY": 194
+      },
+      "destinationOffset": {
+        "x": 37,
+        "y": 50
+      },
+      "contentBox": [
+        70,
+        75,
+        252,
+        245
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 3,
+      "durationMs": 90,
+      "file": "../frames/parpadeo/frame-004.png",
+      "finalProvenance": "raw-frame-004",
+      "finalContentBox": [
+        70,
+        75,
+        252,
+        245
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    }
+  ]
+}

@@ -9,11 +9,10 @@ Create a **Payment Intent**, open a **checkout link or QR**, and receive a signe
 **webhook** when the USDC payment is confirmed onchain. The public environment
 currently uses test funds on Arbitrum Sepolia.
 
-- **Base URL:** `https://server.parmelia.workers.dev`
+- **Base URL:** supplied when your pilot integration is provisioned. Set it as `GATOPAGO_API_URL` in your shell before running the examples; the website and app domains are not API endpoints.
 - **Version:** all endpoints are under `/v1`.
 - **Content type:** `application/json` (request and response).
-- **Get your keys:** create API keys and register webhooks in the dashboard at
-  `https://dashboard.parmelia.me`.
+- **Get your keys:** request pilot access at `hola@gatopago.com`. API and developer dashboard URLs are provided separately; no replacement endpoint is assumed here.
 
 > This reference documents what is available in the public Alpha. Items marked
 > _(roadmap)_ and mainnet entries are designed but not yet enabled.
@@ -50,7 +49,7 @@ A missing or invalid key returns `401`:
 
 ```bash
 # 1. Create a payment intent for 25 USDC, tagged with your order id.
-curl -X POST https://server.parmelia.workers.dev/v1/payment_intents \
+curl -X POST $GATOPAGO_API_URL/v1/payment_intents \
   -H "Authorization: Bearer sk_test_xxx" \
   -H "Content-Type: application/json" \
   -d '{"amount":"25.00","currency":"USDC","metadata":{"order_id":"A-1042"}}'
@@ -65,7 +64,7 @@ curl -X POST https://server.parmelia.workers.dev/v1/payment_intents \
   "currency": "USDC",
   "reference": null,
   "metadata": { "order_id": "A-1042" },
-  "checkout_url": "https://app.parmelia.me/pay?id=…",
+  "checkout_url": "https://app.gatopago.com/pay?id=…",
   "tx_hash": null,
   "mode": "test",
   "expires_at": "2026-06-16T15:00:00.000Z",
@@ -148,7 +147,7 @@ Headers:
 Returns `201` with the payment intent (or `200` if an idempotent replay matched).
 
 ```bash
-curl -X POST https://server.parmelia.workers.dev/v1/payment_intents \
+curl -X POST $GATOPAGO_API_URL/v1/payment_intents \
   -H "Authorization: Bearer sk_test_xxx" \
   -H "Idempotency-Key: order-A-1042" \
   -H "Content-Type: application/json" \
@@ -227,7 +226,7 @@ minutes without acquiring testnet funds. Returns `400 SANDBOX_ONLY` with a live
 key, `409 INTENT_NOT_PAYABLE` if not awaiting payment.
 
 ```bash
-curl -X POST https://server.parmelia.workers.dev/v1/payment_intents/pi_3b1c…/simulate_payment \
+curl -X POST $GATOPAGO_API_URL/v1/payment_intents/pi_3b1c…/simulate_payment \
   -H "Authorization: Bearer sk_test_xxx"
 ```
 
@@ -331,8 +330,7 @@ export function verifyGatoPagoWebhook(rawBody, headers, secret) {
 > Verify against the **raw request body**, byte-for-byte. Re-serializing the JSON
 > will change the bytes and break the signature.
 
-> During the brand transition, the same values are also sent through the
-> legacy `Parmelia-*` header aliases. New integrations should use `GatoPago-*`.
+> Use the `GatoPago-*` headers documented above for new integrations.
 
 ### Idempotency & retries
 
