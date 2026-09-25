@@ -1,0 +1,4 @@
+@import url('./recursive/full.css');
+.gp-linear { font-family: 'Recursive Variable', sans-serif; font-variation-settings: 'MONO' 0, 'CASL' 0, 'slnt' 0, 'CRSV' .5; }
+.gp-casual { font-family: 'Recursive Variable', sans-serif; font-variation-settings: 'MONO' 0, 'CASL' 1, 'slnt' 0, 'CRSV' .5; }
+.gp-mono { font-family: 'Recursive Variable', monospace; font-variation-settings: 'MONO' 1, 'CASL' 0, 'slnt' 0, 'CRSV' .5; font-variant-numeric: tabular-nums; }

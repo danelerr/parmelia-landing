@@ -1,0 +1,2 @@
+# Preserve deliverable bytes: brandkit/manifest.json records SHA-256 hashes.
+brandkit/** -text

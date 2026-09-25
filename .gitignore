@@ -36,6 +36,7 @@ supeorpromt.txt
 elton_transcript.md
 avasettle.txt
 spritesmeli*.png
+!brandkit/06-originales/spritesmeli*.png
 
 # Testing, Playwright & Caches
 .cache/

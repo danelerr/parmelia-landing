@@ -1,0 +1,287 @@
+{
+  "id": "caminata",
+  "name": "Caminata",
+  "frameCount": 6,
+  "canvas": {
+    "width": 320,
+    "height": 256
+  },
+  "anchor": {
+    "x": 160,
+    "y": 244
+  },
+  "playback": "loop",
+  "totalDurationMs": 720,
+  "sourceSheet": 3,
+  "note": "",
+  "repairsApplied": [],
+  "strip": "../spritesheets/caminata-strip.png",
+  "grid": "../spritesheets/caminata-grid.png",
+  "preview": "../previews/caminata.webp",
+  "frames": [
+    {
+      "sourceRect": {
+        "x": 250,
+        "y": 280,
+        "width": 204,
+        "height": 195
+      },
+      "sourceAnchor": {
+        "x": 363.0,
+        "baselineY": 469
+      },
+      "destinationOffset": {
+        "x": 47,
+        "y": 55
+      },
+      "contentBox": [
+        60,
+        71,
+        231,
+        245
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 0,
+      "durationMs": 120,
+      "file": "../frames/caminata/frame-001.png",
+      "finalProvenance": "raw-frame-001",
+      "finalContentBox": [
+        60,
+        71,
+        231,
+        245
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 454,
+        "y": 280,
+        "width": 205,
+        "height": 195
+      },
+      "sourceAnchor": {
+        "x": 580.0,
+        "baselineY": 469
+      },
+      "destinationOffset": {
+        "x": 34,
+        "y": 55
+      },
+      "contentBox": [
+        55,
+        88,
+        228,
+        241
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 1,
+      "durationMs": 120,
+      "file": "../frames/caminata/frame-002.png",
+      "finalProvenance": "raw-frame-002",
+      "finalContentBox": [
+        55,
+        88,
+        228,
+        241
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 659,
+        "y": 280,
+        "width": 211,
+        "height": 195
+      },
+      "sourceAnchor": {
+        "x": 778.0,
+        "baselineY": 469
+      },
+      "destinationOffset": {
+        "x": 41,
+        "y": 55
+      },
+      "contentBox": [
+        53,
+        69,
+        233,
+        242
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 2,
+      "durationMs": 120,
+      "file": "../frames/caminata/frame-003.png",
+      "finalProvenance": "raw-frame-003",
+      "finalContentBox": [
+        53,
+        69,
+        233,
+        242
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 870,
+        "y": 280,
+        "width": 216,
+        "height": 195
+      },
+      "sourceAnchor": {
+        "x": 1001.0,
+        "baselineY": 469
+      },
+      "destinationOffset": {
+        "x": 29,
+        "y": 55
+      },
+      "contentBox": [
+        49,
+        70,
+        224,
+        238
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 3,
+      "durationMs": 120,
+      "file": "../frames/caminata/frame-004.png",
+      "finalProvenance": "raw-frame-004",
+      "finalContentBox": [
+        49,
+        70,
+        224,
+        238
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 1086,
+        "y": 280,
+        "width": 230,
+        "height": 195
+      },
+      "sourceAnchor": {
+        "x": 1222.0,
+        "baselineY": 469
+      },
+      "destinationOffset": {
+        "x": 24,
+        "y": 55
+      },
+      "contentBox": [
+        47,
+        86,
+        228,
+        244
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 4,
+      "durationMs": 120,
+      "file": "../frames/caminata/frame-005.png",
+      "finalProvenance": "raw-frame-005",
+      "finalContentBox": [
+        47,
+        86,
+        228,
+        244
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 1316,
+        "y": 280,
+        "width": 229,
+        "height": 195
+      },
+      "sourceAnchor": {
+        "x": 1447.0,
+        "baselineY": 469
+      },
+      "destinationOffset": {
+        "x": 29,
+        "y": 55
+      },
+      "contentBox": [
+        56,
+        67,
+        234,
+        240
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 5,
+      "durationMs": 120,
+      "file": "../frames/caminata/frame-006.png",
+      "finalProvenance": "raw-frame-006",
+      "finalContentBox": [
+        56,
+        67,
+        234,
+        240
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    }
+  ]
+}

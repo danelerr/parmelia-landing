@@ -1,0 +1,465 @@
+{
+  "id": "swap",
+  "name": "Swap",
+  "frameCount": 10,
+  "canvas": {
+    "width": 320,
+    "height": 256
+  },
+  "anchor": {
+    "x": 160,
+    "y": 244
+  },
+  "playback": "once",
+  "totalDurationMs": 1400,
+  "sourceSheet": 4,
+  "note": "La versión final usa un bloque estable neutral, no un glifo de plataforma social.",
+  "repairsApplied": [
+    "Se sustituyó el glifo azul parecido a Discord por un símbolo de activo estable neutral en todos los frames."
+  ],
+  "strip": "../spritesheets/swap-strip.png",
+  "grid": "../spritesheets/swap-grid.png",
+  "preview": "../previews/swap.webp",
+  "frames": [
+    {
+      "sourceRect": {
+        "x": 10,
+        "y": 306,
+        "width": 180,
+        "height": 149
+      },
+      "sourceAnchor": {
+        "x": 100.0,
+        "baselineY": 438
+      },
+      "destinationOffset": {
+        "x": 70,
+        "y": 112
+      },
+      "contentBox": [
+        85,
+        112,
+        236,
+        243
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 22,
+        "bottom": 0
+      },
+      "index": 0,
+      "durationMs": 140,
+      "file": "../frames/swap/frame-001.png",
+      "finalProvenance": "swap/raw-frame-001+neutral-dollar-glyph",
+      "finalContentBox": [
+        85,
+        112,
+        236,
+        243
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 190,
+        "y": 306,
+        "width": 148,
+        "height": 149
+      },
+      "sourceAnchor": {
+        "x": 264.0,
+        "baselineY": 438
+      },
+      "destinationOffset": {
+        "x": 86,
+        "y": 112
+      },
+      "contentBox": [
+        99,
+        123,
+        214,
+        242
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 1,
+      "durationMs": 140,
+      "file": "../frames/swap/frame-002.png",
+      "finalProvenance": "swap/raw-frame-002+neutral-dollar-glyph",
+      "finalContentBox": [
+        99,
+        123,
+        214,
+        242
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 338,
+        "y": 306,
+        "width": 168,
+        "height": 149
+      },
+      "sourceAnchor": {
+        "x": 422.0,
+        "baselineY": 438
+      },
+      "destinationOffset": {
+        "x": 76,
+        "y": 112
+      },
+      "contentBox": [
+        98,
+        113,
+        236,
+        237
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 2,
+      "durationMs": 140,
+      "file": "../frames/swap/frame-003.png",
+      "finalProvenance": "swap/raw-frame-003+neutral-dollar-glyph",
+      "finalContentBox": [
+        98,
+        113,
+        236,
+        237
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 506,
+        "y": 306,
+        "width": 161,
+        "height": 149
+      },
+      "sourceAnchor": {
+        "x": 586.5,
+        "baselineY": 438
+      },
+      "destinationOffset": {
+        "x": 80,
+        "y": 112
+      },
+      "contentBox": [
+        90,
+        121,
+        228,
+        240
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 3,
+      "durationMs": 140,
+      "file": "../frames/swap/frame-004.png",
+      "finalProvenance": "swap/raw-frame-004+neutral-dollar-glyph",
+      "finalContentBox": [
+        90,
+        121,
+        228,
+        240
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 667,
+        "y": 306,
+        "width": 164,
+        "height": 149
+      },
+      "sourceAnchor": {
+        "x": 749.0,
+        "baselineY": 438
+      },
+      "destinationOffset": {
+        "x": 78,
+        "y": 112
+      },
+      "contentBox": [
+        92,
+        113,
+        229,
+        241
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 4,
+      "durationMs": 140,
+      "file": "../frames/swap/frame-005.png",
+      "finalProvenance": "swap/raw-frame-005+neutral-dollar-glyph",
+      "finalContentBox": [
+        92,
+        113,
+        229,
+        241
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 831,
+        "y": 306,
+        "width": 162,
+        "height": 149
+      },
+      "sourceAnchor": {
+        "x": 912.0,
+        "baselineY": 438
+      },
+      "destinationOffset": {
+        "x": 79,
+        "y": 112
+      },
+      "contentBox": [
+        94,
+        115,
+        227,
+        233
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 5,
+      "durationMs": 140,
+      "file": "../frames/swap/frame-006.png",
+      "finalProvenance": "swap/raw-frame-006+neutral-dollar-glyph",
+      "finalContentBox": [
+        94,
+        115,
+        227,
+        233
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 993,
+        "y": 306,
+        "width": 175,
+        "height": 149
+      },
+      "sourceAnchor": {
+        "x": 1080.5,
+        "baselineY": 438
+      },
+      "destinationOffset": {
+        "x": 72,
+        "y": 112
+      },
+      "contentBox": [
+        87,
+        118,
+        233,
+        244
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 6,
+      "durationMs": 140,
+      "file": "../frames/swap/frame-007.png",
+      "finalProvenance": "swap/raw-frame-007+neutral-dollar-glyph",
+      "finalContentBox": [
+        87,
+        118,
+        233,
+        244
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 1168,
+        "y": 306,
+        "width": 165,
+        "height": 149
+      },
+      "sourceAnchor": {
+        "x": 1250.5,
+        "baselineY": 438
+      },
+      "destinationOffset": {
+        "x": 78,
+        "y": 112
+      },
+      "contentBox": [
+        94,
+        126,
+        231,
+        245
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 7,
+      "durationMs": 140,
+      "file": "../frames/swap/frame-008.png",
+      "finalProvenance": "swap/raw-frame-008+neutral-dollar-glyph",
+      "finalContentBox": [
+        94,
+        126,
+        231,
+        245
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 1333,
+        "y": 306,
+        "width": 163,
+        "height": 149
+      },
+      "sourceAnchor": {
+        "x": 1414.5,
+        "baselineY": 438
+      },
+      "destinationOffset": {
+        "x": 78,
+        "y": 112
+      },
+      "contentBox": [
+        91,
+        115,
+        227,
+        245
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 8,
+      "durationMs": 140,
+      "file": "../frames/swap/frame-009.png",
+      "finalProvenance": "swap/raw-frame-009+neutral-dollar-glyph",
+      "finalContentBox": [
+        91,
+        115,
+        227,
+        245
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    },
+    {
+      "sourceRect": {
+        "x": 1496,
+        "y": 306,
+        "width": 176,
+        "height": 149
+      },
+      "sourceAnchor": {
+        "x": 1584.0,
+        "baselineY": 438
+      },
+      "destinationOffset": {
+        "x": 72,
+        "y": 112
+      },
+      "contentBox": [
+        86,
+        122,
+        228,
+        245
+      ],
+      "edgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      },
+      "index": 9,
+      "durationMs": 140,
+      "file": "../frames/swap/frame-010.png",
+      "finalProvenance": "swap/raw-frame-010+neutral-dollar-glyph",
+      "finalContentBox": [
+        86,
+        122,
+        228,
+        245
+      ],
+      "outputEdgePixels": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0
+      }
+    }
+  ]
+}

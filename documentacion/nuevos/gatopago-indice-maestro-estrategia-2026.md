@@ -156,8 +156,8 @@ Define qué puede ofrecerse, dónde y bajo qué responsabilidades.
 ### 3. Plan técnico actual de la app
 
 - [Visión y plan de mejora](./gatopago-vision-plan-mejora-2026.md)
-- [Architecture](https://github.com/danelerr/parmelia-links/blob/main/ARCHITECTURE.md)
-- [API Design](https://github.com/danelerr/parmelia-links/blob/main/API_DESIGN.md)
+- Architecture — consultar el índice `docs/README.md` del repositorio de la app
+- API Design — consultar el índice `docs/README.md` del repositorio de la app
 
 ### 4. Este sistema estratégico
 
@@ -320,7 +320,7 @@ Las ventanas indican secuencia, no fecha de disponibilidad pública.
 - PWA icon/name/manifest/screenshots;
 - 404 GatoPago;
 - focus visible accesible;
-- limpiar residuos Parmelia;
+- limpiar referencias de la marca anterior;
 - consolidar assets Meli.
 
 #### Core

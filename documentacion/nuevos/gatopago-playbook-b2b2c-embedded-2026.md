@@ -5,7 +5,7 @@
 > **Propósito:** explicar cómo una empresa, comunidad o plataforma puede entregar la experiencia GatoPago a sus usuarios sin reconstruir wallets, pagos, seguridad y operación desde cero.  
 > **Documento superior:** [estrategia integral B2C, B2B2C y B2B](./gatopago-estrategia-integral-b2c-b2b2c-b2b-2026.md).  
 > **Producto de destino:** [plan maestro de GatoPago Personal](./gatopago-plan-maestro-b2c-2026.md).  
-> **Contrato API existente:** [API Design](https://github.com/danelerr/parmelia-links/blob/main/API_DESIGN.md).
+> **Contrato API existente:** API Design — consultar el índice `docs/README.md` del repositorio de la app.
 
 ---
 

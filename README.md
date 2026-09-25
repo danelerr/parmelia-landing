@@ -27,15 +27,23 @@ La analítica está **apagada por defecto**. Para activar Plausible, define la
 variable de entorno antes de `build` (o en un archivo `.env`):
 
 ```sh
-PUBLIC_PLAUSIBLE_DOMAIN=parmelia.me
+PUBLIC_PLAUSIBLE_DOMAIN=gatopago.com
 ```
 
 Con eso se inyecta el script de Plausible y los clics en los CTA
 (`data-cta="…"`) se reportan como evento `CTA click`. El tracker es
 agnóstico: también dispara a Umami o gtag si estuvieran presentes.
 
-Además, todos los CTA hacia `app.parmelia.me` llevan `?ref=landing_*` para
+Además, todos los CTA hacia `app.gatopago.com` llevan `?ref=landing_*` para
 atribuir registros por sección desde la analítica de la propia app.
+
+## Dominios y servicios
+
+La landing usa `https://gatopago.com` y los accesos a la app usan `https://app.gatopago.com`. La configuración pública está en `src/config/brand.ts`; `.env.example` enumera las variables disponibles.
+
+API, dashboard de desarrolladores y cuenta de X no tienen una dirección asumida: los enlaces opcionales solo aparecen al configurar `PUBLIC_API_URL`, `PUBLIC_DASHBOARD_URL` y `PUBLIC_SOCIAL_URL`, según corresponda. Los ejemplos de API usan `$GATOPAGO_API_URL`, que debe configurarse con el endpoint entregado para la integración.
+
+Los correos pasan a `hola@gatopago.com` y `privacy@gatopago.com`. Este cambio local no configura DNS, correo, hosting ni servicios. Antes de publicar, comprobar destinos y variables del entorno de despliegue.
 
 ## Assets generados
 

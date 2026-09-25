@@ -3,7 +3,11 @@
 **Estado:** índice canónico de estrategia, producto y marca.  
 **Última organización:** 23 de agosto de 2026.
 
-Esta carpeta es la fuente central de documentación editorial de GatoPago. La documentación operativa que debe evolucionar junto al código —arquitectura, API, contratos, seguridad, despliegues y runbooks— permanece en [`parmelia-links`](https://github.com/danelerr/parmelia-links).
+Esta carpeta es la fuente central de documentación editorial de GatoPago. La documentación operativa —arquitectura, API, contratos, seguridad, despliegues y runbooks— permanece en el repositorio de la app, cuyo punto de entrada es `docs/README.md`.
+
+## Brandkit y archivos de identidad
+
+El [brandkit de GatoPago](../brandkit/README.md), organizado el 24 de septiembre de 2026, reúne el manual práctico, logo, iconos, ilustraciones, animaciones, fuentes con licencia y paleta. Incluye un [catálogo visual local](../brandkit/index.html) y trazabilidad de los archivos. Es el punto de entrada para entregar recursos de marca; los documentos estratégicos siguen en esta carpeta. Sus tokens reflejan la landing observada, no una certificación de todas las pantallas de la app.
 
 ## Decisiones vigentes
 
@@ -19,7 +23,7 @@ Esta carpeta es la fuente central de documentación editorial de GatoPago. La do
 
 Cuando dos documentos entren en conflicto, se aplica este orden:
 
-1. Realidad verificada del producto y configuración ejecutable en `parmelia-links`.
+1. Realidad verificada del producto y configuración ejecutable en el repositorio de la app.
 2. [Narrativa y contexto completo](./nuevos/gatopago_nueva_narrativa_contexto_completo_2026-08-18.txt).
 3. [Índice maestro de estrategia](./nuevos/gatopago-indice-maestro-estrategia-2026.md).
 4. [Rebranding maestro](./nuevos/gatopago-rebranding-maestro-2026.md).
@@ -51,7 +55,6 @@ El punto de entrada es el [índice maestro](./nuevos/gatopago-indice-maestro-est
 | Archivo | Uso válido | Precaución |
 |---|---|---|
 | Bases y convocatoria de preaceleración | Consultar requisitos históricos | Verificar vigencia antes de reutilizar |
-| Capturas de producto de mayo y junio de 2026 | Evidencia visual de la etapa anterior | No representan la interfaz actual |
 | Fotografía de Daniel | Asset de contexto | Confirmar autorización y necesidad antes de publicar |
 | Contrato laboral fuente | Consulta privada | **No publicar ni versionar** |
 
@@ -65,7 +68,7 @@ El punto de entrada es el [índice maestro](./nuevos/gatopago-indice-maestro-est
 | [Transcripción Elton](./antiguos/modificados/transcripcion-elton-2026.md) | Fuente primaria de una conversación | Copy, posicionamiento o decisión aprobada |
 | [Ideas de hackathons](./antiguos/modificados/ideas-hackathons-cripto.md) | Banco experimental de prototipos | Roadmap comprometido |
 | [Modernización de producto](./antiguos/modificados/gatopago-modernizacion-producto-arquitectura-2026.md) | Diagnóstico técnico del 3 de agosto | Confirmación actual sin revisar el código |
-| [Narrativa Notion ES](./antiguos/modificados/gatopago-notion-ES.md) y [EN](./antiguos/modificados/gatopago-notion-EN.md) | Versiones adaptadas de documentos Parmelia | Fuente narrativa canónica |
+| [Narrativa Notion ES](./antiguos/modificados/gatopago-notion-ES.md) y [EN](./antiguos/modificados/gatopago-notion-EN.md) | Mensajes de GatoPago para Notion y pitches | Fuente narrativa canónica |
 | [Postulación Innova](./antiguos/modificados/innova-preaceleracion-2026.md) | Reutilizar respuestas verificadas | Asumir que la convocatoria sigue abierta |
 
 Los PDF de `antiguos/originales/` permanecen locales porque el repositorio ignora ese formato. `contrato-laboral-fuente.pdf` contiene una fuente privada y **no debe publicarse**; las bases y convocatorias solo deben versionarse si se confirma que pueden distribuirse.
@@ -75,5 +78,5 @@ Los PDF de `antiguos/originales/` permanecen locales porque el repositorio ignor
 - Todo documento nuevo debe indicar fecha, estado y alcance.
 - Si reemplaza otro documento, debe declararlo y actualizar este índice.
 - Los exports HTML, PDF o PPTX no se guardan como documentos independientes sin indicar cuál es la fuente editable.
-- Los nombres técnicos heredados —dominios `parmelia.me`, contratos `Parmelia*`, colas o aliases de API— no son narrativa pública y se mantienen mientras sigan siendo identificadores reales.
+- Los dominios públicos son `gatopago.com` y `app.gatopago.com`. Los endpoints adicionales requieren configuración explícita; no se inventan ni se publican por cambiar el nombre.
 - Ningún documento autoriza despliegues, cambios de red o publicación por sí mismo.

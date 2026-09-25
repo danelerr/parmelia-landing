@@ -1,0 +1,217 @@
+{
+  "schemaVersion": 1,
+  "character": "Meli",
+  "brand": "GatoPago",
+  "deliveryDate": "2026-08-19",
+  "integrationStatus": "asset-package-only",
+  "canvas": {
+    "width": 320,
+    "height": 256,
+    "format": "RGBA PNG"
+  },
+  "anchor": {
+    "x": 160,
+    "y": 244,
+    "meaning": "bottom-center logical anchor"
+  },
+  "sourcePolicy": "Original contact sheets were not modified.",
+  "repairsPolicy": "Corrections use only supplied drawings, deterministic compositing, frame reuse, and a locally drawn neutral dollar glyph.",
+  "sourceSheets": [
+    {
+      "sheet": 1,
+      "file": "Image Aug 19, 2026, 01_47_20 AM (1).png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "sha256": "a055c8246be3dc8ab1f969f64fa692ee89729bebc3bc6f6a27999643cc5ffea5"
+    },
+    {
+      "sheet": 2,
+      "file": "Image Aug 19, 2026, 01_47_21 AM (2).png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "sha256": "57539566225234bcfbc7611c8d5bee5b154af6bac519782b879c6b349148eaca"
+    },
+    {
+      "sheet": 3,
+      "file": "Image Aug 19, 2026, 01_47_21 AM (3).png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "sha256": "3c574aa9518d5547056f2894022fb00a512652695ec75431e4fce8c61ee7887d"
+    },
+    {
+      "sheet": 4,
+      "file": "Image Aug 19, 2026, 01_47_21 AM (4).png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "sha256": "0bf1518671a69efe6fbfaec8e9e994d18ff390af80ac4b6a471d4f83f3f51583"
+    },
+    {
+      "sheet": 5,
+      "file": "Image Aug 19, 2026, 01_47_21 AM (5).png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "sha256": "bdc0c65139623189e7bc9492ab08d6fbb10a7db6cb53aa066071d7dae630a190"
+    }
+  ],
+  "animationCount": 20,
+  "totalFrames": 152,
+  "repairs": [
+    {
+      "animation": "cola",
+      "actions": [
+        "Se reemplazó la fila con doble cola por la secuencia sentada limpia suministrada en la lámina 1."
+      ]
+    },
+    {
+      "animation": "siesta",
+      "actions": [
+        "Se preservaron completas las Z y el último frame incoherente se sustituyó por el cierre neutral del ciclo."
+      ]
+    },
+    {
+      "animation": "asomarse",
+      "actions": [
+        "Se reordenó el ciclo para aparecer, mirar y esconderse; se descartaron la mirada blanca y la pose inclinada incoherente."
+      ]
+    },
+    {
+      "animation": "reparar-rail",
+      "actions": [
+        "Se mantuvo a Meli visible durante las chispas combinando los frames 8 y 9 sin redibujarla."
+      ]
+    },
+    {
+      "animation": "swap",
+      "actions": [
+        "Se sustituyó el glifo azul parecido a Discord por un símbolo de activo estable neutral en todos los frames."
+      ]
+    }
+  ],
+  "animations": [
+    {
+      "id": "parpadeo",
+      "name": "Parpadeo",
+      "frameCount": 4,
+      "manifest": "manifests/parpadeo.json"
+    },
+    {
+      "id": "oreja",
+      "name": "Oreja",
+      "frameCount": 4,
+      "manifest": "manifests/oreja.json"
+    },
+    {
+      "id": "ojos",
+      "name": "Ojos",
+      "frameCount": 6,
+      "manifest": "manifests/ojos.json"
+    },
+    {
+      "id": "idle-sentada",
+      "name": "Idle sentada",
+      "frameCount": 8,
+      "manifest": "manifests/idle-sentada.json"
+    },
+    {
+      "id": "cola",
+      "name": "Cola",
+      "frameCount": 8,
+      "manifest": "manifests/cola.json"
+    },
+    {
+      "id": "siesta",
+      "name": "Siesta",
+      "frameCount": 8,
+      "manifest": "manifests/siesta.json"
+    },
+    {
+      "id": "asomarse",
+      "name": "Asomarse",
+      "frameCount": 8,
+      "manifest": "manifests/asomarse.json"
+    },
+    {
+      "id": "meti-la-pata",
+      "name": "Metí la pata",
+      "frameCount": 6,
+      "manifest": "manifests/meti-la-pata.json"
+    },
+    {
+      "id": "salto-feliz",
+      "name": "Salto feliz",
+      "frameCount": 8,
+      "manifest": "manifests/salto-feliz.json"
+    },
+    {
+      "id": "caminata",
+      "name": "Caminata",
+      "frameCount": 6,
+      "manifest": "manifests/caminata.json"
+    },
+    {
+      "id": "preparando-pago",
+      "name": "Preparando pago",
+      "frameCount": 8,
+      "manifest": "manifests/preparando-pago.json"
+    },
+    {
+      "id": "comprobante",
+      "name": "Comprobante",
+      "frameCount": 8,
+      "manifest": "manifests/comprobante.json"
+    },
+    {
+      "id": "reparar-rail",
+      "name": "Reparar rail",
+      "frameCount": 10,
+      "manifest": "manifests/reparar-rail.json"
+    },
+    {
+      "id": "swap",
+      "name": "Swap",
+      "frameCount": 10,
+      "manifest": "manifests/swap.json"
+    },
+    {
+      "id": "creciendo",
+      "name": "Creciendo",
+      "frameCount": 10,
+      "manifest": "manifests/creciendo.json"
+    },
+    {
+      "id": "card",
+      "name": "Card",
+      "frameCount": 8,
+      "manifest": "manifests/card.json"
+    },
+    {
+      "id": "linterna",
+      "name": "Linterna",
+      "frameCount": 8,
+      "manifest": "manifests/linterna.json"
+    },
+    {
+      "id": "saludo",
+      "name": "Saludo",
+      "frameCount": 6,
+      "manifest": "manifests/saludo.json"
+    },
+    {
+      "id": "mantenimiento",
+      "name": "Mantenimiento",
+      "frameCount": 10,
+      "manifest": "manifests/mantenimiento.json"
+    },
+    {
+      "id": "seguridad",
+      "name": "Seguridad",
+      "frameCount": 8,
+      "manifest": "manifests/seguridad.json"
+    }
+  ]
+}

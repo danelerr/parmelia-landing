@@ -75,7 +75,6 @@ GatoPago es una cuenta onchain programable para recibir, usar y hacer crecer dó
 
 ## Enlaces
 
-- Sitio: `https://parmelia.me`
-- Alpha: `https://app.parmelia.me`
-- Documentación: `https://parmelia.me/docs`
-- X: `https://x.com/parmelia_`
+- Sitio: `https://gatopago.com`
+- Alpha: `https://app.gatopago.com`
+- Documentación: `https://gatopago.com/docs`

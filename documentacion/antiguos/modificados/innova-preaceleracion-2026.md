@@ -144,7 +144,7 @@ Guion completo abajo. **[EN PANTALLA]** es lo que se ve; lo que está entre comi
 "GatoPago reúne ese ciclo en una cuenta que controlas. Recibes USDC; decides cuánto queda Disponible y cuánto pasa a Creciendo con una estrategia guiada; y lo devuelves para pagar, enviar, cambiar o retirar cuando lo necesitas. Tu dinero sigue siendo tuyo, pero ahora puede hacer más."
 
 **1:05 a 1:30 — Producto y aprendizaje**
-[EN PANTALLA: cobro, saldo Disponible/Creciendo y comprobante; luego parmelia.me/docs.]
+[EN PANTALLA: cobro, saldo Disponible/Creciendo y comprobante; luego gatopago.com/docs.]
 "La Alpha pública ya funciona en Arbitrum Sepolia con fondos de prueba. Un solo video de TikTok produjo 56 registros sin pauta. Es una señal de interés, no product-market fit: ahora queremos medir cuántas personas completan el ciclo y vuelven."
 
 **1:30 a 1:50 — A quién buscamos**
@@ -152,8 +152,8 @@ Guion completo abajo. **[EN PANTALLA]** es lo que se ve; lo que está entre comi
 "Empezamos por personas y equipos de LATAM que ya usan USDC: freelancers, creators, contributors, comunidades y participantes de grants o hackathons. Ellos no necesitan otra explicación de cripto; necesitan una mejor cuenta."
 
 **1:50 a 2:00 — Cierre**
-[EN PANTALLA: el logo de GatoPago y parmelia.me.]
-"Buscamos una cohorte de 25 a 50 personas para validar el ciclo antes de mainnet. GatoPago: tus dólares ya saben moverse. parmelia.me."
+[EN PANTALLA: el logo de GatoPago y gatopago.com.]
+"Buscamos una cohorte de 25 a 50 personas para validar el ciclo antes de mainnet. GatoPago: tus dólares ya saben moverse. gatopago.com."
 
 **Tips de grabación**
 - Tu cara al inicio y al cierre da autenticidad; las tomas del medio son la app en pantalla.
