@@ -1,199 +1,87 @@
 {
+  "schemaVersion": 2,
   "id": "parpadeo",
   "name": "Parpadeo",
-  "frameCount": 4,
-  "canvas": {
-    "width": 320,
-    "height": 256
-  },
-  "anchor": {
-    "x": 160,
-    "y": 244
-  },
+  "purpose": "Reposo; señal de vida sin distraer",
   "playback": "loop",
-  "totalDurationMs": 1390,
-  "sourceSheet": 1,
   "note": "",
-  "repairsApplied": [],
+  "grid": {
+    "unit": "block",
+    "canvas": {
+      "width": 48,
+      "height": 44
+    },
+    "anchor": {
+      "x": 24,
+      "y": 42
+    }
+  },
+  "export": {
+    "scale": 8,
+    "canvas": {
+      "width": 384,
+      "height": 352
+    },
+    "anchor": {
+      "x": 196,
+      "y": 344
+    },
+    "previewScale": 4
+  },
+  "frameCount": 8,
+  "totalDurationMs": 3260,
   "strip": "../spritesheets/parpadeo-strip.png",
-  "grid": "../spritesheets/parpadeo-grid.png",
+  "gridSheet": "../spritesheets/parpadeo-grid.png",
   "preview": "../previews/parpadeo.webp",
+  "previewGif": "../previews/parpadeo.gif",
   "frames": [
     {
-      "sourceRect": {
-        "x": 280,
-        "y": 0,
-        "width": 242,
-        "height": 215
-      },
-      "sourceAnchor": {
-        "x": 397.0,
-        "baselineY": 194
-      },
-      "destinationOffset": {
-        "x": 43,
-        "y": 50
-      },
-      "contentBox": [
-        70,
-        75,
-        252,
-        245
-      ],
-      "edgePixels": {
-        "left": 0,
-        "right": 0,
-        "top": 0,
-        "bottom": 0
-      },
       "index": 0,
-      "durationMs": 1100,
       "file": "../frames/parpadeo/frame-001.png",
-      "finalProvenance": "raw-frame-001",
-      "finalContentBox": [
-        70,
-        75,
-        252,
-        245
-      ],
-      "outputEdgePixels": {
-        "left": 0,
-        "right": 0,
-        "top": 0,
-        "bottom": 0
-      }
+      "file1x": "../frames-1x/parpadeo/frame-001.png",
+      "durationMs": 1600
     },
     {
-      "sourceRect": {
-        "x": 522,
-        "y": 0,
-        "width": 250,
-        "height": 215
-      },
-      "sourceAnchor": {
-        "x": 647.0,
-        "baselineY": 194
-      },
-      "destinationOffset": {
-        "x": 35,
-        "y": 50
-      },
-      "contentBox": [
-        69,
-        75,
-        253,
-        245
-      ],
-      "edgePixels": {
-        "left": 0,
-        "right": 0,
-        "top": 0,
-        "bottom": 0
-      },
       "index": 1,
-      "durationMs": 90,
       "file": "../frames/parpadeo/frame-002.png",
-      "finalProvenance": "raw-frame-002",
-      "finalContentBox": [
-        69,
-        75,
-        253,
-        245
-      ],
-      "outputEdgePixels": {
-        "left": 0,
-        "right": 0,
-        "top": 0,
-        "bottom": 0
-      }
+      "file1x": "../frames-1x/parpadeo/frame-002.png",
+      "durationMs": 50
     },
     {
-      "sourceRect": {
-        "x": 772,
-        "y": 0,
-        "width": 255,
-        "height": 215
-      },
-      "sourceAnchor": {
-        "x": 900.0,
-        "baselineY": 194
-      },
-      "destinationOffset": {
-        "x": 32,
-        "y": 50
-      },
-      "contentBox": [
-        68,
-        75,
-        255,
-        245
-      ],
-      "edgePixels": {
-        "left": 0,
-        "right": 0,
-        "top": 0,
-        "bottom": 0
-      },
       "index": 2,
-      "durationMs": 110,
       "file": "../frames/parpadeo/frame-003.png",
-      "finalProvenance": "raw-frame-003",
-      "finalContentBox": [
-        68,
-        75,
-        255,
-        245
-      ],
-      "outputEdgePixels": {
-        "left": 0,
-        "right": 0,
-        "top": 0,
-        "bottom": 0
-      }
+      "file1x": "../frames-1x/parpadeo/frame-003.png",
+      "durationMs": 90
     },
     {
-      "sourceRect": {
-        "x": 1027,
-        "y": 0,
-        "width": 243,
-        "height": 215
-      },
-      "sourceAnchor": {
-        "x": 1150.0,
-        "baselineY": 194
-      },
-      "destinationOffset": {
-        "x": 37,
-        "y": 50
-      },
-      "contentBox": [
-        70,
-        75,
-        252,
-        245
-      ],
-      "edgePixels": {
-        "left": 0,
-        "right": 0,
-        "top": 0,
-        "bottom": 0
-      },
       "index": 3,
-      "durationMs": 90,
       "file": "../frames/parpadeo/frame-004.png",
-      "finalProvenance": "raw-frame-004",
-      "finalContentBox": [
-        70,
-        75,
-        252,
-        245
-      ],
-      "outputEdgePixels": {
-        "left": 0,
-        "right": 0,
-        "top": 0,
-        "bottom": 0
-      }
+      "file1x": "../frames-1x/parpadeo/frame-004.png",
+      "durationMs": 50
+    },
+    {
+      "index": 4,
+      "file": "../frames/parpadeo/frame-005.png",
+      "file1x": "../frames-1x/parpadeo/frame-005.png",
+      "durationMs": 1300
+    },
+    {
+      "index": 5,
+      "file": "../frames/parpadeo/frame-006.png",
+      "file1x": "../frames-1x/parpadeo/frame-006.png",
+      "durationMs": 50
+    },
+    {
+      "index": 6,
+      "file": "../frames/parpadeo/frame-007.png",
+      "file1x": "../frames-1x/parpadeo/frame-007.png",
+      "durationMs": 70
+    },
+    {
+      "index": 7,
+      "file": "../frames/parpadeo/frame-008.png",
+      "file1x": "../frames-1x/parpadeo/frame-008.png",
+      "durationMs": 50
     }
   ]
 }

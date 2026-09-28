@@ -1,6 +1,6 @@
 # Sistema visual
 
-Edición 2026-09-24 · Valores observados en la landing y reglas de uso para el kit.
+Edición 2026-09-25 · Valores observados en la landing y reglas de uso para el kit.
 
 ## Dirección
 
@@ -10,19 +10,18 @@ La [paleta entregada](../05-colores/README.md) se extrae del CSS existente. No s
 
 ## Logo
 
-Archivo principal: [gatopago.svg](../02-logos/simbolo/gatopago.svg), vector 64 × 64, tres colores, sin rectángulo de fondo.
+Archivo principal: [gatopago.svg](../02-logos/simbolo/gatopago.svg). Es pixel art de 30 × 23 bloques en tres colores (Ink, Cat Fire y Cat Shadow), simétrico y sin fondo. Es la cabeza del personaje original reconstruida sobre su rejilla real, y sustituye al símbolo plano anterior, que se descartó. Su fuente editable son los mapas de [02-logos/modelo](../02-logos/README.md).
 
-- Mantener proporciones; usar `object-fit: contain`, no `cover`.
-- No cortar orejas, bigotes ni contorno. El espacio transparente forma parte del archivo.
-- No añadir resplandor, volumen, rotación o expresiones al símbolo.
-- Las versiones ilustradas de la cabeza no reemplazan al SVG en navegación ni favicons.
-- Como regla de composición de esta entrega, reservar al menos 1/4 del ancho del símbolo como área libre alrededor del lockup. No es un margen añadido dentro del SVG.
-- En navegación, el símbolo existente mide 34 px. Para 16, 32 y 48 px usar los favicons específicos incluidos. Revisar cualquier uso menor: no reducir arbitrariamente una ilustración compleja.
-- Sobre fondos oscuros, verificar que los rasgos Ink no se pierdan. Preferir un contenedor claro o el conjunto símbolo + nombre claro; el símbolo tricolor no equivale a una versión inversa optimizada.
+- **Escala entera**: 30 × 23, 60 × 46, 90 × 69, 120 × 92… A escalas no enteras los bloques quedan desiguales. El ×1,5 queda descartado: solo es exacto en pantallas 2×.
+- **Tamaños pequeños**: por debajo de 30 px de ancho, usar la versión de 16 × 16 ([gatopago-16.svg](../02-logos/simbolo/gatopago-16.svg)) o los favicons dedicados. No reducir la versión completa.
+- **Encuadre**: mantener proporciones y usar `object-fit: contain`, no `cover`. No cortar orejas, bigotes ni contorno.
+- **Sin efectos**: no añadir resplandor, volumen, rotación ni expresiones al símbolo. Las expresiones pertenecen al personaje.
+- **Área libre**: al menos 3 bloques (1/10 del ancho) alrededor del símbolo o del lockup.
+- **Fondos oscuros**: el contorno Ink desaparece. Colocar el símbolo sobre un contenedor Milk; el símbolo tricolor no tiene versión inversa.
 
 ### Composición horizontal
 
-La landing compone el símbolo con texto vivo **GatoPago**: Recursive Variable, `MONO 0`, `CASL 1`, `wght 760`, tracking `-0.045em`, separación de 10 px y símbolo de 34 px. El catálogo incluye una muestra escalada de esta composición.
+El símbolo se compone con texto vivo **GatoPago**: Recursive Variable, `MONO 0`, `CASL 1`, `wght 760`, tracking `-0.045em` y separación de 10 px. En navegación, el símbolo va a ×1 (30 × 23 px) o ×2 (60 × 46 px), según la altura de la barra. El catálogo incluye la composición a tamaño de navegación y sobre fondo oscuro con contenedor Milk.
 
 No se ha encontrado un wordmark vectorial trazado independiente ni se entrega uno inventado. Si un proveedor requiere curvas para impresión, hay que exportarlo desde una herramienta de diseño y aprobar visualmente el resultado. Las familias alternativas mencionadas durante la exploración no forman parte del kit vigente.
 
@@ -75,7 +74,9 @@ No aplicar el interlineado de los titulares a párrafos o instrucciones. En cifr
 
 Ilustración de personaje separada del logo. Preservar el pixel art; no sustituirlo por emojis, gatos de otro estilo o iconografía bancaria genérica. `image-rendering: pixelated` es apropiado para sprites; no para fotografías ni tipografía.
 
-El damero del catálogo indica transparencia y no forma parte de los archivos. Los originales, previews y capturas se conservan byte a byte. Si un original tiene color de fondo, esta entrega no lo elimina automáticamente.
+El personaje es pixel art real: un color por bloque, [paleta cerrada](../03-mascota/modelo/paleta.json), contorno de tinta continuo y escalado solo por múltiplos enteros (el SVG escala sin pérdida). Las cabezas frontales comparten silueta; las expresiones cambian ojos, boca y orejas, no el modelo. Lienzos, construcción y reglas de todo el arte nuevo: [especificación del personaje](../03-mascota/ESPECIFICACION.md).
+
+El damero del catálogo indica transparencia y no forma parte de los archivos. Los originales de `06-originales` se conservan byte a byte como referencia; si un original tiene color de fondo, esta entrega no lo elimina automáticamente.
 
 ## Diferencias con los planes anteriores
 

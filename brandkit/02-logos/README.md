@@ -1,19 +1,40 @@
 # Logos e iconos
 
-Edición 2026-09-24 · Copias de archivos existentes, sin redibujar.
+Edición 2026-09-25 · Símbolo reconstruido como pixel art; favicons generados desde el símbolo.
 
 | Carpeta | Entrega | Uso |
 |---|---|---|
-| `simbolo/` | [gatopago.svg](./simbolo/gatopago.svg) | Cabeza vectorial principal, 64 × 64, tres colores, fondo transparente |
-| `iconos-web/` | SVG, ICO, PNG 16/32/48 y Apple touch icon de la landing | Identidad del sitio, con formatos dedicados |
-| `pwa/` | PNG 192/512, Apple touch icon y manifiesto de la app | Snapshot de instalación de la aplicación |
+| `modelo/` | [simbolo.txt](./modelo/simbolo.txt) (30 × 23) y [simbolo-16.txt](./modelo/simbolo-16.txt) (16 × 16) | **Fuente editable**. Un carácter por bloque: `#` Ink, `o` Cat Fire, `s` Cat Shadow, `.` transparente |
+| `simbolo/` | [gatopago.svg](./simbolo/gatopago.svg), [gatopago-16.svg](./simbolo/gatopago-16.svg), [gatopago.png](./simbolo/gatopago.png) (×8) | Símbolo principal, fondo transparente |
+| `iconos-web/` | `favicon.svg`, `favicon.ico` (16/32/48), PNG 16/32/48 y `apple-touch-icon.png` | Identidad del sitio |
+| `pwa/` | PNG 192/512, Apple touch icon y manifiesto de la app | Snapshot de instalación de la aplicación (pendiente de rehacer) |
 
-**No todos son intercambiables.** Un icono de instalación puede tener un fondo deliberado; no usarlo como si fuera el símbolo transparente. Conservar los archivos SVG para escalar sin pérdida.
+## El símbolo
 
-La composición horizontal combina símbolo y texto vivo Recursive. Está representada en [el catálogo](../index.html#logo), con las especificaciones en [el sistema visual](../01-manual/sistema-visual.md). No se entrega como un wordmark vectorial trazado inexistente.
+Es la cabeza del personaje original reconstruida sobre su rejilla real: 30 × 23 bloques, tres colores de marca, simétrica. Sustituye al símbolo plano anterior, que se descartó.
 
-No recortar, estirar ni eliminar fondos automáticamente. Para fondos oscuros, comprobar la silueta Ink y preferir un contenedor claro cuando haga falta. Este kit no declara que el símbolo tricolor sea una versión inversa o monocromática.
+- **Escala**: siempre a múltiplos enteros para que cada bloque quede nítido: 30 × 23, 60 × 46, 90 × 69, 120 × 92… En navegación, ×1 o ×2. El ×1,5 queda descartado: solo es exacto en pantallas 2×.
+- **Lienzo**: 32 × 32 con la cabeza en (1, 4), igual que el favicon de 32 px. Detalle en la [especificación del personaje](../03-mascota/ESPECIFICACION.md#3-lienzos).
+- **Tamaños pequeños**: por debajo de 30 px de ancho, usar la versión de 16 × 16. Mantiene orejas, ojos, nariz, boca y bigotes, sin rayas ni sombras.
+- **Área libre**: al menos 3 bloques alrededor (1/10 del ancho).
+- **Fondos oscuros**: el contorno Ink se pierde. Colocar el símbolo sobre un contenedor Milk.
+- **No** rotar, estirar, añadir resplandor ni cambiar la expresión: las expresiones pertenecen al personaje, no al logo.
 
-El manifiesto PWA conserva sus rutas de aplicación: sirve de referencia y no debe instalarse desde esta carpeta. Los iconos no se han regenerado ni redeplegado.
+## Favicons
 
-`pwa/` es el snapshot canónico versionado para el kit. Solo se refresca desde la app cuando se indica explícitamente `--app-dir`; un build normal no necesita otro repositorio.
+Los genera `npm run brandkit:build` desde los mapas; no se editan a mano.
+
+| Archivo | Contenido |
+|---|---|
+| `favicon-16x16.png` | Versión 16 × 16 a 1 píxel por bloque |
+| `favicon-32x32.png` | Símbolo completo a 1 píxel por bloque, centrado |
+| `favicon-48x48.png` | Versión 16 × 16 a ×3 |
+| `favicon.ico` | Las tres anteriores en un solo archivo |
+| `favicon.svg` | Versión 16 × 16 en vector: nítida a 16, 32 y 48 px |
+| `apple-touch-icon.png` | 180 × 180, **opaco** sobre Milk, símbolo a ×4 centrado (iOS pinta de negro la transparencia) |
+
+La composición horizontal (símbolo + «GatoPago» en Recursive) es texto vivo y está en [el catálogo](../index.html#logo), con las reglas en [el sistema visual](../01-manual/sistema-visual.md).
+
+## PWA
+
+`pwa/` sigue siendo el snapshot de la app: la cabeza original, transparente y ligeramente descentrada. Su manifiesto conserva las rutas de la aplicación; sirve de referencia y no debe instalarse desde esta carpeta. Solo se refresca desde la app con `--app-dir`. La versión nueva (fondo Milk, iconos `maskable`, símbolo centrado) está pendiente.

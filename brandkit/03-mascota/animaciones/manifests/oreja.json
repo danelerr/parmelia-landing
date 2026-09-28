@@ -1,199 +1,75 @@
 {
+  "schemaVersion": 2,
   "id": "oreja",
   "name": "Oreja",
-  "frameCount": 4,
-  "canvas": {
-    "width": 320,
-    "height": 256
-  },
-  "anchor": {
-    "x": 160,
-    "y": 244
-  },
+  "purpose": "Reposo; reacción mínima a una notificación",
   "playback": "loop",
-  "totalDurationMs": 1270,
-  "sourceSheet": 1,
   "note": "",
-  "repairsApplied": [],
+  "grid": {
+    "unit": "block",
+    "canvas": {
+      "width": 48,
+      "height": 44
+    },
+    "anchor": {
+      "x": 24,
+      "y": 42
+    }
+  },
+  "export": {
+    "scale": 8,
+    "canvas": {
+      "width": 384,
+      "height": 352
+    },
+    "anchor": {
+      "x": 196,
+      "y": 344
+    },
+    "previewScale": 4
+  },
+  "frameCount": 6,
+  "totalDurationMs": 2590,
   "strip": "../spritesheets/oreja-strip.png",
-  "grid": "../spritesheets/oreja-grid.png",
+  "gridSheet": "../spritesheets/oreja-grid.png",
   "preview": "../previews/oreja.webp",
+  "previewGif": "../previews/oreja.gif",
   "frames": [
     {
-      "sourceRect": {
-        "x": 280,
-        "y": 220,
-        "width": 240,
-        "height": 205
-      },
-      "sourceAnchor": {
-        "x": 396.0,
-        "baselineY": 410
-      },
-      "destinationOffset": {
-        "x": 44,
-        "y": 54
-      },
-      "contentBox": [
-        70,
-        77,
-        252,
-        245
-      ],
-      "edgePixels": {
-        "left": 0,
-        "right": 0,
-        "top": 0,
-        "bottom": 0
-      },
       "index": 0,
-      "durationMs": 850,
       "file": "../frames/oreja/frame-001.png",
-      "finalProvenance": "raw-frame-001",
-      "finalContentBox": [
-        70,
-        77,
-        252,
-        245
-      ],
-      "outputEdgePixels": {
-        "left": 0,
-        "right": 0,
-        "top": 0,
-        "bottom": 0
-      }
+      "file1x": "../frames-1x/oreja/frame-001.png",
+      "durationMs": 1400
     },
     {
-      "sourceRect": {
-        "x": 520,
-        "y": 220,
-        "width": 252,
-        "height": 205
-      },
-      "sourceAnchor": {
-        "x": 653.0,
-        "baselineY": 410
-      },
-      "destinationOffset": {
-        "x": 27,
-        "y": 54
-      },
-      "contentBox": [
-        61,
-        78,
-        246,
-        245
-      ],
-      "edgePixels": {
-        "left": 0,
-        "right": 0,
-        "top": 0,
-        "bottom": 0
-      },
       "index": 1,
-      "durationMs": 120,
       "file": "../frames/oreja/frame-002.png",
-      "finalProvenance": "raw-frame-002",
-      "finalContentBox": [
-        61,
-        78,
-        246,
-        245
-      ],
-      "outputEdgePixels": {
-        "left": 0,
-        "right": 0,
-        "top": 0,
-        "bottom": 0
-      }
+      "file1x": "../frames-1x/oreja/frame-002.png",
+      "durationMs": 70
     },
     {
-      "sourceRect": {
-        "x": 772,
-        "y": 220,
-        "width": 256,
-        "height": 205
-      },
-      "sourceAnchor": {
-        "x": 908.0,
-        "baselineY": 410
-      },
-      "destinationOffset": {
-        "x": 24,
-        "y": 54
-      },
-      "contentBox": [
-        58,
-        93,
-        250,
-        245
-      ],
-      "edgePixels": {
-        "left": 0,
-        "right": 0,
-        "top": 0,
-        "bottom": 0
-      },
       "index": 2,
-      "durationMs": 120,
       "file": "../frames/oreja/frame-003.png",
-      "finalProvenance": "raw-frame-003",
-      "finalContentBox": [
-        58,
-        93,
-        250,
-        245
-      ],
-      "outputEdgePixels": {
-        "left": 0,
-        "right": 0,
-        "top": 0,
-        "bottom": 0
-      }
+      "file1x": "../frames-1x/oreja/frame-003.png",
+      "durationMs": 60
     },
     {
-      "sourceRect": {
-        "x": 1028,
-        "y": 220,
-        "width": 242,
-        "height": 205
-      },
-      "sourceAnchor": {
-        "x": 1150.0,
-        "baselineY": 410
-      },
-      "destinationOffset": {
-        "x": 38,
-        "y": 54
-      },
-      "contentBox": [
-        69,
-        77,
-        253,
-        245
-      ],
-      "edgePixels": {
-        "left": 0,
-        "right": 0,
-        "top": 0,
-        "bottom": 0
-      },
       "index": 3,
-      "durationMs": 180,
       "file": "../frames/oreja/frame-004.png",
-      "finalProvenance": "raw-frame-004",
-      "finalContentBox": [
-        69,
-        77,
-        253,
-        245
-      ],
-      "outputEdgePixels": {
-        "left": 0,
-        "right": 0,
-        "top": 0,
-        "bottom": 0
-      }
+      "file1x": "../frames-1x/oreja/frame-004.png",
+      "durationMs": 90
+    },
+    {
+      "index": 4,
+      "file": "../frames/oreja/frame-005.png",
+      "file1x": "../frames-1x/oreja/frame-005.png",
+      "durationMs": 70
+    },
+    {
+      "index": 5,
+      "file": "../frames/oreja/frame-006.png",
+      "file1x": "../frames-1x/oreja/frame-006.png",
+      "durationMs": 900
     }
   ]
 }

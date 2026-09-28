@@ -1,6 +1,6 @@
 # Movimiento y componentes
 
-Edición 2026-09-24 · Guía de uso. No se modifican componentes de la app en esta entrega.
+Edición 2026-09-25 · Guía de uso. No se modifican componentes de la app en esta entrega.
 
 ## Botones
 
@@ -62,17 +62,15 @@ Una sola animación ambiental importante por pantalla. El personaje acompaña, n
 
 ## Entrega de movimiento
 
-Se incluyen **20 secuencias / 152 PNG** con canvas 320 × 256 y ancla (160, 244), además de spritesheets, previews WebP y manifiestos por secuencia. Los tiempos individuales y el modo `loop`/`once` se leen del manifiesto; no imponer un FPS universal.
+Se incluyen **20 secuencias / 166 frames** de pixel art sobre un lienzo común de 48 × 44 bloques (384 × 352 px a ×8) con el apoyo en (24, 42). Es la edición 2026-09-25: el arte nuevo usa el lienzo de 144 × 96 de la [especificación del personaje](../03-mascota/ESPECIFICACION.md). Se entregan además frames ×1, spritesheets, previews WebP/GIF y manifiestos por secuencia. Los tiempos individuales y el modo `loop`/`once` se leen del manifiesto; no imponer un FPS universal. Detalle en [animaciones](../03-mascota/animaciones/README.md).
 
-La carpeta `animaciones/qa/raw-problem-sequences/` preserva material problemático previo como comparación. No utilizarlo en producción. Los frames seleccionados están en `animaciones/frames/`.
-
-QA y herramientas permanecen únicamente en la carpeta de trabajo versionada. El comando `npm run brandkit:zip` los excluye del ZIP de entrega.
+Todas las secuencias usan las mismas piezas del personaje, así que el gato no cambia de modelo entre frames ni entre animaciones. La carpeta `03-mascota/qa/` guarda hojas de revisión y la comparación con el paquete anterior generado con IA; el ZIP de entrega la excluye.
 
 **Los WebP de previsualización repiten en bucle para facilitar la revisión**, incluso en secuencias cuyo manifiesto indica `once`. Para respetar la reproducción única en producto, usar los frames y su manifiesto o controlar expresamente la reproducción. No insertar el WebP en un resultado de pago suponiendo que se detendrá solo.
 
 El catálogo muestra el primer frame quieto y exige una acción para reproducir. Detiene la animación anterior al activar otra y al ocultar la pestaña. En producto, respetar `prefers-reduced-motion`, proporcionar estado textual y mantener una alternativa estática.
 
-Esta entrega comprueba integridad y estructura; no vuelve a corregir anatomía ni asegura que todas las secuencias hayan sido aprobadas artísticamente. Antes de integrar, revisar en especial continuidad de cola, siesta, asomarse, reparación y swap en su contexto final.
+El control automático cubre paleta, contorno, fragmentos, lienzo, apoyo y tiempos. La aprobación artística es humana: antes de integrar, revisar cada secuencia en su contexto final y a su tamaño real.
 
 ## Descargas y PWA
 

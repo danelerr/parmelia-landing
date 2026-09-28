@@ -1,4 +1,4 @@
-/** Build a deterministic delivery ZIP, excluding internal QA and processing tools. */
+/** Build a deterministic delivery ZIP, excluding the internal QA sheets. */
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import crypto from 'node:crypto';
@@ -12,7 +12,7 @@ const kit = path.join(root,'brandkit');
 const checked = await verifyKit(kit);
 if(checked.failures.length) throw new Error(`Run brandkit:build first:\n${checked.failures.join('\n')}`);
 const manifest = JSON.parse(await fs.readFile(path.join(kit,'manifest.json'),'utf8'));
-const excluded = ['03-mascota/animaciones/qa/','03-mascota/animaciones/tools/'];
+const excluded = ['03-mascota/qa/'];
 const included = manifest.files.filter(row=>!excluded.some(prefix=>row.path.startsWith(prefix)));
 const work = await fs.mkdtemp(path.join(root,'.brandkit-work-'));
 try {

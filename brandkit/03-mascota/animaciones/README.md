@@ -1,91 +1,45 @@
-# Meli Animation Kit — entrega procesada
+# Animaciones del personaje
 
-Fecha: 19 de agosto de 2026  
-Estado: paquete de recursos únicamente; no integrado en la landing ni en la app.
+Edición 2026-09-25 · Paquete de recursos. No está integrado en la landing ni en la app.
 
-Esta carpeta es la fuente oficial versionada de las animaciones procesadas. El build del kit la conserva y no lee una copia externa en `output/`. `qa/` y `tools/` son internos: permanecen en Git, pero `npm run brandkit:zip` los excluye del paquete de entrega.
+## Qué cambió
 
-## Resultado
+Las 20 animaciones anteriores se recortaron de hojas generadas con IA, con los problemas que eso trae: colas duplicadas, rasgos que cambian entre frames, trozos de otros frames, un frame sin gato, escala distinta en cada secuencia y bordes borrosos. **Ya no se usan.**
 
-- 20 animaciones.
-- 152 frames finales.
-- PNG RGBA individuales con fondo transparente.
-- Lienzo común de `320 × 256 px`.
-- Ancla lógica común en `x: 160`, `y: 244`.
-- Spritesheet horizontal y grilla PNG por animación.
-- Vista previa WebP lossless por animación.
-- Manifiesto JSON general y manifiesto por animación.
-- Láminas numeradas para revisión visual.
+Cada frame se compone con las piezas limpias de la edición 2026-09-25 ([piezas-v1](./piezas-v1/README.md)). Esas piezas usan el lienzo anterior: estas animaciones se rehacen en 144 × 96 con el [modelo vigente](../modelo/README.md), según la [especificación del personaje](../ESPECIFICACION.md). Los movimientos son de bloque entero, y las piezas nuevas se dibujaron a mano: brazo alzado, zarpas, oreja girada, patas del ciclo de paso, accesorios. El gato es idéntico en todas las secuencias.
 
-No se redimensionaron ni regeneraron los dibujos. Los píxeles visibles y el canal alfa provienen de las cinco láminas entregadas, salvo las correcciones deterministas descritas abajo.
+## Formato
 
-## Correcciones realizadas
+- **Lienzo común** de 48 × 44 bloques, con el apoyo en el bloque (24, 42): los pies de todas las poses descansan sobre la misma línea.
+- `frames/<id>/frame-NNN.png`: ×8, 384 × 352 px, RGBA.
+- `frames-1x/<id>/frame-NNN.png`: 48 × 44 px, para motores que escalan por su cuenta con `nearest`/`pixelated`.
+- `spritesheets/<id>-strip.png` y `<id>-grid.png`: tira horizontal y cuadrícula de 4 columnas, a ×8.
+- `previews/<id>.webp` y `.gif`: a ×4. **Siempre en bucle, para revisión**, aunque el uso previsto sea «una vez».
+- `manifests/<id>.json`: tiempos por frame, `playback` (`loop` u `once`), uso previsto, lienzo, apoyo y rutas. `manifest.json` resume las 20 secuencias y la procedencia.
 
-### Cola
+No imponer un FPS fijo: cada frame tiene su duración. Para respetar `once`, reproducir los frames según el manifiesto; no dejar un WebP en bucle en una pantalla de resultado.
 
-La fila original contenía una segunda forma de cola en los frames 2–7. Se sustituyó por la secuencia sentada limpia incluida en la primera lámina. Sigue teniendo ocho frames y utiliza exclusivamente arte suministrado.
+## Secuencias
 
-### Siesta
+| ID | Uso | Reproducción |
+|---|---|---|
+| parpadeo, ojos, oreja, idle-sentada, cola | Reposo, bienvenida, espera amable | bucle |
+| saludo | Bienvenida | una vez |
+| asomarse | Descubrimiento | bucle |
+| salto-feliz, comprobante, swap | Resultado confirmado | una vez |
+| meti-la-pata, reparar-rail | Error recuperable, siempre con texto claro | una vez |
+| caminata, preparando-pago | En curso; no indica llegada | bucle |
+| siesta | Inactividad sin operación en curso | bucle |
+| card, creciendo, linterna, seguridad | Ilustración de concepto; no acredita disponibilidad, rentabilidad ni auditoría | según manifiesto |
+| mantenimiento | Pantalla de excepción | bucle |
 
-Se amplió el área de extracción para recuperar las `Z` completas. El último frame, cuya cabeza y orejas cambiaban de modelo, se reemplazó por el cierre neutral del ciclo.
+## Control de calidad
 
-### Asomarse
+`npm run brandkit:mascota` rechaza cualquier frame que:
 
-Se eliminó el residuo del rótulo. La secuencia se reordenó para que Meli aparezca, mire y vuelva a esconderse. Se descartaron el ojo blanco y la pose que rompía el modelo del personaje.
+- use colores fuera de la paleta o píxeles semitransparentes;
+- tenga el contorno abierto;
+- esté vacío o toque el borde del lienzo;
+- no coincida con su preview en número de frames y tiempos.
 
-### Reparar rail
-
-Meli desaparecía durante el frame de chispas. Ese momento combina los frames originales 8 y 9 para conservar a Meli observando la reparación, sin redibujarla.
-
-### Swap
-
-El glifo azul parecido al de una plataforma social se sustituyó por un símbolo de dólar pixelado y neutral. El bloque, sus colores, flechas y movimientos originales se conservaron.
-
-## Estructura
-
-```text
-frames/<animacion>/frame-001.png
-spritesheets/<animacion>-strip.png
-spritesheets/<animacion>-grid.png
-previews/<animacion>.webp
-manifests/<animacion>.json
-qa/<animacion>-numbered.png
-qa/raw-problem-sequences/*.png
-manifest.json
-```
-
-Las láminas ubicadas en `qa/raw-problem-sequences` muestran la separación anterior a las cinco correcciones. Sirven para comparar el material original con la entrega final.
-
-## Animaciones
-
-| ID | Frames | Reproducción |
-|---|---:|---|
-| parpadeo | 4 | loop |
-| oreja | 4 | loop |
-| ojos | 6 | loop |
-| idle-sentada | 8 | loop |
-| cola | 8 | loop |
-| siesta | 8 | loop |
-| asomarse | 8 | loop |
-| meti-la-pata | 6 | una vez |
-| salto-feliz | 8 | una vez |
-| caminata | 6 | loop |
-| preparando-pago | 8 | loop |
-| comprobante | 8 | una vez |
-| reparar-rail | 10 | una vez |
-| swap | 10 | una vez |
-| creciendo | 10 | loop |
-| card | 8 | una vez |
-| linterna | 8 | loop |
-| saludo | 6 | una vez |
-| mantenimiento | 10 | loop |
-| seguridad | 8 | loop |
-
-## Validación
-
-El reporte `qa/edge-pixel-report.json` distingue dos casos:
-
-- Contacto con el límite de una celda en las láminas originales. Esto ocurre porque algunos destellos, rails y haces fueron dibujados muy cerca entre sí.
-- Contacto con el límite del lienzo final. La entrega debe registrar `0` en este segundo conteo; significa que ningún frame final quedó cortado por el lienzo normalizado.
-
-El script reproducible está en `tools/process_meli_frames.py`. Solo escribe dentro de esta carpeta de entrega y no modifica los cinco originales ni archivos de la aplicación.
+`npm run brandkit:verify` comprueba además que cada ×8 sea un escalado exacto del ×1 y que cada estático coincida con su mapa. Las hojas de revisión, el informe y la comparación con el paquete anterior están en `03-mascota/qa/` (solo en el repositorio; el ZIP de entrega no la incluye). Abre `qa/comparacion.html` para ver cada estático junto a su original de la IA 1 y cada animación junto al material anterior (`qa/antes/`), reproduciéndose a la vez.

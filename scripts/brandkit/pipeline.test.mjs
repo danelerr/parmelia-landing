@@ -99,11 +99,30 @@ test('brandkit pipeline is self-contained and fail-safe', async t=>{
         assert.deepEqual(await inventory(kit),before);
       } finally { for(const [file,bytes] of originals) await fs.writeFile(file,bytes); }
     });
-    await t.test('delivery ZIP excludes QA and tools and verifies independently',async()=>{
+    await t.test('mascot art regenerates byte-identically from the pixel maps',async()=>{
+      const mascot=path.join(kit,'03-mascota');
+      const before=await inventory(mascot);
+      run('mascota/build.mjs');
+      assert.deepEqual(await inventory(mascot),before);
+    });
+    await t.test('a map edit that opens an outline is rejected by the mascot QA',async()=>{
+      const map=path.join(kit,'03-mascota/modelo/estaticos/body-sitting.txt');
+      const original=await fs.readFile(map,'utf8');
+      try {
+        const rendered=async()=>Object.fromEntries(Object.entries(await inventory(path.join(kit,'03-mascota'))).filter(([name])=>!name.startsWith('modelo/')));
+        const before=await rendered();
+        const rows=original.split('\n'); const y=rows.findIndex(r=>!r.startsWith(';')&&r.includes('#')); rows[y]=rows[y].replace('#','o');
+        await fs.writeFile(map,rows.join('\n'));
+        const result=run('mascota/build.mjs',[],1);
+        assert.match(result.stderr,/open outline/);
+        assert.deepEqual(await rendered(),before);
+      } finally { await fs.writeFile(map,original); run('mascota/build.mjs'); }
+    });
+    await t.test('delivery ZIP excludes QA and verifies independently',async()=>{
       const result=JSON.parse(run('package-brandkit.mjs').stdout);
       const zipped=await fs.readFile(result.zip);
       const entries=unzipSync(zipped);
-      assert.equal(Object.keys(entries).some(name=>/\/qa\/|raw-problem-sequences|\/tools\//.test(name)),false);
+      assert.equal(Object.keys(entries).some(name=>/\/qa\//.test(name)),false);
       const extracted=path.join(work,'extracted');
       await fs.mkdir(extracted);
       for(const [name,bytes] of Object.entries(entries)) {
@@ -114,12 +133,14 @@ test('brandkit pipeline is self-contained and fail-safe', async t=>{
       const verification=await verifyKit(path.join(extracted,'brandkit'));
       assert.deepEqual(verification.failures,[]);
       assert.equal(verification.profile,'delivery');
-      assert.equal(verification.frames,152);
+      const motion=JSON.parse(await fs.readFile(path.join(kit,'03-mascota/animaciones/manifest.json'),'utf8'));
+      assert.equal(verification.frames,motion.totalFrames);
+      assert.equal(verification.statics,14);
       run('package-brandkit.mjs');
       assert.equal(hash(await fs.readFile(result.zip)),hash(zipped));
     });
     await t.test('a failed ZIP validation does not overwrite the last good archive',async()=>{
-      const destination=path.join(fixture,'output/gatopago-brandkit-2026-09-24.zip');
+      const destination=path.join(fixture,'output/gatopago-brandkit-2026-09-25.zip');
       const before=hash(await fs.readFile(destination));
       const entry=path.join(kit,'README.md');
       const original=await fs.readFile(entry);

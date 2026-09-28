@@ -1,287 +1,87 @@
 {
+  "schemaVersion": 2,
   "id": "meti-la-pata",
   "name": "Metí la pata",
-  "frameCount": 6,
-  "canvas": {
-    "width": 320,
-    "height": 256
-  },
-  "anchor": {
-    "x": 160,
-    "y": 244
-  },
+  "purpose": "Error recuperable; acompaña un texto claro",
   "playback": "once",
-  "totalDurationMs": 900,
-  "sourceSheet": 2,
   "note": "",
-  "repairsApplied": [],
+  "grid": {
+    "unit": "block",
+    "canvas": {
+      "width": 48,
+      "height": 44
+    },
+    "anchor": {
+      "x": 24,
+      "y": 42
+    }
+  },
+  "export": {
+    "scale": 8,
+    "canvas": {
+      "width": 384,
+      "height": 352
+    },
+    "anchor": {
+      "x": 196,
+      "y": 344
+    },
+    "previewScale": 4
+  },
+  "frameCount": 8,
+  "totalDurationMs": 1470,
   "strip": "../spritesheets/meti-la-pata-strip.png",
-  "grid": "../spritesheets/meti-la-pata-grid.png",
+  "gridSheet": "../spritesheets/meti-la-pata-grid.png",
   "preview": "../previews/meti-la-pata.webp",
+  "previewGif": "../previews/meti-la-pata.gif",
   "frames": [
     {
-      "sourceRect": {
-        "x": 160,
-        "y": 728,
-        "width": 216,
-        "height": 197
-      },
-      "sourceAnchor": {
-        "x": 241.0,
-        "baselineY": 909
-      },
-      "destinationOffset": {
-        "x": 79,
-        "y": 63
-      },
-      "contentBox": [
-        79,
-        63,
-        257,
-        244
-      ],
-      "edgePixels": {
-        "left": 4,
-        "right": 0,
-        "top": 81,
-        "bottom": 0
-      },
       "index": 0,
-      "durationMs": 150,
       "file": "../frames/meti-la-pata/frame-001.png",
-      "finalProvenance": "raw-frame-001",
-      "finalContentBox": [
-        79,
-        63,
-        257,
-        244
-      ],
-      "outputEdgePixels": {
-        "left": 0,
-        "right": 0,
-        "top": 0,
-        "bottom": 0
-      }
+      "file1x": "../frames-1x/meti-la-pata/frame-001.png",
+      "durationMs": 160
     },
     {
-      "sourceRect": {
-        "x": 376,
-        "y": 728,
-        "width": 250,
-        "height": 197
-      },
-      "sourceAnchor": {
-        "x": 480.0,
-        "baselineY": 909
-      },
-      "destinationOffset": {
-        "x": 56,
-        "y": 63
-      },
-      "contentBox": [
-        95,
-        63,
-        265,
-        244
-      ],
-      "edgePixels": {
-        "left": 0,
-        "right": 0,
-        "top": 16,
-        "bottom": 0
-      },
       "index": 1,
-      "durationMs": 150,
       "file": "../frames/meti-la-pata/frame-002.png",
-      "finalProvenance": "raw-frame-002",
-      "finalContentBox": [
-        95,
-        63,
-        265,
-        244
-      ],
-      "outputEdgePixels": {
-        "left": 0,
-        "right": 0,
-        "top": 0,
-        "bottom": 0
-      }
+      "file1x": "../frames-1x/meti-la-pata/frame-002.png",
+      "durationMs": 180
     },
     {
-      "sourceRect": {
-        "x": 626,
-        "y": 728,
-        "width": 234,
-        "height": 197
-      },
-      "sourceAnchor": {
-        "x": 729.0,
-        "baselineY": 909
-      },
-      "destinationOffset": {
-        "x": 57,
-        "y": 63
-      },
-      "contentBox": [
-        98,
-        63,
-        253,
-        245
-      ],
-      "edgePixels": {
-        "left": 0,
-        "right": 0,
-        "top": 17,
-        "bottom": 0
-      },
       "index": 2,
-      "durationMs": 150,
       "file": "../frames/meti-la-pata/frame-003.png",
-      "finalProvenance": "raw-frame-003",
-      "finalContentBox": [
-        98,
-        63,
-        253,
-        245
-      ],
-      "outputEdgePixels": {
-        "left": 0,
-        "right": 0,
-        "top": 0,
-        "bottom": 0
-      }
+      "file1x": "../frames-1x/meti-la-pata/frame-003.png",
+      "durationMs": 90
     },
     {
-      "sourceRect": {
-        "x": 860,
-        "y": 728,
-        "width": 237,
-        "height": 197
-      },
-      "sourceAnchor": {
-        "x": 963.0,
-        "baselineY": 909
-      },
-      "destinationOffset": {
-        "x": 57,
-        "y": 63
-      },
-      "contentBox": [
-        97,
-        63,
-        260,
-        244
-      ],
-      "edgePixels": {
-        "left": 0,
-        "right": 0,
-        "top": 15,
-        "bottom": 0
-      },
       "index": 3,
-      "durationMs": 150,
       "file": "../frames/meti-la-pata/frame-004.png",
-      "finalProvenance": "raw-frame-004",
-      "finalContentBox": [
-        97,
-        63,
-        260,
-        244
-      ],
-      "outputEdgePixels": {
-        "left": 0,
-        "right": 0,
-        "top": 0,
-        "bottom": 0
-      }
+      "file1x": "../frames-1x/meti-la-pata/frame-004.png",
+      "durationMs": 90
     },
     {
-      "sourceRect": {
-        "x": 1097,
-        "y": 728,
-        "width": 233,
-        "height": 197
-      },
-      "sourceAnchor": {
-        "x": 1197.0,
-        "baselineY": 909
-      },
-      "destinationOffset": {
-        "x": 60,
-        "y": 63
-      },
-      "contentBox": [
-        95,
-        63,
-        257,
-        243
-      ],
-      "edgePixels": {
-        "left": 0,
-        "right": 0,
-        "top": 38,
-        "bottom": 0
-      },
       "index": 4,
-      "durationMs": 150,
       "file": "../frames/meti-la-pata/frame-005.png",
-      "finalProvenance": "raw-frame-005",
-      "finalContentBox": [
-        95,
-        63,
-        257,
-        243
-      ],
-      "outputEdgePixels": {
-        "left": 0,
-        "right": 0,
-        "top": 0,
-        "bottom": 0
-      }
+      "file1x": "../frames-1x/meti-la-pata/frame-005.png",
+      "durationMs": 90
     },
     {
-      "sourceRect": {
-        "x": 1330,
-        "y": 728,
-        "width": 230,
-        "height": 197
-      },
-      "sourceAnchor": {
-        "x": 1430.0,
-        "baselineY": 909
-      },
-      "destinationOffset": {
-        "x": 60,
-        "y": 63
-      },
-      "contentBox": [
-        97,
-        63,
-        266,
-        242
-      ],
-      "edgePixels": {
-        "left": 0,
-        "right": 0,
-        "top": 38,
-        "bottom": 0
-      },
       "index": 5,
-      "durationMs": 150,
       "file": "../frames/meti-la-pata/frame-006.png",
-      "finalProvenance": "raw-frame-006",
-      "finalContentBox": [
-        97,
-        63,
-        266,
-        242
-      ],
-      "outputEdgePixels": {
-        "left": 0,
-        "right": 0,
-        "top": 0,
-        "bottom": 0
-      }
+      "file1x": "../frames-1x/meti-la-pata/frame-006.png",
+      "durationMs": 260
+    },
+    {
+      "index": 6,
+      "file": "../frames/meti-la-pata/frame-007.png",
+      "file1x": "../frames-1x/meti-la-pata/frame-007.png",
+      "durationMs": 220
+    },
+    {
+      "index": 7,
+      "file": "../frames/meti-la-pata/frame-008.png",
+      "file1x": "../frames-1x/meti-la-pata/frame-008.png",
+      "durationMs": 380
     }
   ]
 }

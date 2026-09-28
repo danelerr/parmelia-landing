@@ -1,18 +1,18 @@
 # GatoPago · Brandkit
 
-Edición: 24 de septiembre de 2026. Estado: entrega local de identidad y recursos existentes.
+Edición: 25 de septiembre de 2026. Estado: entrega local de identidad. Los estáticos del personaje están dibujados según su [especificación](./03-mascota/ESPECIFICACION.md); las animaciones se rehacen después.
 
 **Empieza por [el catálogo visual](./index.html).** Ábrelo en un navegador: funciona sin conexión, carga las fuentes locales y permite explorar las ilustraciones y activar las animaciones de una en una.
 
-La marca pública es **GatoPago**. **Meli** es solamente el nombre interno del personaje. Este kit organiza la identidad vigente con los dominios `gatopago.com` y `app.gatopago.com`. No despliega nada ni crea nuevas variantes del gato. Las capturas de la interfaz anterior fueron retiradas.
+La marca pública es **GatoPago**. **Meli** es solamente el nombre interno del personaje. Este kit organiza la identidad vigente con los dominios `gatopago.com` y `app.gatopago.com`. No despliega nada. El gato no cambia de diseño: sus estáticos se reconstruyeron fielmente como pixel art limpio y sus animaciones se rehicieron con esas mismas piezas. Las capturas de la interfaz anterior fueron retiradas.
 
 ## Encuentra lo que necesitas
 
 | Carpeta | Contenido | Para qué usarla |
 |---|---|---|
 | [01-manual](./01-manual/identidad-y-voz.md) | Identidad, voz, sistema visual, componentes y mantenimiento | Diseñar y escribir con criterio consistente |
-| [02-logos](./02-logos/README.md) | Símbolo SVG, favicons e iconos PWA existentes | Firma de marca e identidad de instalación |
-| [03-mascota](./03-mascota/CATALOGO.md) | 14 estáticos, 20 secuencias, 152 frames, manifiestos y previews | Personaje y movimiento |
+| [02-logos](./02-logos/README.md) | Símbolo en pixel art (SVG y PNG, versión de 16 px, mapas editables), favicons generados e iconos PWA de la app | Firma de marca e identidad de instalación |
+| [03-mascota](./03-mascota/CATALOGO.md) | Pixel art: 14 estáticos (PNG, SVG, mapas editables), 20 secuencias, 166 frames, manifiestos y previews. **[Especificación del personaje](./03-mascota/ESPECIFICACION.md)**: lienzos y reglas para todo el arte nuevo | Personaje y movimiento |
 | [04-tipografia](./04-tipografia/README.md) | Recursive Variable, 4 WOFF2, CSS y licencia | Tipografía web local |
 | [05-colores](./05-colores/README.md) | HEX, RGB, CSS, JSON, CSV, GPL y contraste | Diseño e implementación |
 | [06-originales](./06-originales/README.md) | 8 imágenes fuente sin alteraciones | Conservación del arte original |
