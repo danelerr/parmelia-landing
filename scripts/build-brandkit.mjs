@@ -7,6 +7,9 @@ import sharp from 'sharp';
 import { appRoot, files, inside, removeWorkdir, slash } from './brandkit/paths.mjs';
 import { verifyKit } from './verify-brandkit.mjs';
 import { symbolFiles } from './brandkit/simbolo.mjs';
+import { characterGallery } from './brandkit/galeria-personaje.mjs';
+import { characterExports } from './brandkit/exportaciones-personaje.mjs';
+import { avatarFiles } from './brandkit/avatar.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const currentKit = path.join(root, 'brandkit');
@@ -14,7 +17,6 @@ let kit;
 const app = await appRoot();
 const provenance = new Map();
 const transforms = new Map();
-const escape = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function target(relative) {
   return inside(kit, relative);
 }
@@ -46,7 +48,7 @@ const required = [
   ...['src/styles/rebrand.css','src/styles/global.css','src/components/CatGlyph.astro','src/components/MeliSprite.astro','src/config/brand.ts','scripts/brandkit/catalogo.html'].map(name=>path.join(root,name)),
   ...originalNames.map(name=>path.join(currentKit,'06-originales',name)),
   ...pwaNames.map(name=>path.join(app ? path.join(app,'client/public') : path.join(currentKit,'02-logos/pwa'),name)),
-  ...['README.md','CONTROL-DE-CALIDAD.md','02-logos/modelo/simbolo.txt','02-logos/modelo/simbolo-16.txt','03-mascota/animaciones/manifest.json','03-mascota/modelo/paleta.json','04-tipografia/recursive/full.css','04-tipografia/recursive/LICENSE.txt'].map(name=>path.join(currentKit,name)),
+  ...['README.md','CONTROL-DE-CALIDAD.md','02-logos/modelo/simbolo.txt','02-logos/modelo/simbolo-16.txt','03-personaje/README.md','03-personaje/animaciones/manifest.json','04-tipografia/recursive/full.css','04-tipografia/recursive/LICENSE.txt'].map(name=>path.join(currentKit,name)),
 ];
 const missing = [];
 for(const file of required) {
@@ -55,7 +57,7 @@ for(const file of required) {
 if(missing.length) throw new Error(`Preflight failed; kit was not modified. Missing files:\n${missing.join('\n')}`);
 if((await fs.lstat(currentKit)).isSymbolicLink()) throw new Error('The canonical kit cannot be a symlink');
 await files(currentKit); // Reject symbolic links before copying or replacing the directory.
-for(const dir of ['03-mascota/modelo/estaticos','03-mascota/estaticos','03-mascota/animaciones/frames','03-mascota/animaciones/manifests','03-mascota/animaciones/previews','03-mascota/animaciones/spritesheets','04-tipografia/recursive/files']) await files(path.join(currentKit,dir));
+await files(path.join(currentKit,'04-tipografia/recursive/files'));
 const fontCssPreflight = await fs.readFile(path.join(currentKit,'04-tipografia/recursive/full.css'),'utf8');
 for(const match of fontCssPreflight.matchAll(/url\(\.\/([^)]*)\)/g)) await fs.access(inside(path.join(currentKit,'04-tipografia/recursive'),match[1]));
 
@@ -84,8 +86,13 @@ for (const [relative, bytes] of Object.entries(await symbolFiles(
 if (app) for (const name of pwaNames) {
   await copy(path.join(app, 'client/public', name), `02-logos/pwa/${name}`, `app/client/public/${name}`);
 }
-// The mascot (maps, statics, animations), PWA defaults, originals and licensed font files are canonical in Git.
-// Mascot art is regenerated from 03-mascota/modelo with `npm run brandkit:mascota`, never copied from the landing.
+// PWA defaults, originals, the character brief and licensed font files are canonical in Git.
+// descartado/ keeps retired work (the 2026-09 mascot); it is inventoried but never shipped in the delivery ZIP.
+const character = JSON.parse(await fs.readFile(target('03-personaje/animaciones/manifest.json'), 'utf8'));
+const exports = await characterExports(kit,character);
+const avatar = await avatarFiles(await fs.readFile(target('02-logos/modelo/simbolo.txt'),'utf8'));
+for(const [file,bytes] of Object.entries(avatar.files)) await write(file,bytes);
+await write('03-personaje/galeria.html', characterGallery(character,exports,avatar.manifest));
 await write('04-tipografia/uso.css', `@import url('./recursive/full.css');
 .gp-linear { font-family: 'Recursive Variable', sans-serif; font-variation-settings: 'MONO' 0, 'CASL' 0, 'slnt' 0, 'CRSV' .5; }
 .gp-casual { font-family: 'Recursive Variable', sans-serif; font-variation-settings: 'MONO' 0, 'CASL' 1, 'slnt' 0, 'CRSV' .5; }
@@ -115,24 +122,9 @@ const contrast = pairs.map(([fg,bg])=> { const a=luminance(color(fg).rgb), b=lum
 await write('05-colores/contraste.json', JSON.stringify(contrast,null,2)+'\n');
 await write('05-colores/README.md', `# Paleta de GatoPago\n\nSnapshot sRGB extraído del CSS de la landing. Los colores semánticos identifican estados; no son acentos intercambiables.\n\n| Token | HEX | RGB |\n|---|---|---|\n${colors.map(c=>`| ${c.name} | ${c.hex} | ${c.rgb.join(', ')} |`).join('\n')}\n\n## Contraste calculado\n\n| Texto / fondo | Ratio | AA texto normal |\n|---|---:|---|\n${contrast.map(c=>`| ${c.foreground} / ${c.background} | ${c.ratio}:1 | ${c.normalTextAA?'Sí':'No'} |`).join('\n')}\n\nCSS y JSON incluyen los tokens literales existentes; CSV y GPL facilitan importar la paleta. No son colores Pantone ni una conversión CMYK aprobada para imprenta.\n`);
 
-const sprites = (await fs.readdir(target('03-mascota/estaticos'))).filter(f=>f.endsWith('.png') && !f.includes('-oscuro')).sort();
-const motion = JSON.parse(await fs.readFile(target('03-mascota/animaciones/manifest.json'), 'utf8'));
-const animations = [];
-for (const name of (await fs.readdir(target('03-mascota/animaciones/manifests'))).filter(f=>f.endsWith('.json')).sort()) {
-  animations.push(JSON.parse(await fs.readFile(target(`03-mascota/animaciones/manifests/${name}`), 'utf8')));
-}
-const roles = {'head-neutral':'Referencia de expresión neutral','head-happy':'Éxito discreto','head-focused':'Atención y verificación','head-cautious':'Advertencia recuperable','head-curious':'Ayuda y exploración','head-excited':'Celebración breve','head-sleepy':'Espera tranquila','head-peek':'Descubrimiento','body-sitting':'Bienvenida y estados vacíos','body-courier':'Envío y movimiento','body-sleeping':'Inactividad','body-qr':'Cobro y recepción; QR ilustrativo','body-conveyor':'Procesamiento','body-peek-card':'Tarjeta conceptual'};
-const cellsOf = async f => { const m = await sharp(await fs.readFile(target(`03-mascota/estaticos/1x/${f}`))).metadata(); return `${m.width} × ${m.height}`; };
-const spriteRows = [];
-for (const f of sprites) { const n=f.replace('.png',''); spriteRows.push(`| ${n} | ${roles[n]} | ${await cellsOf(f)} | [×1](./estaticos/1x/${f}) · [×4](./estaticos/4x/${f}) · [×8](./estaticos/${f}) · [SVG](./estaticos/svg/${n}.svg) · [mapa](./modelo/estaticos/${n}.txt) | [×4](./estaticos/4x/${n}-oscuro.png) · [SVG](./estaticos/svg/${n}-oscuro.svg) |`); }
-await write('03-mascota/CATALOGO.md', `# Catálogo del personaje\n\nNombre interno: Meli. El nombre público es GatoPago. Las expresiones no son variantes del logo.\n\nPixel art sobre cuadrícula real: cada bloque es un píxel del mapa en [modelo](./modelo/README.md). Los estáticos siguen la [especificación del personaje](./ESPECIFICACION.md): el diseño original de la IA 1 a doble resolución, con cabezas en 64 × 64 y poses en 96 × 96. PNG ×1, ×4 y ×8, SVG y la versión para fondos oscuros (borde Milk) se generan a partir de los mapas con \`npm run brandkit:mascota\`.\n\n## Estáticos\n\n| Pieza | Uso | Bloques | Archivos | Fondo oscuro |\n|---|---|---:|---|---|\n${spriteRows.join('\n')}\n\n## Animación\n\n${motion.animationCount} secuencias · ${motion.totalFrames} frames · lienzo ${motion.grid.canvas.width} × ${motion.grid.canvas.height} bloques (${motion.export.canvas.width} × ${motion.export.canvas.height} px a ×${motion.export.scale}) · apoyo común en (${motion.grid.anchor.x}, ${motion.grid.anchor.y}). No implica que estén integradas en la app.\n\n| Ciclo | Uso | Frames | Duración | Reproducción |\n|---|---|---:|---:|---|\n${animations.map(a=>`| [${a.name}](./animaciones/previews/${a.id}.webp) | ${a.purpose} | ${a.frameCount} | ${a.totalDurationMs} ms | ${a.playback === 'loop' ? 'bucle' : 'una vez'} |`).join('\n')}\n\nCada manifiesto define tiempos por frame, apoyo y rutas. No reproducir con un FPS fijo. Las previews repiten en bucle para revisión aunque el uso previsto sea «una vez». La carpeta \`qa/\` (solo en el repositorio; no viaja en el ZIP de entrega) contiene hojas de revisión y la comparación con el material anterior; no son assets de producto.\n`);
-
 const template = (await fs.readFile(path.join(root, 'scripts/brandkit/catalogo.html'), 'utf8')).replace(/\r\n/g,'\n');
 const colorHtml = colors.map(c=>`<article class="swatch"><div style="background:${c.hex}"></div><h3>${c.name}</h3><code>${c.hex}</code><small>RGB ${c.rgb.join(' · ')}</small></article>`).join('');
-const spriteHtml = sprites.map(f=>{const n=f.replace('.png','');const k=n.startsWith('head-')?'kcab':'kpose';return `<article class="asset"><div class="art checker"><img class="${k}" src="03-mascota/estaticos/${f}" alt="${escape(roles[n])}" loading="lazy"></div><h3>${n}</h3><p>${roles[n]}</p><a href="03-mascota/estaticos/${f}" download>PNG ↗</a> · <a href="03-mascota/estaticos/svg/${n}.svg" download>SVG ↗</a> · <a href="03-mascota/estaticos/${n}-oscuro.png" download>Oscuro ↗</a></article>`;}).join('');
-const animationHtml = animations.map(a=>`<article class="asset"><div class="art checker"><img class="anim" src="03-mascota/animaciones/frames/${a.id}/frame-001.png" data-static="03-mascota/animaciones/frames/${a.id}/frame-001.png" data-animated="03-mascota/animaciones/previews/${a.id}.webp" alt="${escape(a.name)}" loading="lazy"></div><h3>${escape(a.name)}</h3><p>${a.frameCount} frames · ${a.totalDurationMs} ms · ${a.playback==='loop'?'ciclo':'uso: una vez; preview en ciclo'}</p><button class="play" type="button" aria-pressed="false">Reproducir</button> <a href="03-mascota/animaciones/manifests/${a.id}.json">Manifiesto ↗</a></article>`).join('');
-await write('index.html', template.replace('<!-- COLORS -->',colorHtml).replace('<!-- SPRITES -->',spriteHtml).replace('<!-- ANIMATIONS -->',animationHtml)
-  .replace('<!-- STAT_SPRITES -->', String(sprites.length)).replace('<!-- STAT_ANIMATIONS -->', String(motion.animationCount)).replace('<!-- STAT_FRAMES -->', String(motion.totalFrames)));
+await write('index.html', template.replace('<!-- COLORS -->',colorHtml).replace('<!-- STAT_COLORS -->', String(colors.length).padStart(2,'0')));
 
 // Inventory every deliverable, including hashes and actual image metadata.
 const inventory = [];
@@ -140,7 +132,7 @@ for (const file of await files(kit)) {
   const relative = slash(path.relative(kit,file));
   if (['manifest.json','CONTROL-DE-CALIDAD.md'].includes(relative)) continue;
   const buffer = await fs.readFile(file);
-  const canonical = ['02-logos/modelo/','02-logos/pwa/','03-mascota/','04-tipografia/recursive/','06-originales/'].some(prefix=>relative.startsWith(prefix)) && relative !== '03-mascota/CATALOGO.md';
+  const canonical = ['02-logos/modelo/','02-logos/pwa/','03-personaje/','04-tipografia/recursive/','06-originales/','descartado/'].some(prefix=>relative.startsWith(prefix));
   const row = {path:relative,bytes:buffer.length,sha256:crypto.createHash('sha256').update(buffer).digest('hex'),source:canonical?'brandkit canonical':provenance.get(relative)||'brandkit editorial / generated'};
   if(transforms.has(relative)) row.transform=transforms.get(relative);
   if (/\.(png|webp|jpg|svg)$/i.test(file)) {
@@ -149,7 +141,7 @@ for (const file of await files(kit)) {
   }
   inventory.push(row);
 }
-await write('manifest.json', JSON.stringify({schemaVersion:2,profile:'repository',brand:'GatoPago',edition:'2026-09-25',copyPolicy:'Raster images from other sources are copied byte-for-byte; derived text and SVG snapshots use LF. Mascot art is generated from the canonical pixel maps in 03-mascota/modelo. Canonical kit sources are versioned in Git.',files:inventory},null,2)+'\n');
+await write('manifest.json', JSON.stringify({schemaVersion:2,profile:'repository',brand:'GatoPago',edition:'2026-09-28',copyPolicy:'Raster images from other sources are copied byte-for-byte; derived text and SVG snapshots use LF. Canonical kit sources are versioned in Git. descartado/ holds retired work and is excluded from the delivery ZIP.',files:inventory},null,2)+'\n');
 const result = await verifyKit(kit,{sourceRoot:root,app});
 if(result.failures.length) throw new Error(`Staged kit failed validation:\n${result.failures.join('\n')}`);
 if(initialFingerprint !== await fingerprint(currentKit)) throw new Error('Canonical kit changed during build; refusing replacement');

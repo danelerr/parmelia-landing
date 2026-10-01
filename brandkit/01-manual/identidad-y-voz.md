@@ -15,7 +15,7 @@ Esto es posicionamiento, no garantía contractual de custodia, velocidad, precio
 ## Nombre, símbolo y personaje
 
 - **GatoPago**: nombre público, una sola palabra, G y P mayúsculas. En texto corriente no escribir “Gato Pago”, “Gatopago” ni usar nombres de marca anteriores.
-- **Símbolo**: cabeza frontal vectorial estable. Identifica el producto; no cambia de expresión en cada pantalla.
+- **Símbolo**: cabeza frontal en pixel art, entregada como SVG y PNG. Identifica el producto; no cambia de expresión en cada pantalla.
 - **Personaje**: el gato ilustrado que acompaña los estados y pequeñas acciones. **Meli** se conserva en archivos, capas y conversaciones de producción; no encabeza funciones ni textos públicos.
 - Dominios públicos: `gatopago.com` y `app.gatopago.com`. Las rutas internas `meli` identifican al personaje y no son nombres públicos de producto.
 

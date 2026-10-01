@@ -42,7 +42,7 @@ No se ha encontrado un wordmark vectorial trazado independiente ni se entrega un
 | Pendiente | Pending | #F6C65B | En proceso, sin implicar fallo |
 | Error | Danger | #FF6B7A | Error y riesgo; siempre con texto o icono |
 
-Ink Soft y Ink Raised completan superficies oscuras en los archivos de tokens. No asignar colores al azar a cada producto. Priorizar fondos neutros, un acento dominante y estados semánticos puntuales.
+Estos cuatro estados son los de fondo oscuro. Sobre Milk o Paper, la app usa variantes oscuras con contraste AA (ver [producto](./producto-app.md#estados-dos-juegos-según-el-fondo)). Ink Soft y Ink Raised completan superficies oscuras en los archivos de tokens. No asignar colores al azar a cada producto. Priorizar fondos neutros, un acento dominante y estados semánticos puntuales.
 
 Cat Fire con texto Ink es la combinación primaria. Milk sobre Cat Fire no alcanza AA para texto normal: no copiar el aspecto de un botón sin comprobar la legibilidad. El archivo [contraste.json](../05-colores/contraste.json) contiene los cálculos de las combinaciones principales; no certifica toda la interfaz.
 
@@ -74,7 +74,7 @@ No aplicar el interlineado de los titulares a párrafos o instrucciones. En cifr
 
 Ilustración de personaje separada del logo. Preservar el pixel art; no sustituirlo por emojis, gatos de otro estilo o iconografía bancaria genérica. `image-rendering: pixelated` es apropiado para sprites; no para fotografías ni tipografía.
 
-El personaje es pixel art real: un color por bloque, [paleta cerrada](../03-mascota/modelo/paleta.json), contorno de tinta continuo y escalado solo por múltiplos enteros (el SVG escala sin pérdida). Las cabezas frontales comparten silueta; las expresiones cambian ojos, boca y orejas, no el modelo. Lienzos, construcción y reglas de todo el arte nuevo: [especificación del personaje](../03-mascota/ESPECIFICACION.md).
+El personaje tiene [propuestas de revisión](../03-personaje/galeria.html) recortadas de los originales. Conservan semitransparencias y variaciones de color: no son todavía pixel art de paleta cerrada. Los requisitos del arte final siguen en [03-personaje](../03-personaje/README.md): contorno de tinta continuo, retícula consistente y escalado solo por múltiplos enteros.
 
 El damero del catálogo indica transparencia y no forma parte de los archivos. Los originales de `06-originales` se conservan byte a byte como referencia; si un original tiene color de fondo, esta entrega no lo elimina automáticamente.
 

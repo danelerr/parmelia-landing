@@ -1,6 +1,6 @@
 /** Symbol and web icons generated from the canonical pixel maps in brandkit/02-logos/modelo. */
 import sharp from 'sharp';
-import { parse, raster, svg } from '../mascota/lib/pixmap.mjs';
+import { parse, raster, svg } from './pixmap.mjs';
 
 const MILK = { r: 0xff, g: 0xf8, b: 0xf0, alpha: 1 };
 const pngOf = async (rows, scale) => { const r = raster(rows, scale); return sharp(r.buf, { raw: { width: r.W, height: r.H, channels: 4 } }).png({ compressionLevel: 9 }).toBuffer(); };

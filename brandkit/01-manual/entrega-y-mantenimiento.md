@@ -1,6 +1,6 @@
 # Entrega, procedencia y mantenimiento
 
-Edición 2026-09-25 · Fuentes versionadas y generación reproducible.
+Edición 2026-09-28 · Fuentes versionadas y generación reproducible.
 
 ## Fuentes
 
@@ -8,16 +8,16 @@ Edición 2026-09-25 · Fuentes versionadas y generación reproducible.
 |---|---|
 | Símbolo y favicons | Fuente versionada: mapas en `brandkit/02-logos/modelo/`; el build genera el SVG, los PNG, el ICO y el apple-touch-icon |
 | Iconos PWA y manifiesto | Fuente versionada: `brandkit/02-logos/pwa/`; actualización desde la app solo con `--app-dir` |
-| Mascota: estáticos y animaciones | Fuente versionada: mapas de píxeles en `brandkit/03-mascota/modelo/`; PNG, SVG y animaciones se generan con `npm run brandkit:mascota` |
+| Personaje | Propuestas para revisión en `brandkit/03-personaje/`, generadas desde `06-originales/`. El arte final sigue pendiente. El trabajo retirado está en `brandkit/descartado/`, fuera del ZIP |
 | Dibujos originales | Fuente única versionada: `brandkit/06-originales/`; sin duplicados en la raíz |
 | Fuente tipográfica | Fuente versionada: `brandkit/04-tipografia/recursive/`, con licencia y versión de origen |
 | Paleta, geometría y tipografía observadas | `src/styles/rebrand.css`, `global.css` y componentes de la landing |
 | Narrativa y planes | `documentacion/nuevos/` de la landing |
-| Imagen social | `public/og.png`; las capturas de la interfaz anterior fueron retiradas |
+| Imágenes sociales | Avatar generado desde el símbolo sobre Milk; `public/og.png` se conserva. Las capturas de la interfaz anterior fueron retiradas |
 
 Estas carpetas del kit son fuentes oficiales, no copias descartables. Los manuales también se editan dentro de `brandkit/`. Los snapshots de CSS, componentes y planes sí se regeneran desde `src/` y `documentacion/`: no editarlos como única fuente.
 
-Los PNG, WebP, JPG e ICO copiados de otras fuentes se conservan byte a byte. En los snapshots SVG solo se normalizan saltos de línea a LF, sin cambiar el dibujo. El arte de la mascota no se copia: se genera de forma determinista desde sus mapas ([modelo](../03-mascota/modelo/README.md)). El build del kit no regenera la mascota ni depende de `output/`, de imágenes sueltas ni del checkout de la app.
+Los PNG, WebP, JPG e ICO copiados de otras fuentes se conservan byte a byte. En los snapshots SVG solo se normalizan saltos de línea a LF, sin cambiar el dibujo. El build del kit no depende de `output/`, de imágenes sueltas ni del checkout de la app.
 
 ## Derechos y distribución
 
@@ -39,7 +39,6 @@ Desde un clon limpio, con Node compatible con `package.json`:
 ```sh
 npm ci
 npm run brandkit:verify
-npm run brandkit:mascota     # solo si cambió un mapa del personaje o una animación
 npm run brandkit:build
 npm run brandkit:verify -- --sources
 npm run brandkit:test
@@ -48,22 +47,22 @@ npm run brandkit:zip
 
 `npm ci` instala las dependencias fijadas en el lockfile. Ignorar `node_modules/` es correcto; no se requiere versionarlo. La tipografía del kit se toma de su carpeta canónica, no del paquete instalado para la landing.
 
-1. Editar la fuente indicada en la tabla; mantener la licencia al actualizar una fuente tipográfica. Para la mascota, editar el mapa o `scripts/mascota/animaciones.mjs` y ejecutar `brandkit:mascota`: valida los mapas antes de escribir y aplica su control de calidad.
+1. Editar la fuente indicada en la tabla; mantener la licencia al actualizar una fuente tipográfica.
 2. Ejecutar el build. Primero comprueba entradas y rechaza enlaces simbólicos; después prepara y valida una copia temporal. Solo tras la validación sustituye el kit, con restauración del anterior si falla el intercambio. Un error de entrada o generación no sobrescribe el kit actual.
-3. `brandkit:verify` comprueba inventario exacto, hashes, enlaces, fuentes locales, frames y tiempos sin consultar fuentes externas. En la mascota exige pixel art exacto: cada estático idéntico a su mapa, cada ×4 y ×8 escalado exacto del ×1, la versión oscura igual al borde Milk de su mapa, solo colores de la paleta y ningún píxel en el borde de los frames. También admite `--kit <carpeta>` para validar un paquete extraído fuera del checkout.
+3. `brandkit:verify` comprueba inventario exacto, hashes, enlaces y fuentes locales sin consultar fuentes externas. En el símbolo y los favicons exige pixel art exacto: cada archivo idéntico a su mapa, solo colores de la paleta. En las propuestas del personaje verifica 14 estáticos, 20 secuencias, lienzos, fotogramas, versiones HD, hojas y tiempos WebP. En los avatares verifica fondo opaco, símbolo y margen circular. También admite `--kit <carpeta>` para validar un paquete extraído fuera del checkout.
 4. `brandkit:verify -- --sources` añade la comparación con `src/`, `public/` y `documentacion/`. Es opcional, no una dependencia del paquete entregado.
 5. Para refrescar únicamente los iconos PWA desde otra app: `npm run brandkit:build -- --app-dir <ruta-app>`. Para compararlos sin modificarlos: `npm run brandkit:verify -- --app-dir <ruta-app>`. La variable ambiental antigua ya no controla el proceso.
 6. Revisar y aprobar cualquier retirada de assets. El build no elimina recursos canónicos por considerarlos sobrantes.
 
-No borres `brandkit/` para regenerarlo: contiene fuentes versionadas. Si falta un original, recupera el archivo correspondiente desde Git. Los tests cubren entradas ausentes, fallos posteriores al preflight, builds idénticos, la regeneración idéntica de la mascota, el rechazo de un mapa con el contorno abierto y la conservación del ZIP previo cuando falla una validación.
+No borres `brandkit/` para regenerarlo: contiene fuentes versionadas. Si falta un original, recupera el archivo correspondiente desde Git. Los tests cubren entradas ausentes, fallos posteriores al preflight, builds idénticos, fuentes CRLF y LF, el ZIP sin material retirado y la conservación del ZIP previo cuando falla una validación.
 
 ## ZIP de entrega
 
-`npm run brandkit:zip` crea `output/gatopago-brandkit-2026-09-25.zip`, tras validar el kit. No empaqueta `03-mascota/qa/` (hojas de revisión, informe y comparación con el paquete anterior). Esa carpeta permanece versionada para trabajo interno.
+`npm run brandkit:zip` crea `output/gatopago-brandkit-2026-09-28.zip`, tras validar el kit. No empaqueta `descartado/`, que permanece versionada solo para consulta interna.
 
 El ZIP tiene un manifiesto propio con `profile: delivery` y los hashes de sus archivos reales. Se valida antes de reemplazar el ZIP anterior y se genera con metadatos de fecha fijos. Puede abrirse sin conexión. El catálogo y sus assets siguen incluidos; los planes de referencia permanecen identificados como contexto, no como assets de producción.
 
-El template editable del catálogo es `scripts/brandkit/catalogo.html`. Los manuales cortos dentro de `01-manual/` se editan directamente; no los sobreescribe el generador.
+El template editable del catálogo es `scripts/brandkit/catalogo.html`; el de la galería, `scripts/brandkit/galeria-personaje.mjs`. Los exports HD y los avatares se generan con `exportaciones-personaje.mjs` y `avatar.mjs`. Los manuales cortos dentro de `01-manual/` se editan directamente; no los sobreescribe el generador. Para actualizar los recortes, ejecutar `brandkit:personaje` antes del build. Ese paso usa una carpeta temporal y no sustituye la entrega si falla la generación.
 
 ## Límites de esta edición
 
@@ -72,4 +71,5 @@ El template editable del catálogo es `scripts/brandkit/catalogo.html`. Los manu
 - Incluye fuentes WOFF2 para web, no una distribución TTF/OTF de escritorio.
 - No prueba ejecución financiera, disponibilidad comercial ni instalación PWA.
 - No elimina originales canónicos: los duplicados de la raíz se retiraron tras verificar sus hashes.
-- No implementa el kit en pantallas. La mascota sí se redibujó. Los 14 estáticos (2026-09-26) reproducen el diseño original a doble resolución, según la [especificación del personaje](../03-mascota/ESPECIFICACION.md). Las 20 animaciones son las de 2026-09-25, compuestas con las piezas anteriores, y se rehacen después. El material generado con IA ya no se distribuye.
+- No implementa el kit en pantallas.
+- Incluye ilustraciones y animaciones del personaje como propuestas de revisión, sin aprobación artística ni certificación de pixel art ([03-personaje](../03-personaje/README.md)). La versión anterior de septiembre de 2026 se retiró a `descartado/`.

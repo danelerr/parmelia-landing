@@ -11,7 +11,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "assets:og": "node scripts/make-og.mjs",
-    "brandkit:mascota": "node scripts/mascota/build.mjs",
+    "brandkit:personaje": "node scripts/brandkit/personaje.mjs",
     "brandkit:build": "node scripts/build-brandkit.mjs",
     "brandkit:verify": "node scripts/verify-brandkit.mjs",
     "brandkit:zip": "node scripts/package-brandkit.mjs",

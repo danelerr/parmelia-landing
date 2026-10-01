@@ -7,7 +7,7 @@ Esta carpeta es la fuente central de documentación editorial de GatoPago. La do
 
 ## Brandkit y archivos de identidad
 
-El [brandkit de GatoPago](../brandkit/README.md), organizado el 24 de septiembre de 2026, reúne el manual práctico, logo, iconos, ilustraciones, animaciones, fuentes con licencia y paleta. Incluye un [catálogo visual local](../brandkit/index.html) y trazabilidad de los archivos. Es el punto de entrada para entregar recursos de marca; los documentos estratégicos siguen en esta carpeta. Sus tokens reflejan la landing observada, no una certificación de todas las pantallas de la app.
+El [brandkit de GatoPago](../brandkit/README.md), organizado el 24 de septiembre de 2026, reúne el manual práctico, logo, iconos, fuentes con licencia y paleta. El personaje está en desarrollo; su versión de septiembre de 2026 se retiró a `brandkit/descartado/`. Incluye un [catálogo visual local](../brandkit/index.html) y trazabilidad de los archivos. Es el punto de entrada para entregar recursos de marca; los documentos estratégicos siguen en esta carpeta. Sus tokens reflejan la landing observada, no una certificación de todas las pantallas de la app. La [propuesta de mejoras de marca en la app](./nuevos/gatopago-propuesta-mejoras-app-2026-09-28.md) (28 de septiembre de 2026) recoge las correcciones pendientes en la app.
 
 ## Decisiones vigentes
 

@@ -5,15 +5,13 @@ import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
 import { appRoot, argument, files, inside, slash } from './brandkit/paths.mjs';
-import { borde } from './mascota/lib/pixmap.mjs';
+import { PALETTE } from './brandkit/pixmap.mjs';
 
 export async function verifyKit(kit, { sourceRoot = null, app = null } = {}) {
 const hash = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
 const inventory = JSON.parse(await fs.readFile(path.join(kit, 'manifest.json'), 'utf8'));
 const failures = [];
-let copies = 0, links = 0, frames = 0, animations = 0, edgePixels = 0, faintEdgePixels = 0, maxEdgeAlpha = 0;
-// Mascot frames are exact pixel art (alpha 0 or 255): any opaque pixel on a frame border fails.
-const alphaThreshold = 8;
+let copies = 0, links = 0;
 const assert = (condition, message) => { if (!condition) failures.push(message); };
 async function checkLink(owner, link) {
   if (!link || /^(#|https?:|mailto:|data:)/.test(link)) return;
@@ -35,10 +33,12 @@ for (const row of inventory.files) {
     if (row.transform === 'lf') original = Buffer.from(original.toString('utf8').replace(/\r\n/g,'\n'));
     assert(hash(bytes) === hash(original), `Copy differs from source: ${row.path}`); copies++;
   }
-  if (row.path.endsWith('.html')) {
+  // Retired work keeps its old relative links; it is inventoried (hashes) but its links are not checked.
+  const archived = row.path.startsWith('descartado/');
+  if (row.path.endsWith('.html') && !archived) {
     for (const m of bytes.toString().matchAll(/(?:href|src|data-static|data-animated)="([^"]+)"/g)) await checkLink(file,m[1]);
   }
-  if (row.path.endsWith('.md')) {
+  if (row.path.endsWith('.md') && !archived) {
     const markdown = bytes.toString().replace(/```[\s\S]*?```/g,'');
     for (const m of markdown.matchAll(/\[[^\]]*\]\(([^)\s]+)\)/g)) await checkLink(file,m[1]);
   }
@@ -50,71 +50,76 @@ const indexed = inventory.files.map(row => row.path);
 assert(new Set(indexed).size===indexed.length,'Duplicate inventory paths');
 const actual = (await files(kit)).map(file=>slash(path.relative(kit,file))).filter(file=>!['manifest.json','CONTROL-DE-CALIDAD.md'].includes(file));
 assert(JSON.stringify(actual.sort())===JSON.stringify([...indexed].sort()),'Inventory does not cover the exact file set');
-// Mascot: canonical pixel maps -> generated statics and animations. All raster art must be exact pixel art.
-const palette = JSON.parse(await fs.readFile(path.join(kit,'03-mascota/modelo/paleta.json'),'utf8')).colours;
-const rgbOf = new Map(palette.map(c=>[c.char,[1,3,5].map(i=>parseInt(c.hex.slice(i,i+2),16))]));
-const charOf = new Map(palette.map(c=>[rgbOf.get(c.char).join(','),c.char]));
+// Review crops have their own contract: frame references, canvas and timing, not a closed pixel palette.
+const characterDir = path.join(kit,'03-personaje');
+const motion = JSON.parse(await fs.readFile(path.join(characterDir,'animaciones/manifest.json'),'utf8'));
+assert(motion.status==='candidate','Character must remain marked as candidate until artistic approval');
+assert(motion.statics.length===14,'Expected 14 character statics');
+assert(motion.animations.length===20,'Expected 20 character animations');
+assert(new Set(motion.statics.map(s=>s.id)).size===14,'Duplicate static IDs');
+assert(new Set(motion.animations.map(a=>a.id)).size===20,'Duplicate animation IDs');
+for (const source of motion.sourceSheets) {
+  assert(hash(await fs.readFile(inside(path.join(kit,'06-originales'),source.file)))===source.sha256,`Character original changed: ${source.file}`);
+}
+for (const s of motion.statics) {
+  const file = inside(characterDir,s.file);
+  await checkLink(path.join(characterDir,'galeria.html'),s.file);
+  const m = await sharp(file).metadata();
+  assert(m.width===s.width && m.height===s.height,`Static dimensions: ${s.id}`);
+}
+let characterFrames = 0;
+for (const a of motion.animations) {
+  const base = path.join(characterDir,'animaciones');
+  const owner = path.join(base,'manifest.json');
+  assert(['loop','once'].includes(a.playback),`Playback mode: ${a.id}`);
+  const unique = [...new Set(a.sequence.map(f=>f.frame))];
+  assert(unique.length===a.frames,`Unique frame count: ${a.id}`);
+  assert(a.sequence.every(f=>Number.isInteger(f.ms) && f.ms>=50),`Frame duration: ${a.id}`);
+  assert(a.sequence.reduce((n,f)=>n+f.ms,0)===a.totalMs,`Total duration: ${a.id}`);
+  await checkLink(owner,a.preview);
+  const m = await sharp(inside(base,a.preview),{animated:true}).metadata();
+  assert(m.width===a.canvas.width && m.pageHeight===a.canvas.height,`Preview canvas: ${a.id}`);
+  assert(m.pages===a.sequence.length,`Preview step count: ${a.id}`);
+  assert(JSON.stringify(m.delay)===JSON.stringify(a.sequence.map(f=>f.ms)),`Preview timing: ${a.id}`);
+  assert(m.loop===0,`Gallery previews must loop: ${a.id}`);
+  for (const frame of unique) {
+    characterFrames++;
+    await checkLink(owner,frame);
+    const f = await sharp(inside(base,frame)).metadata();
+    assert(f.width===a.canvas.width && f.height===a.canvas.height,`Frame canvas: ${a.id}/${frame}`);
+  }
+  const delivered = (await files(path.join(base,'fotogramas',a.id))).map(f=>slash(path.relative(base,f)));
+  assert(JSON.stringify(delivered.sort())===JSON.stringify(unique.sort()),`Frame file set: ${a.id}`);
+}
+const hd = JSON.parse(await fs.readFile(path.join(characterDir,'exportaciones.json'),'utf8'));
+assert(hd.files.length===221,'Expected 221 HD and contact-sheet exports');
+assert(hd.resampling==='nearest' && hd.longEdgeMinimum===2048,'HD enlargement policy');
+for(const row of hd.files) {
+  const file = inside(characterDir,row.file);
+  await checkLink(path.join(characterDir,'exportaciones.json'),row.file);
+  const bytes = await fs.readFile(file);
+  assert(hash(bytes)===row.sha256 && bytes.length===row.bytes,`HD export hash: ${row.file}`);
+  const m = await sharp(bytes,{animated:true}).metadata();
+  assert(m.width===row.width && (m.pageHeight||m.height)===row.height,`HD dimensions: ${row.file}`);
+  if(row.source) {
+    await checkLink(path.join(characterDir,'exportaciones.json'),row.source);
+    const source = await sharp(inside(characterDir,row.source),{animated:true}).metadata();
+    assert(Number.isInteger(row.scale) && row.scale>=1,`HD integer scale: ${row.file}`);
+    assert(row.width===source.width*row.scale && row.height===(source.pageHeight||source.height)*row.scale,`HD source aspect ratio: ${row.file}`);
+    assert(Math.max(row.width,row.height)>=2048,`HD minimum size: ${row.file}`);
+    if(row.format==='webp') assert(m.pages===source.pages && JSON.stringify(m.delay)===JSON.stringify(source.delay) && m.loop===source.loop,`HD animation timing: ${row.file}`);
+  }
+}
+await checkLink(path.join(characterDir,'exportaciones.json'),hd.archive.file);
+assert(hash(await fs.readFile(inside(characterDir,hd.archive.file)))===hd.archive.sha256,'Character download archive hash');
+// Pixel art checks for the symbol and the favicons: every pixel is a palette colour or fully transparent.
+const charOf = new Map(PALETTE.map(c=>[c.rgb.join(','),c.ch]));
 async function rawOf(file) { const {data,info} = await sharp(await fs.readFile(file)).ensureAlpha().raw().toBuffer({resolveWithObject:true}); return {data,w:info.width,h:info.height}; }
 /** Every pixel is a palette colour at full opacity, or fully transparent. Returns the character grid. */
 function gridOf({data,w,h}, label) {
   const rows=[];
   for (let y=0;y<h;y++){let r='';for(let x=0;x<w;x++){const i=(y*w+x)*4;if(data[i+3]===0){r+='.';continue;}const ch=charOf.get(`${data[i]},${data[i+1]},${data[i+2]}`);if(!ch||data[i+3]!==255){failures.push(`Off-palette or semi-transparent pixel: ${label} (${x},${y})`);return rows;}r+=ch;}rows.push(r);}
   return rows;
-}
-/** The large render must be an exact integer upscale of the 1x image. */
-function assertUpscale(big, one, k, label) {
-  assert(big.w===one.w*k && big.h===one.h*k, `Scale ×${k} size: ${label}`);
-  if (big.w!==one.w*k || big.h!==one.h*k) return;
-  for (let y=0;y<one.h;y++) for (let x=0;x<one.w;x++) for (const [dx,dy] of [[0,0],[k-1,k-1],[k>>1,k>>1]]) {
-    const a=(y*one.w+x)*4, b=((y*k+dy)*big.w+(x*k+dx))*4;
-    if (one.data[a]!==big.data[b]||one.data[a+1]!==big.data[b+1]||one.data[a+2]!==big.data[b+2]||one.data[a+3]!==big.data[b+3]) { failures.push(`Not an exact ×${k} upscale: ${label}`); return; }
-  }
-}
-let statics = 0;
-const mapDir = path.join(kit,'03-mascota/modelo/estaticos');
-for (const file of (await fs.readdir(mapDir)).filter(f=>f.endsWith('.txt')).sort()) {
-  statics++;
-  const name = file.replace('.txt','');
-  const map = (await fs.readFile(path.join(mapDir,file),'utf8')).replace(/\r/g,'').split('\n').filter(l=>l.length && !l.startsWith(';'));
-  // Each static exists as drawn and with the dark-background border; x4 and x8 are exact upscales of x1.
-  for (const [suffix, art] of [['', map], ['-oscuro', borde(map)]]) {
-    const id = `${name}${suffix}`;
-    const one = await rawOf(path.join(kit,'03-mascota/estaticos/1x',`${id}.png`));
-    assert(JSON.stringify(gridOf(one,`1x/${id}`))===JSON.stringify(art), `Static differs from its map: ${id}`);
-    assertUpscale(await rawOf(path.join(kit,'03-mascota/estaticos/4x',`${id}.png`)), one, 4, `estaticos/4x/${id}.png`);
-    assertUpscale(await rawOf(path.join(kit,'03-mascota/estaticos',`${id}.png`)), one, 8, `estaticos/${id}.png`);
-    await fs.access(path.join(kit,'03-mascota/estaticos/svg',`${id}.svg`)).catch(()=>failures.push(`Missing SVG: ${id}`));
-  }
-}
-const motion = JSON.parse(await fs.readFile(path.join(kit,'03-mascota/animaciones/manifest.json'),'utf8'));
-const dir = path.join(kit,'03-mascota/animaciones/manifests');
-for (const file of (await fs.readdir(dir)).filter(f=>f.endsWith('.json'))) {
-  animations++;
-  const owner = path.join(dir,file);
-  const a = JSON.parse(await fs.readFile(owner,'utf8'));
-  const {width:gw,height:gh} = a.grid.canvas, k = a.export.scale;
-  assert(a.frames.length === a.frameCount, `Frame count: ${a.id}`);
-  assert(a.frames.reduce((n,f)=>n+f.durationMs,0) === a.totalDurationMs, `Duration: ${a.id}`);
-  assert(gw===motion.grid.canvas.width && gh===motion.grid.canvas.height && a.grid.anchor.x===motion.grid.anchor.x && a.grid.anchor.y===motion.grid.anchor.y, `Canvas/anchor: ${a.id}`);
-  assert(a.export.canvas.width===gw*k && a.export.canvas.height===gh*k, `Export canvas: ${a.id}`);
-  for (const key of ['strip','gridSheet','preview','previewGif']) await checkLink(owner,a[key]);
-  const preview = await sharp(await fs.readFile(path.resolve(dir,a.preview)),{animated:true}).metadata();
-  assert(preview.width===gw*a.export.previewScale && (preview.pageHeight || preview.height)===gh*a.export.previewScale, `Preview canvas: ${a.id}`);
-  assert(preview.pages===a.frameCount && preview.delay.reduce((n,v)=>n+v,0)===a.totalDurationMs, `Preview frames/timing: ${a.id}`);
-  for (const frame of a.frames) {
-    frames++;
-    await checkLink(owner,frame.file); await checkLink(owner,frame.file1x);
-    const one = await rawOf(path.resolve(dir,frame.file1x)), big = await rawOf(path.resolve(dir,frame.file));
-    assert(one.w===gw && one.h===gh, `1x canvas: ${a.id}/${frame.index}`);
-    gridOf(one, `${a.id}/${frame.index}`);
-    assertUpscale(big, one, k, `${a.id}/${frame.index}`);
-    let edges=0;
-    const inspect = (x,y) => { const alpha=one.data[(y*one.w+x)*4+3]; maxEdgeAlpha=Math.max(maxEdgeAlpha,alpha); if(alpha>alphaThreshold) edges++; else if(alpha>0) faintEdgePixels++; };
-    for(let x=0;x<one.w;x++) for(const y of [0,one.h-1]) inspect(x,y);
-    for(let y=1;y<one.h-1;y++) for(const x of [0,one.w-1]) inspect(x,y);
-    edgePixels += edges;
-    assert(edges===0,`Opaque pixels touch the frame edge: ${a.id}/${frame.index}`);
-  }
 }
 // Symbol and web icons must be exact renders of the approved maps in 02-logos/modelo.
 const readMap = async name => (await fs.readFile(path.join(kit,'02-logos/modelo',name),'utf8')).replace(/\r/g,'').split('\n').filter(l=>l.length);
@@ -138,6 +143,22 @@ assert(apple.w===180 && apple.h===180, 'apple-touch-icon size');
 let transparent=0; for (let i=3;i<apple.data.length;i+=4) if (apple.data[i]!==255) transparent++;
 assert(transparent===0, 'apple-touch-icon must be opaque (iOS paints transparency black)');
 same(gridOf(downsample(apple,4,Math.floor((180-symbol[0].length*4)/2),Math.floor((180-symbol.length*4)/2),symbol[0].length,symbol.length),'apple-touch').map(r=>r.replace(/w/g,'.')), symbol, 'apple-touch-icon.png');
+const avatarDir = path.join(kit,'08-imagenes/avatar');
+const avatar = JSON.parse(await fs.readFile(path.join(avatarDir,'manifest.json'),'utf8'));
+assert(avatar.background==='#FFF8F0' && avatar.variants.length===7,'Avatar background and variants');
+for(const v of avatar.variants) {
+  const img = await rawOf(inside(avatarDir,v.file));
+  assert(img.w===v.size && img.h===v.size,`Avatar size: ${v.file}`);
+  assert(v.scale===Math.floor(v.size/45),'Avatar integer scale');
+  same(gridOf(downsample(img,v.scale,v.left,v.top,symbol[0].length,symbol.length),v.file).map(r=>r.replace(/w/g,'.')),symbol,v.file);
+  for(let i=0;i<img.data.length;i+=4) {
+    if(img.data[i+3]!==255) { failures.push(`Avatar transparency: ${v.file}`); break; }
+    const x=(i/4)%img.w, y=Math.floor(i/4/img.w);
+    if(img.data[i]===255 && img.data[i+1]===248 && img.data[i+2]===240) continue;
+    assert((x-(img.w-1)/2)**2+(y-(img.h-1)/2)**2<(img.w/2)**2,`Avatar artwork outside circular crop: ${v.file}`);
+  }
+  if(v.size===180) assert(img.data.equals(apple.data),'180 avatar must equal the apple-touch-icon');
+}
 const icoBytes = await fs.readFile(path.join(iconDir,'favicon.ico'));
 const icoCount = icoBytes.readUInt16LE(4), icoSizes = [];
 for (let i=0;i<icoCount;i++) { const e=6+16*i, size=icoBytes[e]||256, len=icoBytes.readUInt32LE(e+8), off=icoBytes.readUInt32LE(e+12);
@@ -146,11 +167,7 @@ for (let i=0;i<icoCount;i++) { const e=6+16*i, size=icoBytes[e]||256, len=icoByt
   const expected = size===16 ? 'favicon-16x16.png' : size===32 ? 'favicon-32x32.png' : 'favicon-48x48.png';
   assert(hash(png)===hash(await fs.readFile(path.join(iconDir,expected))), `favicon.ico ${size}px differs from ${expected}`); }
 assert(JSON.stringify(icoSizes)==='[16,32,48]', `favicon.ico sizes ${icoSizes}`);
-for (const sheet of motion.provenance.sourceSheets) assert(hash(await fs.readFile(path.join(kit,'06-originales',sheet.file)))===sheet.sha256,`Original sheet hash: ${sheet.file}`);
-assert(animations===motion.animationCount && animations===20, 'Expected the 20 mascot sequences');
-assert(frames===motion.totalFrames, `Frame total ${frames} differs from the motion manifest (${motion.totalFrames})`);
-assert(statics===14, 'Expected 14 static mascot maps');
-return {files:inventory.files.length,profile:inventory.profile || 'repository',identicalSourceCopies:copies,localLinksChecked:links,statics,animations,frames,alphaThreshold,frameBoundaryPixelsAboveThreshold:edgePixels,faintEdgePixels,maxEdgeAlpha,failures};
+return {files:inventory.files.length,profile:inventory.profile || 'repository',identicalSourceCopies:copies,localLinksChecked:links,characterStatus:motion.status,statics:motion.statics.length,animations:motion.animations.length,characterFrames,failures};
 }
 
 if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.argv[1])) {

@@ -1,6 +1,6 @@
 # Movimiento y componentes
 
-Edición 2026-09-25 · Guía de uso. No se modifican componentes de la app en esta entrega.
+Edición 2026-09-28 · Guía de uso. No se modifican componentes de la app en esta entrega.
 
 ## Botones
 
@@ -51,26 +51,22 @@ Una sola animación ambiental importante por pantalla. El personaje acompaña, n
 
 | Contexto | Recurso sugerido | Límite |
 |---|---|---|
-| Bienvenida o vacío | Sentada, saludo | No obstruir el primer paso |
-| Preparación de envío | Courier, preparando-pago | No indica que el pago llegó |
-| Cobro | Body-qr | Sustituir el QR ilustrado por un QR real solo en una composición implementada y validada |
-| Éxito confirmado | Comprobante, salto-feliz | Una vez, breve, sin bucle de celebración |
+| Bienvenida o vacío | pose-sentado, saludo | No obstruir el primer paso |
+| Preparación de envío | pose-mensajero, preparando-pago | No indica que el pago llegó |
+| Cobro | pose-qr | Sustituir el QR ilustrado por un QR real solo en una composición implementada y validada |
+| Éxito confirmado | comprobante, salto | Una vez, breve, sin bucle de celebración |
 | Espera tranquila | Siesta, cola | No sugerir inactividad del servicio cuando una operación está en curso |
 | Error recuperable | Metí la pata, reparar rail | Texto claro antes que chiste; no banalizar pérdidas |
 | Seguridad | Seguridad, linterna | Ilustración, no sello de auditoría ni garantía |
-| Descubrimiento | Asomarse, curiosa | No tapar controles ni pedir atención repetidamente |
+| Descubrimiento | asomarse, expresion-curioso | No tapar controles ni pedir atención repetidamente |
 
 ## Entrega de movimiento
 
-Se incluyen **20 secuencias / 166 frames** de pixel art sobre un lienzo común de 48 × 44 bloques (384 × 352 px a ×8) con el apoyo en (24, 42). Es la edición 2026-09-25: el arte nuevo usa el lienzo de 144 × 96 de la [especificación del personaje](../03-mascota/ESPECIFICACION.md). Se entregan además frames ×1, spritesheets, previews WebP/GIF y manifiestos por secuencia. Los tiempos individuales y el modo `loop`/`once` se leen del manifiesto; no imponer un FPS universal. Detalle en [animaciones](../03-mascota/animaciones/README.md).
-
-Todas las secuencias usan las mismas piezas del personaje, así que el gato no cambia de modelo entre frames ni entre animaciones. La carpeta `03-mascota/qa/` guarda hojas de revisión y la comparación con el paquete anterior generado con IA; el ZIP de entrega la excluye.
-
-**Los WebP de previsualización repiten en bucle para facilitar la revisión**, incluso en secuencias cuyo manifiesto indica `once`. Para respetar la reproducción única en producto, usar los frames y su manifiesto o controlar expresamente la reproducción. No insertar el WebP en un resultado de pago suponiendo que se detendrá solo.
-
-El catálogo muestra el primer frame quieto y exige una acción para reproducir. Detiene la animación anterior al activar otra y al ocultar la pestaña. En producto, respetar `prefers-reduced-motion`, proporcionar estado textual y mantener una alternativa estática.
-
-El control automático cubre paleta, contorno, fragmentos, lienzo, apoyo y tiempos. La aprobación artística es humana: antes de integrar, revisar cada secuencia en su contexto final y a su tamaño real.
+Las [20 propuestas de animación](../03-personaje/galeria.html#animaciones) se incluyen para revisión, pendientes de aprobación artística:
+- cada secuencia tiene fotogramas y un manifiesto con el tiempo de cada paso y el modo previsto de reproducción (en bucle o una vez); no se impone un FPS universal;
+- en producto se respetará la reproducción única de las secuencias «una vez»; una preview en bucle no sirve para un resultado de pago;
+- la galería permite pausar todas las previews y respeta `prefers-reduced-motion`; en producto, acompañar la alternativa estática con un estado en texto;
+- la aprobación artística es humana: cada secuencia se revisa en su contexto final y a su tamaño real.
 
 ## Descargas y PWA
 

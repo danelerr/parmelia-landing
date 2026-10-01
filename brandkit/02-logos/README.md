@@ -14,7 +14,7 @@ Edición 2026-09-25 · Símbolo reconstruido como pixel art; favicons generados 
 Es la cabeza del personaje original reconstruida sobre su rejilla real: 30 × 23 bloques, tres colores de marca, simétrica. Sustituye al símbolo plano anterior, que se descartó.
 
 - **Escala**: siempre a múltiplos enteros para que cada bloque quede nítido: 30 × 23, 60 × 46, 90 × 69, 120 × 92… En navegación, ×1 o ×2. El ×1,5 queda descartado: solo es exacto en pantallas 2×.
-- **Lienzo**: 32 × 32 con la cabeza en (1, 4), igual que el favicon de 32 px. Detalle en la [especificación del personaje](../03-mascota/ESPECIFICACION.md#3-lienzos).
+- **Lienzo**: 32 × 32 con la cabeza en (1, 4), igual que el favicon de 32 px.
 - **Tamaños pequeños**: por debajo de 30 px de ancho, usar la versión de 16 × 16. Mantiene orejas, ojos, nariz, boca y bigotes, sin rayas ni sombras.
 - **Área libre**: al menos 3 bloques alrededor (1/10 del ancho).
 - **Fondos oscuros**: el contorno Ink se pierde. Colocar el símbolo sobre un contenedor Milk.
@@ -34,6 +34,10 @@ Los genera `npm run brandkit:build` desde los mapas; no se editan a mano.
 | `apple-touch-icon.png` | 180 × 180, **opaco** sobre Milk, símbolo a ×4 centrado (iOS pinta de negro la transparencia) |
 
 La composición horizontal (símbolo + «GatoPago» en Recursive) es texto vivo y está en [el catálogo](../index.html#logo), con las reglas en [el sistema visual](../01-manual/sistema-visual.md).
+
+## Avatar para redes
+
+[08-imagenes/avatar](../08-imagenes/avatar/README.md) contiene el mismo símbolo sobre Milk, como el apple-touch-icon: SVG con fondo y siete PNG cuadrados, de 180 a 2160 px. El de 180 es idéntico visualmente al apple-touch-icon; los tamaños de 1080 y 2160 conservan exactamente su composición. Los archivos son cuadrados y opacos; el margen protege las orejas y los bigotes al mostrarlos en un círculo.
 
 ## PWA
 

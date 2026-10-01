@@ -1,0 +1,1242 @@
+{
+  "schemaVersion": 1,
+  "status": "candidate",
+  "source": "06-originales",
+  "sourceSheets": [
+    {
+      "file": "spritesmeli1.png",
+      "sha256": "9da636053d3dbb8076d06c59517596103dbeb62c5af771b249c27fe284d4b99e"
+    },
+    {
+      "file": "spritesmeli2.png",
+      "sha256": "af7b0b5730e7e348f4e412949c1a0fd81dc8d87ac52c1a29f14a1dfe6a712c60"
+    },
+    {
+      "file": "Image Aug 19, 2026, 01_47_20 AM (1).png",
+      "sha256": "a055c8246be3dc8ab1f969f64fa692ee89729bebc3bc6f6a27999643cc5ffea5"
+    },
+    {
+      "file": "Image Aug 19, 2026, 01_47_21 AM (2).png",
+      "sha256": "57539566225234bcfbc7611c8d5bee5b154af6bac519782b879c6b349148eaca"
+    },
+    {
+      "file": "Image Aug 19, 2026, 01_47_21 AM (3).png",
+      "sha256": "3c574aa9518d5547056f2894022fb00a512652695ec75431e4fce8c61ee7887d"
+    },
+    {
+      "file": "Image Aug 19, 2026, 01_47_21 AM (4).png",
+      "sha256": "0bf1518671a69efe6fbfaec8e9e994d18ff390af80ac4b6a471d4f83f3f51583"
+    },
+    {
+      "file": "Image Aug 19, 2026, 01_47_21 AM (5).png",
+      "sha256": "bdc0c65139623189e7bc9492ab08d6fbb10a7db6cb53aa066071d7dae630a190"
+    }
+  ],
+  "statics": [
+    {
+      "id": "expresion-neutral",
+      "name": "Neutral",
+      "purpose": "Referencia de expresión",
+      "file": "estaticos/expresion-neutral.png",
+      "width": 297,
+      "height": 280,
+      "source": {
+        "file": "spritesmeli1.png",
+        "crop": [
+          33,
+          147,
+          297,
+          280
+        ]
+      }
+    },
+    {
+      "id": "expresion-contento",
+      "name": "Contento",
+      "purpose": "Éxito discreto",
+      "file": "estaticos/expresion-contento.png",
+      "width": 297,
+      "height": 280,
+      "source": {
+        "file": "spritesmeli1.png",
+        "crop": [
+          395,
+          147,
+          297,
+          280
+        ]
+      }
+    },
+    {
+      "id": "expresion-atento",
+      "name": "Atento",
+      "purpose": "Atención y verificación",
+      "file": "estaticos/expresion-atento.png",
+      "width": 297,
+      "height": 280,
+      "source": {
+        "file": "spritesmeli1.png",
+        "crop": [
+          755,
+          147,
+          297,
+          280
+        ]
+      }
+    },
+    {
+      "id": "expresion-somnoliento",
+      "name": "Somnoliento",
+      "purpose": "Espera tranquila",
+      "file": "estaticos/expresion-somnoliento.png",
+      "width": 310,
+      "height": 280,
+      "source": {
+        "file": "spritesmeli1.png",
+        "crop": [
+          1118,
+          147,
+          310,
+          280
+        ]
+      }
+    },
+    {
+      "id": "expresion-curioso",
+      "name": "Curioso",
+      "purpose": "Ayuda y exploración",
+      "file": "estaticos/expresion-curioso.png",
+      "width": 332,
+      "height": 315,
+      "source": {
+        "file": "spritesmeli1.png",
+        "crop": [
+          35,
+          586,
+          332,
+          315
+        ]
+      }
+    },
+    {
+      "id": "expresion-asomado",
+      "name": "Asomado",
+      "purpose": "Descubrimiento",
+      "file": "estaticos/expresion-asomado.png",
+      "width": 170,
+      "height": 309,
+      "source": {
+        "file": "spritesmeli1.png",
+        "crop": [
+          454,
+          586,
+          170,
+          309
+        ]
+      }
+    },
+    {
+      "id": "expresion-cauto",
+      "name": "Cauto",
+      "purpose": "Advertencia recuperable",
+      "file": "estaticos/expresion-cauto.png",
+      "width": 343,
+      "height": 247,
+      "source": {
+        "file": "spritesmeli1.png",
+        "crop": [
+          734,
+          627,
+          343,
+          247
+        ]
+      }
+    },
+    {
+      "id": "expresion-emocionado",
+      "name": "Emocionado",
+      "purpose": "Celebración breve",
+      "file": "estaticos/expresion-emocionado.png",
+      "width": 299,
+      "height": 299,
+      "source": {
+        "file": "spritesmeli1.png",
+        "crop": [
+          1118,
+          571,
+          299,
+          299
+        ]
+      }
+    },
+    {
+      "id": "pose-sentado",
+      "name": "Sentado",
+      "purpose": "Bienvenida y estados vacíos",
+      "file": "estaticos/pose-sentado.png",
+      "width": 270,
+      "height": 395,
+      "source": {
+        "file": "spritesmeli2.png",
+        "crop": [
+          91,
+          76,
+          270,
+          395
+        ]
+      }
+    },
+    {
+      "id": "pose-mensajero",
+      "name": "Mensajero",
+      "purpose": "Envío en curso",
+      "file": "estaticos/pose-mensajero.png",
+      "width": 397,
+      "height": 395,
+      "source": {
+        "file": "spritesmeli2.png",
+        "crop": [
+          499,
+          71,
+          397,
+          395
+        ]
+      }
+    },
+    {
+      "id": "pose-durmiendo",
+      "name": "Durmiendo",
+      "purpose": "Inactividad",
+      "file": "estaticos/pose-durmiendo.png",
+      "width": 393,
+      "height": 309,
+      "source": {
+        "file": "spritesmeli2.png",
+        "crop": [
+          994,
+          170,
+          393,
+          309
+        ]
+      }
+    },
+    {
+      "id": "pose-tarjeta",
+      "name": "Tarjeta",
+      "purpose": "Tarjeta (ilustración conceptual)",
+      "file": "estaticos/pose-tarjeta.png",
+      "width": 402,
+      "height": 409,
+      "source": {
+        "file": "spritesmeli2.png",
+        "crop": [
+          68,
+          541,
+          402,
+          409
+        ]
+      }
+    },
+    {
+      "id": "pose-qr",
+      "name": "QR",
+      "purpose": "Cobro; el QR es ilustrativo",
+      "file": "estaticos/pose-qr.png",
+      "width": 316,
+      "height": 433,
+      "source": {
+        "file": "spritesmeli2.png",
+        "crop": [
+          585,
+          549,
+          316,
+          433
+        ]
+      }
+    },
+    {
+      "id": "pose-carrito",
+      "name": "Carrito",
+      "purpose": "Procesamiento",
+      "file": "estaticos/pose-carrito.png",
+      "width": 445,
+      "height": 387,
+      "source": {
+        "file": "spritesmeli2.png",
+        "crop": [
+          953,
+          582,
+          445,
+          387
+        ]
+      }
+    }
+  ],
+  "note": "Raster crops from original sheets, not closed-palette pixel art. All WebP previews loop; playback specifies the intended product mode. ms = duration of each step; frames may repeat.",
+  "animations": [
+    {
+      "id": "parpadeo",
+      "name": "Parpadeo",
+      "purpose": "Señal de vida en reposo, sin distraer",
+      "playback": "loop",
+      "canvas": {
+        "width": 201,
+        "height": 186
+      },
+      "frames": 3,
+      "totalMs": 3035,
+      "preview": "parpadeo.webp",
+      "sequence": [
+        {
+          "frame": "fotogramas/parpadeo/01.png",
+          "ms": 2400
+        },
+        {
+          "frame": "fotogramas/parpadeo/02.png",
+          "ms": 55
+        },
+        {
+          "frame": "fotogramas/parpadeo/03.png",
+          "ms": 100
+        },
+        {
+          "frame": "fotogramas/parpadeo/02.png",
+          "ms": 55
+        },
+        {
+          "frame": "fotogramas/parpadeo/01.png",
+          "ms": 220
+        },
+        {
+          "frame": "fotogramas/parpadeo/02.png",
+          "ms": 55
+        },
+        {
+          "frame": "fotogramas/parpadeo/03.png",
+          "ms": 90
+        },
+        {
+          "frame": "fotogramas/parpadeo/02.png",
+          "ms": 60
+        }
+      ]
+    },
+    {
+      "id": "oreja",
+      "name": "Oreja",
+      "purpose": "Reacción mínima a un aviso",
+      "playback": "loop",
+      "canvas": {
+        "width": 206,
+        "height": 184
+      },
+      "frames": 4,
+      "totalMs": 2800,
+      "preview": "oreja.webp",
+      "sequence": [
+        {
+          "frame": "fotogramas/oreja/01.png",
+          "ms": 1600
+        },
+        {
+          "frame": "fotogramas/oreja/02.png",
+          "ms": 70
+        },
+        {
+          "frame": "fotogramas/oreja/03.png",
+          "ms": 140
+        },
+        {
+          "frame": "fotogramas/oreja/02.png",
+          "ms": 70
+        },
+        {
+          "frame": "fotogramas/oreja/01.png",
+          "ms": 260
+        },
+        {
+          "frame": "fotogramas/oreja/02.png",
+          "ms": 60
+        },
+        {
+          "frame": "fotogramas/oreja/03.png",
+          "ms": 100
+        },
+        {
+          "frame": "fotogramas/oreja/04.png",
+          "ms": 500
+        }
+      ]
+    },
+    {
+      "id": "mirar",
+      "name": "Mirar alrededor",
+      "purpose": "Invita a explorar",
+      "playback": "loop",
+      "canvas": {
+        "width": 193,
+        "height": 178
+      },
+      "frames": 6,
+      "totalMs": 2770,
+      "preview": "mirar.webp",
+      "sequence": [
+        {
+          "frame": "fotogramas/mirar/01.png",
+          "ms": 900
+        },
+        {
+          "frame": "fotogramas/mirar/02.png",
+          "ms": 90
+        },
+        {
+          "frame": "fotogramas/mirar/03.png",
+          "ms": 700
+        },
+        {
+          "frame": "fotogramas/mirar/04.png",
+          "ms": 90
+        },
+        {
+          "frame": "fotogramas/mirar/05.png",
+          "ms": 900
+        },
+        {
+          "frame": "fotogramas/mirar/06.png",
+          "ms": 90
+        }
+      ]
+    },
+    {
+      "id": "reposo",
+      "name": "Reposo sentado",
+      "purpose": "Bienvenida y estados vacíos",
+      "playback": "loop",
+      "canvas": {
+        "width": 196,
+        "height": 241
+      },
+      "frames": 7,
+      "totalMs": 5050,
+      "preview": "reposo.webp",
+      "sequence": [
+        {
+          "frame": "fotogramas/reposo/01.png",
+          "ms": 1000
+        },
+        {
+          "frame": "fotogramas/reposo/02.png",
+          "ms": 120
+        },
+        {
+          "frame": "fotogramas/reposo/03.png",
+          "ms": 800
+        },
+        {
+          "frame": "fotogramas/reposo/02.png",
+          "ms": 120
+        },
+        {
+          "frame": "fotogramas/reposo/01.png",
+          "ms": 600
+        },
+        {
+          "frame": "fotogramas/reposo/04.png",
+          "ms": 90
+        },
+        {
+          "frame": "fotogramas/reposo/01.png",
+          "ms": 500
+        },
+        {
+          "frame": "fotogramas/reposo/05.png",
+          "ms": 160
+        },
+        {
+          "frame": "fotogramas/reposo/06.png",
+          "ms": 160
+        },
+        {
+          "frame": "fotogramas/reposo/01.png",
+          "ms": 600
+        },
+        {
+          "frame": "fotogramas/reposo/07.png",
+          "ms": 900
+        }
+      ]
+    },
+    {
+      "id": "cola",
+      "name": "Cola",
+      "purpose": "Espera amable, con más presencia que el reposo",
+      "playback": "loop",
+      "canvas": {
+        "width": 196,
+        "height": 193
+      },
+      "frames": 8,
+      "totalMs": 1690,
+      "preview": "cola.webp",
+      "sequence": [
+        {
+          "frame": "fotogramas/cola/01.png",
+          "ms": 500
+        },
+        {
+          "frame": "fotogramas/cola/02.png",
+          "ms": 100
+        },
+        {
+          "frame": "fotogramas/cola/03.png",
+          "ms": 100
+        },
+        {
+          "frame": "fotogramas/cola/04.png",
+          "ms": 120
+        },
+        {
+          "frame": "fotogramas/cola/05.png",
+          "ms": 260
+        },
+        {
+          "frame": "fotogramas/cola/06.png",
+          "ms": 110
+        },
+        {
+          "frame": "fotogramas/cola/07.png",
+          "ms": 100
+        },
+        {
+          "frame": "fotogramas/cola/08.png",
+          "ms": 400
+        }
+      ]
+    },
+    {
+      "id": "siesta",
+      "name": "Siesta",
+      "purpose": "Inactividad o espera larga sin operación en curso",
+      "playback": "loop",
+      "canvas": {
+        "width": 195,
+        "height": 193
+      },
+      "frames": 7,
+      "totalMs": 5920,
+      "preview": "siesta.webp",
+      "sequence": [
+        {
+          "frame": "fotogramas/siesta/01.png",
+          "ms": 600
+        },
+        {
+          "frame": "fotogramas/siesta/02.png",
+          "ms": 600
+        },
+        {
+          "frame": "fotogramas/siesta/03.png",
+          "ms": 600
+        },
+        {
+          "frame": "fotogramas/siesta/02.png",
+          "ms": 600
+        },
+        {
+          "frame": "fotogramas/siesta/01.png",
+          "ms": 600
+        },
+        {
+          "frame": "fotogramas/siesta/04.png",
+          "ms": 450
+        },
+        {
+          "frame": "fotogramas/siesta/05.png",
+          "ms": 600
+        },
+        {
+          "frame": "fotogramas/siesta/06.png",
+          "ms": 450
+        },
+        {
+          "frame": "fotogramas/siesta/01.png",
+          "ms": 600
+        },
+        {
+          "frame": "fotogramas/siesta/07.png",
+          "ms": 220
+        },
+        {
+          "frame": "fotogramas/siesta/01.png",
+          "ms": 600
+        }
+      ]
+    },
+    {
+      "id": "asomarse",
+      "name": "Asomarse",
+      "purpose": "Descubrimiento: algo nuevo por ver",
+      "playback": "once",
+      "canvas": {
+        "width": 173,
+        "height": 177
+      },
+      "frames": 8,
+      "totalMs": 3980,
+      "preview": "asomarse.webp",
+      "sequence": [
+        {
+          "frame": "fotogramas/asomarse/01.png",
+          "ms": 700
+        },
+        {
+          "frame": "fotogramas/asomarse/02.png",
+          "ms": 160
+        },
+        {
+          "frame": "fotogramas/asomarse/03.png",
+          "ms": 160
+        },
+        {
+          "frame": "fotogramas/asomarse/04.png",
+          "ms": 260
+        },
+        {
+          "frame": "fotogramas/asomarse/05.png",
+          "ms": 380
+        },
+        {
+          "frame": "fotogramas/asomarse/06.png",
+          "ms": 420
+        },
+        {
+          "frame": "fotogramas/asomarse/07.png",
+          "ms": 700
+        },
+        {
+          "frame": "fotogramas/asomarse/08.png",
+          "ms": 1200
+        }
+      ]
+    },
+    {
+      "id": "meti-la-pata",
+      "name": "Metí la pata",
+      "purpose": "Error recuperable, con tono amable",
+      "playback": "once",
+      "canvas": {
+        "width": 188,
+        "height": 203
+      },
+      "frames": 6,
+      "totalMs": 3080,
+      "preview": "meti-la-pata.webp",
+      "sequence": [
+        {
+          "frame": "fotogramas/meti-la-pata/01.png",
+          "ms": 600
+        },
+        {
+          "frame": "fotogramas/meti-la-pata/02.png",
+          "ms": 160
+        },
+        {
+          "frame": "fotogramas/meti-la-pata/03.png",
+          "ms": 500
+        },
+        {
+          "frame": "fotogramas/meti-la-pata/04.png",
+          "ms": 160
+        },
+        {
+          "frame": "fotogramas/meti-la-pata/05.png",
+          "ms": 260
+        },
+        {
+          "frame": "fotogramas/meti-la-pata/06.png",
+          "ms": 1400
+        }
+      ]
+    },
+    {
+      "id": "salto",
+      "name": "Salto feliz",
+      "purpose": "Éxito confirmado; una vez y breve",
+      "playback": "once",
+      "canvas": {
+        "width": 191,
+        "height": 228
+      },
+      "frames": 8,
+      "totalMs": 2210,
+      "preview": "salto.webp",
+      "sequence": [
+        {
+          "frame": "fotogramas/salto/01.png",
+          "ms": 400
+        },
+        {
+          "frame": "fotogramas/salto/02.png",
+          "ms": 220
+        },
+        {
+          "frame": "fotogramas/salto/03.png",
+          "ms": 70
+        },
+        {
+          "frame": "fotogramas/salto/04.png",
+          "ms": 80
+        },
+        {
+          "frame": "fotogramas/salto/05.png",
+          "ms": 200
+        },
+        {
+          "frame": "fotogramas/salto/06.png",
+          "ms": 80
+        },
+        {
+          "frame": "fotogramas/salto/07.png",
+          "ms": 160
+        },
+        {
+          "frame": "fotogramas/salto/08.png",
+          "ms": 1000
+        }
+      ]
+    },
+    {
+      "id": "caminata",
+      "name": "Caminata",
+      "purpose": "Envío en curso; no indica llegada",
+      "playback": "loop",
+      "canvas": {
+        "width": 201,
+        "height": 194
+      },
+      "frames": 6,
+      "totalMs": 660,
+      "preview": "caminata.webp",
+      "sequence": [
+        {
+          "frame": "fotogramas/caminata/01.png",
+          "ms": 110
+        },
+        {
+          "frame": "fotogramas/caminata/02.png",
+          "ms": 110
+        },
+        {
+          "frame": "fotogramas/caminata/03.png",
+          "ms": 110
+        },
+        {
+          "frame": "fotogramas/caminata/04.png",
+          "ms": 110
+        },
+        {
+          "frame": "fotogramas/caminata/05.png",
+          "ms": 110
+        },
+        {
+          "frame": "fotogramas/caminata/06.png",
+          "ms": 110
+        }
+      ]
+    },
+    {
+      "id": "preparando-pago",
+      "name": "Preparando el pago",
+      "purpose": "Procesamiento de una operación",
+      "playback": "loop",
+      "canvas": {
+        "width": 221,
+        "height": 177
+      },
+      "frames": 8,
+      "totalMs": 1960,
+      "preview": "preparando-pago.webp",
+      "sequence": [
+        {
+          "frame": "fotogramas/preparando-pago/01.png",
+          "ms": 300
+        },
+        {
+          "frame": "fotogramas/preparando-pago/02.png",
+          "ms": 120
+        },
+        {
+          "frame": "fotogramas/preparando-pago/03.png",
+          "ms": 120
+        },
+        {
+          "frame": "fotogramas/preparando-pago/04.png",
+          "ms": 120
+        },
+        {
+          "frame": "fotogramas/preparando-pago/05.png",
+          "ms": 120
+        },
+        {
+          "frame": "fotogramas/preparando-pago/06.png",
+          "ms": 120
+        },
+        {
+          "frame": "fotogramas/preparando-pago/07.png",
+          "ms": 260
+        },
+        {
+          "frame": "fotogramas/preparando-pago/08.png",
+          "ms": 800
+        }
+      ]
+    },
+    {
+      "id": "comprobante",
+      "name": "Comprobante",
+      "purpose": "Comprobante emitido tras un estado confirmado",
+      "playback": "once",
+      "canvas": {
+        "width": 192,
+        "height": 201
+      },
+      "frames": 8,
+      "totalMs": 3200,
+      "preview": "comprobante.webp",
+      "sequence": [
+        {
+          "frame": "fotogramas/comprobante/01.png",
+          "ms": 500
+        },
+        {
+          "frame": "fotogramas/comprobante/02.png",
+          "ms": 200
+        },
+        {
+          "frame": "fotogramas/comprobante/03.png",
+          "ms": 120
+        },
+        {
+          "frame": "fotogramas/comprobante/04.png",
+          "ms": 180
+        },
+        {
+          "frame": "fotogramas/comprobante/05.png",
+          "ms": 300
+        },
+        {
+          "frame": "fotogramas/comprobante/06.png",
+          "ms": 200
+        },
+        {
+          "frame": "fotogramas/comprobante/07.png",
+          "ms": 500
+        },
+        {
+          "frame": "fotogramas/comprobante/08.png",
+          "ms": 1200
+        }
+      ]
+    },
+    {
+      "id": "reparar-rail",
+      "name": "Reparar el rail",
+      "purpose": "Recuperación de un error del recorrido",
+      "playback": "once",
+      "canvas": {
+        "width": 181,
+        "height": 183
+      },
+      "frames": 9,
+      "totalMs": 3410,
+      "preview": "reparar-rail.webp",
+      "sequence": [
+        {
+          "frame": "fotogramas/reparar-rail/01.png",
+          "ms": 500
+        },
+        {
+          "frame": "fotogramas/reparar-rail/02.png",
+          "ms": 450
+        },
+        {
+          "frame": "fotogramas/reparar-rail/03.png",
+          "ms": 200
+        },
+        {
+          "frame": "fotogramas/reparar-rail/04.png",
+          "ms": 180
+        },
+        {
+          "frame": "fotogramas/reparar-rail/05.png",
+          "ms": 220
+        },
+        {
+          "frame": "fotogramas/reparar-rail/06.png",
+          "ms": 180
+        },
+        {
+          "frame": "fotogramas/reparar-rail/07.png",
+          "ms": 220
+        },
+        {
+          "frame": "fotogramas/reparar-rail/08.png",
+          "ms": 260
+        },
+        {
+          "frame": "fotogramas/reparar-rail/09.png",
+          "ms": 1200
+        }
+      ]
+    },
+    {
+      "id": "intercambio",
+      "name": "Intercambio",
+      "purpose": "Cambio de un activo por otro",
+      "playback": "once",
+      "canvas": {
+        "width": 207,
+        "height": 164
+      },
+      "frames": 9,
+      "totalMs": 3250,
+      "preview": "intercambio.webp",
+      "sequence": [
+        {
+          "frame": "fotogramas/intercambio/01.png",
+          "ms": 500
+        },
+        {
+          "frame": "fotogramas/intercambio/02.png",
+          "ms": 200
+        },
+        {
+          "frame": "fotogramas/intercambio/03.png",
+          "ms": 180
+        },
+        {
+          "frame": "fotogramas/intercambio/04.png",
+          "ms": 220
+        },
+        {
+          "frame": "fotogramas/intercambio/05.png",
+          "ms": 180
+        },
+        {
+          "frame": "fotogramas/intercambio/06.png",
+          "ms": 220
+        },
+        {
+          "frame": "fotogramas/intercambio/07.png",
+          "ms": 250
+        },
+        {
+          "frame": "fotogramas/intercambio/08.png",
+          "ms": 500
+        },
+        {
+          "frame": "fotogramas/intercambio/09.png",
+          "ms": 1000
+        }
+      ]
+    },
+    {
+      "id": "creciendo",
+      "name": "Creciendo",
+      "purpose": "Progreso a lo largo del tiempo; no promete rentabilidad",
+      "playback": "once",
+      "canvas": {
+        "width": 203,
+        "height": 154
+      },
+      "frames": 10,
+      "totalMs": 3720,
+      "preview": "creciendo.webp",
+      "sequence": [
+        {
+          "frame": "fotogramas/creciendo/01.png",
+          "ms": 500
+        },
+        {
+          "frame": "fotogramas/creciendo/02.png",
+          "ms": 200
+        },
+        {
+          "frame": "fotogramas/creciendo/03.png",
+          "ms": 160
+        },
+        {
+          "frame": "fotogramas/creciendo/04.png",
+          "ms": 160
+        },
+        {
+          "frame": "fotogramas/creciendo/05.png",
+          "ms": 160
+        },
+        {
+          "frame": "fotogramas/creciendo/06.png",
+          "ms": 220
+        },
+        {
+          "frame": "fotogramas/creciendo/07.png",
+          "ms": 220
+        },
+        {
+          "frame": "fotogramas/creciendo/08.png",
+          "ms": 300
+        },
+        {
+          "frame": "fotogramas/creciendo/09.png",
+          "ms": 600
+        },
+        {
+          "frame": "fotogramas/creciendo/10.png",
+          "ms": 1200
+        }
+      ]
+    },
+    {
+      "id": "tarjeta",
+      "name": "Pago con tarjeta",
+      "purpose": "Ilustración conceptual de un pago con tarjeta",
+      "playback": "once",
+      "canvas": {
+        "width": 226,
+        "height": 177
+      },
+      "frames": 8,
+      "totalMs": 3650,
+      "preview": "tarjeta.webp",
+      "sequence": [
+        {
+          "frame": "fotogramas/tarjeta/01.png",
+          "ms": 400
+        },
+        {
+          "frame": "fotogramas/tarjeta/02.png",
+          "ms": 200
+        },
+        {
+          "frame": "fotogramas/tarjeta/03.png",
+          "ms": 200
+        },
+        {
+          "frame": "fotogramas/tarjeta/04.png",
+          "ms": 250
+        },
+        {
+          "frame": "fotogramas/tarjeta/05.png",
+          "ms": 500
+        },
+        {
+          "frame": "fotogramas/tarjeta/06.png",
+          "ms": 700
+        },
+        {
+          "frame": "fotogramas/tarjeta/07.png",
+          "ms": 400
+        },
+        {
+          "frame": "fotogramas/tarjeta/08.png",
+          "ms": 1000
+        }
+      ]
+    },
+    {
+      "id": "linterna",
+      "name": "Linterna",
+      "purpose": "Buscar o revisar",
+      "playback": "loop",
+      "canvas": {
+        "width": 252,
+        "height": 190
+      },
+      "frames": 8,
+      "totalMs": 3200,
+      "preview": "linterna.webp",
+      "sequence": [
+        {
+          "frame": "fotogramas/linterna/01.png",
+          "ms": 400
+        },
+        {
+          "frame": "fotogramas/linterna/02.png",
+          "ms": 200
+        },
+        {
+          "frame": "fotogramas/linterna/03.png",
+          "ms": 500
+        },
+        {
+          "frame": "fotogramas/linterna/04.png",
+          "ms": 500
+        },
+        {
+          "frame": "fotogramas/linterna/05.png",
+          "ms": 400
+        },
+        {
+          "frame": "fotogramas/linterna/06.png",
+          "ms": 300
+        },
+        {
+          "frame": "fotogramas/linterna/07.png",
+          "ms": 400
+        },
+        {
+          "frame": "fotogramas/linterna/08.png",
+          "ms": 500
+        }
+      ]
+    },
+    {
+      "id": "saludo",
+      "name": "Saludo",
+      "purpose": "Bienvenida",
+      "playback": "loop",
+      "canvas": {
+        "width": 198,
+        "height": 237
+      },
+      "frames": 6,
+      "totalMs": 2200,
+      "preview": "saludo.webp",
+      "sequence": [
+        {
+          "frame": "fotogramas/saludo/01.png",
+          "ms": 600
+        },
+        {
+          "frame": "fotogramas/saludo/02.png",
+          "ms": 120
+        },
+        {
+          "frame": "fotogramas/saludo/03.png",
+          "ms": 140
+        },
+        {
+          "frame": "fotogramas/saludo/04.png",
+          "ms": 160
+        },
+        {
+          "frame": "fotogramas/saludo/05.png",
+          "ms": 160
+        },
+        {
+          "frame": "fotogramas/saludo/04.png",
+          "ms": 160
+        },
+        {
+          "frame": "fotogramas/saludo/05.png",
+          "ms": 160
+        },
+        {
+          "frame": "fotogramas/saludo/06.png",
+          "ms": 700
+        }
+      ]
+    },
+    {
+      "id": "mantenimiento",
+      "name": "Mantenimiento",
+      "purpose": "Servicio en mantenimiento",
+      "playback": "loop",
+      "canvas": {
+        "width": 185,
+        "height": 184
+      },
+      "frames": 10,
+      "totalMs": 3400,
+      "preview": "mantenimiento.webp",
+      "sequence": [
+        {
+          "frame": "fotogramas/mantenimiento/01.png",
+          "ms": 400
+        },
+        {
+          "frame": "fotogramas/mantenimiento/02.png",
+          "ms": 200
+        },
+        {
+          "frame": "fotogramas/mantenimiento/03.png",
+          "ms": 220
+        },
+        {
+          "frame": "fotogramas/mantenimiento/04.png",
+          "ms": 260
+        },
+        {
+          "frame": "fotogramas/mantenimiento/05.png",
+          "ms": 220
+        },
+        {
+          "frame": "fotogramas/mantenimiento/06.png",
+          "ms": 180
+        },
+        {
+          "frame": "fotogramas/mantenimiento/07.png",
+          "ms": 220
+        },
+        {
+          "frame": "fotogramas/mantenimiento/08.png",
+          "ms": 300
+        },
+        {
+          "frame": "fotogramas/mantenimiento/09.png",
+          "ms": 500
+        },
+        {
+          "frame": "fotogramas/mantenimiento/10.png",
+          "ms": 900
+        }
+      ]
+    },
+    {
+      "id": "seguridad",
+      "name": "Seguridad",
+      "purpose": "Protección de la cuenta; ilustración, no garantía",
+      "playback": "once",
+      "canvas": {
+        "width": 214,
+        "height": 236
+      },
+      "frames": 8,
+      "totalMs": 3400,
+      "preview": "seguridad.webp",
+      "sequence": [
+        {
+          "frame": "fotogramas/seguridad/01.png",
+          "ms": 500
+        },
+        {
+          "frame": "fotogramas/seguridad/02.png",
+          "ms": 180
+        },
+        {
+          "frame": "fotogramas/seguridad/03.png",
+          "ms": 250
+        },
+        {
+          "frame": "fotogramas/seguridad/04.png",
+          "ms": 150
+        },
+        {
+          "frame": "fotogramas/seguridad/05.png",
+          "ms": 220
+        },
+        {
+          "frame": "fotogramas/seguridad/06.png",
+          "ms": 500
+        },
+        {
+          "frame": "fotogramas/seguridad/07.png",
+          "ms": 700
+        },
+        {
+          "frame": "fotogramas/seguridad/08.png",
+          "ms": 900
+        }
+      ]
+    }
+  ]
+}

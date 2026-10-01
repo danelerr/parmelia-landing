@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "background": "#FFF8F0",
+  "source": "02-logos/modelo/simbolo.txt",
+  "svg": "gatopago-avatar.svg",
+  "archive": "gatopago-avatares.zip",
+  "variants": [
+    {
+      "file": "gatopago-avatar-2160.png",
+      "size": 2160,
+      "use": "Máster HD",
+      "scale": 48,
+      "left": 360,
+      "top": 528
+    },
+    {
+      "file": "gatopago-avatar-1080.png",
+      "size": 1080,
+      "use": "Instagram · Facebook · TikTok",
+      "scale": 24,
+      "left": 180,
+      "top": 264
+    },
+    {
+      "file": "gatopago-avatar-1024.png",
+      "size": 1024,
+      "use": "WhatsApp · Telegram",
+      "scale": 22,
+      "left": 182,
+      "top": 259
+    },
+    {
+      "file": "gatopago-avatar-800.png",
+      "size": 800,
+      "use": "YouTube",
+      "scale": 17,
+      "left": 145,
+      "top": 204
+    },
+    {
+      "file": "gatopago-avatar-512.png",
+      "size": 512,
+      "use": "Discord",
+      "scale": 11,
+      "left": 91,
+      "top": 129
+    },
+    {
+      "file": "gatopago-avatar-400.png",
+      "size": 400,
+      "use": "X · LinkedIn",
+      "scale": 8,
+      "left": 80,
+      "top": 108
+    },
+    {
+      "file": "gatopago-avatar-180.png",
+      "size": 180,
+      "use": "Apple touch / referencia",
+      "scale": 4,
+      "left": 30,
+      "top": 44
+    }
+  ]
+}
