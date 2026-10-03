@@ -44,7 +44,7 @@ test('wordmarks are outlined from the licensed local font, not live text',async(
 });
 
 test('external delivery is independently readable and excludes all review material',async()=>{
-  const result=spawnSync(process.execPath,[path.join(root,'scripts/package-brandkit.mjs'),'--external'],{cwd:root,encoding:'utf8',maxBuffer:3_000_000});
+  const result=spawnSync(process.execPath,[path.join(root,'herramientas/package-brandkit.mjs'),'--external'],{cwd:root,encoding:'utf8',maxBuffer:3_000_000});
   assert.equal(result.status,0,result.stderr+'\n'+result.stdout);
   const report=JSON.parse(result.stdout);
   const archive=await fs.readFile(report.zip);
@@ -62,7 +62,7 @@ test('external delivery is independently readable and excludes all review materi
       await fs.writeFile(dest,bytes);
     }
     assert.deepEqual((await verifyKit(path.join(work,'brandkit'))).failures,[]);
-    const repeat=spawnSync(process.execPath,[path.join(root,'scripts/package-brandkit.mjs'),'--external'],{cwd:root,encoding:'utf8'});
+    const repeat=spawnSync(process.execPath,[path.join(root,'herramientas/package-brandkit.mjs'),'--external'],{cwd:root,encoding:'utf8'});
     assert.equal(repeat.status,0,repeat.stderr);
     assert.equal(sha(await fs.readFile(report.zip)),sha(archive));
     // Tampering with hashes alone cannot add a reviewed character to the external kit.
@@ -79,7 +79,7 @@ test('external delivery is independently readable and excludes all review materi
 });
 
 test('npm asset tarball is local, private and exports complete baseline font paths',async()=>{
-  const result=spawnSync(process.execPath,[path.join(root,'scripts/package-frontend.mjs')],{cwd:root,encoding:'utf8',maxBuffer:3_000_000});
+  const result=spawnSync(process.execPath,[path.join(root,'herramientas/package-frontend.mjs')],{cwd:root,encoding:'utf8',maxBuffer:3_000_000});
   assert.equal(result.status,0,result.stderr+'\n'+result.stdout);
   const report=JSON.parse(result.stdout);
   assert.equal(report.published,false);

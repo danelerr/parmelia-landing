@@ -1,8 +1,8 @@
 {
   "entry": [
-    "scripts/brandkit/release.test.mjs"
+    "herramientas/brandkit/release.test.mjs"
   ],
-  "project": ["scripts/**/*.mjs"],
+  "project": ["herramientas/**/*.mjs"],
   "node": false,
   "include": ["files", "dependencies", "unlisted", "unresolved"]
 }

@@ -7,17 +7,17 @@ Versión 1.0.0-rc.1 · Preparación 2026-10-02 · Fuentes versionadas y generaci
 | Grupo | Origen |
 |---|---|
 | Símbolo y favicons | Fuente versionada: mapas en `brandkit/02-logos/modelo/`; el build genera el SVG, los PNG, el ICO y el apple-touch-icon |
-| Nuevos wordmarks y variantes | Recetas en `scripts/brandkit/design-files.mjs`, mapa del símbolo y Recursive WOFF2 local; propuestas en revisión |
-| Componentes y plantillas | Recetas en `scripts/brandkit/design-files.mjs`; copy social editable en `brandkit/10-plantillas/modelo.json`; HTML, SVG trazados y previews se regeneran desde ahí |
+| Nuevos wordmarks y variantes | Recetas en `herramientas/brandkit/design-files.mjs`, mapa del símbolo y Recursive WOFF2 local; propuestas en revisión |
+| Componentes y plantillas | Recetas en `herramientas/brandkit/design-files.mjs`; copy social editable en `brandkit/10-plantillas/modelo.json`; HTML, SVG trazados y previews se regeneran desde ahí |
 | Iconos PWA y manifiesto | Fuente versionada: `brandkit/02-logos/pwa/`; actualización desde la app solo con `--app-dir` |
 | Personaje | Propuestas para revisión en `brandkit/03-personaje/`, generadas desde `06-originales/`. El arte final sigue pendiente. El trabajo retirado está en `brandkit/descartado/`, fuera del ZIP |
 | Dibujos originales | Fuente única versionada: `brandkit/06-originales/`; sin duplicados en la raíz |
 | Fuente tipográfica | Fuente versionada: `brandkit/04-tipografia/recursive/`, con licencia y versión de origen |
 | Paleta y tokens | Fuente canónica: `brandkit/05-colores/tokens.json`; los exports CSS, CSV, GPL y contraste se generan desde ese JSON |
-| Narrativa y planes | `documentacion/nuevos/` de este repositorio |
-| Imágenes sociales | Avatar generado desde el símbolo sobre Milk; `brandkit/08-imagenes/open-graph/og.png` es la fuente versionada. Otras piezas están en `recursos/` |
+| Narrativa y planes | `estrategia/vigente/` y `estrategia/planes/` de este repositorio |
+| Imágenes sociales | Avatar generado desde el símbolo sobre Milk; `brandkit/08-imagenes/open-graph/og.png` es la fuente versionada. Otras piezas están en `contenido/` |
 
-Estas carpetas del kit son fuentes oficiales, no copias descartables. Los manuales también se editan dentro de `brandkit/`. Las copias de planes se regeneran desde `documentacion/`: no editarlas como única fuente. El código de la antigua landing y sus snapshots se retiraron; el kit no depende de un frontend.
+Estas carpetas del kit son fuentes oficiales, no copias descartables. Los manuales también se editan dentro de `brandkit/`. Las copias de planes se regeneran desde `estrategia/`: no editarlas como única fuente. El código de la antigua landing y sus snapshots se retiraron; el kit no depende de un frontend.
 
 Los PNG, WebP, JPG e ICO copiados de otras fuentes se conservan byte a byte. En los snapshots SVG solo se normalizan saltos de línea a LF, sin cambiar el dibujo. El build del kit no depende de `output/`, de imágenes sueltas ni del checkout de la app.
 
@@ -54,7 +54,7 @@ npm run brandkit:frontend
 1. Editar la fuente indicada en la tabla; mantener la licencia al actualizar una fuente tipográfica.
 2. Ejecutar el build. Primero comprueba entradas y rechaza enlaces simbólicos; después prepara y valida una copia temporal. Solo tras la validación sustituye el kit, con restauración del anterior si falla el intercambio. Un error de entrada o generación no sobrescribe el kit actual.
 3. `brandkit:verify` comprueba inventario exacto, hashes, enlaces y fuentes locales sin consultar fuentes externas. En el símbolo y los favicons exige pixel art exacto: cada archivo idéntico a su mapa, solo colores de la paleta. En las propuestas del personaje verifica 14 estáticos, 20 secuencias, lienzos, fotogramas, versiones HD, hojas y tiempos WebP. En los avatares verifica fondo opaco, símbolo y margen circular. También admite `--kit <carpeta>` para validar un paquete extraído fuera del checkout.
-4. `brandkit:verify -- --sources` añade la comparación de los snapshots con `documentacion/`. Es opcional, no una dependencia del paquete entregado.
+4. `brandkit:verify -- --sources` añade la comparación de los snapshots con `estrategia/`. Es opcional, no una dependencia del paquete entregado.
 5. Para refrescar únicamente los iconos PWA desde otra app: `npm run brandkit:build -- --app-dir <ruta-app>`. Para compararlos sin modificarlos: `npm run brandkit:verify -- --app-dir <ruta-app>`. La variable ambiental antigua ya no controla el proceso.
 6. Revisar y aprobar cualquier retirada de assets. El build no elimina recursos canónicos por considerarlos sobrantes.
 
@@ -78,11 +78,11 @@ El paquete `@gatopago/brand-assets` se genera con `brandkit:frontend` en
 `output/frontend/`. Es un tarball local privado, no una publicación npm. Solo lleva
 la misma base vigente y no modifica el frontend. Ver [integración](./integracion-frontend.md).
 
-El template editable del catálogo es `scripts/brandkit/catalogo.html`; el de la galería, `scripts/brandkit/galeria-personaje.mjs`. Los exports HD y los avatares se generan con `exportaciones-personaje.mjs` y `avatar.mjs`. No se recrea el ZIP duplicado del personaje retirado del kit: sus archivos están incluidos directamente en el ZIP general de `output/`. Los manuales cortos dentro de `01-manual/` se editan directamente; no los sobreescribe el generador. Para actualizar los recortes, ejecutar `brandkit:personaje` antes del build. Ese paso usa una carpeta temporal y no sustituye la entrega si falla la generación.
+El template editable del catálogo es `herramientas/brandkit/catalogo.html`; el de la galería, `herramientas/brandkit/galeria-personaje.mjs`. Los exports HD y los avatares se generan con `exportaciones-personaje.mjs` y `avatar.mjs`. No se recrea el ZIP duplicado del personaje retirado del kit: sus archivos están incluidos directamente en el ZIP general de `output/`. Los manuales cortos dentro de `01-manual/` se editan directamente; no los sobreescribe el generador. Para actualizar los recortes, ejecutar `brandkit:personaje` antes del build. Ese paso usa una carpeta temporal y no sustituye la entrega si falla la generación.
 
 ## Repositorio de marca
 
-Desde el 1 de octubre de 2026 este checkout almacena identidad, recursos y documentación, no una landing. La app y la landing viven en el frontend unificado. Se conservaron los WebP de uso anterior en `recursos/personaje-web/`, la portada y las presentaciones, sin cambios artísticos.
+Desde el 1 de octubre de 2026 este checkout almacena identidad, recursos y estrategia, no una landing. La app y la landing viven en el frontend unificado. Se conservaron los WebP de uso anterior en `archivo/personaje-web/`, la portada en `contenido/plantillas/` y las presentaciones en `comercial/pitch/`, sin cambios artísticos.
 
 ## Límites de esta edición
 

@@ -1,6 +1,6 @@
 # Redes sociales · octubre de 2026
 
-**Estado: propuesta.** 166 piezas generadas con `npm run brandkit:social` (fuente: `scripts/brandkit/social.mjs`). Abrir [index.html](./index.html) para revisarlas.
+**Estado: propuesta.** 166 piezas generadas con `npm run brandkit:social` (fuente: `herramientas/brandkit/social.mjs`). Abrir [index.html](./index.html) para revisarlas.
 
 - `png/`: listas para publicar. `svg/`: editables; el texto está trazado (no depende de fuentes instaladas).
 - Formatos: posts 1080 × 1350 (4:5) y 1080 × 1080 (1:1), carruseles 4:5, historias 1080 × 1920, posts horizontales 1200 × 675, banners de X, LinkedIn, YouTube, Facebook y enlace compartido, portadas de destacadas, fondos, stickers y plantillas.

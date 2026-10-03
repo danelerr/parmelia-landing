@@ -828,7 +828,7 @@ for (const t of SCREEN_TEMPLATES) {
   await out(t.id, frame(W, H, THEMES[t.th], await screenshotTemplate(t), 'Plantilla de novedad con captura'));
   rows.push({ id: t.id, serie: 'Plantillas con captura', formato: t.f, size: `${W}×${H}`, copy: 'Plantilla: sustituir la captura por una real de la app y el titular por la novedad. Mantener la nota de alpha.' });
 }
-await fs.writeFile(path.join(OUT, 'manifest.json'), JSON.stringify({ schemaVersion: 1, status: 'propuesta', generator: 'scripts/brandkit/social.mjs', pieces: rows }, null, 2) + '\n');
+await fs.writeFile(path.join(OUT, 'manifest.json'), JSON.stringify({ schemaVersion: 1, status: 'propuesta', generator: 'herramientas/brandkit/social.mjs', pieces: rows }, null, 2) + '\n');
 
 // Gallery and README.
 const series = [...new Set(rows.map(r => r.serie))];
@@ -845,7 +845,7 @@ ${series.map(s => `<h2 id="${encodeURIComponent(s)}">${esc(s)}</h2>${grid(s)}`).
 `);
 await fs.writeFile(path.join(OUT, 'README.md'), `# Redes sociales · octubre de 2026
 
-**Estado: propuesta.** ${rows.length} piezas generadas con \`npm run brandkit:social\` (fuente: \`scripts/brandkit/social.mjs\`). Abrir [index.html](./index.html) para revisarlas.
+**Estado: propuesta.** ${rows.length} piezas generadas con \`npm run brandkit:social\` (fuente: \`herramientas/brandkit/social.mjs\`). Abrir [index.html](./index.html) para revisarlas.
 
 - \`png/\`: listas para publicar. \`svg/\`: editables; el texto está trazado (no depende de fuentes instaladas).
 - Formatos: posts 1080 × 1350 (4:5) y 1080 × 1080 (1:1), carruseles 4:5, historias 1080 × 1920, posts horizontales 1200 × 675, banners de X, LinkedIn, YouTube, Facebook y enlace compartido, portadas de destacadas, fondos, stickers y plantillas.

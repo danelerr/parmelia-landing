@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "status": "propuesta",
-  "generator": "scripts/brandkit/social.mjs",
+  "generator": "herramientas/brandkit/social.mjs",
   "pieces": [
     {
       "id": "manifiesto-01",

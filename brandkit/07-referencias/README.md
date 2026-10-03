@@ -10,7 +10,7 @@ Edición 2026-09-24. **Contexto de consulta, no una segunda fuente editable.**
 
 Estas copias preservan los textos originales. Algunas propuestas visuales y menciones públicas de Meli están superadas por decisiones posteriores; consultar [las diferencias](../01-manual/sistema-visual.md#diferencias-con-los-planes-anteriores). Un plan no acredita que una funcionalidad esté implementada.
 
-El conjunto de documentación estratégica sigue centralizado en `documentacion/` de este repositorio de marca; la documentación técnica vive en `docs/` de la app. No se copian aquí planes de negocio, contratos privados o documentación técnica sin relación directa con identidad.
+El conjunto de documentación estratégica sigue centralizado en `estrategia/` de este repositorio de marca; la documentación técnica vive en `docs/` de la app. No se copian aquí planes de negocio, contratos privados o documentación técnica sin relación directa con identidad.
 
 ## Implementación en producto
 

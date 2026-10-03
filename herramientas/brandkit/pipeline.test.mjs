@@ -23,13 +23,13 @@ test('brandkit pipeline is self-contained and fail-safe', async t=>{
   const fixture = path.join(work,'fixture');
   await fs.mkdir(fixture);
   try {
-    for(const relative of ['scripts','brandkit','documentacion/nuevos']) {
+    for(const relative of ['herramientas','brandkit','estrategia/vigente']) {
       await fs.cp(path.join(root,relative),path.join(fixture,relative),{recursive:true});
     }
     const kit=path.join(fixture,'brandkit');
     function run(script,args=[],expected=0) {
       // Node resolves installed tooling from the enclosing checkout. No app checkout is provided.
-      const result=spawnSync(process.execPath,[path.join(fixture,'scripts',script),...args],{
+      const result=spawnSync(process.execPath,[path.join(fixture,'herramientas',script),...args],{
         cwd:fixture,encoding:'utf8',maxBuffer:3_000_000,
         env:{...process.env,GATOPAGO_APP_DIR:path.join(work,'does-not-exist')},
       });
@@ -146,7 +146,7 @@ test('brandkit pipeline is self-contained and fail-safe', async t=>{
       run('verify-brandkit.mjs');
     });
     await t.test('explicit source comparison detects drift; standalone verification still passes',async()=>{
-      const source=path.join(fixture,'documentacion/nuevos/gatopago-plan-marca-experiencia-2026.md');
+      const source=path.join(fixture,'estrategia/vigente/gatopago-plan-marca-experiencia-2026.md');
       const original=await fs.readFile(source);
       try {
         await fs.writeFile(source,Buffer.concat([original,Buffer.from('changed')]));
@@ -159,7 +159,7 @@ test('brandkit pipeline is self-contained and fail-safe', async t=>{
       const before=await inventory(kit);
       const originals=new Map();
       try {
-        for(const relative of ['scripts/brandkit/catalogo.html','documentacion/nuevos/gatopago-plan-marca-experiencia-2026.md']) {
+        for(const relative of ['herramientas/brandkit/catalogo.html','estrategia/vigente/gatopago-plan-marca-experiencia-2026.md']) {
           const file=path.join(fixture,relative);
           const bytes=await fs.readFile(file);
           originals.set(file,bytes);

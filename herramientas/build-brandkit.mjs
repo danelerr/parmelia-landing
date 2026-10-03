@@ -45,8 +45,8 @@ const originalNames = ['d54017bf-565f-49e0-8192-bd0f47bfc050.png','spritesmeli1.
 const documentNames = ['gatopago-rebranding-maestro-2026.md','gatopago-plan-marca-experiencia-2026.md','gatopago_nueva_narrativa_contexto_completo_2026-08-18.txt'];
 const pwaNames = ['icon-192.png','icon-512.png','apple-touch-icon.png','manifest.webmanifest'];
 const required = [
-  ...documentNames.map(name=>path.join(root,'documentacion/nuevos',name)),
-  path.join(root,'scripts/brandkit/catalogo.html'),
+  ...documentNames.map(name=>path.join(root,'estrategia/vigente',name)),
+  path.join(root,'herramientas/brandkit/catalogo.html'),
   ...originalNames.map(name=>path.join(currentKit,'06-originales',name)),
   ...pwaNames.map(name=>path.join(app ? path.join(app,'client/public') : path.join(currentKit,'02-logos/pwa'),name)),
   ...['README.md','CONTROL-DE-CALIDAD.md','02-logos/modelo/simbolo.txt','02-logos/modelo/simbolo-16.txt','03-personaje/README.md','03-personaje/animaciones/manifest.json','04-tipografia/recursive/full.css','04-tipografia/recursive/LICENSE.txt','05-colores/tokens.json','08-imagenes/open-graph/og.png'].map(name=>path.join(currentKit,name)),
@@ -101,7 +101,7 @@ await write('04-tipografia/uso.css', `@import url('./recursive/full.css');
 `);
 
 for (const name of documentNames) {
-  await copy(path.join(root, 'documentacion/nuevos', name), `07-referencias/documentos/${name}`);
+  await copy(path.join(root, 'estrategia/vigente', name), `07-referencias/documentos/${name}`);
 }
 const tokenDocument = JSON.parse(await fs.readFile(target('05-colores/tokens.json'),'utf8'));
 const tokens = tokenDocument.tokens;
@@ -120,7 +120,7 @@ const contrast = pairs.map(([fg,bg])=> { const a=luminance(color(fg).rgb), b=lum
 await write('05-colores/contraste.json', JSON.stringify(contrast,null,2)+'\n');
 await write('05-colores/README.md', `# Paleta de GatoPago\n\nLa fuente editable es [tokens.json](./tokens.json). Se conservan los valores de la identidad existente, sin depender del código de un frontend. [tokens.css](./tokens.css), CSV, GPL y contraste se regeneran desde ese JSON. Los nombres internos \`--meli-*\` se mantienen por compatibilidad; no son nombres públicos de producto. Los colores semánticos identifican estados; no son acentos intercambiables.\n\n| Token | HEX | RGB |\n|---|---|---|\n${colors.map(c=>`| ${c.name} | ${c.hex} | ${c.rgb.join(', ')} |`).join('\n')}\n\n## Contraste calculado\n\n| Texto / fondo | Ratio | AA texto normal |\n|---|---:|---|\n${contrast.map(c=>`| ${c.foreground} / ${c.background} | ${c.ratio}:1 | ${c.normalTextAA?'Sí':'No'} |`).join('\n')}\n\nNo son colores Pantone ni una conversión CMYK aprobada para imprenta. \`tokens-app.json\` conserva una referencia histórica de la app, no su configuración actual. Verificar cada aplicación en su propio repositorio.\n`);
 
-const template = (await fs.readFile(path.join(root, 'scripts/brandkit/catalogo.html'), 'utf8')).replace(/\r\n/g,'\n');
+const template = (await fs.readFile(path.join(root, 'herramientas/brandkit/catalogo.html'), 'utf8')).replace(/\r\n/g,'\n');
 const colorHtml = colors.map(c=>`<article class="swatch"><div style="background:${c.hex}"></div><h3>${c.name}</h3><code>${c.hex}</code><small>RGB ${c.rgb.join(' · ')}</small></article>`).join('');
 await write('index.html', template.replace('<!-- COLORS -->',colorHtml).replace('<!-- STAT_COLORS -->', String(colors.length).padStart(2,'0')).replace('<!-- RELEASE -->',release.version));
 for (const [name,bytes] of Object.entries(await designFiles(kit))) await write(name,bytes);

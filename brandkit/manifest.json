@@ -15,8 +15,8 @@
     },
     {
       "path": "01-manual/entrega-y-mantenimiento.md",
-      "bytes": 9179,
-      "sha256": "c7a26d6db7ab25a02878cb4422ef7239cdd4fef3fff9cfd93e98288c00e0410d",
+      "bytes": 9259,
+      "sha256": "da96c393f27da1ce19c7b4c48c80cf56c6281e764965ff6df6d294447d9cab57",
       "source": "brandkit editorial / generated",
       "status": "internal"
     },
@@ -6392,8 +6392,8 @@
     },
     {
       "path": "07-referencias/README.md",
-      "bytes": 1495,
-      "sha256": "1802bb974b609a0caac87eef955e51eb57d7379061f5ad6fa6397be79b5da15f",
+      "bytes": 1492,
+      "sha256": "6268ce41fd7bd6ae732a522a2a21fb7473b183355464b196b632252ac698b937",
       "source": "brandkit editorial / generated",
       "status": "reference"
     },
@@ -6401,7 +6401,7 @@
       "path": "07-referencias/documentos/gatopago-plan-marca-experiencia-2026.md",
       "bytes": 19945,
       "sha256": "11e0cc544caf337e8b6bb1a7b27d4168ca4f85cd3ffcda61c3cd87e8bee2953d",
-      "source": "repository/documentacion/nuevos/gatopago-plan-marca-experiencia-2026.md",
+      "source": "repository/estrategia/vigente/gatopago-plan-marca-experiencia-2026.md",
       "status": "reference",
       "transform": "lf"
     },
@@ -6409,7 +6409,7 @@
       "path": "07-referencias/documentos/gatopago-rebranding-maestro-2026.md",
       "bytes": 61230,
       "sha256": "8c443c225474467f2c931a030940833d3fea3e94a236cfa96cf7f81ccc3aad40",
-      "source": "repository/documentacion/nuevos/gatopago-rebranding-maestro-2026.md",
+      "source": "repository/estrategia/vigente/gatopago-rebranding-maestro-2026.md",
       "status": "reference",
       "transform": "lf"
     },
@@ -6417,14 +6417,14 @@
       "path": "07-referencias/documentos/gatopago_nueva_narrativa_contexto_completo_2026-08-18.txt",
       "bytes": 46192,
       "sha256": "7c6965bc43feed0bad3e98bf9bf6c52c042437239a0219c6a23ae526e6ce94d7",
-      "source": "repository/documentacion/nuevos/gatopago_nueva_narrativa_contexto_completo_2026-08-18.txt",
+      "source": "repository/estrategia/vigente/gatopago_nueva_narrativa_contexto_completo_2026-08-18.txt",
       "status": "reference",
       "transform": "lf"
     },
     {
       "path": "08-imagenes/README.md",
-      "bytes": 1076,
-      "sha256": "12fdc4334f0f485008aeb2fb985fbe379257637453231e5e142ce3bd709ba130",
+      "bytes": 1073,
+      "sha256": "511ec07693dfd6824a567a9904bdb111c1cdff4ba3e8ec701be993a6b398a289",
       "source": "brandkit editorial / generated",
       "status": "internal"
     },
@@ -6577,8 +6577,8 @@
     },
     {
       "path": "09-componentes/README.md",
-      "bytes": 638,
-      "sha256": "3cc94832e3629d9bfd5e19bbe17df37d91978c6d9e65fd2ddc376947c3918632",
+      "bytes": 643,
+      "sha256": "8a33cd751bf36c0da2c008b1bac9fd8ba5af3af8f564751c0161bd6674f7bba0",
       "source": "brandkit editorial / generated",
       "status": "review"
     },
@@ -6626,8 +6626,8 @@
     },
     {
       "path": "10-plantillas/README.md",
-      "bytes": 1235,
-      "sha256": "10028e112cb72c3c489199edbf61dde73588904ec2e5c41e5df30846c4776dfd",
+      "bytes": 1240,
+      "sha256": "2ac4b4c39216eae56d1ecfeabc34378bc895496d5374f6e12382acd49d1093b1",
       "source": "brandkit editorial / generated",
       "status": "review"
     },

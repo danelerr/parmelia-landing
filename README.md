@@ -1,52 +1,63 @@
-# GatoPago — marca y recursos
+# GatoPago — Identidad, Estrategia y Recursos
 
-Este repositorio conserva la identidad de GatoPago: brandkit, originales, fuentes,
-sprites, recursos gráficos y documentación. Ya no contiene una landing ni una app.
-No tiene servidor de desarrollo, rutas públicas, analítica ni configuración de despliegue.
+Este repositorio es la biblioteca central de marca, estrategia, activos comerciales y generadores de GatoPago.  
+No contiene código de frontend, servidor web ni configuración de despliegue (la app y la landing viven en el repositorio unificado `gatopago/gatopago`).
 
-La landing y la app se trabajan en el repositorio unificado `gatopago/gatopago`.
-Este cambio no modifica ni publica ese frontend.
+## Mapa del repositorio
 
-## Dónde está cada cosa
+```
+├── brandkit/                    IDENTIDAD CANÓNICA
+│                                Manual, logos, personaje, tipografía, colores, plantillas y catálogo local
+│
+├── estrategia/                  QUÉ ES GATOPAGO Y POR QUÉ
+│   ├── vigente/                 Narrativa 2026-10, promesa de marca, índice maestro y rebranding
+│   ├── planes/                  Planes estratégicos 2026–2030 (producto, finanzas, marketing, B2B…)
+│   ├── investigacion/           Benchmarks y análisis de mercado
+│   ├── auditorias/              Auditoría de marca y recomendaciones de diseño
+│   └── archivo/                 Documentos y adaptaciones históricas
+│
+├── comercial/                   VENTAS, CAPITAL Y ALIANZAS
+│   ├── pitch/                   Guion del pitch deck, presentaciones PPTX/PDF e histórico
+│   ├── grants/                  Solicitudes y reportes de convocatorias y subvenciones
+│   ├── partners/                Propuestas y one-pagers para aliados comerciales
+│   └── data-room/               Índice para due diligence (sin datos sensibles)
+│
+├── contenido/                   COMUNICACIÓN Y PUBLICACIONES
+│   ├── redes/2026-10/           166 piezas sociales generadas (posts, carruseles, banners, stickers)
+│   ├── calendario/              Plan editorial y cronograma de publicación
+│   └── plantillas/              Portadas, fondos y recursos reutilizables
+│
+├── archivo/                     REGISTRO TÉCNICO E HISTÓRICO (No usar en piezas nuevas)
+│   ├── laboratorio-gatopago/    332 MB de animaciones, propuestas y rigs experimentales
+│   ├── personaje-web/           WebP del frontend anterior conservados byte a byte
+│   ├── archivo-web/             Iconos históricos de la web anterior
+│   └── iconos-terceros/         Logos de USDC, Arbitrum, Bitcoin y Ethereum
+│
+├── herramientas/                SCRIPTS Y GENERADORES
+│   ├── brandkit/                Generadores de personaje, piezas sociales, release y tests
+│   ├── build-brandkit.mjs       Compilación determinista del kit
+│   ├── verify-brandkit.mjs      Verificación estricta de inventario y hashes
+│   ├── package-brandkit.mjs     Empaquetado de ZIP interno y externo
+│   └── package-frontend.mjs     Generación de tarball @gatopago/brand-assets
+│
+└── output/                      Entregas locales (ignorado por Git)
+```
 
-| Carpeta | Contenido |
-|---|---|
-| [brandkit/](./brandkit/README.md) | Manual, logos, iconos, tipografía, colores, personaje y originales |
-| [brandkit/index.html](./brandkit/index.html) | Catálogo visual local, sin conexión |
-| [documentacion/](./documentacion/README.md) | Narrativa, estrategia y lineamientos; separados por procedencia |
-| [recursos/](./recursos/README.md) | Ilustraciones web conservadas, iconos de redes/tokens, portada y presentaciones |
-| `scripts/` | Generación, verificación y empaquetado del kit |
-| `output/` | Entregas ZIP y archivos de trabajo locales; no se versionan |
-
-Las carpetas de configuración de agentes contienen herramientas de trabajo,
-no código de producto. El nombre del directorio local conserva su nombre anterior
-para no romper accesos del equipo; el paquete se llama `gatopago-brandkit`.
-
-## Mantener el kit
+## Herramientas del Brandkit
 
 Con Node >=22.12:
 
 ```sh
 npm ci
-npm run brandkit:build
-npm run brandkit:verify -- --sources
-npm run brandkit:test
-npm run brandkit:zip
-npm run brandkit:external
-npm run brandkit:frontend
+npm run brandkit:build          # Genera catálogo, tokens CSS/CSV/GPL y manifiesto
+npm run brandkit:verify -- --sources  # Valida inventario, hashes y coincidencia de fuentes
+npm run brandkit:test           # Ejecuta suite completa de pruebas unitarias
+npm run brandkit:zip            # Genera ZIP interno para el equipo
+npm run brandkit:external       # Genera ZIP externo sin material en revisión
+npm run brandkit:frontend       # Genera tarball local @gatopago/brand-assets
 ```
 
-La candidata actual es **1.0.0-rc.1**, no una aprobación artística final. Se generan
-un ZIP interno, otro externo con la base vigente y un tarball npm local y privado.
-Las entregas quedan en `output/`; se excluye el material retirado de `brandkit/descartado/`.
-Las variantes nuevas, componentes y plantillas quedan solo en la entrega interna.
-Las fuentes editables están versionadas: mapas del símbolo, tokens JSON, originales,
-fuentes con licencia, plantillas y documentación. No se requieren Astro, Tailwind,
-fuentes de `node_modules`, archivos de la antigua landing ni otro checkout.
+La candidata actual es **1.0.0-rc.1**.  
+Las fuentes editables están versionadas: mapas del símbolo, tokens JSON, originales, fuentes tipográficas con licencia y plantillas. No se borra `brandkit/` para regenerarlo.
 
-No borrar `brandkit/` antes de regenerarlo: también almacena originales. El build
-valida una copia temporal antes de sustituir el resultado y no redibuja el personaje.
-Para rehacer los recortes, ejecutar `npm run brandkit:personaje` antes del build.
-
-Consulta [entrega y mantenimiento](./brandkit/01-manual/entrega-y-mantenimiento.md)
-para conocer procedencia, licencias y límites de la entrega.
+Consulta [entrega y mantenimiento](./brandkit/01-manual/entrega-y-mantenimiento.md) para más detalles.

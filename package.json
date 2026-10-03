@@ -8,14 +8,14 @@
     "node": ">=22.12.0"
   },
   "scripts": {
-    "brandkit:personaje": "node scripts/brandkit/personaje.mjs",
-    "brandkit:social": "node scripts/brandkit/social.mjs",
-    "brandkit:build": "node scripts/build-brandkit.mjs",
-    "brandkit:verify": "node scripts/verify-brandkit.mjs",
-    "brandkit:zip": "node scripts/package-brandkit.mjs",
-    "brandkit:test": "node --test scripts/brandkit/pipeline.test.mjs scripts/brandkit/release.test.mjs",
-    "brandkit:external": "node scripts/package-brandkit.mjs --external",
-    "brandkit:frontend": "node scripts/package-frontend.mjs"
+    "brandkit:personaje": "node herramientas/brandkit/personaje.mjs",
+    "brandkit:social": "node herramientas/brandkit/social.mjs",
+    "brandkit:build": "node herramientas/build-brandkit.mjs",
+    "brandkit:verify": "node herramientas/verify-brandkit.mjs",
+    "brandkit:zip": "node herramientas/package-brandkit.mjs",
+    "brandkit:test": "node --test herramientas/brandkit/pipeline.test.mjs herramientas/brandkit/release.test.mjs",
+    "brandkit:external": "node herramientas/package-brandkit.mjs --external",
+    "brandkit:frontend": "node herramientas/package-frontend.mjs"
   },
   "dependencies": {
     "sharp": "0.35.5",
