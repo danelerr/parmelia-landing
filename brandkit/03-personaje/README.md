@@ -13,12 +13,12 @@
 - `hd/`: 14 PNG estáticos, 147 fotogramas y 20 WebP ampliados por múltiplos enteros; lado mayor de al menos 2048 px. Se conservan proporciones, tiempos, RGB y alfa de los PNG originales, sin interpolación ni detalle inventado.
 - `hojas/`: 20 hojas PNG con todos los fotogramas únicos de cada secuencia, con su lienzo completo. También tienen una versión HD en `hd/hojas/`.
 - [Exportaciones](./exportaciones.json): dimensiones, escalas, hashes y procedencia de los 221 exports.
-- [Descargar personaje completo](./descargas/gatopago-personaje-hd.zip): originales, HD, hojas y metadatos en un ZIP de 404 archivos.
+- Entrega completa: ejecutar `npm run brandkit:zip`. El ZIP general en `output/` incluye directamente los originales, HD, hojas y metadatos del personaje, sin un ZIP duplicado dentro del kit.
 - [Avatar de GatoPago](../08-imagenes/avatar/README.md): logo SVG sobre Milk y siete tamaños PNG, separados del personaje.
 
 Estas piezas conservan semitransparencias, variaciones de color y densidades de píxel de los originales. Por ejemplo, la expresión neutral original contiene 7.018 valores RGB visibles y 71.243 píxeles con alfa entre 1 y 254. Las versiones HD amplían esos mismos píxeles: no convierten los recortes en arte de paleta cerrada. El SVG entregado corresponde al logo y al avatar; todavía no se entregan vectores ni borde para fondo oscuro del personaje.
 
-Para regenerar los recortes: `npm run brandkit:personaje`, después `npm run brandkit:build` y `npm run brandkit:verify`. El build crea los HD, las hojas, los ZIP de descarga y la galería. Reutiliza únicamente exports cuyos hashes y receta siguen coincidiendo con las fuentes. El generador comprueba las entradas y prepara una carpeta temporal antes de sustituir las piezas actuales; conserva este README.
+Para regenerar los recortes: `npm run brandkit:personaje`, después `npm run brandkit:build` y `npm run brandkit:verify`. El build crea los HD, las hojas, la galería y el ZIP de avatares. El ZIP de entrega general se genera por separado con `brandkit:zip`. Reutiliza únicamente exports cuyos hashes y receta siguen coincidiendo con las fuentes. El generador comprueba las entradas y prepara una carpeta temporal antes de sustituir las piezas actuales; conserva este README.
 
 - El gato acompaña, orienta y reacciona. **No es el logo**: el símbolo de [02-logos](../02-logos/README.md) no cambia.
 - No tiene nombre público. En textos se habla de «el gato» o de la acción que realiza.

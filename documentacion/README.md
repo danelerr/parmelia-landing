@@ -1,13 +1,13 @@
 # Documentación central de GatoPago
 
 **Estado:** índice canónico de estrategia, producto y marca.  
-**Última organización:** 23 de agosto de 2026.
+**Última organización:** 1 de octubre de 2026.
 
 Esta carpeta es la fuente central de documentación editorial de GatoPago. La documentación operativa —arquitectura, API, contratos, seguridad, despliegues y runbooks— permanece en el repositorio de la app, cuyo punto de entrada es `docs/README.md`.
 
 ## Brandkit y archivos de identidad
 
-El [brandkit de GatoPago](../brandkit/README.md), organizado el 24 de septiembre de 2026, reúne el manual práctico, logo, iconos, fuentes con licencia y paleta. El personaje está en desarrollo; su versión de septiembre de 2026 se retiró a `brandkit/descartado/`. Incluye un [catálogo visual local](../brandkit/index.html) y trazabilidad de los archivos. Es el punto de entrada para entregar recursos de marca; los documentos estratégicos siguen en esta carpeta. Sus tokens reflejan la landing observada, no una certificación de todas las pantallas de la app. La [propuesta de mejoras de marca en la app](./nuevos/gatopago-propuesta-mejoras-app-2026-09-28.md) (28 de septiembre de 2026) recoge las correcciones pendientes en la app.
+El [brandkit de GatoPago](../brandkit/README.md), organizado el 24 de septiembre de 2026, reúne el manual práctico, logo, iconos, fuentes con licencia y paleta. El personaje está en desarrollo; su versión de septiembre de 2026 se retiró a `brandkit/descartado/`. Incluye un [catálogo visual local](../brandkit/index.html) y trazabilidad de los archivos. Es el punto de entrada para entregar recursos de marca; los documentos estratégicos siguen en esta carpeta. Desde el 1 de octubre de 2026 este checkout es exclusivamente de marca y recursos. La landing y la app viven en el repositorio unificado `gatopago/gatopago`. La paleta editable está en `brandkit/05-colores/tokens.json`; no certifica el estilo de todas las pantallas de la app. La [propuesta de mejoras de marca en la app](./nuevos/gatopago-propuesta-mejoras-app-2026-09-28.md) (28 de septiembre de 2026) recoge las correcciones pendientes en la app.
 
 ## Decisiones vigentes
 

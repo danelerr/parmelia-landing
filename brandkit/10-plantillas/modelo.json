@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "status": "review",
+  "templates": [
+    {
+      "id": "post-cuadrado",
+      "w": 1080,
+      "h": 1080,
+      "background": "milk",
+      "headline": ["Una cuenta.", "Tu propio", "camino."],
+      "label": "GATOPAGO / PLANTILLA",
+      "footer": ["Tu mensaje aquí.", "Una idea, un siguiente paso."],
+      "note": "Tu mensaje aquí. Una idea, sin promesas sin verificar."
+    },
+    {
+      "id": "novedad-vertical",
+      "w": 1080,
+      "h": 1350,
+      "background": "paper",
+      "headline": ["Algo nuevo.", "Te lo", "contamos."],
+      "label": "NOVEDAD / PLANTILLA",
+      "footer": ["Tu mensaje aquí.", "Una idea, un siguiente paso."],
+      "note": "Describe qué cambió y para quién está disponible."
+    },
+    {
+      "id": "portada-horizontal",
+      "w": 1500,
+      "h": 500,
+      "background": "ink",
+      "headline": ["Tu dinero.", "Tu camino."],
+      "label": "GATOPAGO",
+      "footer": ["gatopago.com"],
+      "note": "Plantilla editable · deja libre el recorte del avatar."
+    }
+  ]
+}

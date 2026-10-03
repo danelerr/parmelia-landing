@@ -6,14 +6,17 @@ import { fileURLToPath } from 'node:url';
 import { zipSync } from 'fflate';
 import { verifyKit } from './verify-brandkit.mjs';
 import { files, inside, removeWorkdir, slash } from './brandkit/paths.mjs';
+import { readRelease, approvedAssets, externalReadme, externalCatalog } from './brandkit/release.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const kit = path.join(root,'brandkit');
 const checked = await verifyKit(kit);
 if(checked.failures.length) throw new Error(`Run brandkit:build first:\n${checked.failures.join('\n')}`);
 const manifest = JSON.parse(await fs.readFile(path.join(kit,'manifest.json'),'utf8'));
-const excluded = ['descartado/'];
-const included = manifest.files.filter(row=>!excluded.some(prefix=>row.path.startsWith(prefix)));
+const release=await readRelease(kit);
+const external=process.argv.includes('--external');
+const excluded = external ? ['unapproved-assets','internal-documents','originals','references','retired-work'] : ['descartado/'];
+const included = external ? approvedAssets(manifest.files,release) : manifest.files.filter(row=>!row.path.startsWith('descartado/'));
 const work = await fs.mkdtemp(path.join(root,'.brandkit-work-'));
 try {
   const delivery = path.join(work,'delivery');
@@ -23,8 +26,14 @@ try {
     await fs.mkdir(path.dirname(dest),{recursive:true});
     await fs.copyFile(inside(kit,row.path),dest);
   }
-  await fs.copyFile(path.join(kit,'CONTROL-DE-CALIDAD.md'),path.join(delivery,'CONTROL-DE-CALIDAD.md'));
-  const deliveryManifest = {...manifest,profile:'delivery',excludedAreas:excluded,files:included};
+  if(external) {
+    for(const [name,content] of [['README.md',externalReadme(release.version)],['index.html',externalCatalog(release.version)]]) {
+      const bytes=Buffer.from(content);
+      await fs.writeFile(inside(delivery,name),bytes);
+      included.push({path:name,bytes:bytes.length,sha256:crypto.createHash('sha256').update(bytes).digest('hex'),source:'generated/external-delivery',status:'delivery-document'});
+    }
+  } else await fs.copyFile(path.join(kit,'CONTROL-DE-CALIDAD.md'),path.join(delivery,'CONTROL-DE-CALIDAD.md'));
+  const deliveryManifest = {...manifest,profile:external?'approved-delivery':'delivery',excludedAreas:excluded,files:included,...(external?{releasePolicy:release}:{})};
   await fs.writeFile(path.join(delivery,'manifest.json'),JSON.stringify(deliveryManifest,null,2)+'\n');
   const result = await verifyKit(delivery);
   if(result.failures.length) throw new Error(result.failures.join('\n'));
@@ -36,8 +45,8 @@ try {
   const bytes = zipSync(entries);
   const output = path.join(root,'output');
   await fs.mkdir(output,{recursive:true});
-  const filename = `gatopago-brandkit-${manifest.edition}.zip`;
-  if(!/^gatopago-brandkit-\d{4}-\d{2}-\d{2}\.zip$/.test(filename)) throw new Error('Invalid package edition');
+  const filename = `gatopago-brandkit-${external?'externo':'interno'}-${release.version}.zip`;
+  if(!/^gatopago-brandkit-(interno|externo)-\d+\.\d+\.\d+(?:-rc\.\d+)?\.zip$/.test(filename)) throw new Error('Invalid package version');
   const destination = inside(output,filename);
   const temporary = inside(output,filename+'.'+crypto.randomUUID()+'.tmp');
   try {

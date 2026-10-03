@@ -10,9 +10,12 @@ import { symbolFiles } from './brandkit/simbolo.mjs';
 import { characterGallery } from './brandkit/galeria-personaje.mjs';
 import { characterExports } from './brandkit/exportaciones-personaje.mjs';
 import { avatarFiles } from './brandkit/avatar.mjs';
+import { designFiles } from './brandkit/design-files.mjs';
+import { readRelease, statusOf } from './brandkit/release.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const currentKit = path.join(root, 'brandkit');
+const release = await readRelease(currentKit);
 let kit;
 const app = await appRoot();
 const provenance = new Map();
@@ -34,21 +37,19 @@ async function copy(source, relative, label) {
     transforms.set(relative, 'lf');
   }
   await fs.writeFile(dest, bytes);
-  provenance.set(relative, label || `landing/${slash(path.relative(root, source))}`);
+  provenance.set(relative, label || `repository/${slash(path.relative(root, source))}`);
 }
 
 const originalNames = ['d54017bf-565f-49e0-8192-bd0f47bfc050.png','spritesmeli1.png','spritesmeli2.png',
   'Image Aug 19, 2026, 01_47_20 AM (1).png', ...[2,3,4,5].map(i => `Image Aug 19, 2026, 01_47_21 AM (${i}).png`)];
 const documentNames = ['gatopago-rebranding-maestro-2026.md','gatopago-plan-marca-experiencia-2026.md','gatopago_nueva_narrativa_contexto_completo_2026-08-18.txt'];
-const publicNames = ['og.png'];
 const pwaNames = ['icon-192.png','icon-512.png','apple-touch-icon.png','manifest.webmanifest'];
 const required = [
-  ...publicNames.map(name=>path.join(root,'public',name)),
   ...documentNames.map(name=>path.join(root,'documentacion/nuevos',name)),
-  ...['src/styles/rebrand.css','src/styles/global.css','src/components/CatGlyph.astro','src/components/MeliSprite.astro','src/config/brand.ts','scripts/brandkit/catalogo.html'].map(name=>path.join(root,name)),
+  path.join(root,'scripts/brandkit/catalogo.html'),
   ...originalNames.map(name=>path.join(currentKit,'06-originales',name)),
   ...pwaNames.map(name=>path.join(app ? path.join(app,'client/public') : path.join(currentKit,'02-logos/pwa'),name)),
-  ...['README.md','CONTROL-DE-CALIDAD.md','02-logos/modelo/simbolo.txt','02-logos/modelo/simbolo-16.txt','03-personaje/README.md','03-personaje/animaciones/manifest.json','04-tipografia/recursive/full.css','04-tipografia/recursive/LICENSE.txt'].map(name=>path.join(currentKit,name)),
+  ...['README.md','CONTROL-DE-CALIDAD.md','02-logos/modelo/simbolo.txt','02-logos/modelo/simbolo-16.txt','03-personaje/README.md','03-personaje/animaciones/manifest.json','04-tipografia/recursive/full.css','04-tipografia/recursive/LICENSE.txt','05-colores/tokens.json','08-imagenes/open-graph/og.png'].map(name=>path.join(currentKit,name)),
 ];
 const missing = [];
 for(const file of required) {
@@ -102,29 +103,27 @@ await write('04-tipografia/uso.css', `@import url('./recursive/full.css');
 for (const name of documentNames) {
   await copy(path.join(root, 'documentacion/nuevos', name), `07-referencias/documentos/${name}`);
 }
-for (const name of ['rebrand.css', 'global.css']) await copy(path.join(root, 'src/styles', name), `07-referencias/implementacion/${name}`);
-for (const name of ['CatGlyph.astro', 'MeliSprite.astro']) await copy(path.join(root, 'src/components', name), `07-referencias/implementacion/${name}`);
-await copy(path.join(root, 'src/config/brand.ts'), '07-referencias/implementacion/brand.ts');
-await copy(path.join(root, 'public/og.png'), '08-imagenes/open-graph/og.png');
-
-const sourceCss = (await fs.readFile(path.join(root, 'src/styles/rebrand.css'), 'utf8')).replace(/\r\n/g,'\n');
-const rootBlock = sourceCss.match(/:root\s*\{([\s\S]*?)\}/)[1];
-const tokens = Object.fromEntries([...rootBlock.matchAll(/(--meli-[\w-]+):\s*([^;]+);/g)].map(m => [m[1], m[2].trim()]));
-await write('05-colores/tokens-landing.json', JSON.stringify({schemaVersion:1, source:'src/styles/rebrand.css :root', scope:'Snapshot of landing tokens; not an app-wide theme', tokens}, null, 2) + '\n');
-await write('05-colores/tokens-landing.css', `/* Snapshot literal de los tokens de la landing. */\n:root {${rootBlock}}\n`);
+const tokenDocument = JSON.parse(await fs.readFile(target('05-colores/tokens.json'),'utf8'));
+const tokens = tokenDocument.tokens;
+if (tokenDocument.schemaVersion !== 1 || !tokens || !Object.keys(tokens).length || Object.entries(tokens).some(([name,value])=>!/^--meli-[\w-]+$/.test(name) || typeof value !== 'string' || /[;{}\r\n]/.test(value))) {
+  throw new Error('Invalid canonical design tokens');
+}
+const rootBlock = '\n' + Object.entries(tokens).map(([name,value])=>`  ${name}: ${value};`).join('\n') + '\n';
+await write('05-colores/tokens.css', `/* Generado desde tokens.json; editar la fuente JSON. */\n:root {${rootBlock}}\n`);
 const colors = Object.entries(tokens).filter(([,v]) => /^#[\da-f]{6}$/i.test(v)).map(([name,hex]) => ({name:name.replace('--meli-',''), hex:hex.toUpperCase(), rgb:[1,3,5].map(i => parseInt(hex.slice(i,i+2),16))}));
 await write('05-colores/paleta.csv', 'token,hex,r,g,b\n' + colors.map(c => `${c.name},${c.hex},${c.rgb.join(',')}`).join('\n') + '\n');
-await write('05-colores/gatopago.gpl', 'GIMP Palette\nName: GatoPago — landing\nColumns: 4\n# sRGB\n' + colors.map(c => `${c.rgb.join(' ')} ${c.name}`).join('\n') + '\n');
+await write('05-colores/gatopago.gpl', 'GIMP Palette\nName: GatoPago\nColumns: 4\n# sRGB\n' + colors.map(c => `${c.rgb.join(' ')} ${c.name}`).join('\n') + '\n');
 const luminance = rgb => rgb.map(v=>v/255).map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4).reduce((v,c,i)=>v+c*[.2126,.7152,.0722][i],0);
 const color = n => colors.find(c=>c.name===n);
 const pairs = [['ink','milk'],['ink','cat-fire'],['milk','ink'],['milk','cat-fire'],['cat-shadow','milk']];
 const contrast = pairs.map(([fg,bg])=> { const a=luminance(color(fg).rgb), b=luminance(color(bg).rgb); const ratio=(Math.max(a,b)+.05)/(Math.min(a,b)+.05); return {foreground:fg,background:bg,ratio:Number(ratio.toFixed(2)),normalTextAA:ratio>=4.5,largeTextAA:ratio>=3}; });
 await write('05-colores/contraste.json', JSON.stringify(contrast,null,2)+'\n');
-await write('05-colores/README.md', `# Paleta de GatoPago\n\nSnapshot sRGB extraído del CSS de la landing. Los colores semánticos identifican estados; no son acentos intercambiables.\n\n| Token | HEX | RGB |\n|---|---|---|\n${colors.map(c=>`| ${c.name} | ${c.hex} | ${c.rgb.join(', ')} |`).join('\n')}\n\n## Contraste calculado\n\n| Texto / fondo | Ratio | AA texto normal |\n|---|---:|---|\n${contrast.map(c=>`| ${c.foreground} / ${c.background} | ${c.ratio}:1 | ${c.normalTextAA?'Sí':'No'} |`).join('\n')}\n\nCSS y JSON incluyen los tokens literales existentes; CSV y GPL facilitan importar la paleta. No son colores Pantone ni una conversión CMYK aprobada para imprenta.\n`);
+await write('05-colores/README.md', `# Paleta de GatoPago\n\nLa fuente editable es [tokens.json](./tokens.json). Se conservan los valores de la identidad existente, sin depender del código de un frontend. [tokens.css](./tokens.css), CSV, GPL y contraste se regeneran desde ese JSON. Los nombres internos \`--meli-*\` se mantienen por compatibilidad; no son nombres públicos de producto. Los colores semánticos identifican estados; no son acentos intercambiables.\n\n| Token | HEX | RGB |\n|---|---|---|\n${colors.map(c=>`| ${c.name} | ${c.hex} | ${c.rgb.join(', ')} |`).join('\n')}\n\n## Contraste calculado\n\n| Texto / fondo | Ratio | AA texto normal |\n|---|---:|---|\n${contrast.map(c=>`| ${c.foreground} / ${c.background} | ${c.ratio}:1 | ${c.normalTextAA?'Sí':'No'} |`).join('\n')}\n\nNo son colores Pantone ni una conversión CMYK aprobada para imprenta. \`tokens-app.json\` conserva una referencia histórica de la app, no su configuración actual. Verificar cada aplicación en su propio repositorio.\n`);
 
 const template = (await fs.readFile(path.join(root, 'scripts/brandkit/catalogo.html'), 'utf8')).replace(/\r\n/g,'\n');
 const colorHtml = colors.map(c=>`<article class="swatch"><div style="background:${c.hex}"></div><h3>${c.name}</h3><code>${c.hex}</code><small>RGB ${c.rgb.join(' · ')}</small></article>`).join('');
-await write('index.html', template.replace('<!-- COLORS -->',colorHtml).replace('<!-- STAT_COLORS -->', String(colors.length).padStart(2,'0')));
+await write('index.html', template.replace('<!-- COLORS -->',colorHtml).replace('<!-- STAT_COLORS -->', String(colors.length).padStart(2,'0')).replace('<!-- RELEASE -->',release.version));
+for (const [name,bytes] of Object.entries(await designFiles(kit))) await write(name,bytes);
 
 // Inventory every deliverable, including hashes and actual image metadata.
 const inventory = [];
@@ -132,8 +131,9 @@ for (const file of await files(kit)) {
   const relative = slash(path.relative(kit,file));
   if (['manifest.json','CONTROL-DE-CALIDAD.md'].includes(relative)) continue;
   const buffer = await fs.readFile(file);
-  const canonical = ['02-logos/modelo/','02-logos/pwa/','03-personaje/','04-tipografia/recursive/','06-originales/','descartado/'].some(prefix=>relative.startsWith(prefix));
+  const canonical = ['02-logos/modelo/','02-logos/pwa/','03-personaje/','04-tipografia/recursive/','05-colores/tokens.json','06-originales/','08-imagenes/open-graph/','descartado/'].some(prefix=>relative.startsWith(prefix));
   const row = {path:relative,bytes:buffer.length,sha256:crypto.createHash('sha256').update(buffer).digest('hex'),source:canonical?'brandkit canonical':provenance.get(relative)||'brandkit editorial / generated'};
+  row.status = statusOf(relative,release);
   if(transforms.has(relative)) row.transform=transforms.get(relative);
   if (/\.(png|webp|jpg|svg)$/i.test(file)) {
     const m = await sharp(buffer,{animated:true}).metadata();
@@ -141,7 +141,7 @@ for (const file of await files(kit)) {
   }
   inventory.push(row);
 }
-await write('manifest.json', JSON.stringify({schemaVersion:2,profile:'repository',brand:'GatoPago',edition:'2026-09-28',copyPolicy:'Raster images from other sources are copied byte-for-byte; derived text and SVG snapshots use LF. Canonical kit sources are versioned in Git. descartado/ holds retired work and is excluded from the delivery ZIP.',files:inventory},null,2)+'\n');
+await write('manifest.json', JSON.stringify({schemaVersion:2,profile:'repository',brand:'GatoPago',edition:'2026-09-28',version:release.version,copyPolicy:'Raster images from other sources are copied byte-for-byte; derived text and SVG snapshots use LF. Canonical kit sources are versioned in Git. descartado/ holds retired work and is excluded from the delivery ZIP.',files:inventory},null,2)+'\n');
 const result = await verifyKit(kit,{sourceRoot:root,app});
 if(result.failures.length) throw new Error(`Staged kit failed validation:\n${result.failures.join('\n')}`);
 if(initialFingerprint !== await fingerprint(currentKit)) throw new Error('Canonical kit changed during build; refusing replacement');
@@ -154,6 +154,9 @@ catch(error) {
   throw error;
 }
 console.log(JSON.stringify({kit:currentKit,...result,bytes:inventory.reduce((n,f)=>n+f.bytes,0)},null,2));
+} catch (error) {
+  console.error('Brandkit generation failed; the current kit is retained:', error.message);
+  throw error;
 } finally {
   await lock.close();
   await fs.unlink(lockPath);

@@ -3,7 +3,6 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import sharp from 'sharp';
-import { zipSync } from 'fflate';
 import { inside } from './paths.mjs';
 
 const hash = bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
@@ -86,20 +85,8 @@ export async function characterExports(kit, character) {
     animations[a.id] = {preview,frames,sheet,sheetHD};
     console.log(`HD: ${a.id} · ${preview.width} × ${preview.height} · ${frames.length} fotogramas`);
   }
-  const archiveFile = 'descargas/gatopago-personaje-hd.zip';
   const manifest = {schemaVersion:1,longEdgeMinimum:LONG_EDGE,resampling:'nearest',policy:POLICY,
-    note:'Integer enlargement without added detail; colours and alpha of source crops are preserved.',files:outputs,archive:{file:archiveFile}};
-  const originalFiles = [...character.statics.map(s=>s.file),...character.animations.flatMap(a=>[`animaciones/${a.preview}`,...new Set(a.sequence.map(f=>`animaciones/${f.frame}`))])];
-  const allFiles = [...originalFiles,...outputs.map(f=>f.file)];
-  const entries = Object.create(null);
-  for(const file of allFiles) entries[file] = [new Uint8Array(await fs.readFile(inside(base,file))),{mtime:new Date(2026,0,1),level:6}];
-  entries['animaciones/manifest.json'] = [new Uint8Array(Buffer.from(JSON.stringify(character,null,2)+'\n')),{mtime:new Date(2026,0,1),level:6}];
-  entries['exportaciones.json'] = [new Uint8Array(Buffer.from(JSON.stringify({...manifest,archive:undefined},null,2)+'\n')),{mtime:new Date(2026,0,1),level:6}];
-  const archive = Buffer.from(zipSync(entries));
-  await fs.mkdir(path.join(base,'descargas'),{recursive:true});
-  await fs.writeFile(inside(base,archiveFile),archive);
-  manifest.archive.bytes = archive.length;
-  manifest.archive.sha256 = hash(archive);
+    note:'Integer enlargement without added detail; colours and alpha of source crops are preserved. Bulk delivery is generated in output/ by brandkit:zip.',files:outputs};
   await fs.writeFile(manifestPath,JSON.stringify(manifest,null,2)+'\n');
   return {manifest,statics,animations};
 }

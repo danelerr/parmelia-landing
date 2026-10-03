@@ -1,0 +1,8 @@
+{
+  "entry": [
+    "scripts/brandkit/release.test.mjs"
+  ],
+  "project": ["scripts/**/*.mjs"],
+  "node": false,
+  "include": ["files", "dependencies", "unlisted", "unresolved"]
+}

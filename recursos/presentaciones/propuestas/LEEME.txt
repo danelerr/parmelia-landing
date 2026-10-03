@@ -1,0 +1,21 @@
+GatoPago · Pitch deck
+
+GatoPago_Pitch_Deck_GatoPago.pptx
+Presentación editable de 14 diapositivas. Los textos y diagramas son objetos
+nativos de PowerPoint. Las ilustraciones y el logo proceden del brandkit oficial.
+
+GatoPago_Pitch_Deck_GatoPago.pdf
+Versión lista para compartir. Mantiene la composición y las fuentes sin
+necesidad de instalar nada.
+
+fuentes/
+Tres variantes estáticas de Recursive, con los ejes del brandkit de GatoPago:
+GatoPago Deck Text, GatoPago Deck Display y GatoPago Deck Brand.
+Se incluyen también dentro del PowerPoint como fuentes incrustadas.
+Si tu editor sustituye una fuente al editar, instala los tres archivos TTF
+y vuelve a abrir la presentación.
+
+Las variantes estáticas llevan nombres propios para respetar la licencia
+de la fuente original. La licencia SIL Open Font License está en LICENSE.txt.
+
+El PowerPoint original permanece separado y sin modificaciones.

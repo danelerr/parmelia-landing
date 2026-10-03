@@ -1,0 +1,17 @@
+{
+  "status": "review",
+  "font": "04-tipografia/recursive/files/recursive-latin-full-normal.woff2",
+  "fontSha256": "14ef41458aeba3d812284c4e32ee956910b88845062c61e91cc8578c2b78bccb",
+  "axes": {
+    "MONO": 0,
+    "CASL": 1,
+    "wght": 760,
+    "slnt": 0,
+    "CRSV": 0.5
+  },
+  "text": "GatoPago",
+  "fontSize": 44,
+  "trackingEm": -0.045,
+  "format": "SVG paths, no text elements or external fonts",
+  "colorSpace": "sRGB; not CMYK or Pantone"
+}

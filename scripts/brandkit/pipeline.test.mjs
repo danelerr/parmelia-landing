@@ -23,7 +23,7 @@ test('brandkit pipeline is self-contained and fail-safe', async t=>{
   const fixture = path.join(work,'fixture');
   await fs.mkdir(fixture);
   try {
-    for(const relative of ['scripts','brandkit','src','public','documentacion/nuevos']) {
+    for(const relative of ['scripts','brandkit','documentacion/nuevos']) {
       await fs.cp(path.join(root,relative),path.join(fixture,relative),{recursive:true});
     }
     const kit=path.join(fixture,'brandkit');
@@ -83,22 +83,37 @@ test('brandkit pipeline is self-contained and fail-safe', async t=>{
       } finally { await fs.writeFile(motionPath,originalMotion); await fs.writeFile(inventoryPath,originalInventory); }
     });
     await t.test('a generation failure after preflight leaves the current kit untouched',async()=>{
-      const source=path.join(fixture,'public/og.png');
+      const source=path.join(kit,'05-colores/tokens.json');
       const original=await fs.readFile(source);
       try {
-        await fs.writeFile(source,'not an image');
+        await fs.writeFile(source,'not JSON');
         const before=await inventory(kit);
         run('build-brandkit.mjs',[],1);
         assert.deepEqual(await inventory(kit),before);
       } finally { await fs.writeFile(source,original); }
     });
     await t.test('build succeeds with no output directory, loose originals or font package input',async()=>{
+      await assert.rejects(fs.access(path.join(fixture,'src')));
+      await assert.rejects(fs.access(path.join(fixture,'public')));
       await assert.rejects(fs.access(path.join(fixture,'output')));
       await assert.rejects(fs.access(path.join(fixture,'spritesmeli1.png')));
       await assert.rejects(fs.access(path.join(fixture,'node_modules/@fontsource-variable/recursive')));
       run('build-brandkit.mjs');
       run('verify-brandkit.mjs');
       run('verify-brandkit.mjs',['--sources']);
+    });
+    await t.test('an overflowing template headline fails without replacing any kit files',async()=>{
+      const file=path.join(kit,'10-plantillas/modelo.json');
+      const saved=await fs.readFile(file);
+      try {
+        const recipe=JSON.parse(saved);
+        recipe.templates[0].headline[0]='A'.repeat(200);
+        await fs.writeFile(file,JSON.stringify(recipe));
+        const before=await inventory(kit);
+        const result=run('build-brandkit.mjs',[],1);
+        assert.match(result.stderr,/Headline too wide/);
+        assert.deepEqual(await inventory(kit),before);
+      } finally {await fs.writeFile(file,saved);}
     });
     await t.test('two builds produce the exact same files, including the manifest',async()=>{
       const before=await inventory(kit);
@@ -127,11 +142,11 @@ test('brandkit pipeline is self-contained and fail-safe', async t=>{
       const original=await fs.readFile(file);
       await fs.writeFile(file,'broken HD export');
       run('build-brandkit.mjs');
-      assert.equal(hash(await fs.readFile(file)),hash(original));
+      assert.deepEqual(await sharp(file).ensureAlpha().raw().toBuffer(),await sharp(original).ensureAlpha().raw().toBuffer());
       run('verify-brandkit.mjs');
     });
     await t.test('explicit source comparison detects drift; standalone verification still passes',async()=>{
-      const source=path.join(fixture,'public/og.png');
+      const source=path.join(fixture,'documentacion/nuevos/gatopago-plan-marca-experiencia-2026.md');
       const original=await fs.readFile(source);
       try {
         await fs.writeFile(source,Buffer.concat([original,Buffer.from('changed')]));
@@ -144,7 +159,7 @@ test('brandkit pipeline is self-contained and fail-safe', async t=>{
       const before=await inventory(kit);
       const originals=new Map();
       try {
-        for(const relative of ['src/styles/rebrand.css','scripts/brandkit/catalogo.html','public/Logo_gatopago.svg','public/favicon.svg']) {
+        for(const relative of ['scripts/brandkit/catalogo.html','documentacion/nuevos/gatopago-plan-marca-experiencia-2026.md']) {
           const file=path.join(fixture,relative);
           const bytes=await fs.readFile(file);
           originals.set(file,bytes);
@@ -162,9 +177,8 @@ test('brandkit pipeline is self-contained and fail-safe', async t=>{
       assert.equal(Object.keys(entries).some(name=>name.startsWith('brandkit/02-logos/simbolo/')),true);
       assert.equal(Object.keys(entries).filter(name=>/^brandkit\/03-personaje\/estaticos\/.*\.png$/.test(name)).length,14);
       assert.equal(Object.keys(entries).filter(name=>/^brandkit\/03-personaje\/animaciones\/[^/]+\.webp$/.test(name)).length,20);
-      const characterZip=unzipSync(entries['brandkit/03-personaje/descargas/gatopago-personaje-hd.zip']);
-      assert.equal(Object.keys(characterZip).length,404);
-      assert.equal(Object.keys(characterZip).filter(name=>/^hd\/animaciones\/fotogramas\/.*\.png$/.test(name)).length,147);
+      assert.equal(Object.keys(entries).filter(name=>/^brandkit\/03-personaje\/hd\/animaciones\/fotogramas\/.*\.png$/.test(name)).length,147);
+      assert.equal(Object.keys(entries).some(name=>name.startsWith('brandkit/03-personaje/descargas/')),false);
       const avatars=unzipSync(entries['brandkit/08-imagenes/avatar/gatopago-avatares.zip']);
       assert.equal(Object.keys(avatars).filter(name=>name.endsWith('.png')).length,7);
       assert.ok(avatars['gatopago-avatar.svg']);
@@ -182,7 +196,7 @@ test('brandkit pipeline is self-contained and fail-safe', async t=>{
       assert.equal(hash(await fs.readFile(result.zip)),hash(zipped));
     });
     await t.test('a failed ZIP validation does not overwrite the last good archive',async()=>{
-      const destination=path.join(fixture,'output/gatopago-brandkit-2026-09-28.zip');
+      const destination=path.join(fixture,'output/gatopago-brandkit-interno-1.0.0-rc.1.zip');
       const before=hash(await fs.readFile(destination));
       const entry=path.join(kit,'README.md');
       const original=await fs.readFile(entry);

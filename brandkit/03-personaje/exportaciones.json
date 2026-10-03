@@ -3,7 +3,7 @@
   "longEdgeMinimum": 2048,
   "resampling": "nearest",
   "policy": "rgba-nearest-integer-2048-v2",
-  "note": "Integer enlargement without added detail; colours and alpha of source crops are preserved.",
+  "note": "Integer enlargement without added detail; colours and alpha of source crops are preserved. Bulk delivery is generated in output/ by brandkit:zip.",
   "files": [
     {
       "file": "hd/estaticos/expresion-neutral.png",
@@ -2516,10 +2516,5 @@
       "bytes": 604315,
       "sha256": "3159cf20823fa3c13b0c1b509c951a992b32289afdd517bcc20bbf95588e9c75"
     }
-  ],
-  "archive": {
-    "file": "descargas/gatopago-personaje-hd.zip",
-    "bytes": 45546640,
-    "sha256": "d47fe979d77785c297a745739dbe463411fcdc20f76279bfdc65db8789f5eb51"
-  }
+  ]
 }

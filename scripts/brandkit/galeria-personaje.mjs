@@ -37,7 +37,7 @@ h3{margin:0;font-size:1.05rem;font-variation-settings:'CASL' 1}article p{margin:
 </style></head><body><main>
 <header><img src="../02-logos/simbolo/gatopago.svg" alt=""><h1>El gato de GatoPago</h1></header>
 <p class="lead">14 ilustraciones, 20 animaciones y sus 147 fotogramas completos. Explora las piezas y descarga el tamaño original o su versión HD.</p>
-${exports ? `<div class="toolbar">${link(exports.manifest.archive.file,`Descargar personaje completo · ${(exports.manifest.archive.bytes/1024/1024).toFixed(1)} MB`,'primary')}${avatar ? link(avatarDir+avatar.archive,'Descargar avatares') : ''}</div>` : ''}
+${avatar ? `<div class="toolbar">${link(avatarDir+avatar.archive,'Descargar avatares','primary')}</div>` : ''}
 <nav aria-label="Secciones de la galería"><a href="../index.html#personaje">Brandkit</a><a href="#expresiones">Expresiones</a><a href="#poses">Poses</a><a href="#animaciones">Animaciones</a><a href="#fotogramas">Fotogramas</a>${avatar ? '<a href="#avatar">Avatar</a>' : ''}<a href="#originales">Hojas originales</a></nav>
 <p class="note">Las versiones HD conservan el dibujo, los colores y la transparencia del original. Se amplían sin suavizar los bordes; no añaden detalle nuevo. El arte del personaje sigue <a href="README.md">en revisión</a>.</p>
 <h2 id="expresiones">Expresiones</h2><p class="lead">La cabeza del gato para estados y reacciones.</p><div class="grid">${heads.map(staticCard).join('')}</div>

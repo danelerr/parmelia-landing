@@ -1,67 +1,52 @@
-# GatoPago — landing
+# GatoPago — marca y recursos
 
-Landing page de GatoPago. Astro + Tailwind v4, sin librerías JS de animación
-(los reveals usan IntersectionObserver + CSS) y con imágenes optimizadas vía
-`astro:assets`.
+Este repositorio conserva la identidad de GatoPago: brandkit, originales, fuentes,
+sprites, recursos gráficos y documentación. Ya no contiene una landing ni una app.
+No tiene servidor de desarrollo, rutas públicas, analítica ni configuración de despliegue.
 
-## Desarrollo
+La landing y la app se trabajan en el repositorio unificado `gatopago/gatopago`.
+Este cambio no modifica ni publica ese frontend.
 
-```sh
-npm install
-npm run dev      # http://localhost:4321
-npm run build    # genera dist/
-npm run preview  # sirve dist/
-```
+## Dónde está cada cosa
 
-## Idiomas (i18n)
+| Carpeta | Contenido |
+|---|---|
+| [brandkit/](./brandkit/README.md) | Manual, logos, iconos, tipografía, colores, personaje y originales |
+| [brandkit/index.html](./brandkit/index.html) | Catálogo visual local, sin conexión |
+| [documentacion/](./documentacion/README.md) | Narrativa, estrategia y lineamientos; separados por procedencia |
+| [recursos/](./recursos/README.md) | Ilustraciones web conservadas, iconos de redes/tokens, portada y presentaciones |
+| `scripts/` | Generación, verificación y empaquetado del kit |
+| `output/` | Entregas ZIP y archivos de trabajo locales; no se versionan |
 
-- `/`    → español (idioma por defecto)
-- `/en/` → inglés
+Las carpetas de configuración de agentes contienen herramientas de trabajo,
+no código de producto. El nombre del directorio local conserva su nombre anterior
+para no romper accesos del equipo; el paquete se llama `gatopago-brandkit`.
 
-El idioma se resuelve con `Astro.currentLocale` y cada componente toma su copy
-de un objeto `{ es, en }`. El selector de idioma vive en el navbar.
+## Mantener el kit
 
-## Analítica (opcional, privacy-friendly)
-
-La analítica está **apagada por defecto**. Para activar Plausible, define la
-variable de entorno antes de `build` (o en un archivo `.env`):
-
-```sh
-PUBLIC_PLAUSIBLE_DOMAIN=gatopago.com
-```
-
-Con eso se inyecta el script de Plausible y los clics en los CTA
-(`data-cta="…"`) se reportan como evento `CTA click`. El tracker es
-agnóstico: también dispara a Umami o gtag si estuvieran presentes.
-
-Además, todos los CTA hacia `app.gatopago.com` llevan `?ref=landing_*` para
-atribuir registros por sección desde la analítica de la propia app.
-
-## Dominios y servicios
-
-La landing usa `https://gatopago.com` y los accesos a la app usan `https://app.gatopago.com`. La configuración pública está en `src/config/brand.ts`; `.env.example` enumera las variables disponibles.
-
-API, dashboard de desarrolladores y cuenta de X no tienen una dirección asumida: los enlaces opcionales solo aparecen al configurar `PUBLIC_API_URL`, `PUBLIC_DASHBOARD_URL` y `PUBLIC_SOCIAL_URL`, según corresponda. Los ejemplos de API usan `$GATOPAGO_API_URL`, que debe configurarse con el endpoint entregado para la integración.
-
-Los correos pasan a `hola@gatopago.com` y `privacy@gatopago.com`. Este cambio local no configura DNS, correo, hosting ni servicios. Antes de publicar, comprobar destinos y variables del entorno de despliegue.
-
-## Assets generados
-
-### Brandkit reproducible
+Con Node >=22.12:
 
 ```sh
 npm ci
 npm run brandkit:build
-npm run brandkit:verify
+npm run brandkit:verify -- --sources
 npm run brandkit:test
 npm run brandkit:zip
+npm run brandkit:external
+npm run brandkit:frontend
 ```
 
-Las fuentes canónicas están versionadas dentro de `brandkit/`: no se requieren archivos ignorados ni otro repositorio. No borres el kit para regenerarlo. El build prepara y valida una copia temporal antes de sustituir el resultado; el ZIP de `output/` excluye QA y herramientas internas.
+La candidata actual es **1.0.0-rc.1**, no una aprobación artística final. Se generan
+un ZIP interno, otro externo con la base vigente y un tarball npm local y privado.
+Las entregas quedan en `output/`; se excluye el material retirado de `brandkit/descartado/`.
+Las variantes nuevas, componentes y plantillas quedan solo en la entrega interna.
+Las fuentes editables están versionadas: mapas del símbolo, tokens JSON, originales,
+fuentes con licencia, plantillas y documentación. No se requieren Astro, Tailwind,
+fuentes de `node_modules`, archivos de la antigua landing ni otro checkout.
 
-Ver [fuentes y mantenimiento](./brandkit/01-manual/entrega-y-mantenimiento.md). La comparación adicional con fuentes actuales usa `npm run brandkit:verify -- --sources`; la app solo interviene si se proporciona explícitamente `--app-dir`.
+No borrar `brandkit/` antes de regenerarlo: también almacena originales. El build
+valida una copia temporal antes de sustituir el resultado y no redibuja el personaje.
+Para rehacer los recortes, ejecutar `npm run brandkit:personaje` antes del build.
 
-### Imágenes sociales
-
-- `scripts/make-og.ps1` → `public/og.png` (1200×630) y `public/apple-touch-icon.png`.
-  Regenerar con: `pwsh scripts/make-og.ps1`.
+Consulta [entrega y mantenimiento](./brandkit/01-manual/entrega-y-mantenimiento.md)
+para conocer procedencia, licencias y límites de la entrega.

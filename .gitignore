@@ -1,7 +1,7 @@
-# build output
+# Local generated deliveries (this repository does not build a website)
 dist/
 
-# generated types
+# Retired website caches must never re-enter Git
 .astro/
 
 # dependencies
@@ -28,6 +28,8 @@ pnpm-debug.log*
 # Documents and assets
 *.pdf
 *.pptx
+!recursos/presentaciones/**/*.pdf
+!recursos/presentaciones/**/*.pptx
 *.log
 *.tmp
 Captura de pantalla*

@@ -8,6 +8,8 @@ Edición 2026-09-25 · Símbolo reconstruido como pixel art; favicons generados 
 | `simbolo/` | [gatopago.svg](./simbolo/gatopago.svg), [gatopago-16.svg](./simbolo/gatopago-16.svg), [gatopago.png](./simbolo/gatopago.png) (×8) | Símbolo principal, fondo transparente |
 | `iconos-web/` | `favicon.svg`, `favicon.ico` (16/32/48), PNG 16/32/48 y `apple-touch-icon.png` | Identidad del sitio |
 | `pwa/` | PNG 192/512, Apple touch icon y manifiesto de la app | Snapshot de instalación de la aplicación (pendiente de rehacer) |
+| [horizontal/](./horizontal/README.md) | Cuatro wordmarks SVG trazados y PNG | Propuestas pendientes de aprobación |
+| [variantes/](./variantes/index.html) | Monocromáticas Ink, Milk y Cat Fire, y variante oscura | Propuestas; no sustituyen el símbolo principal |
 
 ## El símbolo
 
@@ -33,7 +35,7 @@ Los genera `npm run brandkit:build` desde los mapas; no se editan a mano.
 | `favicon.svg` | Versión 16 × 16 en vector: nítida a 16, 32 y 48 px |
 | `apple-touch-icon.png` | 180 × 180, **opaco** sobre Milk, símbolo a ×4 centrado (iOS pinta de negro la transparencia) |
 
-La composición horizontal (símbolo + «GatoPago» en Recursive) es texto vivo y está en [el catálogo](../index.html#logo), con las reglas en [el sistema visual](../01-manual/sistema-visual.md).
+El [catálogo principal](../index.html#logo) conserva la composición de base con texto vivo. Las nuevas composiciones [horizontales](./horizontal/README.md) usan contornos reales de Recursive, sin depender de fuentes instaladas. Ver la [galería de variantes](./variantes/index.html) y su trazabilidad antes de aprobarlas.
 
 ## Avatar para redes
 

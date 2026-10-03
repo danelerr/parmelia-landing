@@ -1,6 +1,6 @@
 # Paleta de GatoPago
 
-Snapshot sRGB extraído del CSS de la landing. Los colores semánticos identifican estados; no son acentos intercambiables.
+La fuente editable es [tokens.json](./tokens.json). Se conservan los valores de la identidad existente, sin depender del código de un frontend. [tokens.css](./tokens.css), CSV, GPL y contraste se regeneran desde ese JSON. Los nombres internos `--meli-*` se mantienen por compatibilidad; no son nombres públicos de producto. Los colores semánticos identifican estados; no son acentos intercambiables.
 
 | Token | HEX | RGB |
 |---|---|---|
@@ -29,4 +29,4 @@ Snapshot sRGB extraído del CSS de la landing. Los colores semánticos identific
 | milk / cat-fire | 3.19:1 | No |
 | cat-shadow / milk | 4.76:1 | Sí |
 
-CSS y JSON incluyen los tokens literales existentes; CSV y GPL facilitan importar la paleta. No son colores Pantone ni una conversión CMYK aprobada para imprenta.
+No son colores Pantone ni una conversión CMYK aprobada para imprenta. `tokens-app.json` conserva una referencia histórica de la app, no su configuración actual. Verificar cada aplicación en su propio repositorio.

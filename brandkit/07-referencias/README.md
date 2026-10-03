@@ -10,10 +10,10 @@ Edición 2026-09-24. **Contexto de consulta, no una segunda fuente editable.**
 
 Estas copias preservan los textos originales. Algunas propuestas visuales y menciones públicas de Meli están superadas por decisiones posteriores; consultar [las diferencias](../01-manual/sistema-visual.md#diferencias-con-los-planes-anteriores). Un plan no acredita que una funcionalidad esté implementada.
 
-El conjunto de documentación estratégica sigue centralizado en `documentacion/` de la landing; la documentación técnica vive en `docs/` de la app. No se copian aquí planes de negocio, contratos privados o documentación técnica sin relación directa con identidad.
+El conjunto de documentación estratégica sigue centralizado en `documentacion/` de este repositorio de marca; la documentación técnica vive en `docs/` de la app. No se copian aquí planes de negocio, contratos privados o documentación técnica sin relación directa con identidad.
 
-## Implementación
+## Implementación en producto
 
-`implementacion/` conserva `rebrand.css`, `global.css`, `CatGlyph.astro`, `MeliSprite.astro` y `brand.ts` como evidencia del estado de origen. Sus imports y rutas pertenecen al proyecto original: **no son un paquete de componentes instalable por separado**.
+El código y los snapshots de la antigua landing se retiraron el 1 de octubre de 2026. Este kit no distribuye páginas, componentes Astro ni un frontend alternativo.
 
 Los tokens reutilizables y fuentes autocontenidas están en `05-colores/` y `04-tipografia/`. Para componentes reales, trabajar en su repositorio con dependencias, pruebas y contexto completos.

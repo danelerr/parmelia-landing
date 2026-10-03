@@ -6,6 +6,10 @@ import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
 import { appRoot, argument, files, inside, slash } from './brandkit/paths.mjs';
 import { PALETTE } from './brandkit/pixmap.mjs';
+import { readRelease, statusOf } from './brandkit/release.mjs';
+
+// Do not retain native file handles to a staged kit during replacement on Windows.
+sharp.cache(false);
 
 export async function verifyKit(kit, { sourceRoot = null, app = null } = {}) {
 const hash = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
@@ -27,7 +31,7 @@ for (const row of inventory.files) {
   const bytes = await fs.readFile(file);
   assert(hash(bytes) === row.sha256, `Hash mismatch: ${row.path}`);
   assert(bytes.length === row.bytes, `Size mismatch: ${row.path}`);
-  const source = sourceRoot && row.source.startsWith('landing/') ? inside(sourceRoot,row.source.slice(8)) : app && row.path.startsWith('02-logos/pwa/') ? inside(app,`client/public/${path.basename(row.path)}`) : null;
+  const source = sourceRoot && row.source.startsWith('repository/') ? inside(sourceRoot,row.source.slice(11)) : app && row.path.startsWith('02-logos/pwa/') ? inside(app,`client/public/${path.basename(row.path)}`) : null;
   if (source) {
     let original = await fs.readFile(source);
     if (row.transform === 'lf') original = Buffer.from(original.toString('utf8').replace(/\r\n/g,'\n'));
@@ -50,6 +54,20 @@ const indexed = inventory.files.map(row => row.path);
 assert(new Set(indexed).size===indexed.length,'Duplicate inventory paths');
 const actual = (await files(kit)).map(file=>slash(path.relative(kit,file))).filter(file=>!['manifest.json','CONTROL-DE-CALIDAD.md'].includes(file));
 assert(JSON.stringify(actual.sort())===JSON.stringify([...indexed].sort()),'Inventory does not cover the exact file set');
+if(inventory.profile==='approved-delivery') {
+  const policy=inventory.releasePolicy;
+  assert(policy?.schemaVersion===1 && policy.version===inventory.version,'External release policy');
+  for(const row of inventory.files) {
+    if(['README.md','index.html'].includes(row.path)) continue;
+    assert(policy && statusOf(row.path,policy)==='approved-baseline' && !row.path.endsWith('.md'),`Unapproved external asset: ${row.path}`);
+  }
+  for(const required of ['02-logos/simbolo/gatopago.svg','05-colores/tokens.json','04-tipografia/recursive/LICENSE.txt']) assert(indexed.includes(required),`External asset missing: ${required}`);
+  return {files:indexed.length,profile:inventory.profile,identicalSourceCopies:copies,localLinksChecked:links,validationScope:'Inventory, hashes, release policy and local links; pixel validation performed on source repository before packaging.',failures};
+}
+assert(['repository','delivery',undefined].includes(inventory.profile),'Unknown inventory profile');
+const release=await readRelease(kit);
+assert(release.version===inventory.version,'Release version differs from inventory; rebuild the kit');
+for(const row of inventory.files) assert(row.status===statusOf(row.path,release),`Release status mismatch: ${row.path}`);
 // Review crops have their own contract: frame references, canvas and timing, not a closed pixel palette.
 const characterDir = path.join(kit,'03-personaje');
 const motion = JSON.parse(await fs.readFile(path.join(characterDir,'animaciones/manifest.json'),'utf8'));
@@ -110,8 +128,6 @@ for(const row of hd.files) {
     if(row.format==='webp') assert(m.pages===source.pages && JSON.stringify(m.delay)===JSON.stringify(source.delay) && m.loop===source.loop,`HD animation timing: ${row.file}`);
   }
 }
-await checkLink(path.join(characterDir,'exportaciones.json'),hd.archive.file);
-assert(hash(await fs.readFile(inside(characterDir,hd.archive.file)))===hd.archive.sha256,'Character download archive hash');
 // Pixel art checks for the symbol and the favicons: every pixel is a palette colour or fully transparent.
 const charOf = new Map(PALETTE.map(c=>[c.rgb.join(','),c.ch]));
 async function rawOf(file) { const {data,info} = await sharp(await fs.readFile(file)).ensureAlpha().raw().toBuffer({resolveWithObject:true}); return {data,w:info.width,h:info.height}; }

@@ -6,7 +6,7 @@ Edición 2026-09-25 · Valores observados en la landing y reglas de uso para el 
 
 Pixel art cálido sobre una interfaz legible. Bloques, bordes definidos, sombras desplazadas y espacio suficiente. La personalidad vive en el gato, la tipografía y los acentos; no hace falta decorar cada control.
 
-La [paleta entregada](../05-colores/README.md) se extrae del CSS existente. No se han elegido colores nuevos ni corregido las imágenes.
+La [paleta entregada](../05-colores/README.md) conserva los valores de la identidad existente; su fuente editable actual es `05-colores/tokens.json`. No se han elegido colores nuevos ni corregido las ilustraciones originales.
 
 ## Logo
 
@@ -23,7 +23,7 @@ Archivo principal: [gatopago.svg](../02-logos/simbolo/gatopago.svg). Es pixel ar
 
 El símbolo se compone con texto vivo **GatoPago**: Recursive Variable, `MONO 0`, `CASL 1`, `wght 760`, tracking `-0.045em` y separación de 10 px. En navegación, el símbolo va a ×1 (30 × 23 px) o ×2 (60 × 46 px), según la altura de la barra. El catálogo incluye la composición a tamaño de navegación y sobre fondo oscuro con contenedor Milk.
 
-No se ha encontrado un wordmark vectorial trazado independiente ni se entrega uno inventado. Si un proveedor requiere curvas para impresión, hay que exportarlo desde una herramienta de diseño y aprobar visualmente el resultado. Las familias alternativas mencionadas durante la exploración no forman parte del kit vigente.
+Se prepararon [cuatro wordmarks trazados](../02-logos/horizontal/README.md) desde el WOFF2 local de Recursive, con ejes y hash documentados. Son propuestas para revisión: no sustituyen todavía la composición de base. También hay [monocromáticas y una variante para oscuro](../02-logos/variantes/index.html), sin alterar el símbolo principal. Las familias alternativas mencionadas durante la exploración no forman parte del kit vigente.
 
 ## Color
 
@@ -83,5 +83,5 @@ El damero del catálogo indica transparencia y no forma parte de los archivos. L
 - Los planes extensos incluyen exploraciones de paleta y geometría. La entrega usa la tabla extraída de `rebrand.css`, no una mezcla de versiones.
 - Las instrucciones antiguas que hablan de modificar letras como “p”, “r”, “m” o un punto de “i” no describen el wordmark actual GatoPago; no se aplican.
 - Las menciones públicas del nombre Meli en manifiestos anteriores no son copy vigente.
-- Variantes monocromáticas, wordmark trazado, versiones de imprenta y piezas sociales eliminadas no se presentan como archivos finales si no están disponibles.
+- Las nuevas variantes monocromáticas, wordmarks y plantillas están disponibles para revisión, no se presentan como archivos finales aprobados. No se restituyen piezas sociales eliminadas ni se certifican colores de imprenta.
 - Este manual organiza y aclara. No afirma que todos estos criterios estén ya implementados en todas las pantallas de la app.
