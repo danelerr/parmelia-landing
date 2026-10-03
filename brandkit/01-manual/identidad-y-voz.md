@@ -1,12 +1,16 @@
 # Identidad y voz
 
-Edición 2026-09-24 · Guía editorial de esta entrega.
+Edición 2026-10-03 · Guía editorial de esta entrega.
 
 ## La idea central
 
-**Tus dólares ya saben moverse.**
+**Dinero sin fronteras. Siempre tuyo.**
+
+El problema al que responde: **Tu dinero no debería detenerse en la frontera.** Hoy un mensaje cruza en segundos; el dinero tarda días y pierde una parte por el camino.
 
 La filosofía que la sostiene: **Tu dinero sigue siendo tuyo. GatoPago se ocupa del camino.**
+
+Desde el 3 de octubre de 2026 esta promesa sustituye a «Tus dólares ya saben moverse», que hablaba solo de dólares y no decía que el dinero es de quien lo tiene. El razonamiento completo está en la narrativa de octubre de 2026 (`documentacion/nuevos/gatopago-narrativa-2026-10.md`).
 
 GatoPago busca que mover dinero digital sea una acción comprensible: elegir qué hacer, conocer el destino y los costes, autorizar y seguir el resultado. La tecnología habilita el recorrido; no debe convertirse en una tarea adicional para la persona.
 
@@ -48,8 +52,8 @@ Etiquetas cortas: **Enviar**, **Cobrar**, **Cambiar**, **Ver actividad**, **Revi
 
 ## Idiomas
 
-- ES: “Tus dólares ya saben moverse.”
-- EN: “Your dollars already know how to move.”
+- ES: “Dinero sin fronteras. Siempre tuyo.”
+- EN: “Money without borders. Always yours.”
 - No traducir GatoPago ni hacer público el nombre interno del personaje.
 - Importes, separadores, fechas y moneda deben seguir la configuración regional del usuario. No confundir USD con USDC ni ocultar qué activo se está utilizando.
 

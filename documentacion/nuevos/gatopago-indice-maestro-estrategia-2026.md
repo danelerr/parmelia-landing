@@ -39,7 +39,9 @@ Hacer que el dinero digital global se sienta utilizable, propio y cercano para p
 
 ### Promesa
 
-> **Tus dólares ya saben moverse.**
+> **Dinero sin fronteras. Siempre tuyo.**
+
+Actualizada el 3 de octubre de 2026; sustituye a «Tus dólares ya saben moverse». Ver la [narrativa de octubre de 2026](./gatopago-narrativa-2026-10.md).
 
 ### Filosofía
 
@@ -238,7 +240,7 @@ No hay un hueco estratégico conocido de primer orden sin owner documental. Los 
 | ------------------ | --------------------------------------------------------- |
 | Nombre de trabajo  | GatoPago, sujeto a revisión marcaria/legal                |
 | Mascota            | Meli                                                      |
-| Promesa            | Tus dólares ya saben moverse                              |
+| Promesa            | Dinero sin fronteras. Siempre tuyo                        |
 | Filosofía          | Tu dinero sigue siendo tuyo. GatoPago se ocupa del camino |
 | Producto centro    | GatoPago Personal                                         |
 | Cuña               | LATAM crypto-adjacent que cobra/usa USDC                  |

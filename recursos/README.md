@@ -11,6 +11,14 @@ esta carpeta no define una segunda marca.
   Son recursos de terceros, no logos de GatoPago ni activos de libre licencia.
 - `social/`: portada de X y su encargo. La portada es una propuesta visual
   ya realizada; no se ha vuelto a generar ni modificado.
+- `social/posts-2026-10/`: 166 piezas generadas desde el kit con
+  `npm run brandkit:social` (posts, carruseles, historias, banners, portadas
+  de destacadas, fondos, stickers y plantillas), con galería (`index.html`) y
+  textos sugeridos. Es una propuesta: las piezas con el gato dependen de su
+  aprobación artística.
+- `laboratorio-gatopago/`: propuestas independientes de animación, manual
+  visual, biblioteca de Figma, iconos, movimiento y aplicaciones. Ocupa la
+  mayor parte de esta carpeta y no sustituye al kit; ver su `README.md`.
 - `presentaciones/`: deck original y entregas existentes. El trabajo de
   diapositivas sigue pausado; conservar un archivo no implica aprobación final.
 - `archivo-web/`: iconos históricos cuyos bytes diferían del kit oficial.

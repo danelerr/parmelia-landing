@@ -22,8 +22,8 @@
     },
     {
       "path": "01-manual/identidad-y-voz.md",
-      "bytes": 4062,
-      "sha256": "96526f47990ba2d8019ea0bdbc073b360e457ed6a16a079e36f05c993e8777ae",
+      "bytes": 4532,
+      "sha256": "4aac1c6e8a31b3c58ed33f51bb62cb8f25f8f78b83d9f835ab3a2c1e97748a0b",
       "source": "brandkit editorial / generated",
       "status": "internal"
     },
@@ -6738,8 +6738,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 1258,
-      "sha256": "aa4c7a62608323375fe77ae364a060372c3455202eed1f47d040fa9c740fb19e",
+      "bytes": 1468,
+      "sha256": "a3812a39be010239982be89f8ff4096037e2ad2ae014e5307c57c54305f9f2dc",
       "source": "brandkit editorial / generated",
       "status": "internal"
     },

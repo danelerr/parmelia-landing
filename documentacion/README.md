@@ -9,10 +9,12 @@ Esta carpeta es la fuente central de documentación editorial de GatoPago. La do
 
 El [brandkit de GatoPago](../brandkit/README.md), organizado el 24 de septiembre de 2026, reúne el manual práctico, logo, iconos, fuentes con licencia y paleta. El personaje está en desarrollo; su versión de septiembre de 2026 se retiró a `brandkit/descartado/`. Incluye un [catálogo visual local](../brandkit/index.html) y trazabilidad de los archivos. Es el punto de entrada para entregar recursos de marca; los documentos estratégicos siguen en esta carpeta. Desde el 1 de octubre de 2026 este checkout es exclusivamente de marca y recursos. La landing y la app viven en el repositorio unificado `gatopago/gatopago`. La paleta editable está en `brandkit/05-colores/tokens.json`; no certifica el estilo de todas las pantallas de la app. La [propuesta de mejoras de marca en la app](./nuevos/gatopago-propuesta-mejoras-app-2026-09-28.md) (28 de septiembre de 2026) recoge las correcciones pendientes en la app.
 
+La [narrativa de octubre de 2026](./nuevos/gatopago-narrativa-2026-10.md) fija el problema, la tesis (cuenta autocustodia, simple, programable y abierta) y el papel de Bolivia como mercado inicial; el [guion del pitch deck](./nuevos/gatopago-pitch-deck-guion-2026-10-03.md) la aplica. La [auditoría de marca y recursos](./nuevos/gatopago-auditoria-marca-2026-10-03.md) (3 de octubre de 2026) revisa iconos, manuales, banners y piezas sociales, y propone cómo ordenar el kit y el laboratorio.
+
 ## Decisiones vigentes
 
 - La marca pública es **GatoPago**, siempre unida.
-- La promesa principal es **“Tus dólares ya saben moverse.”**
+- La promesa principal es **“Dinero sin fronteras. Siempre tuyo.”** (desde el 3 de octubre de 2026; sustituye a “Tus dólares ya saben moverse.”). El problema al que responde: **“Tu dinero no debería detenerse en la frontera.”**
 - La filosofía es **“Tu dinero sigue siendo tuyo. GatoPago se ocupa del camino.”**
 - La categoría interna es **cuenta onchain programable**.
 - La versión disponible es una **alpha de testnet**; Card, mainnet y cobertura comercial no deben presentarse como capacidades activas.

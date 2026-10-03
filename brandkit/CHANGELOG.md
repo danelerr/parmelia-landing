@@ -1,5 +1,9 @@
 # Historial del brandkit
 
+## Sin publicar — 2026-10-03
+
+- Promesa de marca: **Dinero sin fronteras. Siempre tuyo.** sustituye a «Tus dólares ya saben moverse» en la guía de voz y en la entrega externa. La filosofía se mantiene.
+
 ## 1.0.0-rc.1 — 2026-10-02
 
 Candidata preparada para revisión, sin aprobación artística automática ni publicación.

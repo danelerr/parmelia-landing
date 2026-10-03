@@ -9,6 +9,7 @@
   },
   "scripts": {
     "brandkit:personaje": "node scripts/brandkit/personaje.mjs",
+    "brandkit:social": "node scripts/brandkit/social.mjs",
     "brandkit:build": "node scripts/build-brandkit.mjs",
     "brandkit:verify": "node scripts/verify-brandkit.mjs",
     "brandkit:zip": "node scripts/package-brandkit.mjs",

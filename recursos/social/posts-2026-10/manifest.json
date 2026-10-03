@@ -1,0 +1,1182 @@
+{
+  "schemaVersion": 1,
+  "status": "propuesta",
+  "generator": "scripts/brandkit/social.mjs",
+  "pieces": [
+    {
+      "id": "manifiesto-01",
+      "serie": "Manifiesto",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Dinero sin fronteras. Siempre tuyo. Cobra, guarda y mueve tu dinero entre países."
+    },
+    {
+      "id": "manifiesto-08",
+      "serie": "Manifiesto",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Tu dinero no debería detenerse en la frontera. Hoy un mensaje cruza en segundos; el dinero tarda días y pierde una parte por el camino."
+    },
+    {
+      "id": "manifiesto-09",
+      "serie": "Manifiesto",
+      "formato": "1x1",
+      "size": "1080×1080",
+      "copy": "Un mensaje cruza una frontera en segundos. El dinero, en días. Eso es lo que venimos a cambiar."
+    },
+    {
+      "id": "manifiesto-10",
+      "serie": "Manifiesto",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Sin fronteras, sin encierro, siempre tuyo: una cuenta para cobrar, guardar y mover dinero entre países."
+    },
+    {
+      "id": "manifiesto-02",
+      "serie": "Manifiesto",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Tu dinero sigue siendo tuyo. Nosotros nos ocupamos del camino."
+    },
+    {
+      "id": "manifiesto-03",
+      "serie": "Manifiesto",
+      "formato": "1x1",
+      "size": "1080×1080",
+      "copy": "Una tarea, una frase. Enviar, cobrar y cambiar dicho claro."
+    },
+    {
+      "id": "manifiesto-04",
+      "serie": "Manifiesto",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Antes de confirmar, todo a la vista: destino, importe y costes."
+    },
+    {
+      "id": "manifiesto-05",
+      "serie": "Manifiesto",
+      "formato": "1x1",
+      "size": "1080×1080",
+      "copy": "Tu dinero, tu decisión. Nada se mueve sin tu autorización."
+    },
+    {
+      "id": "manifiesto-06",
+      "serie": "Manifiesto",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Mover dinero debería ser fácil de entender: elegir, revisar, autorizar y seguir el resultado."
+    },
+    {
+      "id": "manifiesto-07",
+      "serie": "Manifiesto",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Menos ruido, más claridad: cada paso dice qué pasa y qué sigue."
+    },
+    {
+      "id": "pasos-01",
+      "serie": "Cómo funciona",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Así se mueve tu dinero en GatoPago: eliges, revisas, autorizas y sigues el estado. (Alpha en testnet, con fondos de prueba.)"
+    },
+    {
+      "id": "pasos-02",
+      "serie": "Cómo funciona",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Cobrar en cuatro pasos: enlace o QR, compartir, revisar y comprobante. (Alpha en testnet.)"
+    },
+    {
+      "id": "pasos-03",
+      "serie": "Cómo funciona",
+      "formato": "1x1",
+      "size": "1080×1080",
+      "copy": "Antes de enviar, tres preguntas: a quién, cuánto y en qué activo, y qué cuesta la red."
+    },
+    {
+      "id": "consejo-01",
+      "serie": "Seguridad",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Consejo 01: revisa el destino antes de enviar. Un carácter distinto lleva el dinero a otra cuenta."
+    },
+    {
+      "id": "consejo-02",
+      "serie": "Seguridad",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Consejo 02: tus accesos son solo tuyos. No compartas tus códigos de acceso con nadie."
+    },
+    {
+      "id": "consejo-03",
+      "serie": "Seguridad",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Consejo 03: USD no es USDC. Mira qué activo y qué red usas antes de mover dinero."
+    },
+    {
+      "id": "consejo-04",
+      "serie": "Seguridad",
+      "formato": "1x1",
+      "size": "1080×1080",
+      "copy": "Consejo 04: antes de pagar con QR, confirma el nombre y el importe."
+    },
+    {
+      "id": "consejo-05",
+      "serie": "Seguridad",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Consejo 05: si no sabes si un envío salió, revisa la actividad antes de repetirlo."
+    },
+    {
+      "id": "consejo-06",
+      "serie": "Seguridad",
+      "formato": "1x1",
+      "size": "1080×1080",
+      "copy": "Consejo 06: si algo no cuadra, detente. Ninguna urgencia justifica saltarse la revisión."
+    },
+    {
+      "id": "consejo-07",
+      "serie": "Seguridad",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Consejo 07: tu teléfono es tu llave. Bloqueo de pantalla activo y sistema al día."
+    },
+    {
+      "id": "consejo-08",
+      "serie": "Seguridad",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Consejo 08: ojo con los enlaces. Escribe gatopago.com y desconfía de las prisas."
+    },
+    {
+      "id": "glosario-01",
+      "serie": "Glosario",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Glosario 01 · Stablecoin: moneda digital pensada para mantener un valor estable, normalmente atado al dólar."
+    },
+    {
+      "id": "glosario-02",
+      "serie": "Glosario",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Glosario 02 · USDC: stablecoin emitida por Circle que busca valer un dólar estadounidense."
+    },
+    {
+      "id": "glosario-03",
+      "serie": "Glosario",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Glosario 03 · Red: donde se registra una transferencia. Un mismo activo puede vivir en varias."
+    },
+    {
+      "id": "glosario-04",
+      "serie": "Glosario",
+      "formato": "1x1",
+      "size": "1080×1080",
+      "copy": "Glosario 04 · Comisión: lo que cuesta procesar una operación. Siempre visible antes de autorizar."
+    },
+    {
+      "id": "glosario-05",
+      "serie": "Glosario",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Glosario 05 · Autocustodia: tú controlas tus fondos; ninguna empresa los guarda por ti."
+    },
+    {
+      "id": "glosario-06",
+      "serie": "Glosario",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Glosario 06 · Dirección: el identificador de una cuenta en una red. Revísala antes de enviar."
+    },
+    {
+      "id": "glosario-07",
+      "serie": "Glosario",
+      "formato": "1x1",
+      "size": "1080×1080",
+      "copy": "Glosario 07 · Comprobante: quién, cuánto, cuándo y en qué estado quedó una operación."
+    },
+    {
+      "id": "glosario-08",
+      "serie": "Glosario",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Glosario 08 · Testnet: red de pruebas. Lo que se mueve ahí no tiene valor real."
+    },
+    {
+      "id": "gato-01",
+      "serie": "El gato",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Hola, te esperábamos. El gato acompaña; tú decides."
+    },
+    {
+      "id": "gato-02",
+      "serie": "El gato",
+      "formato": "1x1",
+      "size": "1080×1080",
+      "copy": "¿Primera vez por aquí? Empieza por lo básico: qué es una stablecoin."
+    },
+    {
+      "id": "gato-03",
+      "serie": "El gato",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Tu envío va en camino. Síguelo en Actividad hasta que se confirme."
+    },
+    {
+      "id": "gato-04",
+      "serie": "El gato",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Domingo de siesta. Tu dinero sigue siendo tuyo, también cuando descansas."
+    },
+    {
+      "id": "gato-05",
+      "serie": "El gato",
+      "formato": "1x1",
+      "size": "1080×1080",
+      "copy": "Listo: confirmado y con comprobante."
+    },
+    {
+      "id": "gato-06",
+      "serie": "El gato",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Preparando tu pago: primero revisamos, después se mueve."
+    },
+    {
+      "id": "gato-07",
+      "serie": "El gato",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Atento a los detalles: importe, destino, red y costes."
+    },
+    {
+      "id": "gato-08",
+      "serie": "El gato",
+      "formato": "1x1",
+      "size": "1080×1080",
+      "copy": "Algo nuevo se asoma. Pronto te contamos más."
+    },
+    {
+      "id": "gato-09",
+      "serie": "El gato",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Lunes. El gato también."
+    },
+    {
+      "id": "gato-10",
+      "serie": "El gato",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Cobrar sin complicarte: un enlace o un QR para que te paguen. (Alpha en testnet.)"
+    },
+    {
+      "id": "gato-11",
+      "serie": "El gato",
+      "formato": "1x1",
+      "size": "1080×1080",
+      "copy": "¡Primer pago! Celebramos cuando está confirmado. No antes."
+    },
+    {
+      "id": "gato-12",
+      "serie": "El gato",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Mejor revisar dos veces: un minuto de revisión vale más que un envío equivocado."
+    },
+    {
+      "id": "gato-13",
+      "serie": "El gato",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Hola desde el otro lado. (Ilustración del gato; no anuncia una tarjeta.)"
+    },
+    {
+      "id": "gato-14",
+      "serie": "El gato",
+      "formato": "1x1",
+      "size": "1080×1080",
+      "copy": "Sin prisa, sin pausa: cada paso a su tiempo."
+    },
+    {
+      "id": "acciones-01",
+      "serie": "Acciones",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Cuatro verbos, un solo lugar: enviar, cobrar, cambiar y ver tu actividad."
+    },
+    {
+      "id": "acciones-02",
+      "serie": "Acciones",
+      "formato": "1x1",
+      "size": "1080×1080",
+      "copy": "Lo que haces cada día, con nombres claros."
+    },
+    {
+      "id": "acciones-03",
+      "serie": "Acciones",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Protección en capas: tu acceso, revisión antes de autorizar y control de tu cuenta."
+    },
+    {
+      "id": "comparar-01",
+      "serie": "Comparativas",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Enviado no es confirmado: celebramos cuando la red lo registra."
+    },
+    {
+      "id": "comparar-02",
+      "serie": "Comparativas",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "USD y USDC no son lo mismo: uno es el dólar; el otro, una stablecoin que busca valer un dólar."
+    },
+    {
+      "id": "comparar-03",
+      "serie": "Comparativas",
+      "formato": "1x1",
+      "size": "1080×1080",
+      "copy": "Testnet y mainnet: la primera es para probar; la segunda mueve dinero real. Hoy GatoPago es una alpha en testnet."
+    },
+    {
+      "id": "principio-01",
+      "serie": "Principios",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Celebramos cuando está confirmado. No antes."
+    },
+    {
+      "id": "principio-02",
+      "serie": "Principios",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Primero la acción; después, la explicación necesaria."
+    },
+    {
+      "id": "principio-03",
+      "serie": "Principios",
+      "formato": "1x1",
+      "size": "1080×1080",
+      "copy": "Costes a la vista, antes de autorizar."
+    },
+    {
+      "id": "principio-04",
+      "serie": "Principios",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Una idea por frase. Así escribimos en GatoPago."
+    },
+    {
+      "id": "estado-01",
+      "serie": "Transparencia",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Estamos en alpha: probamos en testnet con fondos de prueba. Te contaremos las novedades."
+    },
+    {
+      "id": "publicos-01",
+      "serie": "Transparencia",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Una promesa, tres caminos: personas, negocios e integradores."
+    },
+    {
+      "id": "historia-01",
+      "serie": "Historias",
+      "formato": "9x16",
+      "size": "1080×1920",
+      "copy": "Historia · promesa."
+    },
+    {
+      "id": "historia-09",
+      "serie": "Historias",
+      "formato": "9x16",
+      "size": "1080×1920",
+      "copy": "Historia · el problema."
+    },
+    {
+      "id": "historia-02",
+      "serie": "Historias",
+      "formato": "9x16",
+      "size": "1080×1920",
+      "copy": "Historia · bienvenida."
+    },
+    {
+      "id": "historia-03",
+      "serie": "Historias",
+      "formato": "9x16",
+      "size": "1080×1920",
+      "copy": "Historia · consejo de seguridad."
+    },
+    {
+      "id": "historia-04",
+      "serie": "Historias",
+      "formato": "9x16",
+      "size": "1080×1920",
+      "copy": "Historia · glosario."
+    },
+    {
+      "id": "historia-05",
+      "serie": "Historias",
+      "formato": "9x16",
+      "size": "1080×1920",
+      "copy": "Historia · cómo funciona."
+    },
+    {
+      "id": "historia-06",
+      "serie": "Historias",
+      "formato": "9x16",
+      "size": "1080×1920",
+      "copy": "Historia · encuesta (añadir el sticker de encuesta de la red social)."
+    },
+    {
+      "id": "historia-07",
+      "serie": "Historias",
+      "formato": "9x16",
+      "size": "1080×1920",
+      "copy": "Historia · principio."
+    },
+    {
+      "id": "historia-08",
+      "serie": "Historias",
+      "formato": "9x16",
+      "size": "1080×1920",
+      "copy": "Historia · celebración."
+    },
+    {
+      "id": "pilares-01",
+      "serie": "Pilares",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Una cuenta, cuatro promesas: tuya, simple, programable y abierta. [Publicar cuando la autocustodia y la salida a otra wallet estén demostradas.]",
+      "revisar": "autocustodia"
+    },
+    {
+      "id": "pilares-02",
+      "serie": "Pilares",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Tus fondos son realmente tuyos: GatoPago no guarda tu dinero; tú tienes el control. [Publicar cuando la autocustodia y la salida a otra wallet estén demostradas.]",
+      "revisar": "autocustodia"
+    },
+    {
+      "id": "pilares-03",
+      "serie": "Pilares",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Cripto sin la parte difícil: sin redes, gas ni direcciones a la vista."
+    },
+    {
+      "id": "pilares-04",
+      "serie": "Pilares",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Tu cuenta trabaja por ti. Hoy, rendimiento con DeFi; pronto, reglas que tú defines. El rendimiento varía y no está garantizado. (Alpha en testnet.)"
+    },
+    {
+      "id": "pilares-05",
+      "serie": "Pilares",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Entra y sal cuando quieras: tu dinero puede ir a otra wallet o exchange. Sin encierro. [Publicar cuando la autocustodia y la salida a otra wallet estén demostradas.]",
+      "revisar": "autocustodia"
+    },
+    {
+      "id": "pilares-06",
+      "serie": "Pilares",
+      "formato": "1x1",
+      "size": "1080×1080",
+      "copy": "Fácil como una app. Tuya como una wallet. Las dos cosas, en una cuenta. [Publicar cuando la autocustodia y la salida a otra wallet estén demostradas.]",
+      "revisar": "autocustodia"
+    },
+    {
+      "id": "pilares-07",
+      "serie": "Pilares",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "O es fácil, o es tuyo. Hasta ahora: GatoPago es fácil y tus fondos son tuyos. [Publicar cuando la autocustodia y la salida a otra wallet estén demostradas.]",
+      "revisar": "autocustodia"
+    },
+    {
+      "id": "entre-paises-01",
+      "serie": "Entre países",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Cobra desde cualquier país: un enlace o un QR, y el pago llega en dólares digitales. (Alpha en testnet.)"
+    },
+    {
+      "id": "entre-paises-02",
+      "serie": "Entre países",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Así cobras desde otro país: tu cliente paga con tu enlace, recibes dólares digitales y decides qué hacer. Pronto, retiro en bolivianos. (Alpha en testnet.)"
+    },
+    {
+      "id": "entre-paises-03",
+      "serie": "Entre países",
+      "formato": "1x1",
+      "size": "1080×1080",
+      "copy": "Cobrar de fuera: menos intermediarios y costes a la vista, en dólares digitales."
+    },
+    {
+      "id": "entre-paises-04",
+      "serie": "Entre países",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "De dólares digitales a bolivianos: estamos trabajando en la salida a tu banco en Bolivia. Aún no está disponible."
+    },
+    {
+      "id": "entre-paises-05",
+      "serie": "Entre países",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Tu cliente está lejos; tu cobro, no tanto. (Alpha en testnet.)"
+    },
+    {
+      "id": "entre-paises-06",
+      "serie": "Entre países",
+      "formato": "9x16",
+      "size": "1080×1920",
+      "copy": "Historia · cobrar desde otro país."
+    },
+    {
+      "id": "defi-01",
+      "serie": "DeFi sin jerga",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Finanzas abiertas, sin jerga: ahorra y genera rendimiento desde tu cuenta. El rendimiento varía y no está garantizado. (Alpha en testnet.)"
+    },
+    {
+      "id": "defi-02",
+      "serie": "DeFi sin jerga",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "El rendimiento varía y no está garantizado. Te lo decimos antes, no después."
+    },
+    {
+      "id": "en-01",
+      "serie": "English",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Money without borders. Always yours."
+    },
+    {
+      "id": "en-02",
+      "serie": "English",
+      "formato": "1x1",
+      "size": "1080×1080",
+      "copy": "Your money, your call. Nothing moves without your approval."
+    },
+    {
+      "id": "en-03",
+      "serie": "English",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Tip 01: check the address before you send."
+    },
+    {
+      "id": "en-04",
+      "serie": "English",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Hi, we were expecting you."
+    },
+    {
+      "id": "banner-x-01",
+      "serie": "Banners",
+      "formato": "Portada de X",
+      "size": "1500×500",
+      "copy": "Dinero sin fronteras. Siempre tuyo."
+    },
+    {
+      "id": "banner-x-02",
+      "serie": "Banners",
+      "formato": "Portada de X (oscura)",
+      "size": "1500×500",
+      "copy": "Tu dinero. Tu camino."
+    },
+    {
+      "id": "banner-linkedin-01",
+      "serie": "Banners",
+      "formato": "Portada de LinkedIn",
+      "size": "1584×396",
+      "copy": "Mover dinero, fácil de entender."
+    },
+    {
+      "id": "banner-youtube-01",
+      "serie": "Banners",
+      "formato": "Banner de YouTube (zona segura centrada)",
+      "size": "2560×1440",
+      "copy": "Dinero sin fronteras. Siempre tuyo."
+    },
+    {
+      "id": "banner-facebook-01",
+      "serie": "Banners",
+      "formato": "Portada de Facebook",
+      "size": "1640×624",
+      "copy": "Tu dinero sigue siendo tuyo."
+    },
+    {
+      "id": "banner-compartir-01",
+      "serie": "Banners",
+      "formato": "Imagen para compartir enlaces (1200 × 630)",
+      "size": "1200×630",
+      "copy": "Dinero sin fronteras. Siempre tuyo."
+    },
+    {
+      "id": "banner-linkedin-post-01",
+      "serie": "Banners",
+      "formato": "Post horizontal de LinkedIn",
+      "size": "1200×627",
+      "copy": "Antes de confirmar, todo a la vista."
+    },
+    {
+      "id": "horizontal-01",
+      "serie": "Horizontales",
+      "formato": "Post 16:9",
+      "size": "1200×675",
+      "copy": "Enviado no es confirmado."
+    },
+    {
+      "id": "horizontal-02",
+      "serie": "Horizontales",
+      "formato": "Post 16:9",
+      "size": "1200×675",
+      "copy": "Revisa el destino antes de enviar."
+    },
+    {
+      "id": "horizontal-03",
+      "serie": "Horizontales",
+      "formato": "Post 16:9",
+      "size": "1200×675",
+      "copy": "Tu dinero. Tu decisión."
+    },
+    {
+      "id": "horizontal-05",
+      "serie": "Horizontales",
+      "formato": "Post 16:9",
+      "size": "1200×675",
+      "copy": "Tu dinero no debería detenerse en la frontera."
+    },
+    {
+      "id": "horizontal-04",
+      "serie": "Horizontales",
+      "formato": "Post 16:9",
+      "size": "1200×675",
+      "copy": "Estamos en alpha."
+    },
+    {
+      "id": "carrusel-cobrar-01",
+      "serie": "Carrusel · Cobrar con un enlace",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Cobrar con un enlace, paso a paso. (Alpha en testnet, con fondos de prueba.)"
+    },
+    {
+      "id": "carrusel-cobrar-02",
+      "serie": "Carrusel · Cobrar con un enlace",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Diapositiva 2 de 6."
+    },
+    {
+      "id": "carrusel-cobrar-03",
+      "serie": "Carrusel · Cobrar con un enlace",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Diapositiva 3 de 6."
+    },
+    {
+      "id": "carrusel-cobrar-04",
+      "serie": "Carrusel · Cobrar con un enlace",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Diapositiva 4 de 6."
+    },
+    {
+      "id": "carrusel-cobrar-05",
+      "serie": "Carrusel · Cobrar con un enlace",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Diapositiva 5 de 6."
+    },
+    {
+      "id": "carrusel-cobrar-06",
+      "serie": "Carrusel · Cobrar con un enlace",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Diapositiva 6 de 6."
+    },
+    {
+      "id": "carrusel-revisar-01",
+      "serie": "Carrusel · Antes de enviar",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Antes de enviar, revisa tres cosas: el destino, el activo y la red, y el coste."
+    },
+    {
+      "id": "carrusel-revisar-02",
+      "serie": "Carrusel · Antes de enviar",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Diapositiva 2 de 5."
+    },
+    {
+      "id": "carrusel-revisar-03",
+      "serie": "Carrusel · Antes de enviar",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Diapositiva 3 de 5."
+    },
+    {
+      "id": "carrusel-revisar-04",
+      "serie": "Carrusel · Antes de enviar",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Diapositiva 4 de 5."
+    },
+    {
+      "id": "carrusel-revisar-05",
+      "serie": "Carrusel · Antes de enviar",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Diapositiva 5 de 5."
+    },
+    {
+      "id": "carrusel-palabras-01",
+      "serie": "Carrusel · Cinco palabras",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Cinco palabras para empezar: stablecoin, USDC, autocustodia, DeFi y comprobante."
+    },
+    {
+      "id": "carrusel-palabras-02",
+      "serie": "Carrusel · Cinco palabras",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Diapositiva 2 de 7."
+    },
+    {
+      "id": "carrusel-palabras-03",
+      "serie": "Carrusel · Cinco palabras",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Diapositiva 3 de 7."
+    },
+    {
+      "id": "carrusel-palabras-04",
+      "serie": "Carrusel · Cinco palabras",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Diapositiva 4 de 7."
+    },
+    {
+      "id": "carrusel-palabras-05",
+      "serie": "Carrusel · Cinco palabras",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Diapositiva 5 de 7."
+    },
+    {
+      "id": "carrusel-palabras-06",
+      "serie": "Carrusel · Cinco palabras",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Diapositiva 6 de 7."
+    },
+    {
+      "id": "carrusel-palabras-07",
+      "serie": "Carrusel · Cinco palabras",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Diapositiva 7 de 7."
+    },
+    {
+      "id": "carrusel-estafas-01",
+      "serie": "Carrusel · Señales de alerta",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Cuatro señales de alerta: prisa, que te pidan códigos, enlaces raros y ganancias seguras."
+    },
+    {
+      "id": "carrusel-estafas-02",
+      "serie": "Carrusel · Señales de alerta",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Diapositiva 2 de 6."
+    },
+    {
+      "id": "carrusel-estafas-03",
+      "serie": "Carrusel · Señales de alerta",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Diapositiva 3 de 6."
+    },
+    {
+      "id": "carrusel-estafas-04",
+      "serie": "Carrusel · Señales de alerta",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Diapositiva 4 de 6."
+    },
+    {
+      "id": "carrusel-estafas-05",
+      "serie": "Carrusel · Señales de alerta",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Diapositiva 5 de 6."
+    },
+    {
+      "id": "carrusel-estafas-06",
+      "serie": "Carrusel · Señales de alerta",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Diapositiva 6 de 6."
+    },
+    {
+      "id": "carrusel-defi-01",
+      "serie": "Carrusel · DeFi sin jerga",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "DeFi explicado sin jerga: qué es, qué puedes hacer, qué riesgos tiene y dónde entra GatoPago. (Alpha en testnet.)"
+    },
+    {
+      "id": "carrusel-defi-02",
+      "serie": "Carrusel · DeFi sin jerga",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Diapositiva 2 de 6."
+    },
+    {
+      "id": "carrusel-defi-03",
+      "serie": "Carrusel · DeFi sin jerga",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Diapositiva 3 de 6."
+    },
+    {
+      "id": "carrusel-defi-04",
+      "serie": "Carrusel · DeFi sin jerga",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Diapositiva 4 de 6."
+    },
+    {
+      "id": "carrusel-defi-05",
+      "serie": "Carrusel · DeFi sin jerga",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Diapositiva 5 de 6."
+    },
+    {
+      "id": "carrusel-defi-06",
+      "serie": "Carrusel · DeFi sin jerga",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Diapositiva 6 de 6."
+    },
+    {
+      "id": "destacada-roja-empieza",
+      "serie": "Portadas de destacadas",
+      "formato": "9x16",
+      "size": "1080×1920",
+      "copy": "Portada de destacada «Empieza». Instagram muestra solo el círculo central."
+    },
+    {
+      "id": "destacada-roja-cobrar",
+      "serie": "Portadas de destacadas",
+      "formato": "9x16",
+      "size": "1080×1920",
+      "copy": "Portada de destacada «Cobrar». Instagram muestra solo el círculo central."
+    },
+    {
+      "id": "destacada-roja-enviar",
+      "serie": "Portadas de destacadas",
+      "formato": "9x16",
+      "size": "1080×1920",
+      "copy": "Portada de destacada «Enviar». Instagram muestra solo el círculo central."
+    },
+    {
+      "id": "destacada-roja-seguridad",
+      "serie": "Portadas de destacadas",
+      "formato": "9x16",
+      "size": "1080×1920",
+      "copy": "Portada de destacada «Seguridad». Instagram muestra solo el círculo central."
+    },
+    {
+      "id": "destacada-roja-glosario",
+      "serie": "Portadas de destacadas",
+      "formato": "9x16",
+      "size": "1080×1920",
+      "copy": "Portada de destacada «Glosario». Instagram muestra solo el círculo central."
+    },
+    {
+      "id": "destacada-roja-novedades",
+      "serie": "Portadas de destacadas",
+      "formato": "9x16",
+      "size": "1080×1920",
+      "copy": "Portada de destacada «Novedades». Instagram muestra solo el círculo central."
+    },
+    {
+      "id": "destacada-roja-ayuda",
+      "serie": "Portadas de destacadas",
+      "formato": "9x16",
+      "size": "1080×1920",
+      "copy": "Portada de destacada «Ayuda». Instagram muestra solo el círculo central."
+    },
+    {
+      "id": "destacada-roja-gato",
+      "serie": "Portadas de destacadas",
+      "formato": "9x16",
+      "size": "1080×1920",
+      "copy": "Portada de destacada «El gato». Instagram muestra solo el círculo central."
+    },
+    {
+      "id": "destacada-oscura-empieza",
+      "serie": "Portadas de destacadas",
+      "formato": "9x16",
+      "size": "1080×1920",
+      "copy": "Portada de destacada «Empieza». Instagram muestra solo el círculo central."
+    },
+    {
+      "id": "destacada-oscura-cobrar",
+      "serie": "Portadas de destacadas",
+      "formato": "9x16",
+      "size": "1080×1920",
+      "copy": "Portada de destacada «Cobrar». Instagram muestra solo el círculo central."
+    },
+    {
+      "id": "destacada-oscura-enviar",
+      "serie": "Portadas de destacadas",
+      "formato": "9x16",
+      "size": "1080×1920",
+      "copy": "Portada de destacada «Enviar». Instagram muestra solo el círculo central."
+    },
+    {
+      "id": "destacada-oscura-seguridad",
+      "serie": "Portadas de destacadas",
+      "formato": "9x16",
+      "size": "1080×1920",
+      "copy": "Portada de destacada «Seguridad». Instagram muestra solo el círculo central."
+    },
+    {
+      "id": "destacada-oscura-glosario",
+      "serie": "Portadas de destacadas",
+      "formato": "9x16",
+      "size": "1080×1920",
+      "copy": "Portada de destacada «Glosario». Instagram muestra solo el círculo central."
+    },
+    {
+      "id": "destacada-oscura-novedades",
+      "serie": "Portadas de destacadas",
+      "formato": "9x16",
+      "size": "1080×1920",
+      "copy": "Portada de destacada «Novedades». Instagram muestra solo el círculo central."
+    },
+    {
+      "id": "destacada-oscura-ayuda",
+      "serie": "Portadas de destacadas",
+      "formato": "9x16",
+      "size": "1080×1920",
+      "copy": "Portada de destacada «Ayuda». Instagram muestra solo el círculo central."
+    },
+    {
+      "id": "destacada-oscura-gato",
+      "serie": "Portadas de destacadas",
+      "formato": "9x16",
+      "size": "1080×1920",
+      "copy": "Portada de destacada «El gato». Instagram muestra solo el círculo central."
+    },
+    {
+      "id": "fondo-historia-01",
+      "serie": "Fondos para historias",
+      "formato": "9x16",
+      "size": "1080×1920",
+      "copy": "Fondo libre para escribir con el texto nativo de la red."
+    },
+    {
+      "id": "fondo-historia-02",
+      "serie": "Fondos para historias",
+      "formato": "9x16",
+      "size": "1080×1920",
+      "copy": "Fondo libre para escribir con el texto nativo de la red."
+    },
+    {
+      "id": "fondo-historia-03",
+      "serie": "Fondos para historias",
+      "formato": "9x16",
+      "size": "1080×1920",
+      "copy": "Fondo libre para escribir con el texto nativo de la red."
+    },
+    {
+      "id": "fondo-historia-04",
+      "serie": "Fondos para historias",
+      "formato": "9x16",
+      "size": "1080×1920",
+      "copy": "Fondo libre para escribir con el texto nativo de la red."
+    },
+    {
+      "id": "fondo-historia-05",
+      "serie": "Fondos para historias",
+      "formato": "9x16",
+      "size": "1080×1920",
+      "copy": "Fondo libre para escribir con el texto nativo de la red."
+    },
+    {
+      "id": "fondo-historia-06",
+      "serie": "Fondos para historias",
+      "formato": "9x16",
+      "size": "1080×1920",
+      "copy": "Fondo libre para escribir con el texto nativo de la red."
+    },
+    {
+      "id": "sticker-confirmado",
+      "serie": "Stickers",
+      "formato": "sticker",
+      "size": "481×142",
+      "copy": "Sticker «Confirmado», fondo transparente."
+    },
+    {
+      "id": "sticker-en-camino",
+      "serie": "Stickers",
+      "formato": "sticker",
+      "size": "441×142",
+      "copy": "Sticker «En camino», fondo transparente."
+    },
+    {
+      "id": "sticker-pendiente",
+      "serie": "Stickers",
+      "formato": "sticker",
+      "size": "446×142",
+      "copy": "Sticker «Pendiente», fondo transparente."
+    },
+    {
+      "id": "sticker-revisa",
+      "serie": "Stickers",
+      "formato": "sticker",
+      "size": "520×142",
+      "copy": "Sticker «Revisa antes», fondo transparente."
+    },
+    {
+      "id": "sticker-nuevo",
+      "serie": "Stickers",
+      "formato": "sticker",
+      "size": "336×142",
+      "copy": "Sticker «Nuevo», fondo transparente."
+    },
+    {
+      "id": "sticker-alpha",
+      "serie": "Stickers",
+      "formato": "sticker",
+      "size": "632×142",
+      "copy": "Sticker «Alpha en testnet», fondo transparente."
+    },
+    {
+      "id": "sticker-gato-sentado",
+      "serie": "Stickers",
+      "formato": "sticker",
+      "size": "648×898",
+      "copy": "Sticker troquelado del gato, fondo transparente. Solo PNG.",
+      "png": true
+    },
+    {
+      "id": "sticker-gato-contento",
+      "serie": "Stickers",
+      "formato": "sticker",
+      "size": "702×668",
+      "copy": "Sticker troquelado del gato, fondo transparente. Solo PNG.",
+      "png": true
+    },
+    {
+      "id": "sticker-gato-emocionado",
+      "serie": "Stickers",
+      "formato": "sticker",
+      "size": "706×706",
+      "copy": "Sticker troquelado del gato, fondo transparente. Solo PNG.",
+      "png": true
+    },
+    {
+      "id": "sticker-gato-atento",
+      "serie": "Stickers",
+      "formato": "sticker",
+      "size": "702×668",
+      "copy": "Sticker troquelado del gato, fondo transparente. Solo PNG.",
+      "png": true
+    },
+    {
+      "id": "sticker-gato-curioso",
+      "serie": "Stickers",
+      "formato": "sticker",
+      "size": "772×738",
+      "copy": "Sticker troquelado del gato, fondo transparente. Solo PNG.",
+      "png": true
+    },
+    {
+      "id": "sticker-gato-durmiendo",
+      "serie": "Stickers",
+      "formato": "sticker",
+      "size": "894×726",
+      "copy": "Sticker troquelado del gato, fondo transparente. Solo PNG.",
+      "png": true
+    },
+    {
+      "id": "sticker-gato-cauto",
+      "serie": "Stickers",
+      "formato": "sticker",
+      "size": "794×602",
+      "copy": "Sticker troquelado del gato, fondo transparente. Solo PNG.",
+      "png": true
+    },
+    {
+      "id": "sticker-gato-somnoliento",
+      "serie": "Stickers",
+      "formato": "sticker",
+      "size": "728×668",
+      "copy": "Sticker troquelado del gato, fondo transparente. Solo PNG.",
+      "png": true
+    },
+    {
+      "id": "fondo-pantalla-movil-01",
+      "serie": "Fondos de pantalla",
+      "formato": "9x19.5",
+      "size": "1179×2556",
+      "copy": "Fondo de pantalla para móvil; deja libres el reloj y los botones."
+    },
+    {
+      "id": "fondo-pantalla-movil-02",
+      "serie": "Fondos de pantalla",
+      "formato": "9x19.5",
+      "size": "1179×2556",
+      "copy": "Fondo de pantalla para móvil; deja libres el reloj y los botones."
+    },
+    {
+      "id": "fondo-pantalla-escritorio-01",
+      "serie": "Fondos de pantalla",
+      "formato": "16x9",
+      "size": "2560×1440",
+      "copy": "Fondo de pantalla para escritorio."
+    },
+    {
+      "id": "plantilla-captura-4x5",
+      "serie": "Plantillas con captura",
+      "formato": "4x5",
+      "size": "1080×1350",
+      "copy": "Plantilla: sustituir la captura por una real de la app y el titular por la novedad. Mantener la nota de alpha."
+    },
+    {
+      "id": "plantilla-captura-9x16",
+      "serie": "Plantillas con captura",
+      "formato": "9x16",
+      "size": "1080×1920",
+      "copy": "Plantilla: sustituir la captura por una real de la app y el titular por la novedad. Mantener la nota de alpha."
+    }
+  ]
+}
