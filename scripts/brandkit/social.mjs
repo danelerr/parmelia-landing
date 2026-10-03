@@ -1,7 +1,7 @@
 /**
  * Social media proposals for GatoPago: posts (4:5, 1:1), stories (9:16) and banners, as SVG (text traced from the
  * local Recursive, no font lookup) and PNG, plus a review gallery and the caption of every piece.
- * Output: recursos/social/posts-2026-10. Usage: npm run brandkit:social
+ * Output: contenido/redes/2026-10. Usage: npm run brandkit:social
  * Content follows brandkit/01-manual/identidad-y-voz.md: no unverified promises, the alpha is stated, the cat has no public name.
  */
 import fs from 'node:fs/promises';
@@ -14,8 +14,8 @@ import { parse, svg as pixelSvg } from './pixmap.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const KIT = path.join(root, 'brandkit');
-const OUT = path.join(root, 'recursos/social/posts-2026-10');
-const ICONS = path.join(root, 'recursos/laboratorio-gatopago/04-iconos/svg');
+const OUT = path.join(root, 'contenido/redes/2026-10');
+const ICONS = path.join(root, 'archivo/laboratorio-gatopago/04-iconos/svg');
 const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
 // ---------------------------------------------------------------------------------------------- brand resources

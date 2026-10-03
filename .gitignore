@@ -28,6 +28,8 @@ pnpm-debug.log*
 # Documents and assets
 *.pdf
 *.pptx
+!comercial/**/*.pdf
+!comercial/**/*.pptx
 !recursos/presentaciones/**/*.pdf
 !recursos/presentaciones/**/*.pptx
 *.log
