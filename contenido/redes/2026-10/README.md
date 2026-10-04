@@ -1,6 +1,6 @@
 # Redes sociales · octubre de 2026
 
-**Estado: propuesta.** 166 piezas generadas con `npm run brandkit:social` (fuente: `herramientas/brandkit/social.mjs`). Abrir [index.html](./index.html) para revisarlas.
+**Estado: propuesta.** 172 piezas generadas con `npm run brandkit:social` (fuente: `herramientas/brandkit/social.mjs`). Abrir [index.html](./index.html) para revisarlas.
 
 - `png/`: listas para publicar. `svg/`: editables; el texto está trazado (no depende de fuentes instaladas).
 - Formatos: posts 1080 × 1350 (4:5) y 1080 × 1080 (1:1), carruseles 4:5, historias 1080 × 1920, posts horizontales 1200 × 675, banners de X, LinkedIn, YouTube, Facebook y enlace compartido, portadas de destacadas, fondos, stickers y plantillas.
@@ -19,6 +19,7 @@
 - Fondos para historias: dejan libre el centro para escribir con el texto nativo de la red y añadir stickers.
 - Stickers: PNG con fondo transparente. Los del gato usan los píxeles originales ampliados por un factor entero, con un borde Milk y un filo Ink; no redibujan la ilustración.
 - Fondos de pantalla: sin texto; en el móvil dejan libres el reloj y los botones inferiores.
+- Imagen para compartir (OG): `og-gatopago.png` es la versión principal; se instala como `og:image` en la web, que vive en el repositorio de la app.
 - Plantillas con captura: sustituir el marcador por una captura real de la app y conservar la nota de alpha.
 
 ## Textos sugeridos
@@ -93,7 +94,7 @@
 | `pilares-02` | Pilares | 1080×1350 | Tus fondos son realmente tuyos: GatoPago no guarda tu dinero; tú tienes el control. [Publicar cuando la autocustodia y la salida a otra wallet estén demostradas.] |
 | `pilares-03` | Pilares | 1080×1350 | Cripto sin la parte difícil: sin redes, gas ni direcciones a la vista. |
 | `pilares-04` | Pilares | 1080×1350 | Tu cuenta trabaja por ti. Hoy, rendimiento con DeFi; pronto, reglas que tú defines. El rendimiento varía y no está garantizado. (Alpha en testnet.) |
-| `pilares-05` | Pilares | 1080×1350 | Entra y sal cuando quieras: tu dinero puede ir a otra wallet o exchange. Sin encierro. [Publicar cuando la autocustodia y la salida a otra wallet estén demostradas.] |
+| `pilares-05` | Pilares | 1080×1350 | Entra y sal cuando quieras: tu dinero puede ir a otra wallet o exchange. Sin encierro. |
 | `pilares-06` | Pilares | 1080×1080 | Fácil como una app. Tuya como una wallet. Las dos cosas, en una cuenta. [Publicar cuando la autocustodia y la salida a otra wallet estén demostradas.] |
 | `pilares-07` | Pilares | 1080×1350 | O es fácil, o es tuyo. Hasta ahora: GatoPago es fácil y tus fondos son tuyos. [Publicar cuando la autocustodia y la salida a otra wallet estén demostradas.] |
 | `entre-paises-01` | Entre países | 1080×1350 | Cobra desde cualquier país: un enlace o un QR, y el pago llega en dólares digitales. (Alpha en testnet.) |
@@ -119,6 +120,10 @@
 | `horizontal-02` | Horizontales | 1200×675 | Revisa el destino antes de enviar. |
 | `horizontal-03` | Horizontales | 1200×675 | Tu dinero. Tu decisión. |
 | `horizontal-05` | Horizontales | 1200×675 | Tu dinero no debería detenerse en la frontera. |
+| `hackquest-01` | HackQuest | 1280×720 | Money without borders. Always yours. |
+| `hackquest-02` | HackQuest | 1280×720 | A message crosses a border in seconds. Money takes days. |
+| `hackquest-03` | HackQuest | 1280×720 | Get paid with a link. Send to a username. |
+| `hackquest-04` | HackQuest | 1280×720 | ERC-4337 accounts signed with passkeys. |
 | `horizontal-04` | Horizontales | 1200×675 | Estamos en alpha. |
 | `carrusel-cobrar-01` | Carrusel · Cobrar con un enlace | 1080×1350 | Cobrar con un enlace, paso a paso. (Alpha en testnet, con fondos de prueba.) |
 | `carrusel-cobrar-02` | Carrusel · Cobrar con un enlace | 1080×1350 | Diapositiva 2 de 6. |
@@ -189,5 +194,7 @@
 | `fondo-pantalla-movil-01` | Fondos de pantalla | 1179×2556 | Fondo de pantalla para móvil; deja libres el reloj y los botones. |
 | `fondo-pantalla-movil-02` | Fondos de pantalla | 1179×2556 | Fondo de pantalla para móvil; deja libres el reloj y los botones. |
 | `fondo-pantalla-escritorio-01` | Fondos de pantalla | 2560×1440 | Fondo de pantalla para escritorio. |
+| `og-gatopago` | Imagen para compartir (OG) | 1200×630 | Imagen Open Graph (oscura) para gatopago.com: se muestra al compartir el enlace en redes y mensajería. Se instala en el repositorio de la app. |
+| `og-gatopago-claro` | Imagen para compartir (OG) | 1200×630 | Imagen Open Graph (clara) para gatopago.com: se muestra al compartir el enlace en redes y mensajería. Se instala en el repositorio de la app. |
 | `plantilla-captura-4x5` | Plantillas con captura | 1080×1350 | Plantilla: sustituir la captura por una real de la app y el titular por la novedad. Mantener la nota de alpha. |
 | `plantilla-captura-9x16` | Plantillas con captura | 1080×1920 | Plantilla: sustituir la captura por una real de la app y el titular por la novedad. Mantener la nota de alpha. |

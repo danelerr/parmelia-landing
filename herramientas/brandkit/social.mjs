@@ -482,7 +482,7 @@ const P = [
     copy: 'Cripto sin la parte difícil: sin redes, gas ni direcciones a la vista.' },
   { id: 'pilares-04', serie: 'Pilares', f: '4x5', t: 'titular', th: 'ink', kicker: 'Programable', head: ['Tu cuenta', 'trabaja', 'por ti.'], sub: ['Hoy: rendimiento con DeFi.', 'Pronto: reglas que tú defines.'], deco: 'icon:crecer', alpha: true,
     copy: 'Tu cuenta trabaja por ti. Hoy, rendimiento con DeFi; pronto, reglas que tú defines. El rendimiento varía y no está garantizado. (Alpha en testnet.)' },
-  { id: 'pilares-05', serie: 'Pilares', f: '4x5', t: 'titular', th: 'fire', kicker: 'Abierta', head: ['Entra y sal', 'cuando', 'quieras.'], sub: ['Tu dinero puede ir a otra', 'wallet o exchange. Sin encierro.'], deco: 'rail', prove: true,
+  { id: 'pilares-05', serie: 'Pilares', f: '4x5', t: 'titular', th: 'fire', kicker: 'Abierta', head: ['Entra y sal', 'cuando', 'quieras.'], sub: ['Tu dinero puede ir a otra', 'wallet o exchange. Sin encierro.'], deco: 'rail',
     copy: 'Entra y sal cuando quieras: tu dinero puede ir a otra wallet o exchange. Sin encierro.' },
   { id: 'pilares-06', serie: 'Pilares', f: '1x1', t: 'titular', th: 'ink', kicker: 'GatoPago', head: ['Fácil como una app.', 'Tuya como una wallet.'], sub: ['Las dos cosas, en una cuenta.'], deco: 'steps', prove: true,
     copy: 'Fácil como una app. Tuya como una wallet. Las dos cosas, en una cuenta.' },
@@ -534,6 +534,11 @@ const BANNERS = [
   { id: 'horizontal-02', serie: 'Horizontales', name: 'Post 16:9', size: [1200, 675], theme: 'oat', head: ['Revisa el destino', 'antes de enviar.'], sub: 'Un carácter distinto lleva el dinero a otra cuenta.', cat: 'expresion-atento', headScale: 0.15 },
   { id: 'horizontal-03', serie: 'Horizontales', name: 'Post 16:9', size: [1200, 675], theme: 'milk', head: ['Tu dinero.', 'Tu decisión.'], sub: 'Nada se mueve sin tu autorización.', cat: 'pose-sentado', headScale: 0.18 },
   { id: 'horizontal-05', serie: 'Horizontales', name: 'Post 16:9', size: [1200, 675], theme: 'milk', head: ['Tu dinero no debería', 'detenerse en la frontera.'], sub: 'Un mensaje cruza en segundos. El dinero tarda días.', headScale: 0.14 },
+  // Gallery images for the HackQuest project page (1280 × 720), in English like the submission.
+  { id: 'hackquest-01', serie: 'HackQuest', name: 'Imagen de proyecto 1280 × 720', size: [1280, 720], theme: 'milk', head: ['Money without borders.', 'Always yours.'], sub: 'Self-custodial payments on Arbitrum.', cat: 'pose-sentado', headScale: 0.13 },
+  { id: 'hackquest-02', serie: 'HackQuest', name: 'Imagen de proyecto 1280 × 720', size: [1280, 720], theme: 'ink', head: ['A message crosses', 'a border in seconds.', 'Money takes days.'], sub: 'GatoPago moves it like a message, and you keep the keys.', headScale: 0.12 },
+  { id: 'hackquest-03', serie: 'HackQuest', name: 'Imagen de proyecto 1280 × 720', size: [1280, 720], theme: 'oat', head: ['Get paid with a link.', 'Send to a username.'], sub: 'A passkey instead of a seed phrase. Gas covered.', cat: 'pose-qr', headScale: 0.12 },
+  { id: 'hackquest-04', serie: 'HackQuest', name: 'Imagen de proyecto 1280 × 720', size: [1280, 720], theme: 'fire', head: ['ERC-4337 accounts', 'signed with passkeys.'], sub: 'Sponsored gas · guardian recovery · Arbitrum Sepolia', headScale: 0.11 },
   { id: 'horizontal-04', serie: 'Horizontales', name: 'Post 16:9', size: [1200, 675], theme: 'ink', head: ['Estamos', 'en alpha.'], sub: 'Testnet y fondos de prueba, por ahora.', headScale: 0.18 },
 ];
 
@@ -746,6 +751,22 @@ const WALLPAPERS = [
   { id: 'fondo-pantalla-escritorio-01', kind: 'desktop', size: [2560, 1440], th: 'oat', cat: 'pose-mensajero' },
 ];
 
+/** Open Graph image (1200 × 630): what a link to gatopago.com shows when shared. Symbol, promise, the camino and the cat. */
+async function ogImage(o) {
+  const W = 1200, H = 630, th = THEMES[o.th], M = 72, sw = 60, sh = 46;
+  let m = rect(W - M - 60, 0, 60, 10, C.fire) + rect(W - M - 78, 0, 18, 10, C.deep);
+  if (th.chip) m += rect(M - 10, M - 10, sw + 20, sh + 20, C.milk);
+  m += symbol(M, M, 2) + text('GatoPago', M + sw + (th.chip ? 30 : 18), M + sh * 0.78, 36, th.fg, 'display');
+  const head = block(['Dinero sin', 'fronteras.'], M, 262, 84, th.fg, { face: 'display', lh: 1.0, maxW: 680 });
+  m += head.markup + text('Siempre tuyo.', M, head.bottom + head.size * 1.02, head.size, C.fire, 'display');
+  m += text('gatopago.com', M, H - M + 6, 26, th.sub, 'mono');
+  const unit = 56, base = H - M + 10;
+  m += steps(W - M - 4 * unit * 1.6, base, unit, 4, th.deco);
+  m += (await cat('pose-sentado', W - M - unit * 0.5, base - 4 * unit * 0.62 + 6, 200, 'bottom-right')).markup;
+  return frame(W, H, th, m, 'GatoPago: Dinero sin fronteras. Siempre tuyo.');
+}
+const OG = [{ id: 'og-gatopago', th: 'ink', name: 'oscura' }, { id: 'og-gatopago-claro', th: 'milk', name: 'clara' }];
+
 /** Product-news template with a phone placeholder for a real app screenshot. */
 async function screenshotTemplate(t) {
   const [W, H] = FORMATS[t.f], th = THEMES[t.th], M = W * 0.0815, story = H / W > 1.6, top = story ? 300 : M + 70;
@@ -823,6 +844,10 @@ for (const w of WALLPAPERS) {
   await out(w.id, frame(w.size[0], w.size[1], THEMES[w.th], await wallpaper(w), 'Fondo de pantalla de GatoPago'));
   rows.push({ id: w.id, serie: 'Fondos de pantalla', formato: w.kind === 'phone' ? '9x19.5' : '16x9', size: `${w.size[0]}×${w.size[1]}`, copy: w.kind === 'phone' ? 'Fondo de pantalla para móvil; deja libres el reloj y los botones.' : 'Fondo de pantalla para escritorio.' });
 }
+for (const o of OG) {
+  await out(o.id, await ogImage(o));
+  rows.push({ id: o.id, serie: 'Imagen para compartir (OG)', formato: '1200x630', size: '1200×630', copy: `Imagen Open Graph (${o.name}) para gatopago.com: se muestra al compartir el enlace en redes y mensajería. Se instala en el repositorio de la app.` });
+}
 for (const t of SCREEN_TEMPLATES) {
   const [W, H] = FORMATS[t.f];
   await out(t.id, frame(W, H, THEMES[t.th], await screenshotTemplate(t), 'Plantilla de novedad con captura'));
@@ -864,6 +889,7 @@ await fs.writeFile(path.join(OUT, 'README.md'), `# Redes sociales · octubre de 
 - Fondos para historias: dejan libre el centro para escribir con el texto nativo de la red y añadir stickers.
 - Stickers: PNG con fondo transparente. Los del gato usan los píxeles originales ampliados por un factor entero, con un borde Milk y un filo Ink; no redibujan la ilustración.
 - Fondos de pantalla: sin texto; en el móvil dejan libres el reloj y los botones inferiores.
+- Imagen para compartir (OG): \`og-gatopago.png\` es la versión principal; se instala como \`og:image\` en la web, que vive en el repositorio de la app.
 - Plantillas con captura: sustituir el marcador por una captura real de la app y conservar la nota de alpha.
 
 ## Textos sugeridos

@@ -486,8 +486,7 @@
       "serie": "Pilares",
       "formato": "4x5",
       "size": "1080×1350",
-      "copy": "Entra y sal cuando quieras: tu dinero puede ir a otra wallet o exchange. Sin encierro. [Publicar cuando la autocustodia y la salida a otra wallet estén demostradas.]",
-      "revisar": "autocustodia"
+      "copy": "Entra y sal cuando quieras: tu dinero puede ir a otra wallet o exchange. Sin encierro."
     },
     {
       "id": "pilares-06",
@@ -665,6 +664,34 @@
       "formato": "Post 16:9",
       "size": "1200×675",
       "copy": "Tu dinero no debería detenerse en la frontera."
+    },
+    {
+      "id": "hackquest-01",
+      "serie": "HackQuest",
+      "formato": "Imagen de proyecto 1280 × 720",
+      "size": "1280×720",
+      "copy": "Money without borders. Always yours."
+    },
+    {
+      "id": "hackquest-02",
+      "serie": "HackQuest",
+      "formato": "Imagen de proyecto 1280 × 720",
+      "size": "1280×720",
+      "copy": "A message crosses a border in seconds. Money takes days."
+    },
+    {
+      "id": "hackquest-03",
+      "serie": "HackQuest",
+      "formato": "Imagen de proyecto 1280 × 720",
+      "size": "1280×720",
+      "copy": "Get paid with a link. Send to a username."
+    },
+    {
+      "id": "hackquest-04",
+      "serie": "HackQuest",
+      "formato": "Imagen de proyecto 1280 × 720",
+      "size": "1280×720",
+      "copy": "ERC-4337 accounts signed with passkeys."
     },
     {
       "id": "horizontal-04",
@@ -1163,6 +1190,20 @@
       "formato": "16x9",
       "size": "2560×1440",
       "copy": "Fondo de pantalla para escritorio."
+    },
+    {
+      "id": "og-gatopago",
+      "serie": "Imagen para compartir (OG)",
+      "formato": "1200x630",
+      "size": "1200×630",
+      "copy": "Imagen Open Graph (oscura) para gatopago.com: se muestra al compartir el enlace en redes y mensajería. Se instala en el repositorio de la app."
+    },
+    {
+      "id": "og-gatopago-claro",
+      "serie": "Imagen para compartir (OG)",
+      "formato": "1200x630",
+      "size": "1200×630",
+      "copy": "Imagen Open Graph (clara) para gatopago.com: se muestra al compartir el enlace en redes y mensajería. Se instala en el repositorio de la app."
     },
     {
       "id": "plantilla-captura-4x5",

@@ -23,7 +23,7 @@ No contiene código de frontend, servidor web ni configuración de despliegue (l
 │   └── data-room/               Índice para due diligence (sin datos sensibles)
 │
 ├── contenido/                   COMUNICACIÓN Y PUBLICACIONES
-│   ├── redes/2026-10/           166 piezas sociales generadas (posts, carruseles, banners, stickers)
+│   ├── redes/2026-10/           168 piezas sociales generadas (posts, carruseles, banners, stickers)
 │   ├── calendario/              Plan editorial y cronograma de publicación
 │   └── plantillas/              Portadas, fondos y recursos reutilizables
 │
