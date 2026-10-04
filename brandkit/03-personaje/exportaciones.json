@@ -545,9 +545,9 @@
       "scale": 11,
       "width": 2156,
       "height": 2123,
-      "recipe": "6da1453d63a566db60ea7c4efbc3a0f5af89e80984dac7fd13421742b014076c",
-      "bytes": 139716,
-      "sha256": "59197235a79f4330dff351800d8d422fd512bccb538bd1afff0e9e2a64e8c6fc"
+      "recipe": "addeb28ebf9501f684627b4fac506f9beb29ee3c4d6e217406654c16f4a0796d",
+      "bytes": 139502,
+      "sha256": "44030965e31c77f188a82ff1a524e54f58bc0fcf46376af6e5795ecac35ce48b"
     },
     {
       "file": "hd/animaciones/fotogramas/cola/03.png",
@@ -556,9 +556,9 @@
       "scale": 11,
       "width": 2156,
       "height": 2123,
-      "recipe": "a0b750fea27d060f3e97059f87c9cc1693e653a2543bdd5d4a4d4403c670214f",
-      "bytes": 144989,
-      "sha256": "bc7d64f1c5a9c6774ab01831d4f477c25c29adcff78a7d547b478087c312d64f"
+      "recipe": "4a389c4315d2410907697ffa6285f0fe63e4cdb8517b4d162d62e111a1b00868",
+      "bytes": 144841,
+      "sha256": "e09e22e00fa8103b89faa69ca7ee626def9e7524352b3e984fb25406fdecbf06"
     },
     {
       "file": "hd/animaciones/fotogramas/cola/04.png",
@@ -567,9 +567,9 @@
       "scale": 11,
       "width": 2156,
       "height": 2123,
-      "recipe": "1846722eb4e764af6980a249b2966e4079489d4bb76911c2394a097f14574850",
-      "bytes": 150637,
-      "sha256": "57370304012a7656279970fa7830292d973b0bc06f98368512b4e73eed54f4b8"
+      "recipe": "f6939d39afb706ec0e1a8c8b9753db1cc836102ddc194f2e3df7a8ba6c98d933",
+      "bytes": 150562,
+      "sha256": "e337558dda3a809c3fd347bb988ee1ee438808b929815a75f83822263e5ce0ad"
     },
     {
       "file": "hd/animaciones/fotogramas/cola/05.png",
@@ -578,9 +578,9 @@
       "scale": 11,
       "width": 2156,
       "height": 2123,
-      "recipe": "8cdf90c5372053108e14efa29f0cd084f60bd7aac5387d0437292bdd801d4076",
-      "bytes": 146496,
-      "sha256": "9c316981e48ec6cf9c4d65da4ff3720f0666d3402423d7ac00a399667c7b2d60"
+      "recipe": "bc6047eb9b0f801143a9e7ecffb7e1c65d0d8fcbfa5f0a738321efebffce1497",
+      "bytes": 146348,
+      "sha256": "d03fa2c8dd7117658a6708d255a86b71238b6e31a8d920217a900116c8c74de6"
     },
     {
       "file": "hd/animaciones/fotogramas/cola/06.png",
@@ -589,9 +589,9 @@
       "scale": 11,
       "width": 2156,
       "height": 2123,
-      "recipe": "a6f73465a8eade4cb317a756361e0c90481d9e6be7772daf84f3c16ecf941974",
-      "bytes": 146292,
-      "sha256": "c44ccdf52be3976598bf00dd2942849dd51b46fdf9e471b6528ca81c02d5b08e"
+      "recipe": "118998121004ae979751bbb0c5d02a8547b2d15f2424f2bce836a7ff99a4fc8e",
+      "bytes": 146120,
+      "sha256": "6d7c47a19c2738dd0baedb249f3d5bf0d92998956e10162fdb8db61c4ee9f72d"
     },
     {
       "file": "hd/animaciones/fotogramas/cola/07.png",
@@ -600,9 +600,9 @@
       "scale": 11,
       "width": 2156,
       "height": 2123,
-      "recipe": "a69e71e902616e27714663c3cbb43faf020476a7bdbad769f9f58c319bccfe19",
-      "bytes": 146406,
-      "sha256": "171c01ae0b999841f06087f287092a11f728f29ea025293c4dafd51dc0eb05bf"
+      "recipe": "3d0e3ece68780622fb030fc9682472cdf13753d36bc0e5d98a8c497f34614b8e",
+      "bytes": 146166,
+      "sha256": "6c17c391614b9c438e8dabaea2250c87dafa12eff7a6655aa42324f91261b0f9"
     },
     {
       "file": "hd/animaciones/fotogramas/cola/08.png",
@@ -624,9 +624,9 @@
       "scale": 11,
       "steps": 8,
       "totalMs": 1690,
-      "recipe": "6de46ac459c703ec2ede628755caefa6be4ebe09b20610a3db27fdb0bcd128ce",
-      "bytes": 347770,
-      "sha256": "1e2fb8758298410807422e67d24cc297e96e7a7f46c165af9350d5336ddd44c3"
+      "recipe": "36ccf15243684411cca889928f7bdb377e077e2e04c1f75cc693eea0ed0872cd",
+      "bytes": 346288,
+      "sha256": "ee5dc8c75cfb1f34146a02f20232f2921682de4edc8ecbb263075a508b789e0b"
     },
     {
       "file": "hojas/cola.png",
@@ -637,9 +637,9 @@
       "animation": "cola",
       "columns": 4,
       "frames": 8,
-      "recipe": "f938089cc0f1dcfb6e5126dafe9ad42c4064bd9837b00bd587ad8f7f367115cd",
-      "bytes": 371825,
-      "sha256": "99d2a703ddf09c81bf9e8fd72f7edf491d85e7647dcfb83cc508801f437a957e"
+      "recipe": "01ec51088034102d5dad6ad3ab5576c2721315e2c124fa67369343abfc5ad13b",
+      "bytes": 371215,
+      "sha256": "40dd9587981ee5b081d544ac5d7fd2649dde5a2eba00a840d911b5c64b855f2b"
     },
     {
       "file": "hd/hojas/cola.png",
@@ -648,9 +648,9 @@
       "scale": 3,
       "width": 2352,
       "height": 1158,
-      "recipe": "3f1124ff23ae07d922e747a31cbaaeab049f42a86282fcce986c19440d9ef71f",
-      "bytes": 516554,
-      "sha256": "aaa61fd28bba2b09044b684def848997ef543f3c9f29db9afdcbb405e36fab11"
+      "recipe": "3986adf5d9636e8200afeb76baebc48f3fe8c447a1e4c35928f553bbf263e3e6",
+      "bytes": 515670,
+      "sha256": "5dc35d145769466e0d6bf6b92718a9e1f2badd3754d52e4dac46787a12365561"
     },
     {
       "file": "hd/animaciones/fotogramas/siesta/01.png",
@@ -898,9 +898,9 @@
       "scale": 11,
       "width": 2068,
       "height": 2233,
-      "recipe": "3dcc7969570cbe0ff41e6d7e7fea3002bdd971b079a8733e0c4fc43e49e97e8b",
-      "bytes": 144162,
-      "sha256": "6c1f0e5b74e5ca87676e7796461157f7a5c8b68e8e00d3f90e38759e69ed8dd8"
+      "recipe": "eb2598fe99636b7ae11ed2e1fdd21883a1baefc53b9ba08cec36573abf8c5c0e",
+      "bytes": 143946,
+      "sha256": "ae52745583c32bea704fa9f3c21aba6cd2a6c05d27c000b0319e912eb88da4ea"
     },
     {
       "file": "hd/animaciones/fotogramas/meti-la-pata/02.png",
@@ -909,9 +909,9 @@
       "scale": 11,
       "width": 2068,
       "height": 2233,
-      "recipe": "7dd7793d5d2eac4c0ca8a9e105b3612feb3b91ce709b5240a192cd22df201a27",
-      "bytes": 139908,
-      "sha256": "e2cabfd6236440504426a8ab79abc00aff8f104c7eddb515f9ea42eb2d52a4d0"
+      "recipe": "584456c6ea0180e902fa34f73074e1902e10958f1f6460d6b37c20c3a646da01",
+      "bytes": 139849,
+      "sha256": "94bc45314a53822b0c0e036b1069132d6c183a15f765467eefcfb258197b8387"
     },
     {
       "file": "hd/animaciones/fotogramas/meti-la-pata/03.png",
@@ -920,9 +920,9 @@
       "scale": 11,
       "width": 2068,
       "height": 2233,
-      "recipe": "9326ff490f6a37e761a5e14627993d9cd81e3e1e629f48420e37399eea355e03",
-      "bytes": 140058,
-      "sha256": "3ca299cc658f59c0f02fb934966b77330a9561b2402fd7451fcc18ef57712000"
+      "recipe": "720b828d5569821533596b2a3ba1f7a23048ca65739b19972bafb41a09a4283d",
+      "bytes": 139919,
+      "sha256": "aef03b32c6983366d851c2b55ba52d1ec3b96f0aec6d40540e3b51db969b8288"
     },
     {
       "file": "hd/animaciones/fotogramas/meti-la-pata/04.png",
@@ -931,9 +931,9 @@
       "scale": 11,
       "width": 2068,
       "height": 2233,
-      "recipe": "d6159008b5882b331b1b43a962d61efa02bb3b7bdcf10f966b485222bb8ad5bb",
-      "bytes": 143273,
-      "sha256": "a3c83ebd601f5c12f1262334e5a89af79f072844feee217945a0c82b1c2bbcca"
+      "recipe": "af2df6bf1bed607798275384797cd88632419e48279bb4219dd83dc977a70f47",
+      "bytes": 143098,
+      "sha256": "dd4d8ddb4b94d80d0a9199bae8256a3756913e5dc10c397df9baafeea1435f70"
     },
     {
       "file": "hd/animaciones/fotogramas/meti-la-pata/05.png",
@@ -942,9 +942,9 @@
       "scale": 11,
       "width": 2068,
       "height": 2233,
-      "recipe": "b16b1e3be49d999ec6e95e3f8ec402c5cea367c395c6c85efd805af45530194c",
-      "bytes": 146565,
-      "sha256": "c2f6fdd9b7b05d2028b6329d14ab21927fe7ea9749d15692af602aa5ae77de90"
+      "recipe": "3c816a8f7e448bcc72e27c149af0d636ca4a14eaabf1ec1e2d41d6ccd883a0e5",
+      "bytes": 146374,
+      "sha256": "2ccb7d11306a481b697cd0644aea9a3cf1771f671408bfb0826df5ee2eb2bc11"
     },
     {
       "file": "hd/animaciones/fotogramas/meti-la-pata/06.png",
@@ -953,9 +953,9 @@
       "scale": 11,
       "width": 2068,
       "height": 2233,
-      "recipe": "e7703c8a31187e860f39930f0fbd443856c908d9d1e59495144a997b078c80ff",
-      "bytes": 149353,
-      "sha256": "6fa9f20582f9c0957425c9d6225f4c1f24c9de278d8d57430b805aedacab9edc"
+      "recipe": "2644661eae908d6d9fa3775e867fb7f6fc5da939fb68698020f01bd16dc1a116",
+      "bytes": 149229,
+      "sha256": "9b8f05d17aa0a4d98943fbe455eec10c043da9ad0ceac26ad9eb0e651dc7f74e"
     },
     {
       "file": "hd/animaciones/meti-la-pata.webp",
@@ -966,9 +966,9 @@
       "scale": 11,
       "steps": 6,
       "totalMs": 3080,
-      "recipe": "2da351a190fd004bdc3b2252d8f4546becaca3cbc8ad51c2fd69ad4309f278e9",
-      "bytes": 266596,
-      "sha256": "3a1ddf84b7db24f1fcc299d8d05b39f23fe204b5d0b3ae290ddac8cb020ec342"
+      "recipe": "1a8b03e01943850ba711e081dfa13ea488b1f8d4dc77c60ba8593cc45abf541f",
+      "bytes": 265142,
+      "sha256": "e5df24f46acef3e1c5b2d71a716c6e12fd148d4589047ad7777f73d5363e0fba"
     },
     {
       "file": "hojas/meti-la-pata.png",
@@ -979,9 +979,9 @@
       "animation": "meti-la-pata",
       "columns": 4,
       "frames": 6,
-      "recipe": "776b91908fba959197a5056350c20f0988e37fa0d68dd27b25aed1a6d9857749",
-      "bytes": 283705,
-      "sha256": "366431cabab975dfaf65cf49f73630020c7f792138147d38cee7a73f9268d78e"
+      "recipe": "b8008c54773867d9c43665db38763975f3617a37b0db6688c7efd8f1b9126b36",
+      "bytes": 283121,
+      "sha256": "635a79aed87128a1227aafa58b2c009821b565468196271659097476893286f9"
     },
     {
       "file": "hd/hojas/meti-la-pata.png",
@@ -990,9 +990,9 @@
       "scale": 3,
       "width": 2256,
       "height": 1218,
-      "recipe": "5d3cec8dc1d62613ef5f867994d5bfa4605b5e3c003a67c3874296edc9892697",
-      "bytes": 394980,
-      "sha256": "19f37abb938e8655ab5d2f0d2e15b7b604d750c39fa4136eb3de47c9fb441bc1"
+      "recipe": "183d402db9635bdb507e9f3bff54a925f367422968bdb44ccdd04724dc30edcc",
+      "bytes": 394304,
+      "sha256": "3ada341a4dd6d892b6438aceb300bb0de71070b001006d66cf623c6634483c33"
     },
     {
       "file": "hd/animaciones/fotogramas/salto/01.png",
@@ -1126,9 +1126,9 @@
       "scale": 11,
       "width": 2211,
       "height": 2134,
-      "recipe": "447f1a389feb3507279eb1f156b5357cbec19fefe34c606c9151b433d3233bb1",
-      "bytes": 135998,
-      "sha256": "2ee05a0b85ada98fe6b9270b28d0655b19c41e08d133522daec80a023f33cd00"
+      "recipe": "9937f75beeed87554f8373782557df0abc0cd681e0400545d0bab7dff53ef386",
+      "bytes": 135963,
+      "sha256": "af7aada03fd58b692000922338d003cfa0de82c68cad2c35f41ed65cf794d15f"
     },
     {
       "file": "hd/animaciones/fotogramas/caminata/02.png",
@@ -1137,9 +1137,9 @@
       "scale": 11,
       "width": 2211,
       "height": 2134,
-      "recipe": "20fd272eb5c1a5d0f63693d983ae14b9ae76a6675b07a12716075e1eba7d2051",
-      "bytes": 127737,
-      "sha256": "8811c3315f49cc0db2a04c7e006da48161a808c3223fdd6ac7063d2446ed51a0"
+      "recipe": "5f8b00c3f45e75d2b37869a801bf8490926d36b0c6ccb0315b520e2c52b8a591",
+      "bytes": 127976,
+      "sha256": "5bc2380b3f2f0283a5ce420949cec3cfbc356a093bceb223c1b61851e7bc3e29"
     },
     {
       "file": "hd/animaciones/fotogramas/caminata/03.png",
@@ -1148,9 +1148,9 @@
       "scale": 11,
       "width": 2211,
       "height": 2134,
-      "recipe": "b42fe3916caff8d2810a83a7f2d0797b94de693ac440829865a60ea173a1b931",
-      "bytes": 132275,
-      "sha256": "47bd27451d6fc75e115379bb635e4c8c641e37286dc58c3861cb1397e2b1d270"
+      "recipe": "56553f658c519fa855979b5c18605bb87e05b4bd163304f89226c8b4223d9bae",
+      "bytes": 132127,
+      "sha256": "3c21a6914818e0fd01106b3e7652536b7e585e095cba804e7c2dd7ef54292ef4"
     },
     {
       "file": "hd/animaciones/fotogramas/caminata/04.png",
@@ -1159,9 +1159,9 @@
       "scale": 11,
       "width": 2211,
       "height": 2134,
-      "recipe": "b48d5504917d795db0040203a843719a2a76999b33f04eeb2a37473665338e4a",
-      "bytes": 134865,
-      "sha256": "0b999b464266997ed18f72816ec9e30e8cccea2bcc582359e1edb53a08a53289"
+      "recipe": "30b669ca4ce28fe490442969f0a4978cde3745f4bb145ef6390ad3ee84eec1a8",
+      "bytes": 134772,
+      "sha256": "8dc14a6dad6e86459a636ca6de702cbbda88a0ab4d8d7aaad37b49b173d17b17"
     },
     {
       "file": "hd/animaciones/fotogramas/caminata/05.png",
@@ -1170,9 +1170,9 @@
       "scale": 11,
       "width": 2211,
       "height": 2134,
-      "recipe": "3ed2d62f4d1cd0d15a431f657f9603ca0e48fb3f2f5de3a55d7d75872297bc7b",
-      "bytes": 132666,
-      "sha256": "194bfe57e5130acb564f2ad4a666a2d88d2640b2ccb022a9b393ce861c35f4a6"
+      "recipe": "0f1c1bc0a18534a6bd1b27313a381f5fa9b4a7eb6d9ee5f0c9cb7332b9fdc588",
+      "bytes": 132697,
+      "sha256": "6190e0e4fc893f63fd172147ae827c6d764da662bfb2994444dd53b242c5582b"
     },
     {
       "file": "hd/animaciones/fotogramas/caminata/06.png",
@@ -1181,9 +1181,9 @@
       "scale": 11,
       "width": 2211,
       "height": 2134,
-      "recipe": "9fe3d6e8b1b3c9a5e428de9ee90712779c1d2a3712e00e92800aee9fdd5c612a",
-      "bytes": 135076,
-      "sha256": "cf79761d04f047df09b2922d395d7dbc446ec0e8ec52bf49b5a54fd8838fcfa6"
+      "recipe": "fcb27d13bb41dea89b62a4322a04a61e656ba831e411b46a15b574ba94213b1f",
+      "bytes": 135244,
+      "sha256": "5cc0b7620a65002de71a4f22641bdabb61e0a869de694c691e2bacbac0874dd0"
     },
     {
       "file": "hd/animaciones/caminata.webp",
@@ -1194,9 +1194,9 @@
       "scale": 11,
       "steps": 6,
       "totalMs": 660,
-      "recipe": "ba8fc8a0a29cf53e4fabe09a7a65b6a792411946911eaae2ec246a396319b013",
-      "bytes": 248860,
-      "sha256": "810888e8ea82fa41231da714f2d5480ea4c650afc0cf574b90cc7af772045b77"
+      "recipe": "1c8c9a3c769495447c505f7f7661e07a1fa5fb3b75d39243d1683b6a4a4b7391",
+      "bytes": 248976,
+      "sha256": "be37568136d044877d65fa8275f93664c80856bd13503ce9a3ccd6029dccce06"
     },
     {
       "file": "hojas/caminata.png",
@@ -1207,9 +1207,9 @@
       "animation": "caminata",
       "columns": 4,
       "frames": 6,
-      "recipe": "037d4d591474827d01d0e3ea6ecfd321e2581ab8392963ee46b5f77210f235dd",
-      "bytes": 270918,
-      "sha256": "31c9da67ff9b377f8ab63b55db3c3c0b27858bd1457bbdb9a49cd11379da324e"
+      "recipe": "134ca4e72b79b88fdcc4fa43d18ee2229467f033487077b2f2ab4b5f5d9eb3ce",
+      "bytes": 269121,
+      "sha256": "11bdd99b8e0d8ff292285f3a0d8f142f5c6688d1d0e909f03f2e811eeeb7da1d"
     },
     {
       "file": "hd/hojas/caminata.png",
@@ -1218,9 +1218,9 @@
       "scale": 3,
       "width": 2412,
       "height": 1164,
-      "recipe": "429267ca7e70101efb4b0973e25c6bbf2b7cd57ba68e1ef3091abcfd4117f62d",
-      "bytes": 369079,
-      "sha256": "0f8f41064afba327fcb1e4edb5a932d9f31020ae0639d1874bc30cddd0e79f49"
+      "recipe": "07407548d91e08feb1d28f25b59a89222b9ce7eaea641267a3266d99e6832405",
+      "bytes": 367783,
+      "sha256": "4f63e25d57ab8762c54a22ff6c2b87975207f90a43ecfc519eb9a6627cc1aaa8"
     },
     {
       "file": "hd/animaciones/fotogramas/preparando-pago/01.png",
@@ -1229,9 +1229,9 @@
       "scale": 10,
       "width": 2210,
       "height": 1770,
-      "recipe": "377f212680625c83fb976a8c13cf1dac706cd5579b7eb1d2f1e9c425c9069097",
-      "bytes": 115071,
-      "sha256": "cff91e5a89346e171ab4573613f853841754462dfdbee86672412de3dfb4d4ff"
+      "recipe": "3c6f7ec3e313d900654c59b513615e3defab6f51a308289632e472241f14e55d",
+      "bytes": 118514,
+      "sha256": "0ea6ec5af6114db3ca5095473d97ce5cb15453dfa0749e9a7a6de6f60653f1bf"
     },
     {
       "file": "hd/animaciones/fotogramas/preparando-pago/02.png",
@@ -1240,9 +1240,9 @@
       "scale": 10,
       "width": 2210,
       "height": 1770,
-      "recipe": "072492b7ca3ce9074cd731b2766128ddac43fed85c757eea37d26c97f8428e2d",
+      "recipe": "9370e17a03072cdea816fc1525eddf15b5a1da04bc5d46637772389717353d4b",
       "bytes": 127107,
-      "sha256": "30519c05c961d2ff73b38f742366d9202f012521d4d7445299e89b5e16e47607"
+      "sha256": "9eb0db996fb45dbda289e2a5ad18a90baa8cb591fd3a4e54edd9b66d9981bf7d"
     },
     {
       "file": "hd/animaciones/fotogramas/preparando-pago/03.png",
@@ -1251,9 +1251,9 @@
       "scale": 10,
       "width": 2210,
       "height": 1770,
-      "recipe": "9f6d1ff453466cdfd26edfdb64cc42900472e5287fe0d73757f85e0108ec9312",
+      "recipe": "faa30cc7b1bca059e857d97930b51cc1a7fd4b414d5ea36440e05439811326ff",
       "bytes": 122664,
-      "sha256": "999fa56aa608ac50d0c0682f59178cd1d944b1b1e5f85ef14c238a967f430002"
+      "sha256": "aa9f92fd1703bffac342e61accf192219a07978a8d8d59e9434a9e4f8dff31bc"
     },
     {
       "file": "hd/animaciones/fotogramas/preparando-pago/04.png",
@@ -1262,9 +1262,9 @@
       "scale": 10,
       "width": 2210,
       "height": 1770,
-      "recipe": "e460e79894d373507452f6317d7f67e557258aa9f31d4ed1837b20b8edc9f9d4",
-      "bytes": 124092,
-      "sha256": "9aa4d3d13aeb43ab2f6c681eb508a5eb389d595c9c82ffa04f13f80f80c24bc1"
+      "recipe": "4b8e46b2c77cb0946cc12ed6fa601b70011feb2080b365e803598728ca5d2e75",
+      "bytes": 124093,
+      "sha256": "4e8893146b14ba024e740ba802aa923c52e7e15b0e70637606796652294f46c3"
     },
     {
       "file": "hd/animaciones/fotogramas/preparando-pago/05.png",
@@ -1273,9 +1273,9 @@
       "scale": 10,
       "width": 2210,
       "height": 1770,
-      "recipe": "9f94d2f0d18c289753ad681c375ad071bd02e8a88f3657b4c885c816b7fff6f6",
-      "bytes": 126500,
-      "sha256": "ca8f46be13d93804a5378a93a70354ed9e014741f3a52af7fb49e17d407b34a6"
+      "recipe": "b4e06accf50edfb5efbc80d8707fd298d89ea1ad06030d9666d0f4e6ded5ba73",
+      "bytes": 126501,
+      "sha256": "3ad714ab9e561448916ca47a37af55fb1145057ae6e8d3949f9c7884496eef9f"
     },
     {
       "file": "hd/animaciones/fotogramas/preparando-pago/06.png",
@@ -1295,9 +1295,9 @@
       "scale": 10,
       "width": 2210,
       "height": 1770,
-      "recipe": "16241f7078e1bc452fcc3f11d44a63f54b726e7951f1489ceed23ce750e0959e",
-      "bytes": 136714,
-      "sha256": "c7ca36faeb91d814847060c60dc9731c422fef61999aeb8926167915961210dc"
+      "recipe": "d86c0696629ddfe601d6d3044e18e51f01df7e1e0b397326b49ca2ecf4c299f9",
+      "bytes": 136713,
+      "sha256": "6c06f4da2e83957899f5d1ed683caf94a145078d1062aeb10b9bcd64392b5f4c"
     },
     {
       "file": "hd/animaciones/fotogramas/preparando-pago/08.png",
@@ -1306,9 +1306,9 @@
       "scale": 10,
       "width": 2210,
       "height": 1770,
-      "recipe": "44d1134de8f2e289afbff073f4bfa60253bee16178d692b0d5c4c27dda64e49a",
-      "bytes": 125137,
-      "sha256": "0d129deeb7a0bee0e196799070cc8f62fa8f36c8807ba6021cbdcbf593ab8eaa"
+      "recipe": "396c5285f70d8dd12f74f92ca44ed906394bb9835b0d8f70966ecbfc3787bb81",
+      "bytes": 125139,
+      "sha256": "77ca9f4dda37db3290d112093a3540ba3e236284206344b69ab08b9e5cd362d6"
     },
     {
       "file": "hd/animaciones/preparando-pago.webp",
@@ -1319,9 +1319,9 @@
       "scale": 10,
       "steps": 8,
       "totalMs": 1960,
-      "recipe": "253eb50c0c687d0cb3659c0546858440696a5294625fc8c772c8a984a63c20f1",
-      "bytes": 353504,
-      "sha256": "f55789c1829d6fe7715778b466fb6bcbadf241aa841c2f812bdad76aa881fb34"
+      "recipe": "0cd92b4ef6bcb47977e40585f205a209eb3118a00aa24f970b1949e840b42120",
+      "bytes": 354730,
+      "sha256": "40dad608c3c4aef999346a6fed22a437ae280b6a11fee8d68a02bc11daf09d7b"
     },
     {
       "file": "hojas/preparando-pago.png",
@@ -1332,9 +1332,9 @@
       "animation": "preparando-pago",
       "columns": 4,
       "frames": 8,
-      "recipe": "3714126b6ea88f4f8fa19b4614648dba2eb935c9cc81978f92957ea816f1a3b0",
-      "bytes": 394325,
-      "sha256": "d7d513ee9ecc5c0e3cd203e94147f7ebad316bd1eb7163cb5dedd08ba0c0f92c"
+      "recipe": "46cd76beaaa26b05129bebd667f164f7ac5567fe2f44da0924f7c2ce647d2890",
+      "bytes": 395812,
+      "sha256": "44ca7c4ac6ed0e01a900f19ac45aa11cddc340c0f7029ce829a60678f5a64b22"
     },
     {
       "file": "hd/hojas/preparando-pago.png",
@@ -1343,9 +1343,9 @@
       "scale": 3,
       "width": 2652,
       "height": 1062,
-      "recipe": "727b8e8d6935c1a6b5e3ca46a38eec1095620c58391c56df2e3c280609224033",
-      "bytes": 514914,
-      "sha256": "33178d6198ce09204a1e84349d6129c62993280519bbc158b047ff8160263f26"
+      "recipe": "851a9199077f9abf3658cb77bb62545a284ce8409544ea8ad0e66fa12da1291e",
+      "bytes": 517183,
+      "sha256": "a56630693a9cca3903fd75dc7ede03c6666d94798af09163993940ecec9605da"
     },
     {
       "file": "hd/animaciones/fotogramas/comprobante/01.png",

@@ -2,6 +2,7 @@
 
 ## Sin publicar — 2026-10-03
 
+- Personaje: retoques en las animaciones Cola, Metí la pata (una sola cola), Caminata (patas del fondo en sombra y sombra en el suelo) y Preparando el pago (oreja del primer fotograma). Las expresiones y poses estáticas no cambian.
 - Promesa de marca: **Dinero sin fronteras. Siempre tuyo.** sustituye a «Tus dólares ya saben moverse» en la guía de voz y en la entrega externa. La filosofía se mantiene.
 
 ## 1.0.0-rc.1 — 2026-10-02

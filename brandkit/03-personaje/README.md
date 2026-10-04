@@ -18,6 +18,12 @@
 
 Estas piezas conservan semitransparencias, variaciones de color y densidades de píxel de los originales. Por ejemplo, la expresión neutral original contiene 7.018 valores RGB visibles y 71.243 píxeles con alfa entre 1 y 254. Las versiones HD amplían esos mismos píxeles: no convierten los recortes en arte de paleta cerrada. El SVG entregado corresponde al logo y al avatar; todavía no se entregan vectores ni borde para fondo oscuro del personaje.
 
+**Retoques de la revisión del 3 de octubre de 2026.** Cuatro animaciones se corrigieron en el generador, sin redibujar al gato:
+
+- **Cola** y **Metí la pata**: cuando la cola se levanta, ya no se ve también la cola enroscada en el suelo. Se borra la línea que la separaba de las patas, y esa zona pasa a leerse como el muslo.
+- **Caminata**: las patas del fondo llevan un tono más oscuro y hay una sombra suave en el suelo, para distinguir las patas.
+- **Preparando el pago**: el primer fotograma recupera la oreja que borraba, por error, la caja de la etiqueta de la hoja original.
+
 Para regenerar los recortes: `npm run brandkit:personaje`, después `npm run brandkit:build` y `npm run brandkit:verify`. El build crea los HD, las hojas, la galería y el ZIP de avatares. El ZIP de entrega general se genera por separado con `brandkit:zip`. Reutiliza únicamente exports cuyos hashes y receta siguen coincidiendo con las fuentes. El generador comprueba las entradas y prepara una carpeta temporal antes de sustituir las piezas actuales; conserva este README.
 
 - El gato acompaña, orienta y reacciona. **No es el logo**: el símbolo de [02-logos](../02-logos/README.md) no cambia.
