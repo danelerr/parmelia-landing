@@ -4,7 +4,7 @@ Versión 2.1 · 2026-09-28 · **Rige todo el arte del personaje.** Quien dibuje,
 
 > **Estado.** Los 14 estáticos siguen esta versión. Las 20 animaciones siguen siendo las de la edición 2026-09-25: están en otro lienzo y a la mitad de densidad, y se rehacen después (ver [Estado y migración](#16-estado-y-migración)).
 
-El personaje es el gato atigrado naranja **diseñado por la IA 1** en las hojas de [06-originales](../06-originales/README.md). Nombre interno: Meli; nombre público: GatoPago. **Ese diseño es el modelo.** Esta especificación no lo cambia: fija cómo reproducirlo como pixel art limpio y coherente.
+El personaje es el gato atigrado naranja **diseñado por la IA 1** en las hojas de [06-originales](../../06-originales/README.md). Nombre interno: Meli; nombre público: GatoPago. **Ese diseño es el modelo.** Esta especificación no lo cambia: fija cómo reproducirlo como pixel art limpio y coherente.
 
 ## 1. Principios
 
@@ -27,7 +27,7 @@ El personaje es el gato atigrado naranja **diseñado por la IA 1** en las hojas 
 
 | Lienzo | Tamaño | Uso | Colocación | Margen vacío |
 |---|---|---|---|---|
-| Símbolo mini | 16 × 16 | Favicon 16 | El mapa [simbolo-16.txt](../02-logos/modelo/simbolo-16.txt) | 0 |
+| Símbolo mini | 16 × 16 | Favicon 16 | El mapa [simbolo-16.txt](../../02-logos/modelo/simbolo-16.txt) | 0 |
 | Símbolo | 32 × 32 | Logo, favicon 32, iconos | Cabeza del logo en (1, 4) | 1 |
 | Cabeza | 64 × 64 | Cabezas con expresión y avatares | Centrada | 2 |
 | Estático | 96 × 96 | Poses completas | Eje en x = 48, suelo en la fila 92 | 3 |

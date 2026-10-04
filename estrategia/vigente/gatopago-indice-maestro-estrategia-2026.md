@@ -14,20 +14,20 @@ El documento integral original explica **la tesis y cómo encajan las tres super
 
 ### Leer primero
 
-1. [Estrategia integral B2C, B2B2C y B2B](./gatopago-estrategia-integral-b2c-b2b2c-b2b-2026.md) — columna vertebral.
-2. [Plan maestro B2C](./gatopago-plan-maestro-b2c-2026.md) — producto consumer completo.
-3. [Playbook B2B2C / Embedded](./gatopago-playbook-b2b2c-embedded-2026.md) — distribución mediante partners.
-4. [Estrategia B2B / Platform](./gatopago-estrategia-b2b-pagos-transfronterizos-2026.md) — corredores, routing y empresas.
+1. [Estrategia integral B2C, B2B2C y B2B](../planes/gatopago-estrategia-integral-b2c-b2b2c-b2b-2026.md) — columna vertebral.
+2. [Plan maestro B2C](../planes/gatopago-plan-maestro-b2c-2026.md) — producto consumer completo.
+3. [Playbook B2B2C / Embedded](../planes/gatopago-playbook-b2b2c-embedded-2026.md) — distribución mediante partners.
+4. [Estrategia B2B / Platform](../planes/gatopago-estrategia-b2b-pagos-transfronterizos-2026.md) — corredores, routing y empresas.
 
 ### Después, según responsabilidad
 
-- [Producto y tecnología](./gatopago-plan-producto-tecnologia-2026-2030.md)
+- [Producto y tecnología](../planes/gatopago-plan-producto-tecnologia-2026-2030.md)
 - [Marca y experiencia](./gatopago-plan-marca-experiencia-2026.md)
-- [Crecimiento y distribución](./gatopago-plan-crecimiento-distribucion-2026-2028.md)
-- [Operaciones, riesgo y confianza](./gatopago-plan-operaciones-riesgo-confianza-2026.md)
-- [Métricas y experimentos](./gatopago-sistema-metricas-experimentos-2026.md)
-- [Empresa, finanzas y capital](./gatopago-plan-empresa-finanzas-capital-2026-2030.md)
-- [Marketing 2026](./gatopago-plan-marketing-2026.md)
+- [Crecimiento y distribución](../planes/gatopago-plan-crecimiento-distribucion-2026-2028.md)
+- [Operaciones, riesgo y confianza](../planes/gatopago-plan-operaciones-riesgo-confianza-2026.md)
+- [Métricas y experimentos](../planes/gatopago-sistema-metricas-experimentos-2026.md)
+- [Empresa, finanzas y capital](../planes/gatopago-plan-empresa-finanzas-capital-2026-2030.md)
+- [Marketing 2026](../planes/gatopago-plan-marketing-2026.md)
 
 ---
 
@@ -157,7 +157,7 @@ Define qué puede ofrecerse, dónde y bajo qué responsabilidades.
 
 ### 3. Plan técnico actual de la app
 
-- [Visión y plan de mejora](./gatopago-vision-plan-mejora-2026.md)
+- [Visión y plan de mejora](../planes/gatopago-vision-plan-mejora-2026.md)
 - Architecture — consultar el índice `docs/README.md` del repositorio de la app
 - API Design — consultar el índice `docs/README.md` del repositorio de la app
 
@@ -168,7 +168,7 @@ Define intención, prioridad, gates y roadmap.
 ### 5. Narrativa y marketing
 
 - [Narrativa completa](./gatopago_nueva_narrativa_contexto_completo_2026-08-18.txt)
-- [Plan de marketing](./gatopago-plan-marketing-2026.md)
+- [Plan de marketing](../planes/gatopago-plan-marketing-2026.md)
 
 La narrativa nunca eleva una capacidad por encima de la verdad técnica/legal.
 

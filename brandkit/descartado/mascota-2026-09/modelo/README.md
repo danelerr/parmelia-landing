@@ -2,7 +2,7 @@
 
 Edición 2026-09-26 · **Fuente canónica de todo el arte de la mascota.** Las reglas están en la [especificación del personaje](../ESPECIFICACION.md). La guía de lienzos se genera en [guias/](./guias/lienzos.svg).
 
-El modelo es el gato que **diseñó la IA 1** en las hojas de [06-originales](../../06-originales/README.md). Aquí está reproducido como pixel art limpio a doble resolución: 1 celda es medio bloque del original y el contorno mide 2 celdas, como en el original.
+El modelo es el gato que **diseñó la IA 1** en las hojas de [06-originales](../../../06-originales/README.md). Aquí está reproducido como pixel art limpio a doble resolución: 1 celda es medio bloque del original y el contorno mide 2 celdas, como en el original.
 
 Cada mapa es texto: un carácter por celda y una fila por línea. Los PNG y SVG de `03-mascota/estaticos` se generan a partir de estos mapas. Ningún PNG se edita a mano.
 

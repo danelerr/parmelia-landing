@@ -7,7 +7,7 @@ Abrir [index.html](./index.html) para revisar los entregables disponibles. Las p
 ## Seis entregables
 
 1. `01-animaciones/`: correcciones del personaje, fotogramas y comparativas originales/propuestas.
-2. `02-manual/`: manual visual HTML y PDF, ejemplos correctos e incorrectos.
+2. `02-manual/`: **descartado el 3 de octubre de 2026** por decisión del equipo; el manual vigente es el del kit (`brandkit/01-manual/`). Recuperable desde el historial de Git.
 3. `03-editable/`: biblioteca nativa editable en Figma, componentes, estilos y trazabilidad.
 4. `04-iconos/`: familia SVG original, galería, tamaños y estados.
 5. `05-movimiento/`: movimiento vectorial, temporización y alternativas reducidas.

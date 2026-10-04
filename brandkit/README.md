@@ -41,7 +41,7 @@ La marca pública es **GatoPago**. El kit organiza la identidad vigente con los 
 - **Archivos entregados y valores visuales observados:** este manual y el inventario de esta edición.
   - La fuente editable de la paleta es `05-colores/tokens.json`, dentro del kit.
   - Lo que implementa la app está en [producto](./01-manual/producto-app.md) y en `05-colores/tokens-app.json`, como snapshot del 2026-09-28.
-- **Narrativa y estrategia:** el índice editorial de `documentacion/` en este repositorio de marca. Las copias de `07-referencias/` son contexto fechado.
+- **Narrativa y estrategia:** el índice editorial de `estrategia/` en este repositorio de marca. Las copias de `07-referencias/` son contexto fechado.
 - **Capacidades y disponibilidad del producto:** el código, la configuración y la evidencia vigente de la app. Ningún plan de marca acredita que una funcionalidad esté desplegada.
 
 ## Antes de entregar a otra persona

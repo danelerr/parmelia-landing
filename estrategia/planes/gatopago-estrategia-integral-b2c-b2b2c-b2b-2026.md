@@ -2,7 +2,7 @@
 
 **Fecha:** 19 de agosto de 2026  
 **Estado:** tesis estratégica para validación  
-**Índice de todo el sistema:** [GatoPago 2026–2030: índice maestro](./gatopago-indice-maestro-estrategia-2026.md)  
+**Índice de todo el sistema:** [GatoPago 2026–2030: índice maestro](../vigente/gatopago-indice-maestro-estrategia-2026.md)  
 **Planes operativos:** [B2C completo](./gatopago-plan-maestro-b2c-2026.md) · [B2B2C / Embedded](./gatopago-playbook-b2b2c-embedded-2026.md) · [B2B / pagos transfronterizos](./gatopago-estrategia-b2b-pagos-transfronterizos-2026.md)  
 **Promesa maestra:** **Tus dólares ya saben moverse.**
 

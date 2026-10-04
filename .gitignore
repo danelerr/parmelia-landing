@@ -30,8 +30,6 @@ pnpm-debug.log*
 *.pptx
 !comercial/**/*.pdf
 !comercial/**/*.pptx
-!recursos/presentaciones/**/*.pdf
-!recursos/presentaciones/**/*.pptx
 *.log
 *.tmp
 Captura de pantalla*

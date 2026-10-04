@@ -11,6 +11,7 @@ La app y la landing viven en el repositorio unificado `gatopago/gatopago`.
 - Los archivos del kit incluyen fuentes editables; no borrar `brandkit/` para regenerarlo.
 - La paleta editable es `brandkit/05-colores/tokens.json`. Los mapas del logo están en `brandkit/02-logos/modelo/` y los originales en `brandkit/06-originales/`.
 - Los recortes del personaje siguen siendo candidatos hasta aprobación artística.
-- La entrega completa se genera en `output/` con `brandkit:zip`.
+- No recrear el ZIP duplicado retirado de `03-personaje/descargas/`.
+  La entrega completa se genera en `output/` con `brandkit:zip`.
 
 Validar cambios con `npm run brandkit:build`, `npm run brandkit:verify -- --sources`, `npm run brandkit:test` y `npm run brandkit:zip`. Los HTML del kit son catálogos locales, no una nueva landing. La verificación técnica no prueba capacidades financieras, despliegue ni aprobación visual del personaje.

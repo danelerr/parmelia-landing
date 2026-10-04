@@ -10,7 +10,7 @@
 
 > **Alcance:** este documento profundiza exclusivamente el pilar B2B de GatoPago. La estrategia completa —B2C, B2B2C y B2B— está definida en [GatoPago: estrategia integral](./gatopago-estrategia-integral-b2c-b2b2c-b2b-2026.md).
 
-> **Mapa de todos los planes:** [GatoPago 2026–2030: índice maestro](./gatopago-indice-maestro-estrategia-2026.md).
+> **Mapa de todos los planes:** [GatoPago 2026–2030: índice maestro](../vigente/gatopago-indice-maestro-estrategia-2026.md).
 
 ## 1. Resumen ejecutivo
 

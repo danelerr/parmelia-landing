@@ -5,7 +5,7 @@
 > **Alcance:** adquisición, activación, producto, experiencia, seguridad, monetización, operaciones, retención y expansión de GatoPago Personal.  
 > **Documento superior:** [estrategia integral B2C, B2B2C y B2B](./gatopago-estrategia-integral-b2c-b2b2c-b2b-2026.md).  
 > **Verdad técnica actual:** [visión y plan de mejora de la aplicación](./gatopago-vision-plan-mejora-2026.md).  
-> **Sistema visual y de interacción:** [rebranding maestro](./gatopago-rebranding-maestro-2026.md).
+> **Sistema visual y de interacción:** [rebranding maestro](../vigente/gatopago-rebranding-maestro-2026.md).
 
 ---
 
@@ -637,7 +637,7 @@ La mascota —llamada Meli únicamente dentro del equipo y los archivos de produ
 - `prefers-reduced-motion` elimina desplazamiento y conserva el significado.
 - Ningún loop continuo debe consumir CPU o dar sensación de lag.
 
-El catálogo visual, motion tokens, componentes, bordes y sprites se define en el [rebranding maestro](./gatopago-rebranding-maestro-2026.md).
+El catálogo visual, motion tokens, componentes, bordes y sprites se define en el [rebranding maestro](../vigente/gatopago-rebranding-maestro-2026.md).
 
 ---
 
