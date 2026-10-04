@@ -42,16 +42,24 @@ GatoPago existe para que no haya que elegir: **fácil como una app, tuya como un
 - **Promesa:** **Dinero sin fronteras. Siempre tuyo.**
 - **Filosofía:** Tu dinero sigue siendo tuyo. GatoPago se ocupa del camino.
 
-La promesa sustituye a «Tus dólares ya saben moverse» (decisión del 3 de octubre de 2026): aquella hablaba solo de dólares y no decía que el dinero es del usuario. Ya la usan la guía de voz del kit, el índice maestro, `documentacion/README.md`, el deck y las piezas sociales. Los planes anteriores y el laboratorio conservan la promesa antigua como registro histórico; el manifiesto PWA es una copia de la app y se cambia en su repositorio.
+La promesa sustituye a «Tus dólares ya saben moverse» (decisión del 3 de octubre de 2026): aquella hablaba solo de dólares y no decía que el dinero es del usuario. Ya la usan la guía de voz del kit, el índice maestro, `estrategia/README.md`, el deck y las piezas sociales. Los planes anteriores y el laboratorio conservan la promesa antigua como registro histórico; el manifiesto PWA es una copia de la app y se cambia en su repositorio.
 
 ## 4. Dónde empezamos: Bolivia
 
-Bolivia es **por dónde empezamos, no quiénes somos.** El problema y la promesa son globales; la ejecución empieza donde la brecha entre ganar, guardar y mover dinero es más grande.
+Bolivia es **por dónde empezamos, no quiénes somos.** El problema y la promesa son globales; la ejecución empieza donde el dólar digital ya se abrió paso: en tres años de dólares restringidos (2023–2026) la gente aprendió a usarlo, y ese hábito queda aunque el país se normalice.
 
 - **Primer mercado:** personas y equipos pequeños que cobran desde fuera, reciben dinero de familia o quieren guardar en dólares.
 - **Primera salida local:** bolivianos. Después, PIX en Brasil y otras monedas de la región.
 - **Marca:** habla de América Latina y del mundo. No es «la app boliviana».
-- **Pendiente:** `[completar con fuente]`. Datos actuales sobre el acceso a dólares, el coste de cobrar desde fuera y el uso de dólares digitales en Bolivia. Sin fuente, no se dan cifras.
+- **Datos:** +630 % en transacciones con activos virtuales (primer semestre de 2025 frente a 2024) y USD 1.259 M en remesas en 2025, según el BCB. Detalle, fuentes y matices en [bolivia-datos-2026-10.md](../investigacion/bolivia-datos-2026-10.md). No usar la crisis como gancho: en 2026 el país se está normalizando.
+
+## 4 bis. Cómo crecemos: B2B2C
+
+Decisión del 4 de octubre de 2026. GatoPago no gana usuarios uno a uno: **las empresas los traen.** Empresas de pagos, fintechs y negocios de Bolivia ya tienen los clientes, la confianza y la entrada y salida de bolivianos. GatoPago les da la cuenta en dólares autocustodia, lista para integrar. Sus clientes tienen una cuenta en dólares que es suya, dentro de una marca que ya usan. La app sigue abierta a cualquiera; los partners son la forma de escalar.
+
+- **Primer partner en conversación:** PagoFácil (Payin y Payout SRL), empresa de pagos boliviana. Reunión agendada para integrar la entrada y salida en bolivianos. Decir «reunión agendada», nunca «acuerdo», hasta que haya algo firmado.
+- **El hueco que cubrimos:** hoy hay dos formas de entrar a cripto: apps centralizadas (fáciles, pero guardan tu dinero y pueden congelarlo) y wallets descentralizadas (tuyas, pero difíciles). Nadie combina las dos.
+- **Gancho del pitch:** USD 294 M en transacciones con activos virtuales en Bolivia en el primer semestre de 2025, seis veces más que un año antes (BCB). No por moda: los bancos racionaban los dólares.
 
 ## 5. Qué no es GatoPago
 
@@ -98,11 +106,11 @@ Los términos técnicos solo aparecen en documentos técnicos y en el anexo para
 |---|---|---|
 | Personas | Cobrar de fuera y guardar en dólares sin complicarse | Tu dinero no debería detenerse en la frontera; con GatoPago, no se detiene y sigue siendo tuyo |
 | Fondos de blockchains | Usuarios reales y volumen en sus redes y protocolos | Llevamos a personas que nunca usarían cripto a DeFi, de forma simple y en autocustodia |
-| Inversores | Un problema grande, una cuña clara y un camino a ingresos | Empezamos en Bolivia, donde la brecha es mayor, con una cuenta que gana cuando el dinero se mueve, no cuando se queda quieto |
+| Inversores | Un problema grande, una cuña clara y un camino a ingresos | Empezamos en Bolivia, donde el dólar digital ya se abrió paso, con una cuenta que gana cuando el dinero se mueve, no cuando se queda quieto |
 | Partners | Ofrecer una cuenta global a sus usuarios sin construirla | Tu comunidad cobra y guarda dinero global dentro de tu experiencia |
 
 ## 10. Relación con otros documentos
 
 - Mantiene la filosofía del [índice maestro](./gatopago-indice-maestro-estrategia-2026.md) y propone una promesa nueva (sección 3).
 - Concreta la categoría interna «cuenta onchain programable» en lenguaje de persona.
-- El [guion del deck](./gatopago-pitch-deck-guion-2026-10-03.md) aplica esta narrativa diapositiva por diapositiva.
+- El [guion del deck](../../comercial/pitch/gatopago-pitch-deck-guion-2026-10-03.md) aplica esta narrativa diapositiva por diapositiva.

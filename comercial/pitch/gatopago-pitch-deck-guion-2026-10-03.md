@@ -2,7 +2,7 @@
 
 **Estado:** diseñado como propuesta en el deck «GatoPago · Pitch deck» (Artifact privado de Slides). Los datos `[completar]` siguen pendientes.
 **Fecha:** 3 de octubre de 2026.
-**Fuente:** la [narrativa de octubre de 2026](./gatopago-narrativa-2026-10.md). Si el guion y la narrativa discrepan, manda la narrativa.
+**Fuente:** la [narrativa de octubre de 2026](../../estrategia/vigente/gatopago-narrativa-2026-10.md). Si el guion y la narrativa discrepan, manda la narrativa.
 
 ## Problema y tesis
 
@@ -23,7 +23,7 @@
 7. Producto hoy: la alpha ya funciona (capturas `[completar]`).
 8. Programable: tu cuenta trabaja por ti (DeFi hoy, reglas pronto).
 9. Abierta: salidas (wallet y exchange hoy; bolivianos en desarrollo; PIX y tarjeta después).
-10. Empezamos en Bolivia (datos `[completar con fuente]`).
+10. Empezamos en Bolivia, donde el dólar digital ya se abrió paso (datos con fuente en `estrategia/investigacion/bolivia-datos-2026-10.md`).
 11. Modelo de negocio: ganamos cuando el dinero se mueve, no cuando se queda quieto.
 12. Competencia: fácil como una app, tuya como una wallet.
 13. Hitos: cada paso se gana con evidencia.

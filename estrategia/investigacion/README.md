@@ -1,9 +1,8 @@
-# Investigación y Benchmarks — GatoPago
+# Investigación
 
-Carpeta destinada a análisis de mercado, estudios de usuario y benchmarks competitivos.
+| Documento | Contenido |
+|---|---|
+| [bolivia-datos-2026-10.md](./bolivia-datos-2026-10.md) | Datos de Bolivia con fuentes: dólares digitales, remesas, restricciones y normalización de 2026 |
+| [guion-entrevistas-2026-10.md](./guion-entrevistas-2026-10.md) | Guion para validar el problema con 10–15 personas en Bolivia |
 
-## Contenido previsto
-
-- Benchmarks competitivos de cuentas en dólares y pagos transfronterizos (Peanut, Strike, DolarApp, etc.).
-- Análisis de flujos de remesas y cobros en Bolivia y mercados de expansión en LATAM.
-- Estudios normativos de pagos y stablecoins por jurisdicción.
+Pendiente: benchmarks competitivos (Peanut, DolarApp, Strike y similares) y estudio normativo de las salidas a moneda local. El benchmark de Peanut anterior está en `estrategia/archivo/modificados/`.

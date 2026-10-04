@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GatoPago · Resumen de una página</title>
+<link rel="icon" href="../../brandkit/02-logos/iconos-web/favicon.svg">
+<link rel="stylesheet" href="../../brandkit/04-tipografia/uso.css">
+<style>
+  :root { --ink:#0B0B0F; --milk:#FFF8F0; --paper:#FFFDF9; --oat:#EEE4D8; --fire:#F85239; --shadow:#CF3433; --deep:#9F292E; --sub:#5F5650; --stone:#A99F96; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:#e9e1d6; font-family:'Recursive Variable', system-ui, sans-serif; font-variation-settings:'MONO' 0, 'CASL' 0, 'CRSV' .5; color:var(--ink); }
+  .sheet { position:relative; width:210mm; height:297mm; margin:24px auto; padding:15mm 16mm 13mm; background:var(--milk); overflow:hidden; display:flex; flex-direction:column; gap:5.2mm; }
+  .tab { position:absolute; top:0; right:16mm; display:flex; }
+  .tab i { display:block; height:3mm; }
+  .tab i:first-child { width:5mm; background:var(--deep); } .tab i:last-child { width:16mm; background:var(--fire); }
+  .casual { font-variation-settings:'MONO' 0, 'CASL' 1, 'CRSV' .5; font-weight:760; letter-spacing:-.035em; }
+  .mono { font-variation-settings:'MONO' 1, 'CASL' 0; font-weight:600; letter-spacing:.04em; text-transform:uppercase; }
+  header { display:flex; justify-content:space-between; align-items:center; }
+  .brand { display:flex; align-items:center; gap:3mm; font-size:17pt; }
+  .brand img { width:12mm; height:auto; image-rendering:pixelated; }
+  .kicker { font-size:7pt; color:var(--deep); }
+  h1 { font-size:31pt; line-height:1; margin-top:1mm; }
+  h1 span { color:var(--fire); }
+  .lead { font-size:11.5pt; line-height:1.4; color:var(--sub); max-width:150mm; }
+  h2 { font-size:7.5pt; color:var(--deep); display:flex; align-items:center; gap:2mm; margin-bottom:2mm; }
+  h2::before { content:''; width:2mm; height:2mm; background:var(--deep); }
+  .problem { background:var(--ink); color:var(--milk); padding:5mm 6mm; display:grid; grid-template-columns:1.2fr 1fr; gap:6mm; align-items:center; }
+  .problem h2 { color:var(--fire); } .problem h2::before { background:var(--fire); }
+  .problem .big { font-size:16pt; line-height:1.08; }
+  .problem .big span { color:var(--fire); }
+  .problem ul { list-style:none; font-size:8.6pt; line-height:1.4; color:#BDB4AA; display:grid; gap:1.6mm; }
+  .problem li b { color:var(--milk); font-weight:650; }
+  .pillars { display:grid; grid-template-columns:repeat(4,1fr); gap:3mm; }
+  .card { background:var(--paper); border:.5mm solid var(--ink); padding:3.4mm; }
+  .pillars .card { border-top:2mm solid var(--fire); }
+  .pillars .card:nth-child(2) { border-top-color:var(--shadow); } .pillars .card:nth-child(3) { border-top-color:var(--deep); }
+  .card h3 { font-size:12pt; margin-bottom:1.2mm; }
+  .card p { font-size:8.2pt; line-height:1.38; color:var(--sub); }
+  .two { display:grid; grid-template-columns:1fr 1fr; gap:4mm; }
+  .list { list-style:none; font-size:8.6pt; line-height:1.45; display:grid; gap:1mm; }
+  .list li { display:flex; gap:2mm; } .list li::before { content:''; flex:0 0 1.6mm; height:1.6mm; margin-top:1.6mm; background:var(--fire); }
+  .list.soon li::before { background:none; border:.4mm solid var(--deep); }
+  .stats { display:grid; grid-template-columns:repeat(3,1fr); gap:3mm; }
+  .stat { background:var(--paper); border:.5mm solid var(--ink); box-shadow:1.4mm 1.4mm 0 var(--deep); padding:3.2mm; }
+  .stat b { display:block; font-size:16pt; line-height:1.05; }
+  .stat p { font-size:7.8pt; line-height:1.35; color:var(--sub); margin-top:1mm; }
+  .src { font-size:6.4pt; color:var(--sub); margin-top:2mm; }
+  .model p { font-size:8.6pt; line-height:1.45; }
+  footer { margin-top:auto; border-top:.3mm dashed var(--stone); padding-top:3mm; display:flex; justify-content:space-between; gap:6mm; font-size:7pt; color:var(--sub); }
+  footer .mono { font-size:6.6pt; color:var(--ink); white-space:nowrap; }
+  @page { size:A4; margin:0; }
+  @media print { body { background:none; } .sheet { margin:0; } }
+</style>
+</head>
+<body>
+<article class="sheet">
+  <div class="tab"><i></i><i></i></div>
+
+  <header>
+    <div class="brand casual"><img src="../../brandkit/02-logos/simbolo/gatopago.svg" alt="">GatoPago</div>
+    <span class="kicker mono">Resumen · octubre de 2026 · alpha en testnet</span>
+  </header>
+
+  <div>
+    <h1 class="casual">Dinero sin fronteras.<br><span>Siempre tuyo.</span></h1>
+    <p class="lead" style="margin-top:3mm">Una cuenta autocustodia y programable para cobrar, guardar y mover dinero entre países de forma sencilla, sin encerrar a nadie en un ecosistema.</p>
+  </div>
+
+  <section class="problem">
+    <div>
+      <h2 class="mono">El problema</h2>
+      <p class="big casual">Tu dinero no debería <span>detenerse en la frontera.</span></p>
+    </div>
+    <ul>
+      <li><b>Cobras de fuera:</b> cobrar a un cliente de otro país cuesta días y comisiones.</li>
+      <li><b>Recibes de tu familia:</b> el dinero pierde una parte por el camino.</li>
+      <li><b>Quieres guardar en dólares:</b> las apps que te los dan se quedan con el control.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="mono">La solución: fácil como una app, tuya como una wallet</h2>
+    <div class="pillars">
+      <div class="card"><h3 class="casual">Tuya</h3><p>Autocustodia: GatoPago no guarda los fondos.</p></div>
+      <div class="card"><h3 class="casual">Simple</h3><p>Cripto sin ver redes, gas ni direcciones.</p></div>
+      <div class="card"><h3 class="casual">Programable</h3><p>La cuenta trabaja por ti y abre la puerta a DeFi.</p></div>
+      <div class="card"><h3 class="casual">Abierta</h3><p>Entras y sales cuando quieres. Sin encierro.</p></div>
+    </div>
+  </section>
+
+  <section class="two">
+    <div>
+      <h2 class="mono">Funciona hoy (alpha)</h2>
+      <ul class="list">
+        <li>Cobrar con enlace, QR o nombre de usuario</li>
+        <li>Enviar y seguir el estado de cada pago</li>
+        <li>Comprobantes, actividad y cambio entre activos</li>
+        <li>Rendimiento con DeFi (varía, no está garantizado)</li>
+        <li>Recibir desde cualquier wallet o exchange</li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="mono">En desarrollo</h2>
+      <ul class="list soon">
+        <li>Lanzamiento con dinero real, tras seguridad y auditorías</li>
+        <li>Salida a bolivianos con un partner regulado</li>
+        <li>PIX y otras monedas de la región</li>
+        <li>Reglas programables definidas por el usuario</li>
+        <li>Tarjeta para pagar en cualquier comercio</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="mono">Empezamos en Bolivia, donde el dólar digital ya se abrió paso</h2>
+    <div class="stats">
+      <div class="stat"><b class="casual">+630 %</b><p>Transacciones con activos virtuales, 1.er semestre de 2025 frente a 2024.</p></div>
+      <div class="stat"><b class="casual">USD 1.259 M</b><p>Remesas recibidas en 2025; la mitad, desde España.</p></div>
+      <div class="stat"><b class="casual">3 años</b><p>Con los dólares del banco restringidos (2023–2026).</p></div>
+    </div>
+    <p class="src">Fuentes: Banco Central de Bolivia, vía Bloomberg Línea (jul. 2025), EFE (jun. 2026) e Infobae (may. 2026). Bolivia es por dónde empezamos, no quiénes somos.</p>
+  </section>
+
+  <section class="two model">
+    <div>
+      <h2 class="mono">Modelo de negocio</h2>
+      <p>Ganamos cuando el dinero se mueve, no cuando se queda quieto: salidas a moneda local y cambio, tarjeta, y organizaciones que ofrecen la cuenta a sus usuarios. Precios en validación.</p>
+    </div>
+    <div>
+      <h2 class="mono">Contacto</h2>
+      <p>[Nombre] · [cargo]<br>[correo] · gatopago.com</p>
+    </div>
+  </section>
+
+  <footer>
+    <span class="mono">GatoPago · gatopago.com</span>
+    <span>Alpha en testnet con fondos de prueba. Documento informativo: no es una oferta, un contrato ni asesoramiento financiero.</span>
+  </footer>
+</article>
+</body>
+</html>
