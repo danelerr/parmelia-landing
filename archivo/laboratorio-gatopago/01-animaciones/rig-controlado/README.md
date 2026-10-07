@@ -6,4 +6,4 @@ Cada acción tiene SVG editables por capas, PNG transparentes, WebP lossless, ho
 
 Las acciones de inserción e intercambio son ilustraciones; no demuestran ni ejecutan una operación. El estilo del cuerpo requiere revisión artística.
 
-Regenerar con `node recursos/laboratorio-gatopago/tools/rig-character.mjs` y crear la galería con `node recursos/laboratorio-gatopago/tools/comparison-gallery.mjs rig`. El source del movimiento es el generador, no un PNG aplanado.
+Regenerar con `node archivo/laboratorio-gatopago/tools/rig-character.mjs` y crear la galería con `node archivo/laboratorio-gatopago/tools/comparison-gallery.mjs rig`. El source del movimiento es el generador, no un PNG aplanado.

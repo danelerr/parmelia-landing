@@ -26,10 +26,10 @@ La tarjeta oculta al gato durante el gesto; el PNG fuente mantiene cabeza, cuerp
 Desde la raíz del repositorio:
 
 ```powershell
-node recursos/laboratorio-gatopago/tools/revision-actions.mjs
-node recursos/laboratorio-gatopago/tools/comparison-gallery.mjs
-node recursos/laboratorio-gatopago/tools/comparison-gallery.mjs coleccion
-node recursos/laboratorio-gatopago/tools/verify-revision-actions.mjs
+node archivo/laboratorio-gatopago/tools/revision-actions.mjs
+node archivo/laboratorio-gatopago/tools/comparison-gallery.mjs
+node archivo/laboratorio-gatopago/tools/comparison-gallery.mjs coleccion
+node archivo/laboratorio-gatopago/tools/verify-revision-actions.mjs
 ```
 
 Chrome comprobó 24 combinaciones de fase/ancho (390 y 1280 px), observó los 327 pasos a velocidad 1×, los finales y movimiento reducido, y accionó 24 descargas comparadas byte a byte. Evidencia actual en `.qa/revision/`. La primera prueba perdió pasos en el intercambio tras las descargas; se repitió normalizando la ventana de pruebas antes de cada reproducción y pasó completa. No se convierte esa prueba inicial en una afirmación de rendimiento móvil.

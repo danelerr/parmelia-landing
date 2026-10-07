@@ -1,5 +1,5 @@
 async (page) => {
- const base='file:///C:/Users/danie/OneDrive/Desktop/parmelia-landing/parmelia-landing/recursos/laboratorio-gatopago/04-iconos/index.html',checks=[];
+ const base='file:///C:/Users/danie/OneDrive/Desktop/parmelia-landing/parmelia-landing/archivo/laboratorio-gatopago/04-iconos/index.html',checks=[];
  await page.emulateMedia({reducedMotion:'reduce'});
  for(const width of [1280,390]){
   await page.setViewportSize({width,height:920});await page.goto(base);await page.evaluate(()=>document.fonts.ready);
@@ -10,7 +10,7 @@ async (page) => {
     return {icons:icons.length,renderedWidths:icons.map(n=>n.getBoundingClientRect().width),named:icons.every(n=>!!n.querySelector('title')?.textContent),duplicateIds:ids.filter((id,i)=>ids.indexOf(id)!==i),noOverflow:document.documentElement.scrollWidth<=innerWidth,font:[...document.fonts].some(f=>f.family==='Recursive'&&f.status==='loaded')};
    });
    if(result.icons!==32||result.renderedWidths.some(w=>Math.abs(w-Number(size))>.1)||!result.named||result.duplicateIds.length||!result.noOverflow||!result.font)throw Error(JSON.stringify(result));
-   await page.screenshot({path:'recursos/laboratorio-gatopago/.qa/icons/gallery-'+width+'-'+size+'.png',fullPage:true});
+   await page.screenshot({path:'archivo/laboratorio-gatopago/.qa/icons/gallery-'+width+'-'+size+'.png',fullPage:true});
    checks.push({width,size,...result});
   }
  }
@@ -28,11 +28,11 @@ async (page) => {
  await page.locator('#search').fill('zzzzzz');if(await page.locator('.tile:visible').count()!==0)throw Error('Búsqueda vacía no filtra');
  await page.locator('#search').fill('');await page.locator('#theme').click();
  if(!await page.locator('body').evaluate(n=>n.classList.contains('dark')))throw Error('Tema oscuro falló');
- await page.screenshot({path:'recursos/laboratorio-gatopago/.qa/icons/gallery-dark-390-48.png',fullPage:true});
+ await page.screenshot({path:'archivo/laboratorio-gatopago/.qa/icons/gallery-dark-390-48.png',fullPage:true});
  const links=await page.locator('.tile .download').evaluateAll(nodes=>nodes.map(n=>n.getAttribute('href'))),downloads=[];
  for(const href of links){
   const event=page.waitForEvent('download');await page.locator('.tile .download[href="'+href+'"]').click();const download=await event;
-  const file=download.suggestedFilename();await download.saveAs('recursos/laboratorio-gatopago/.qa/icons/downloads/'+file);
+  const file=download.suggestedFilename();await download.saveAs('archivo/laboratorio-gatopago/.qa/icons/downloads/'+file);
   if(!file.endsWith('.svg')||await download.failure())throw Error('Descarga falló '+href);
   downloads.push({href,file});
  }

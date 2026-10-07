@@ -3,7 +3,7 @@ import { resolve, join, relative, extname, basename } from 'node:path';
 import sharp from 'sharp';
 
 const root = resolve('.');
-const dir = join(root, 'recursos/laboratorio-gatopago/03-editable/brandkit-import');
+const dir = join(root, 'archivo/laboratorio-gatopago/03-editable/brandkit-import');
 const skill = 'C:/Users/danie/.codex/plugins/cache/openai-curated-remote/figma/15.0.0/skills';
 const read = async p => JSON.parse(await readFile(join(root, p), 'utf8'));
 const save = async (name, data) => writeFile(join(dir, name), JSON.stringify(data, null, 2) + '\n');

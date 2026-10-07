@@ -1,5 +1,5 @@
 async (page) => {
- const base='file:///C:/Users/danie/OneDrive/Desktop/parmelia-landing/parmelia-landing/recursos/laboratorio-gatopago/05-movimiento/index.html';
+ const base='file:///C:/Users/danie/OneDrive/Desktop/parmelia-landing/parmelia-landing/archivo/laboratorio-gatopago/05-movimiento/index.html';
  const cases=[['ruta',2400],['conexion',2800],['confirmacion',650],['intercambio',2600],['espera',1800],['entrada',280]],checks=[];
  const sample=async(fraction,duration)=>page.evaluate(({fraction,duration})=>{const stage=document.querySelector('#stage');for(const a of stage.getAnimations({subtree:true})){a.pause();a.currentTime=duration*fraction;}return [...stage.querySelectorAll('.packet,.trace,.check,.out,.back,.pulse,.card')].map(n=>{const s=getComputedStyle(n);return {class:n.getAttribute('class'),transform:s.transform,opacity:Number(s.opacity),dash:s.strokeDashoffset}})},{fraction,duration});
  await page.emulateMedia({reducedMotion:'no-preference'});
@@ -19,7 +19,7 @@ async (page) => {
    if(['ruta','conexion','intercambio'].includes(id)){
     const reset=await sample(.995,duration);if(reset.some(n=>n.opacity!==0))throw Error('Reinicio visible '+id);
    }
-   await sample(.5,duration);await page.locator('#stage').screenshot({path:'recursos/laboratorio-gatopago/.qa/motion/'+id+'-'+width+'.png'});
+   await sample(.5,duration);await page.locator('#stage').screenshot({path:'archivo/laboratorio-gatopago/.qa/motion/'+id+'-'+width+'.png'});
    await page.locator('#restart').click();
    await page.locator('#pause').click();
    const states=await page.locator('#stage').evaluate(n=>n.getAnimations({subtree:true}).map(a=>a.playState));
@@ -31,7 +31,7 @@ async (page) => {
    await page.waitForFunction(()=>document.querySelector('#reduce').getAttribute('aria-pressed')==='true');
    const reduced=await page.locator('#stage').evaluate(n=>n.getAnimations({subtree:true}).length);
    if(reduced!==0||!await page.locator('#pause').isDisabled())throw Error('Reducción automática falló '+id);
-   await page.locator('#stage').screenshot({path:'recursos/laboratorio-gatopago/.qa/motion/'+id+'-reduced-'+width+'.png'});
+   await page.locator('#stage').screenshot({path:'archivo/laboratorio-gatopago/.qa/motion/'+id+'-reduced-'+width+'.png'});
    const noOverflow=await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth);
    if(!noOverflow)throw Error('Overflow '+id+' '+width);
    checks.push({id,width,endpoint,pauseStates:states,restartFromStart:restarted,reducedAnimations:reduced,noOverflow});

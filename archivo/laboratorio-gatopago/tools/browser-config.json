@@ -1,6 +1,6 @@
 {
   "browser": {"browserName": "chromium", "launchOptions": {"channel": "chrome", "headless": false, "args": ["--allow-file-access-from-files"]}},
-  "outputDir": "C:/Users/danie/OneDrive/Desktop/parmelia-landing/parmelia-landing/recursos/laboratorio-gatopago/.qa/browser",
+  "outputDir": "C:/Users/danie/OneDrive/Desktop/parmelia-landing/parmelia-landing/archivo/laboratorio-gatopago/.qa/browser",
   "outputMode": "file",
   "allowUnrestrictedFileAccess": true
 }

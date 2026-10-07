@@ -5,14 +5,14 @@ Material preparado para comunicación pública, redes sociales, prensa y campañ
 ## Estructura
 
 - **`redes/2026-10/`**: 
-  - 168 piezas generadas con el generador social (`npm run brandkit:social`).
+  - 172 piezas generadas con el generador social (`npm run brandkit:social`).
   - Formatos: posts 4:5 y 1:1, carruseles, historias 9:16, banners, posts horizontales, portadas de destacadas, fondos, stickers, plantillas con captura y la imagen para compartir enlaces (OG) de gatopago.com.
   - Catálogo interactivo local: [ver catálogo](./redes/2026-10/index.html).
 - **`calendario/`**: 
   - [Calendario de octubre y noviembre de 2026](./calendario/calendario-2026-10-11.md) (8 semanas, con CSV para herramientas de programación). Se regenera con `npm run contenido:calendario`.
 - **`plantillas/`**: 
   - Portada de X (`gatopago-x-cover-2026-10-01-v1.png`) y su especificación / prompt.
-  - Fondos reutilizables, texturas y stickers listos para nuevas publicaciones.
+  - Los fondos, stickers y plantillas con captura viven en `redes/2026-10/` junto al resto de piezas.
 
 ## Criterios de Publicación
 

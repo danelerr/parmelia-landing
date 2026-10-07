@@ -5,7 +5,7 @@ Los seis puntos se entregan separados del brandkit. Abrir [el catálogo local](.
 | Punto | Entrega | Archivos y fuentes |
 | --- | --- | --- |
 | 01. Personaje | [Cinco propuestas anteriores restauradas](./01-animaciones/index.html); [colección completa](./01-animaciones/coleccion/index.html) de 18 acciones y 814 pasos PNG | PNG y WebP anteriores reutilizados sin cambios. `rig-raster/` y `rig-revision/` retirados por rechazo visual, no recomendados. Las otras trece acciones y los [veinte originales](./01-animaciones/originales/index.html) se conservan. |
-| 02. Manual | [HTML de 12 páginas](./02-manual/index.html) y PDF descargable desde ese catálogo | Texto nativo, Recursive incrustada, logo, color, voz, tipografía, composición, ejemplos correctos/incorrectos, componentes y movimiento. |
+| 02. Manual | **Descartado el 3 de octubre de 2026**; el manual vigente es `brandkit/01-manual/`. Recuperable desde el historial de Git | Texto nativo, Recursive incrustada, logo, color, voz, tipografía, composición, ejemplos correctos/incorrectos, componentes y movimiento. |
 | 03. Editable | [Biblioteca nativa Figma](https://www.figma.com/design/HSJ40AEahIfLIgjXjB3foS) | 50 variables, 8 estilos, 2 sombras, 75 componentes/11 familias. [Fuentes y acceso](./03-editable/index.html): JSON, CSS, scripts e IDs. No se descargó un .fig. |
 | 04. Iconos | [Galería de 32 SVG originales](./04-iconos/index.html) | Seis categorías, buscar, fondos, tamaños 16/24/32/48 y descargas individuales. SVG editables con currentColor. |
 | 05. Movimiento | [Seis ejemplos SVG](./05-movimiento/index.html) | Seis animados y seis estáticos; pausa, reinicio, extremo final y movimiento reducido. |
@@ -32,8 +32,8 @@ No hubo integración en la app, commit, push ni despliegue. Falta decidir qué p
 Desde la raíz, con las dependencias locales instaladas:
 
 ```sh
-node recursos/laboratorio-gatopago/tools/verify.mjs
-node recursos/laboratorio-gatopago/tools/verify-delivery.mjs
+node archivo/laboratorio-gatopago/tools/verify.mjs
+node archivo/laboratorio-gatopago/tools/verify-delivery.mjs
 ```
 
 Las guías de cada tanda describen regeneración y pruebas específicas. `verify-delivery.mjs` requiere las auditorías previas conservadas; no suplanta una prueba nueva de navegador o Figma. El adaptador Playwright actual depende de esta instalación local, no se presenta como CI portable.

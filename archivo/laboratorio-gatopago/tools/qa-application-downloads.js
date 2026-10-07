@@ -1,5 +1,5 @@
 async (page) => {
- const base='file:///C:/Users/danie/OneDrive/Desktop/parmelia-landing/parmelia-landing/recursos/laboratorio-gatopago/06-aplicaciones/';
+ const base='file:///C:/Users/danie/OneDrive/Desktop/parmelia-landing/parmelia-landing/archivo/laboratorio-gatopago/06-aplicaciones/';
  await page.goto(base+'index.html');
  await page.locator('details').evaluateAll(nodes=>nodes.forEach(n=>n.open=true));
  const hrefs=await page.locator('a[download]').evaluateAll(nodes=>nodes.map(n=>n.getAttribute('href')));
@@ -9,7 +9,7 @@ async (page) => {
   const event=page.waitForEvent('download');
   await page.locator(`a[download][href="${href}"]`).click();
   const download=await event;
-  await download.saveAs('recursos/laboratorio-gatopago/.qa/applications/downloads/'+href);
+  await download.saveAs('archivo/laboratorio-gatopago/.qa/applications/downloads/'+href);
   if(await download.failure())throw Error('Descarga falló: '+href);
   downloads.push({href,name:download.suggestedFilename()});
  }

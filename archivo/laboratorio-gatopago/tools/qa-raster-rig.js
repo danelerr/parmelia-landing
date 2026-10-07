@@ -1,5 +1,5 @@
 async (page) => {
- const base='file:///C:/Users/danie/OneDrive/Desktop/parmelia-landing/parmelia-landing/recursos/laboratorio-gatopago/01-animaciones/rig-raster/index.html';
+ const base='file:///C:/Users/danie/OneDrive/Desktop/parmelia-landing/parmelia-landing/archivo/laboratorio-gatopago/01-animaciones/rig-raster/index.html';
  const ids=['cola','siesta','asomarse','reparar-rail','intercambio'],results=[],errors=[];
  page.on('pageerror',e=>errors.push(e.message));
  await page.bringToFront();const cdp=await page.context().newCDPSession(page);const window=await cdp.send('Browser.getWindowForTarget');await cdp.send('Browser.setWindowBounds',{windowId:window.windowId,bounds:{windowState:'normal'}});await cdp.detach();
@@ -16,7 +16,7 @@ async (page) => {
    const final=await page.locator('#after').getAttribute('src'),frames=await page.locator('#frames img').count();
    if(!final.endsWith('/'+String(frames).padStart(2,'0')+'.png'))throw Error('Último frame inaccesible '+id);
    await page.locator('#reset').click();if(await page.locator('#phase').inputValue()!=='0')throw Error('Inicio falló');
-   await page.locator('.comparison').screenshot({path:'recursos/laboratorio-gatopago/.qa/raster-rig/'+id+'-'+width+'.png'});
+   await page.locator('.comparison').screenshot({path:'archivo/laboratorio-gatopago/.qa/raster-rig/'+id+'-'+width+'.png'});
    await page.locator('#play').click();await page.waitForTimeout(300);
    const advances=Number(await page.locator('#phase').inputValue())>0;
    await page.locator('#play').click();const paused=await page.locator('#phase').inputValue();await page.waitForTimeout(160);

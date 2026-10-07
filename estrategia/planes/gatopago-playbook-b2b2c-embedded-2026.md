@@ -1,5 +1,7 @@
 # GatoPago Embedded: playbook B2B2C 2026–2030
 
+> **Aviso (7 de octubre de 2026):** este plan usa la promesa «Tus dólares ya saben moverse», sustituida el 3 de octubre de 2026 por «Dinero sin fronteras. Siempre tuyo.». Si hay contradicción, manda la [narrativa vigente](../vigente/gatopago-narrativa-2026-10.md).
+
 > **Estado:** estrategia objetivo y manual de validación. La mayoría de capacidades descritas no están disponibles como producto comercial.  
 > **Fecha de corte:** 19 de agosto de 2026.  
 > **Propósito:** explicar cómo una empresa, comunidad o plataforma puede entregar la experiencia GatoPago a sus usuarios sin reconstruir wallets, pagos, seguridad y operación desde cero.  

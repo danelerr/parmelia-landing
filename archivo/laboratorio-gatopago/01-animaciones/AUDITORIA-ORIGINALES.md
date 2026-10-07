@@ -2,7 +2,7 @@
 
 Se leyó el manifest vigente, se inspeccionaron las 147 poses únicas mediante dos hojas de contacto y se midieron sus límites alfa. Ninguna silueta con alfa mayor que 24 toca un borde del PNG. Eso descarta un recorte visible en los archivos inspeccionados, pero no acredita anatomía, registro ni continuidad de movimiento.
 
-Las hojas de contacto y las métricas se regeneran con `node recursos/laboratorio-gatopago/tools/audit-originals.mjs` y quedan en `.qa/originals/`. Son material de revisión, no assets de producción.
+Las hojas de contacto y las métricas se regeneran con `node archivo/laboratorio-gatopago/tools/audit-originals.mjs` y quedan en `.qa/originals/`. Son material de revisión, no assets de producción.
 
 Se añadió una [galería de reproducción](./originales/index.html): veinte secuencias y 166 pasos, tiempos del manifest, tamaños 96/128/256 px y nativo, paso anterior/siguiente y una vuelta opcional. Las copias se compararon byte a byte con el kit. Una prueba real de Chrome observó los 166 pasos, verificó la parada de cada vuelta/acción y controles en 390/1280 px, sin overflow ni errores de página. También detuvo el reproductor al activar movimiento reducido. Evidencia: `.qa/originals/runtime-verification.json` y `source-verification.json`.
 

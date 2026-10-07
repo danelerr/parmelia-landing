@@ -1,5 +1,5 @@
 async (page) => {
- const base='file:///C:/Users/danie/OneDrive/Desktop/parmelia-landing/parmelia-landing/recursos/laboratorio-gatopago/06-aplicaciones/';
+ const base='file:///C:/Users/danie/OneDrive/Desktop/parmelia-landing/parmelia-landing/archivo/laboratorio-gatopago/06-aplicaciones/';
  const results=[];
  for(const width of [390,1280])for(const file of ['index.html','comprobante/index.html','notificaciones/index.html','correo/actualizacion.html']){
   await page.setViewportSize({width,height:920});await page.goto(base+file);
@@ -10,7 +10,7 @@ async (page) => {
    return {title:document.title,noOverflow:document.documentElement.scrollWidth<=innerWidth,duplicateIds:ids.filter((id,i)=>ids.indexOf(id)!==i),loadedFonts:[...document.fonts].filter(f=>f.status==='loaded').map(f=>f.family),images:[...document.images].every(i=>i.complete&&i.naturalWidth>0)};
   });
   if(!check.noOverflow||check.duplicateIds.length||!check.images)throw Error(JSON.stringify(check));
-  await page.screenshot({path:`recursos/laboratorio-gatopago/.qa/applications/${file.split('/')[0].replace('.html','')}-${width}.png`,fullPage:true});
+  await page.screenshot({path:`archivo/laboratorio-gatopago/.qa/applications/${file.split('/')[0].replace('.html','')}-${width}.png`,fullPage:true});
   results.push({file,width,...check});
  }
  await page.goto(base+'social/camino.svg');

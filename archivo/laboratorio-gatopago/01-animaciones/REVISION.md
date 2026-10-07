@@ -32,8 +32,8 @@ Las cuatro hojas v2 se conservan en `fuentes/`, con sus prompts en `prompts/`. S
 
 ### Regeneración local
 
-1. `node recursos/laboratorio-gatopago/tools/normalize-candidates.mjs`
-2. `node recursos/laboratorio-gatopago/tools/comparison-gallery.mjs`
-3. `node recursos/laboratorio-gatopago/tools/verify-candidates.mjs`
+1. `node archivo/laboratorio-gatopago/tools/normalize-candidates.mjs`
+2. `node archivo/laboratorio-gatopago/tools/comparison-gallery.mjs`
+3. `node archivo/laboratorio-gatopago/tools/verify-candidates.mjs`
 
 La última comprobación contrasta los píxeles de origen con los PNG registrados, verifica alfa, color visible, temporización y número real de frames codificados en WebP. Esta prueba **no acredita continuidad artística**. Los originales del brandkit siguen sin cambios.

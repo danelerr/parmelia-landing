@@ -1,5 +1,5 @@
 async(page)=>{
- const base='file:///C:/Users/danie/OneDrive/Desktop/parmelia-landing/parmelia-landing/recursos/laboratorio-gatopago/01-animaciones/originales/index.html';
+ const base='file:///C:/Users/danie/OneDrive/Desktop/parmelia-landing/parmelia-landing/archivo/laboratorio-gatopago/01-animaciones/originales/index.html';
  const results=[],screens=[],errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.bringToFront();const cdp=await page.context().newCDPSession(page);const window=await cdp.send('Browser.getWindowForTarget');await cdp.send('Browser.setWindowBounds',{windowId:window.windowId,bounds:{windowState:'normal'}});await cdp.detach();
  await page.emulateMedia({reducedMotion:'no-preference'});await page.setViewportSize({width:1280,height:920});await page.goto(base);
@@ -12,7 +12,7 @@ async(page)=>{
   const initial=await page.evaluate(()=>({noOverflow:document.documentElement.scrollWidth<=innerWidth,images:[...document.images].every(i=>i.complete&&i.naturalWidth>0),font:[...document.fonts].some(f=>f.family==='Recursive'&&f.status==='loaded'),paused:document.querySelector('#play').getAttribute('aria-pressed')==='false'}));
   if(!Object.values(initial).every(Boolean))throw Error(JSON.stringify({id,initial}));
   await page.locator('#size').selectOption('128');
-  await page.locator('.stage').screenshot({path:'recursos/laboratorio-gatopago/.qa/originals/runtime-'+id+'.png'});
+  await page.locator('.stage').screenshot({path:'archivo/laboratorio-gatopago/.qa/originals/runtime-'+id+'.png'});
   await page.locator('#speed').selectOption('1');await page.locator('#play').click();
   await page.waitForFunction(()=>document.querySelector('#play').getAttribute('aria-pressed')==='false');
   const trail=await page.evaluate(()=>window.__gpOriginalTrail);
@@ -29,7 +29,7 @@ async(page)=>{
   await page.locator('#prev').click();const previous=await page.locator('#sprite').getAttribute('src');
   await page.locator('#next').click();if(await page.locator('#sprite').getAttribute('src')!==final||previous===final)throw Error('Pasos anterior/siguiente fallaron');
   await page.locator('#reset').click();
-  await page.screenshot({path:'recursos/laboratorio-gatopago/.qa/originals/gallery-'+width+'.png'});
+  await page.screenshot({path:'archivo/laboratorio-gatopago/.qa/originals/gallery-'+width+'.png'});
   screens.push({width,noOverflow,stepControls:true});
  }
  await page.locator('#single').uncheck();await page.locator('#play').click();await page.waitForTimeout(150);

@@ -14,7 +14,7 @@ Es una pose sentada y quieta, no una firma animada con flexión dibujada. La cab
 
 ## Regeneración y evidencia
 
-Desde la raíz, `node recursos/laboratorio-gatopago/tools/receipt-action.mjs`, después `tools/comparison-gallery.mjs documento` y `tools/comparison-gallery.mjs coleccion` con el mismo prefijo de ruta. No se llama a IA al regenerar.
+Desde la raíz, `node archivo/laboratorio-gatopago/tools/receipt-action.mjs`, después `tools/comparison-gallery.mjs documento` y `tools/comparison-gallery.mjs coleccion` con el mismo prefijo de ruta. No se llama a IA al regenerar.
 
 `verify-receipt-action.mjs` reconstruyó exactamente los 61 PNG y comparó todos los píxeles fuera de la zona de tinta: gato y papel constantes, bordes transparentes, origen/hash y tiempos WebP válidos, inicio/final distintos. El WebP une pasos de pausa idénticos en 48 frames codificados, conservando los 2.580 ms. La mayor cantidad de PNG no se presenta como un aumento de complejidad del gesto.
 

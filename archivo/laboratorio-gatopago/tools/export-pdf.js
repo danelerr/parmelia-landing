@@ -4,7 +4,7 @@ async (page) => {
     await Promise.all([...document.images].map(image => image.decode()));
   });
   await page.pdf({
-    path:'recursos/laboratorio-gatopago/02-manual/manual-visual-gatopago.pdf',
+    path:'archivo/laboratorio-gatopago/02-manual/manual-visual-gatopago.pdf',
     format:'A4',
     preferCSSPageSize:true,
     printBackground:true,

@@ -43,7 +43,7 @@ La versión v2 del guion, detallada diapositiva por diapositiva, sigue abajo com
 
 ### 1. Portada
 
-- **Titular:** Tus dólares ya saben moverse.
+- **Titular:** Dinero sin fronteras. Siempre tuyo.
 - **Apoyo:** La cuenta autocustodia y programable para cobrar y mover dinero entre países.
 - **Pie:** Alpha en testnet · fondos de prueba.
 - **Visual:** símbolo, wordmark y el gato sentado.
@@ -131,7 +131,7 @@ La versión v2 del guion, detallada diapositiva por diapositiva, sigue abajo com
 
 - **Titular:** Quién lo construye y qué necesitamos.
 - **Pendiente:** `[completar]` con el equipo y la petición con su uso de fondos por hitos.
-- **Cierre:** Tus dólares ya saben moverse. gatopago.com
+- **Cierre:** Dinero sin fronteras. Siempre tuyo. gatopago.com
 
 ## Módulos por público
 

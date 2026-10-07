@@ -12,23 +12,23 @@ No contiene código de frontend, servidor web ni configuración de despliegue (l
 ├── estrategia/                  QUÉ ES GATOPAGO Y POR QUÉ
 │   ├── vigente/                 Narrativa 2026-10, promesa de marca, índice maestro y rebranding
 │   ├── planes/                  Planes estratégicos 2026–2030 (producto, finanzas, marketing, B2B…)
-│   ├── investigacion/           Benchmarks y análisis de mercado
+│   ├── investigacion/           Datos de Bolivia y guion de entrevistas (benchmarks pendientes)
 │   ├── auditorias/              Auditoría de marca y recomendaciones de diseño
 │   └── archivo/                 Documentos y adaptaciones históricas
 │
 ├── comercial/                   VENTAS, CAPITAL Y ALIANZAS
-│   ├── pitch/                   Guion del pitch deck, presentaciones PPTX/PDF e histórico
-│   ├── grants/                  Solicitudes y reportes de convocatorias y subvenciones
+│   ├── pitch/                   Guion del pitch deck y decks PPTX/PDF anteriores
+│   ├── grants/                  Plantilla, convocatorias y bases de referencia
 │   ├── partners/                Propuestas y one-pagers para aliados comerciales
 │   └── data-room/               Índice para due diligence (sin datos sensibles)
 │
 ├── contenido/                   COMUNICACIÓN Y PUBLICACIONES
-│   ├── redes/2026-10/           168 piezas sociales generadas (posts, carruseles, banners, stickers)
+│   ├── redes/2026-10/           172 piezas sociales generadas (posts, carruseles, banners, stickers)
 │   ├── calendario/              Plan editorial y cronograma de publicación
 │   └── plantillas/              Portadas, fondos y recursos reutilizables
 │
 ├── archivo/                     REGISTRO TÉCNICO E HISTÓRICO (No usar en piezas nuevas)
-│   ├── laboratorio-gatopago/    332 MB de animaciones, propuestas y rigs experimentales
+│   ├── laboratorio-gatopago/    255 MB de animaciones, propuestas y rigs experimentales
 │   ├── personaje-web/           WebP del frontend anterior conservados byte a byte
 │   ├── archivo-web/             Iconos históricos de la web anterior
 │   └── iconos-terceros/         Logos de USDC, Arbitrum, Bitcoin y Ethereum

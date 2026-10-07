@@ -86,7 +86,9 @@ test('npm asset tarball is local, private and exports complete baseline font pat
   assert.equal(report.frontendModified,false);
   const work=await fs.mkdtemp(path.join(root,'.brandkit-work-'));
   try {
-    const extracted=spawnSync(process.platform==='win32'?'tar.exe':'tar',['-xzf',report.tarball,'-C',work],{encoding:'utf8',windowsHide:true});
+    // Git Bash puts GNU tar first in PATH, and it reads "C:\..." as a remote host.
+    const tar=process.platform==='win32'?path.join(process.env.SystemRoot??'C:\\Windows','System32','tar.exe'):'tar';
+    const extracted=spawnSync(tar,['-xzf',report.tarball,'-C',work],{encoding:'utf8',windowsHide:true});
     assert.equal(extracted.status,0,extracted.stderr);
     const pkg=JSON.parse(await fs.readFile(path.join(work,'package/package.json'),'utf8'));
     assert.equal(pkg.name,'@gatopago/brand-assets');

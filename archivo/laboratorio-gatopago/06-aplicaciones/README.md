@@ -4,7 +4,7 @@ Siete propuestas independientes: correo, comprobante, QR A5, tres notificaciones
 
 ## Editar y regenerar
 
-Editar `fuentes.json` para textos y datos, `../tools/applications.mjs` para composición. Ejecutar desde la raíz `node recursos/laboratorio-gatopago/tools/applications.mjs`. Solo escribe en esta carpeta. El catálogo es `index.html`.
+Editar `fuentes.json` para textos y datos, `../tools/applications.mjs` para composición. Ejecutar desde la raíz `node archivo/laboratorio-gatopago/tools/applications.mjs`. Solo escribe en esta carpeta. El catálogo es `index.html`.
 
 Los SVG principales mantienen texto editable y cuatro instancias de Recursive incrustadas. También se entregan versiones `-trazado.svg`, sin dependencia tipográfica, y PNG del tamaño indicado. Algunas aplicaciones no admiten fuentes incrustadas: instalar las TTF de `../assets/fonts/` y conservar su licencia OFL; no confundir la versión trazada con texto editable. La portada de 1500 × 500 no contiene texto.
 
@@ -26,8 +26,8 @@ SVG editable, SVG trazado, PNG y PDF A5 (148 × 210 mm). Quiet zone de cuatro m�
 
 ## Verificación
 
-`python recursos/laboratorio-gatopago/tools/verify-applications.py recursos/laboratorio-gatopago` verifica hashes, tamaños, textos editables, importes y lectura del QR. Las notificaciones permiten cerrar y restaurar ejemplos sin ejecutar operaciones. Las pruebas del navegador y los PDF se conservan en `.qa/applications/`, fuera de la entrega productiva.
+`python archivo/laboratorio-gatopago/tools/verify-applications.py archivo/laboratorio-gatopago` verifica hashes, tamaños, textos editables, importes y lectura del QR. Las notificaciones permiten cerrar y restaurar ejemplos sin ejecutar operaciones. Las pruebas del navegador y los PDF se conservan en `.qa/applications/`, fuera de la entrega productiva.
 
-Los 22 enlaces de descarga del catálogo se accionaron en Chrome y se compararon byte a byte con sus fuentes. También se cerraron y restauraron las tres notificaciones. Reproducir con `tools/browser.mjs run-code-file tools/qa-application-downloads.js` usando sus rutas completas bajo el laboratorio, y después `node recursos/laboratorio-gatopago/tools/verify-application-downloads.mjs`. El resultado está en `.qa/applications/download-verification.json`; no prueba envío de correo ni impresión física.
+Los 22 enlaces de descarga del catálogo se accionaron en Chrome y se compararon byte a byte con sus fuentes. También se cerraron y restauraron las tres notificaciones. Reproducir con `tools/browser.mjs run-code-file tools/qa-application-downloads.js` usando sus rutas completas bajo el laboratorio, y después `node archivo/laboratorio-gatopago/tools/verify-application-downloads.mjs`. El resultado está en `.qa/applications/download-verification.json`; no prueba envío de correo ni impresión física.
 
 Propuestas sin aprobación artística. Marca y personaje no tienen una licencia pública de reutilización; la tipografía conserva su OFL. El nombre interno del personaje no aparece en las piezas públicas.

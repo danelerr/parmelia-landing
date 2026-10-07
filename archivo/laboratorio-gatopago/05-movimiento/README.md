@@ -12,4 +12,4 @@ En flujos financieros el texto de estado es la fuente de información; la ilustr
 
 El centro del bloque de ruta parte de x=24 y llega a x=280, los extremos reales del rail. El reinicio ocurre con opacidad cero; el bloque no salta de vuelta mientras es visible. Conexión e intercambio usan el mismo criterio. Las variantes reducidas quedan visibles y no contienen animaciones.
 
-Prueba de navegador: `node recursos/laboratorio-gatopago/tools/browser.mjs run-code-file recursos/laboratorio-gatopago/tools/qa-motion.js`. Cubre los seis ejemplos a 390 y 1280 px, extremos, pausa, reinicio y cambio automático de preferencia del sistema. Las capturas y su revisión visual no son una prueba de rendimiento en todos los dispositivos.
+Prueba de navegador: `node archivo/laboratorio-gatopago/tools/browser.mjs run-code-file archivo/laboratorio-gatopago/tools/qa-motion.js`. Cubre los seis ejemplos a 390 y 1280 px, extremos, pausa, reinicio y cambio automático de preferencia del sistema. Las capturas y su revisión visual no son una prueba de rendimiento en todos los dispositivos.

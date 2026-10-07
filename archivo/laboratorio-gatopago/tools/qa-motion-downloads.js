@@ -1,5 +1,5 @@
 async (page) => {
- const base='file:///C:/Users/danie/OneDrive/Desktop/parmelia-landing/parmelia-landing/recursos/laboratorio-gatopago/05-movimiento/index.html';
+ const base='file:///C:/Users/danie/OneDrive/Desktop/parmelia-landing/parmelia-landing/archivo/laboratorio-gatopago/05-movimiento/index.html';
  await page.emulateMedia({reducedMotion:'no-preference'});await page.setViewportSize({width:390,height:920});await page.goto(base);
  const downloads=[];
  for(const id of ['ruta','conexion','confirmacion','intercambio','espera','entrada']){
@@ -9,7 +9,7 @@ async (page) => {
    const href=await page.locator('#download').getAttribute('href');
    if(href!==(reduced?'reducido/':'svg/')+id+'.svg')throw Error('Descarga apunta a otra variante');
    const event=page.waitForEvent('download');await page.locator('#download').click();const download=await event;
-   await download.saveAs('recursos/laboratorio-gatopago/.qa/motion/downloads/'+(reduced?'reducido-':'animado-')+id+'.svg');
+   await download.saveAs('archivo/laboratorio-gatopago/.qa/motion/downloads/'+(reduced?'reducido-':'animado-')+id+'.svg');
    if(await download.failure())throw Error('Descarga falló '+id);
    downloads.push({id,reduced,href,file:download.suggestedFilename()});
   }

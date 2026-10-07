@@ -5,7 +5,7 @@ Material archivado para consulta y registro técnico. **No se utiliza en piezas 
 ## Contenido
 
 - **`laboratorio-gatopago/`**:
-  - Propuestas de animación, rigs experimentales, manuales alternativos y componentes del laboratorio (332 MB).
+  - Propuestas de animación, rigs experimentales, manuales alternativos y componentes del laboratorio (255 MB).
   - Conservado para trazabilidad artística y técnica.
 - **`personaje-web/`**:
   - 14 archivos WebP empleados en la landing anterior, preservados byte a byte como referencia histórica.

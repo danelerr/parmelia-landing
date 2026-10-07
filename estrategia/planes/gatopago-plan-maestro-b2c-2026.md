@@ -1,5 +1,7 @@
 # GatoPago Personal: plan maestro B2C 2026–2030
 
+> **Aviso (7 de octubre de 2026):** este plan usa la promesa «Tus dólares ya saben moverse», sustituida el 3 de octubre de 2026 por «Dinero sin fronteras. Siempre tuyo.». Si hay contradicción, manda la [narrativa vigente](../vigente/gatopago-narrativa-2026-10.md).
+
 > **Estado del documento:** estrategia de producto y negocio. No implica disponibilidad comercial, licencia, cobertura geográfica ni lanzamiento en mainnet.  
 > **Fecha de corte:** 19 de agosto de 2026.  
 > **Alcance:** adquisición, activación, producto, experiencia, seguridad, monetización, operaciones, retención y expansión de GatoPago Personal.  

@@ -41,10 +41,10 @@ Es una reinterpretación frontal sentada, no una copia del perfil de los origina
 Desde la raíz, con dependencias instaladas:
 
 ```sh
-node recursos/laboratorio-gatopago/tools/care-actions.mjs
-node recursos/laboratorio-gatopago/tools/verify-care-actions.mjs
-node recursos/laboratorio-gatopago/tools/comparison-gallery.mjs cuidados
-node recursos/laboratorio-gatopago/tools/comparison-gallery.mjs coleccion
+node archivo/laboratorio-gatopago/tools/care-actions.mjs
+node archivo/laboratorio-gatopago/tools/verify-care-actions.mjs
+node archivo/laboratorio-gatopago/tools/comparison-gallery.mjs cuidados
+node archivo/laboratorio-gatopago/tools/comparison-gallery.mjs coleccion
 ```
 
 Los generadores no llaman a IA. La prueba de navegador necesita la sesión local configurada; sus recetas no se confunden con evidencia de ejecución. Guardar cada auditoría antes de navegar y ejecutar `verify-care-downloads.mjs` después de las descargas.

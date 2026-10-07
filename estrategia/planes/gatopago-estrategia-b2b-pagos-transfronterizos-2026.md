@@ -1,5 +1,7 @@
 # GatoPago: estrategia B2B y plataforma de pagos transfronterizos
 
+> **Aviso (7 de octubre de 2026):** este plan usa la promesa «Tus dólares ya saben moverse», sustituida el 3 de octubre de 2026 por «Dinero sin fronteras. Siempre tuyo.». Si hay contradicción, manda la [narrativa vigente](../vigente/gatopago-narrativa-2026-10.md).
+
 **Fecha:** 19 de agosto de 2026  
 **Estado:** tesis estratégica para validación  
 **Uso inmediato:** conversación y discovery con fintechs y potenciales design partners  

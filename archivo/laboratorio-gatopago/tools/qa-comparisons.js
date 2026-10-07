@@ -1,5 +1,5 @@
 async (page) => {
- const base='file:///C:/Users/danie/OneDrive/Desktop/parmelia-landing/parmelia-landing/recursos/laboratorio-gatopago/01-animaciones/index.html';
+ const base='file:///C:/Users/danie/OneDrive/Desktop/parmelia-landing/parmelia-landing/archivo/laboratorio-gatopago/01-animaciones/index.html';
  const ids=['cola','siesta','asomarse','reparar-rail','intercambio'],results=[];
  const errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.emulateMedia({reducedMotion:'no-preference'});
@@ -17,7 +17,7 @@ async (page) => {
    if(!final.endsWith('/'+String(frames).padStart(2,'0')+'.png'))throw Error('El slider no llega al último frame '+id);
    await page.locator('#reset').click();
    if(await page.locator('#phase').inputValue()!=='0')throw Error('Inicio no vuelve a cero');
-   await page.locator('.comparison').screenshot({path:'recursos/laboratorio-gatopago/.qa/frames/'+id+'-'+width+'.png'});
+   await page.locator('.comparison').screenshot({path:'archivo/laboratorio-gatopago/.qa/frames/'+id+'-'+width+'.png'});
    await page.locator('#play').click();
    await page.waitForTimeout(240);
    const advanced=Number(await page.locator('#phase').inputValue())>0;

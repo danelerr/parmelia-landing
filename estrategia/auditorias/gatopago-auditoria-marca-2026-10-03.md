@@ -17,7 +17,7 @@ Prioridades:
 
 ## 1. Iconos
 
-Familia del laboratorio: `recursos/laboratorio-gatopago/04-iconos/`, 32 SVG en una retícula de 24 unidades, trazo de 2 y remates cuadrados. En conjunto es consistente y encaja con el símbolo pixel. Hay cuatro excepciones:
+Familia del laboratorio: `archivo/laboratorio-gatopago/04-iconos/`, 32 SVG en una retícula de 24 unidades, trazo de 2 y remates cuadrados. En conjunto es consistente y encaja con el símbolo pixel. Hay cuatro excepciones:
 
 | Icono | Problema | Propuesta |
 |---|---|---|
@@ -35,7 +35,7 @@ El kit no tiene aún una familia de iconos de interfaz: `02-logos` solo cubre s�
 | Documento | Dónde | Situación |
 |---|---|---|
 | Manual práctico del kit | `brandkit/01-manual/` + `brandkit/index.html` | **Referencia.** Versionado, verificado y empaquetado en el ZIP |
-| Manual visual del laboratorio | `recursos/laboratorio-gatopago/02-manual/` (HTML y PDF de 12 páginas). **Descartado el 3 de octubre de 2026.** | Bien maquetado y coherente con el kit, pero es una propuesta paralela |
+| Manual visual del laboratorio | `archivo/laboratorio-gatopago/02-manual/` (HTML y PDF de 12 páginas). **Descartado el 3 de octubre de 2026.** | Bien maquetado y coherente con el kit, pero es una propuesta paralela |
 | Manual editorial en PDF | `output/gatopago-manual-de-marca-2026-09.pdf` | Ignorado por Git: solo existe en este equipo |
 
 **Propuesta:** el kit es la única fuente de reglas. El PDF del laboratorio puede pasar a ser «la edición imprimible» del kit si se regenera desde `01-manual` (para que no diverjan), o quedar como archivo con una nota en su README. El PDF de `output/` debe tratarse como borrador local.
@@ -45,7 +45,7 @@ El kit no tiene aún una familia de iconos de interfaz: `02-logos` solo cubre s�
 Había tres orígenes sin relación entre sí:
 
 - `brandkit/10-plantillas/`: tres plantillas (post cuadrado, novedad vertical, portada horizontal), sobrias y correctas.
-- `recursos/laboratorio-gatopago/06-aplicaciones/social/`: tres piezas (camino, control, cover).
+- `archivo/laboratorio-gatopago/06-aplicaciones/social/`: tres piezas (camino, control, cover).
 - `recursos/social/gatopago-x-cover-2026-10-01-v1.png`: portada de X ya realizada, con su encargo.
 
 **Nuevo:** [`recursos/social/posts-2026-10/`](../../contenido/redes/2026-10/README.md) reúne 168 piezas generadas desde el kit con `npm run brandkit:social` (más 2 imágenes OG): 83 posts e historias (incluidas las series Pilares, Entre países y DeFi sin jerga), 5 carruseles (30 diapositivas), 7 banners, 4 posts horizontales, 16 portadas de destacadas, 6 fondos para historias, 14 stickers, 3 fondos de pantalla y 2 plantillas con hueco para capturas. Comparten tipografía trazada, paleta, firma, retícula y motivos (escalera, raíl, gato). Cada pieza incluye un texto sugerido.

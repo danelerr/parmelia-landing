@@ -53,3 +53,6 @@ output/
 .brandkit-build.lock
 geoscan/
 
+
+# QA captures from generators (moved folders included)
+.qa/
