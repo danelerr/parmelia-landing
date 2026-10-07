@@ -1,5 +1,20 @@
 # Historial del brandkit
 
+## Revisión local — 2026-10-07
+
+- Caminata: descartados los ensayos de recoloreado y reordenación. Se conserva la secuencia original de seis fotogramas, sin alterar dibujo, sombras, colores ni transparencias.
+- Único ajuste: 130 ms por fotograma en vez de 110 ms; ciclo de 780 ms en vez de 660 ms, aproximadamente un 15 % más lento. Actualizadas la preview original, la HD y la galería.
+- Las pruebas retiradas quedan fuera del kit y de la entrega, en el archivo local de `output/`. No se adoptan como recursos de marca.
+
+## Revisión local — 2026-10-05
+
+- Cola y Metí la pata: duplicación en espejo de las patas del lado izquierdo para formar el lado derecho, copiando RGBA sin interpolación. Sustituye el parche redondeado rechazado; conserva la cabeza, la cola móvil, los tamaños y los tiempos.
+- Metí la pata: restaurada la punta de la oreja izquierda del primer frame desde la hoja original; corregido el límite de la máscara del rótulo.
+- Pulida la unión de la cola con el cuerpo en las dos secuencias: cola original separada como una pieza completa, desplazada 12 px y colocada detrás de las patas, sin cortes entre filas ni recoloreado.
+- Eliminada la costura clara de esa unión mediante composición alfa correcta en los bordes semitransparentes, sin modificar la silueta ni los colores opacos.
+- Generación selectiva con `--only=cola,meti-la-pata` y prueba de reproducibilidad para preservar las otras 18 animaciones y las 14 poses/expresiones estáticas.
+- Piezas aún candidatas a revisión artística. Sin publicación ni actualización de Figma.
+
 ## Sin publicar — 2026-10-03
 
 - Personaje: retoques en las animaciones Cola, Metí la pata (una sola cola), Caminata (patas del fondo en sombra y sombra en el suelo) y Preparando el pago (oreja del primer fotograma). Las expresiones y poses estáticas no cambian.

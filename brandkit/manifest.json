@@ -15,8 +15,8 @@
     },
     {
       "path": "01-manual/entrega-y-mantenimiento.md",
-      "bytes": 9259,
-      "sha256": "da96c393f27da1ce19c7b4c48c80cf56c6281e764965ff6df6d294447d9cab57",
+      "bytes": 9356,
+      "sha256": "15aa6b0dba9664aef4c88bdcecc84e8fb07a10beed320ccca5944a3c74f1acd3",
       "source": "brandkit editorial / generated",
       "status": "internal"
     },
@@ -57,8 +57,8 @@
     },
     {
       "path": "02-logos/README.md",
-      "bytes": 3705,
-      "sha256": "64e01f7501a30534add42fa11d121b5e40340005d939766e951d62f274feb01e",
+      "bytes": 3982,
+      "sha256": "c0f1bdbc9b5e98206803b90682a5a12e1a6a994580641542d40fd526b4e08ce7",
       "source": "brandkit editorial / generated",
       "status": "internal"
     },
@@ -498,8 +498,8 @@
     },
     {
       "path": "03-personaje/README.md",
-      "bytes": 6523,
-      "sha256": "8093da30abddf2b9a410f2a368b8746810147e25527e3cb7298220264c41425f",
+      "bytes": 8015,
+      "sha256": "ae8fba070f95870c76bc3c0bf511df3c8359c078c0d621ab2578724ff5db9b0b",
       "source": "brandkit canonical",
       "status": "review"
     },
@@ -520,7 +520,7 @@
     {
       "path": "03-personaje/animaciones/caminata.webp",
       "bytes": 162790,
-      "sha256": "8b741ee1a74cac3226ee54e25a6fe8095f811a7211486ee18c915bc674692fed",
+      "sha256": "44654b8dcbd520f0981e8b7726ea53c00713646f1ae554dbc35ffc257865b5cd",
       "source": "brandkit canonical",
       "status": "review",
       "image": {
@@ -533,8 +533,8 @@
     },
     {
       "path": "03-personaje/animaciones/cola.webp",
-      "bytes": 224200,
-      "sha256": "296f287bfce988097d9c9b38556ca51a497a4d69007ef52dbb13fb0bf4bc1c8b",
+      "bytes": 209544,
+      "sha256": "6fc92d7b7eab850f74185c97a61637832ed7ea4dff64064e9a42798d4fddcc11",
       "source": "brandkit canonical",
       "status": "review",
       "image": {
@@ -771,8 +771,8 @@
     },
     {
       "path": "03-personaje/animaciones/fotogramas/cola/01.png",
-      "bytes": 44570,
-      "sha256": "de35eae8adb7de1697856515a6112419504f46fcf792858f237e4ce18805966a",
+      "bytes": 40285,
+      "sha256": "507f4da45e65b48bc7aa58f15edb1ed2c799033e659bfe8494fd76e47102fac1",
       "source": "brandkit canonical",
       "status": "review",
       "image": {
@@ -785,8 +785,8 @@
     },
     {
       "path": "03-personaje/animaciones/fotogramas/cola/02.png",
-      "bytes": 45254,
-      "sha256": "4fd033338a577607e25c1796592954cd5399c490abf003c7ae0881078eb8dc50",
+      "bytes": 41794,
+      "sha256": "2f334393669e5371248b51a2a648af63de3e01928f68f8c305cc75f4560fd1fa",
       "source": "brandkit canonical",
       "status": "review",
       "image": {
@@ -799,8 +799,8 @@
     },
     {
       "path": "03-personaje/animaciones/fotogramas/cola/03.png",
-      "bytes": 47424,
-      "sha256": "e9a61d4ee70c908363670ad579318efe2154562d476feceeb66b43b59e56030d",
+      "bytes": 43728,
+      "sha256": "ab7115ba6fc7059a6c44f965169153f88e58f2e1a59fc5d206510fd9f233bfba",
       "source": "brandkit canonical",
       "status": "review",
       "image": {
@@ -813,8 +813,8 @@
     },
     {
       "path": "03-personaje/animaciones/fotogramas/cola/04.png",
-      "bytes": 50385,
-      "sha256": "215f2b683ea5e63ad446813d8a7dfb9be44f6dd8ecbf2bc737173504ba5425fb",
+      "bytes": 45822,
+      "sha256": "be3f4e0e06c565a702d8e233be3fd9cc104653e72debdd14f5229baa8972bb89",
       "source": "brandkit canonical",
       "status": "review",
       "image": {
@@ -827,8 +827,8 @@
     },
     {
       "path": "03-personaje/animaciones/fotogramas/cola/05.png",
-      "bytes": 48493,
-      "sha256": "e382dce3765377365473f62e1b543cd1ae511e30d6464971d92cccd28bea0b79",
+      "bytes": 44771,
+      "sha256": "b3cda85406ec33dadb6b99b215858814e688de366d873872cec4260603085f6e",
       "source": "brandkit canonical",
       "status": "review",
       "image": {
@@ -841,8 +841,8 @@
     },
     {
       "path": "03-personaje/animaciones/fotogramas/cola/06.png",
-      "bytes": 48003,
-      "sha256": "1fb27aec6856a97229fcaf7e2d0d688a8f07805c80db19b2990f29c748afe752",
+      "bytes": 44210,
+      "sha256": "df13b348d5efa0293990dff8eee9b28bd5b3ce31a40525f7b969af04f35ea618",
       "source": "brandkit canonical",
       "status": "review",
       "image": {
@@ -855,8 +855,8 @@
     },
     {
       "path": "03-personaje/animaciones/fotogramas/cola/07.png",
-      "bytes": 48281,
-      "sha256": "620f8990eb0e83db7dd7e8b664532300c9fbff4efbb87e14e10ee95b7aa95048",
+      "bytes": 44376,
+      "sha256": "e9c74130a29241d83cdd8dbe0f5df53d76ce30bed8332835801b2e9f5ca303d7",
       "source": "brandkit canonical",
       "status": "review",
       "image": {
@@ -869,8 +869,8 @@
     },
     {
       "path": "03-personaje/animaciones/fotogramas/cola/08.png",
-      "bytes": 44414,
-      "sha256": "c936e72a6fdfd809000fdba8e2f4fdf6f2f08e47154d13cacfe5e2d3bcda4619",
+      "bytes": 40201,
+      "sha256": "1bd5b75e93cd5afc804b7dd11e7398733e4904db72c511f22de589dae36aec34",
       "source": "brandkit canonical",
       "status": "review",
       "image": {
@@ -1513,8 +1513,8 @@
     },
     {
       "path": "03-personaje/animaciones/fotogramas/meti-la-pata/01.png",
-      "bytes": 46904,
-      "sha256": "c7f6587126a1ffd278914685e73cf355dbb4fad21c36bc1b874f75b0305ea401",
+      "bytes": 44007,
+      "sha256": "5f67b4599030a2fa098acc8e42089ae4a92fd7fc3ce9fe3a03129f94cc1ae6b8",
       "source": "brandkit canonical",
       "status": "review",
       "image": {
@@ -1527,8 +1527,8 @@
     },
     {
       "path": "03-personaje/animaciones/fotogramas/meti-la-pata/02.png",
-      "bytes": 45850,
-      "sha256": "f312d6513994159f0acce17993464cd6c0971cc14f83a6f4edf1a97bfe1844fe",
+      "bytes": 42337,
+      "sha256": "554acce94f7826deefa882f95deada3b440c984c778138cb82a15c96ec095538",
       "source": "brandkit canonical",
       "status": "review",
       "image": {
@@ -1541,8 +1541,8 @@
     },
     {
       "path": "03-personaje/animaciones/fotogramas/meti-la-pata/03.png",
-      "bytes": 45171,
-      "sha256": "be30dd587cf1c01db6033d1e68c3059d629d7b66264451478fea55dc8a5d2fb2",
+      "bytes": 41535,
+      "sha256": "16ca0531d5f6960744e5ef113e4bab8923f120a517617ee29ba74d189c2fd06c",
       "source": "brandkit canonical",
       "status": "review",
       "image": {
@@ -1555,8 +1555,8 @@
     },
     {
       "path": "03-personaje/animaciones/fotogramas/meti-la-pata/04.png",
-      "bytes": 47229,
-      "sha256": "a7add566404a686898286e45ead2c4900a267ab26e646fb30ec4db520e7b5bfe",
+      "bytes": 43770,
+      "sha256": "beecdb9332104f1175b0fccad2e750cc8ed6dd365f175ef5726564de8c75bc17",
       "source": "brandkit canonical",
       "status": "review",
       "image": {
@@ -1569,8 +1569,8 @@
     },
     {
       "path": "03-personaje/animaciones/fotogramas/meti-la-pata/05.png",
-      "bytes": 47492,
-      "sha256": "f2c038401febfd5058b68a848b8236ecea2286be822626b28bfb815cc670a4de",
+      "bytes": 44142,
+      "sha256": "510835c860b044cc1b1b6fd5cb1cd06aa418bd93c3cda27f5bb8139dc1ef246b",
       "source": "brandkit canonical",
       "status": "review",
       "image": {
@@ -1583,8 +1583,8 @@
     },
     {
       "path": "03-personaje/animaciones/fotogramas/meti-la-pata/06.png",
-      "bytes": 49265,
-      "sha256": "129a7182497d2e8bd82d858c769bbbe2016e83c9d157728cdfd219ee222a4f75",
+      "bytes": 46394,
+      "sha256": "b738768cac3178829341a78d9b4dad1827feb3b51fc89c8f7d814cad0b3aad59",
       "source": "brandkit canonical",
       "status": "review",
       "image": {
@@ -2662,7 +2662,7 @@
     {
       "path": "03-personaje/animaciones/manifest.json",
       "bytes": 27669,
-      "sha256": "bdc12c9e23504f8a84c28a26fa0bd681e2c67ea943a3731d38947fa5a7823687",
+      "sha256": "ce6c3a1d8fff54fb906bef2a775f19ecf924fe3035867a726b0fe24aa027b83e",
       "source": "brandkit canonical",
       "status": "review"
     },
@@ -2682,8 +2682,8 @@
     },
     {
       "path": "03-personaje/animaciones/meti-la-pata.webp",
-      "bytes": 170012,
-      "sha256": "0c52a0c32ee81930619c0fe38667af6e5519ab20601e6ad96e4e1ee124c20719",
+      "bytes": 162560,
+      "sha256": "0b88c4abf5d6011d26c13e7744c9ef6e01d59443dd326657b0708a24600ddfd5",
       "source": "brandkit canonical",
       "status": "review",
       "image": {
@@ -3047,14 +3047,14 @@
     {
       "path": "03-personaje/exportaciones.json",
       "bytes": 88941,
-      "sha256": "c94eee3bc6bc8e8a77af191c3819648394ac072f7e7a0777418771acbde26144",
+      "sha256": "a5939cd5bb2fb58b31eed7f1ae6493620b7d70d71bad579af6596a71463a13a8",
       "source": "brandkit canonical",
       "status": "review"
     },
     {
       "path": "03-personaje/galeria.html",
       "bytes": 108426,
-      "sha256": "fee725f8aabf483fadcfd27e5f7defd2c20be9a2be5b3d9d8690ba6f83f0ecb7",
+      "sha256": "04a277b5527d483d059c8471d7683155f3e0db1319baa40e379c55031025f1eb",
       "source": "brandkit canonical",
       "status": "review"
     },
@@ -3075,7 +3075,7 @@
     {
       "path": "03-personaje/hd/animaciones/caminata.webp",
       "bytes": 248976,
-      "sha256": "be37568136d044877d65fa8275f93664c80856bd13503ce9a3ccd6029dccce06",
+      "sha256": "a19170204392571d2738f52e8a20eb1607181e70edffb547a1f86f47529619ad",
       "source": "brandkit canonical",
       "status": "review",
       "image": {
@@ -3088,8 +3088,8 @@
     },
     {
       "path": "03-personaje/hd/animaciones/cola.webp",
-      "bytes": 346288,
-      "sha256": "ee5dc8c75cfb1f34146a02f20232f2921682de4edc8ecbb263075a508b789e0b",
+      "bytes": 326954,
+      "sha256": "92ea868623344d025914f1dea8ea3200d2a6397c53ddb89a3fc1b6df329d09f0",
       "source": "brandkit canonical",
       "status": "review",
       "image": {
@@ -3326,8 +3326,8 @@
     },
     {
       "path": "03-personaje/hd/animaciones/fotogramas/cola/01.png",
-      "bytes": 137039,
-      "sha256": "b65ed22fb238ee2e4bd1e59615c27bc9645c0c217c0de7d3402b6ff2b57d2495",
+      "bytes": 129139,
+      "sha256": "28521828f3c661e13c318046318ecf3904900ee480669cef38c4b07e523ab49a",
       "source": "brandkit canonical",
       "status": "review",
       "image": {
@@ -3340,8 +3340,8 @@
     },
     {
       "path": "03-personaje/hd/animaciones/fotogramas/cola/02.png",
-      "bytes": 139502,
-      "sha256": "44030965e31c77f188a82ff1a524e54f58bc0fcf46376af6e5795ecac35ce48b",
+      "bytes": 132844,
+      "sha256": "50b435a4b86e7aebc16dd8e1c2c1a2b404be89669a033499f8ee901ea9826030",
       "source": "brandkit canonical",
       "status": "review",
       "image": {
@@ -3354,8 +3354,8 @@
     },
     {
       "path": "03-personaje/hd/animaciones/fotogramas/cola/03.png",
-      "bytes": 144841,
-      "sha256": "e09e22e00fa8103b89faa69ca7ee626def9e7524352b3e984fb25406fdecbf06",
+      "bytes": 137863,
+      "sha256": "9eda5c83e8afa2bed0e213bf06b158bb38772248fa737472c812517c8fbfc5f3",
       "source": "brandkit canonical",
       "status": "review",
       "image": {
@@ -3368,8 +3368,8 @@
     },
     {
       "path": "03-personaje/hd/animaciones/fotogramas/cola/04.png",
-      "bytes": 150562,
-      "sha256": "e337558dda3a809c3fd347bb988ee1ee438808b929815a75f83822263e5ce0ad",
+      "bytes": 141459,
+      "sha256": "47cfda7fe830a6ade3794530f78906b4c2b730130e2244fc7dea744b885e6d41",
       "source": "brandkit canonical",
       "status": "review",
       "image": {
@@ -3382,8 +3382,8 @@
     },
     {
       "path": "03-personaje/hd/animaciones/fotogramas/cola/05.png",
-      "bytes": 146348,
-      "sha256": "d03fa2c8dd7117658a6708d255a86b71238b6e31a8d920217a900116c8c74de6",
+      "bytes": 139481,
+      "sha256": "4d1a6cebd92ce3f4cf550c6f080ebb61895b8066de29141cc9671ef95f8d0750",
       "source": "brandkit canonical",
       "status": "review",
       "image": {
@@ -3396,8 +3396,8 @@
     },
     {
       "path": "03-personaje/hd/animaciones/fotogramas/cola/06.png",
-      "bytes": 146120,
-      "sha256": "6d7c47a19c2738dd0baedb249f3d5bf0d92998956e10162fdb8db61c4ee9f72d",
+      "bytes": 138496,
+      "sha256": "b03f513326d3ae4eb54e0da5b452998c124e9f3240857079d5391229350e5726",
       "source": "brandkit canonical",
       "status": "review",
       "image": {
@@ -3410,8 +3410,8 @@
     },
     {
       "path": "03-personaje/hd/animaciones/fotogramas/cola/07.png",
-      "bytes": 146166,
-      "sha256": "6c17c391614b9c438e8dabaea2250c87dafa12eff7a6655aa42324f91261b0f9",
+      "bytes": 138454,
+      "sha256": "1954e89e8a9c3a22e95ff052fae9a69093f60ebb328dd714634ef19acd44564c",
       "source": "brandkit canonical",
       "status": "review",
       "image": {
@@ -3424,8 +3424,8 @@
     },
     {
       "path": "03-personaje/hd/animaciones/fotogramas/cola/08.png",
-      "bytes": 137059,
-      "sha256": "75a54b090104760e69f1e968eb8c7ba04b8c5d74df12f452de90ade75b8d1e85",
+      "bytes": 129303,
+      "sha256": "2f45c363b8a8dca8a737a25cd60eb98876c59d101ea4b3b9237711f925c37b76",
       "source": "brandkit canonical",
       "status": "review",
       "image": {
@@ -4068,8 +4068,8 @@
     },
     {
       "path": "03-personaje/hd/animaciones/fotogramas/meti-la-pata/01.png",
-      "bytes": 143946,
-      "sha256": "ae52745583c32bea704fa9f3c21aba6cd2a6c05d27c000b0319e912eb88da4ea",
+      "bytes": 138778,
+      "sha256": "8f01ffbff64b534904fb74d46e2231cca94e203fd0ceb76180fe0fab32396798",
       "source": "brandkit canonical",
       "status": "review",
       "image": {
@@ -4082,8 +4082,8 @@
     },
     {
       "path": "03-personaje/hd/animaciones/fotogramas/meti-la-pata/02.png",
-      "bytes": 139849,
-      "sha256": "94bc45314a53822b0c0e036b1069132d6c183a15f765467eefcfb258197b8387",
+      "bytes": 133401,
+      "sha256": "e234de2e95ee2f3f3094ccb44a0643e0d3dc3cd783ee46b86018c5262e6b6ea2",
       "source": "brandkit canonical",
       "status": "review",
       "image": {
@@ -4096,8 +4096,8 @@
     },
     {
       "path": "03-personaje/hd/animaciones/fotogramas/meti-la-pata/03.png",
-      "bytes": 139919,
-      "sha256": "aef03b32c6983366d851c2b55ba52d1ec3b96f0aec6d40540e3b51db969b8288",
+      "bytes": 132972,
+      "sha256": "05ec46d34d4e93744df67ef06a57ff5eab7df308ec76cc51d9ea75a09bdb4c30",
       "source": "brandkit canonical",
       "status": "review",
       "image": {
@@ -4110,8 +4110,8 @@
     },
     {
       "path": "03-personaje/hd/animaciones/fotogramas/meti-la-pata/04.png",
-      "bytes": 143098,
-      "sha256": "dd4d8ddb4b94d80d0a9199bae8256a3756913e5dc10c397df9baafeea1435f70",
+      "bytes": 136655,
+      "sha256": "11102138c34dc5de858ebdba5025bcecc44d76da0296260b19e8201d8605c39b",
       "source": "brandkit canonical",
       "status": "review",
       "image": {
@@ -4124,8 +4124,8 @@
     },
     {
       "path": "03-personaje/hd/animaciones/fotogramas/meti-la-pata/05.png",
-      "bytes": 146374,
-      "sha256": "2ccb7d11306a481b697cd0644aea9a3cf1771f671408bfb0826df5ee2eb2bc11",
+      "bytes": 139799,
+      "sha256": "97f79d21f169ef219afc1f709cef80365b9d8da45c0199ecaafe0a1f0dba8784",
       "source": "brandkit canonical",
       "status": "review",
       "image": {
@@ -4138,8 +4138,8 @@
     },
     {
       "path": "03-personaje/hd/animaciones/fotogramas/meti-la-pata/06.png",
-      "bytes": 149229,
-      "sha256": "9b8f05d17aa0a4d98943fbe455eec10c043da9ad0ceac26ad9eb0e651dc7f74e",
+      "bytes": 143583,
+      "sha256": "820930f9f28be64ece44e9b5d484faeb373ffde2eb6b9a506274e46f96cd8da5",
       "source": "brandkit canonical",
       "status": "review",
       "image": {
@@ -5230,8 +5230,8 @@
     },
     {
       "path": "03-personaje/hd/animaciones/meti-la-pata.webp",
-      "bytes": 265142,
-      "sha256": "e5df24f46acef3e1c5b2d71a716c6e12fd148d4589047ad7777f73d5363e0fba",
+      "bytes": 253190,
+      "sha256": "12cf7709fb8656f8deccc3ef425694d5aa5d7a91cf0424908254decbd3392a4c",
       "source": "brandkit canonical",
       "status": "review",
       "image": {
@@ -5622,8 +5622,8 @@
     },
     {
       "path": "03-personaje/hd/hojas/cola.png",
-      "bytes": 515670,
-      "sha256": "5dc35d145769466e0d6bf6b92718a9e1f2badd3754d52e4dac46787a12365561",
+      "bytes": 476949,
+      "sha256": "0566c62f2f9df168abb90cf52f4469195eab8f364edec62d305a44cd7a60c28f",
       "source": "brandkit canonical",
       "status": "review",
       "image": {
@@ -5706,8 +5706,8 @@
     },
     {
       "path": "03-personaje/hd/hojas/meti-la-pata.png",
-      "bytes": 394304,
-      "sha256": "3ada341a4dd6d892b6438aceb300bb0de71070b001006d66cf623c6634483c33",
+      "bytes": 368830,
+      "sha256": "918548ee5fb57e87c0269676a99b13bfdb715ad4b32473eb23698fbade742b15",
       "source": "brandkit canonical",
       "status": "review",
       "image": {
@@ -5902,8 +5902,8 @@
     },
     {
       "path": "03-personaje/hojas/cola.png",
-      "bytes": 371215,
-      "sha256": "40dd9587981ee5b081d544ac5d7fd2649dde5a2eba00a840d911b5c64b855f2b",
+      "bytes": 340070,
+      "sha256": "10b1d205f872bcb3dd31e08fb9bc965ec596e6755306473bf4ddd7ea6da37b6d",
       "source": "brandkit canonical",
       "status": "review",
       "image": {
@@ -5986,8 +5986,8 @@
     },
     {
       "path": "03-personaje/hojas/meti-la-pata.png",
-      "bytes": 283121,
-      "sha256": "635a79aed87128a1227aafa58b2c009821b565468196271659097476893286f9",
+      "bytes": 263384,
+      "sha256": "00b4178f5492c08e723dd6de1c0dd3c3c472e8a66d473bae56632bf8ded3d6ef",
       "source": "brandkit canonical",
       "status": "review",
       "image": {
@@ -6738,8 +6738,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 1702,
-      "sha256": "0aec4aa787c0c837a05e4c0001e194d86c23cd90b8060035c7f3ef0c5b3ace5d",
+      "bytes": 3285,
+      "sha256": "b5ce91d467d35e3fa1e5c39dc1359793d5e5dd97ba1771fd2005f0282ea4b5c8",
       "source": "brandkit editorial / generated",
       "status": "internal"
     },

@@ -715,32 +715,32 @@
         "height": 194
       },
       "frames": 6,
-      "totalMs": 660,
+      "totalMs": 780,
       "preview": "caminata.webp",
       "sequence": [
         {
           "frame": "fotogramas/caminata/01.png",
-          "ms": 110
+          "ms": 130
         },
         {
           "frame": "fotogramas/caminata/02.png",
-          "ms": 110
+          "ms": 130
         },
         {
           "frame": "fotogramas/caminata/03.png",
-          "ms": 110
+          "ms": 130
         },
         {
           "frame": "fotogramas/caminata/04.png",
-          "ms": 110
+          "ms": 130
         },
         {
           "frame": "fotogramas/caminata/05.png",
-          "ms": 110
+          "ms": 130
         },
         {
           "frame": "fotogramas/caminata/06.png",
-          "ms": 110
+          "ms": 130
         }
       ]
     },

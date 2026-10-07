@@ -82,7 +82,7 @@ El template editable del catálogo es `herramientas/brandkit/catalogo.html`; el 
 
 ## Repositorio de marca
 
-Desde el 1 de octubre de 2026 este checkout almacena identidad, recursos y estrategia, no una landing. La app y la landing viven en el frontend unificado. Se conservaron los WebP de uso anterior en `archivo/personaje-web/`, la portada en `contenido/plantillas/` y las presentaciones en `comercial/pitch/`, sin cambios artísticos.
+Desde el 1 de octubre de 2026 este checkout almacena identidad, recursos y estrategia, no una landing. La app y la landing viven en el frontend unificado. Los WebP de la landing anterior quedan en `descartado/mascota-2026-09/qa/antes/estaticos/` (la copia de `archivo/personaje-web/` se retiró el 7 de octubre de 2026), la portada en `contenido/plantillas/` y las presentaciones en `comercial/pitch/`, sin cambios artísticos.
 
 ## Límites de esta edición
 

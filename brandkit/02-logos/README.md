@@ -43,4 +43,4 @@ El [catálogo principal](../index.html#logo) conserva la composición de base co
 
 ## PWA
 
-`pwa/` sigue siendo el snapshot de la app: la cabeza original, transparente y ligeramente descentrada. Su manifiesto conserva las rutas de la aplicación; sirve de referencia y no debe instalarse desde esta carpeta. Solo se refresca desde la app con `--app-dir`. La versión nueva (fondo Milk, iconos `maskable`, símbolo centrado) está pendiente.
+`pwa/` sigue siendo el snapshot de la app: la cabeza original, transparente y ligeramente descentrada. Su manifiesto conserva las rutas de la aplicación; sirve de referencia y no debe instalarse desde esta carpeta. Solo se refresca desde la app con `--app-dir`. La versión nueva (fondo Milk, iconos `maskable`, símbolo centrado) está pendiente. También está pendiente en la app la `description` del manifiesto: todavía dice «Tus dólares ya saben moverse», sustituida el 3 de octubre de 2026 por «Dinero sin fronteras. Siempre tuyo.». Se corrige en `gatopago/gatopago` y después se refresca aquí con `--app-dir`.

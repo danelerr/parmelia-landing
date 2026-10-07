@@ -9,6 +9,8 @@ import { unzipSync } from 'fflate';
 import sharp from 'sharp';
 import { files, inside, removeWorkdir, slash } from './paths.mjs';
 import { verifyKit } from '../verify-brandkit.mjs';
+import { mirrorPaw } from './mirror-paw.mjs';
+import { retimeWebp } from './retime-caminata.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const hash = bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
@@ -17,6 +19,37 @@ async function inventory(dir) {
   for(const file of await files(dir)) result[slash(path.relative(dir,file))]=hash(await fs.readFile(file));
   return result;
 }
+
+test('mirrored paw copies exact RGBA and places the intact tail behind the body',()=>{
+  const W=196,H=193,raw=Buffer.alloc(W*H*4),at=(x,y)=>(y*W+x)*4;
+  for(let y=119;y<=185;y++)for(let x=34;x<=135;x++){
+    const p=at(x,y);raw[p]=210+x%30;raw[p+1]=55+y%25;raw[p+2]=40;raw[p+3]=255;
+  }
+  for(let y=135;y<=172;y++)for(let x=78;x<=81;x++)raw.set([11,11,15,255],at(x,y));
+  // A separate head and tail above the shoulders, connected below them.
+  for(let y=20;y<119;y++)for(let x=34;x<=117;x++)raw.set([248,82,57,255],at(x,y));
+  for(let y=90;y<171;y++)for(let x=137;x<=149;x++)raw.set([207,52,51,255],at(x,y));
+  raw.set([207,52,51,255],at(143,100));
+  raw.set([11,11,15,255],at(45,70));
+  raw.set([11,11,15,64],at(125,105)); // Translucent head contour over the tail.
+  raw.set([248,82,37,64],at(35,140)); // Translucent paw contour over the tail.
+  const output=mirrorPaw(raw,W,H);
+  for(let y=119;y<=185;y++)for(let x=81;x<=136;x++){
+    if(!raw[at(160-x,y)+3])continue; // Transparent paw pixels reveal the tail behind it.
+    if(x===125&&y===140)continue;
+    assert.deepEqual(output.subarray(at(x,y),at(x,y)+4),raw.subarray(at(160-x,y),at(160-x,y)+4));
+  }
+  for(const [x,y] of [[45,70],[56,150]])assert.deepEqual(output.subarray(at(x,y),at(x,y)+4),raw.subarray(at(x,y),at(x,y)+4));
+  for(let y=20;y<119;y++)for(let x=34;x<=117;x++)assert.deepEqual(output.subarray(at(x,y),at(x,y)+4),raw.subarray(at(x,y),at(x,y)+4));
+  // No horizontal slices: every row of the tip keeps its exact donor pixels.
+  for(let y=90;y<119;y++)for(let x=137;x<=149;x++){
+    if(x===137&&y===105)continue;
+    assert.deepEqual(output.subarray(at(x-12,y),at(x-12,y)+4),raw.subarray(at(x,y),at(x,y)+4));
+    if(x>137)assert.equal(output[at(x,y)+3],0);
+  }
+  assert.deepEqual([...output.subarray(at(125,105),at(125,105)+4)],[158,42,42,255]);
+  assert.deepEqual([...output.subarray(at(125,140),at(125,140)+4)],[217,60,47,255]);
+});
 
 test('brandkit pipeline is self-contained and fail-safe', async t=>{
   const work = await fs.mkdtemp(path.join(root,'.brandkit-work-'));
@@ -62,6 +95,45 @@ test('brandkit pipeline is self-contained and fail-safe', async t=>{
         run('brandkit/personaje.mjs',[],1);
         assert.deepEqual(await inventory(kit),before);
       } finally { await fs.rename(saved,original); }
+    });
+    await t.test('scoped character retouches are reproducible and preserve all unrelated artwork',async()=>{
+      const before=await inventory(kit);
+      const result=run('brandkit/personaje.mjs',['--only=cola,meti-la-pata']);
+      assert.equal(JSON.parse(result.stdout).frames,147);
+      const after=await inventory(kit);
+      // Character generation writes its basic gallery; the build adds HD download links.
+      delete before['03-personaje/galeria.html'];
+      delete after['03-personaje/galeria.html'];
+      assert.deepEqual(after,before);
+      const motion=JSON.parse(await fs.readFile(path.join(kit,'03-personaje/animaciones/manifest.json'),'utf8'));
+      assert.deepEqual(motion.animations.find(a=>a.id==='cola').canvas,{width:196,height:193});
+      assert.deepEqual(motion.animations.find(a=>a.id==='meti-la-pata').canvas,{width:188,height:203});
+      assert.equal(motion.animations.find(a=>a.id==='cola').totalMs,1690);
+      assert.equal(motion.animations.find(a=>a.id==='meti-la-pata').totalMs,3080);
+      // Restore the original gallery after the test so later standalone checks see a complete kit.
+      await fs.copyFile(path.join(root,'brandkit/03-personaje/galeria.html'),path.join(kit,'03-personaje/galeria.html'));
+    });
+    await t.test('walking keeps its original artwork and changes only frame duration',async()=>{
+      const previewPath=path.join(kit,'03-personaje/animaciones/caminata.webp');
+      const preview=await fs.readFile(previewPath);
+      const oldTiming=retimeWebp(preview,Array(6).fill(110));
+      const slower=retimeWebp(oldTiming,Array(6).fill(130));
+      assert.deepEqual(slower,preview);
+      assert.deepEqual(await sharp(oldTiming,{animated:true}).ensureAlpha().raw().toBuffer(),
+        await sharp(slower,{animated:true}).ensureAlpha().raw().toBuffer());
+      assert.deepEqual((await sharp(slower,{animated:true}).metadata()).delay,Array(6).fill(130));
+      assert.throws(()=>retimeWebp(preview,[130]),/Unexpected animation frame/);
+      assert.throws(()=>retimeWebp(preview,Array(6).fill(0)));
+      const before=await inventory(kit);
+      run('brandkit/retime-caminata.mjs');
+      assert.deepEqual(await inventory(kit),before,'Timing update must be idempotent and leave every PNG intact');
+      const manifest=JSON.parse(await fs.readFile(path.join(kit,'03-personaje/animaciones/manifest.json')));
+      const walk=manifest.animations.find(a=>a.id==='caminata');
+      assert.equal(walk.totalMs,780);
+      assert.deepEqual(walk.sequence.map(f=>f.frame),Array.from({length:6},(_,i)=>`fotogramas/caminata/0${i+1}.png`));
+      assert.deepEqual(walk.sequence.map(f=>f.ms),Array(6).fill(130));
+      const hd=await sharp(path.join(kit,'03-personaje/hd/animaciones/caminata.webp'),{animated:true}).metadata();
+      assert.deepEqual(hd.delay,Array(6).fill(130));
     });
     await t.test('character timing drift fails even when the inventory hashes are refreshed',async()=>{
       const motionPath=path.join(kit,'03-personaje/animaciones/manifest.json');

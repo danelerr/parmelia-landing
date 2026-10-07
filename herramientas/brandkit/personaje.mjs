@@ -4,6 +4,7 @@
  * - 20 animations cut from the animation sheets, registered on one canvas per sequence (no jitter) and timed by hand
  *   (holds on key poses, quick in-betweens, anticipation and hang time);
  * - a manifest and the gallery page. Output: brandkit/03-personaje. Usage: npm run brandkit:personaje
+ *   Scoped review: npm run brandkit:personaje -- --only=cola,meti-la-pata
  */
 import fs from 'node:fs/promises';
 import path from 'node:path';
@@ -12,6 +13,7 @@ import sharp from 'sharp';
 import crypto from 'node:crypto';
 import { files, removeWorkdir } from './paths.mjs';
 import { characterGallery } from './galeria-personaje.mjs';
+import { mirrorPaw } from './mirror-paw.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const ORIG = path.join(root, 'brandkit/06-originales');
@@ -42,7 +44,8 @@ const STATICS = [
  * anchor: 'fur' registers on the cat, 'all' on everything (a fixed prop dominates), 'x' only horizontally (keeps a jump's height);
  * play: [frame, ms] pairs (the timing), frames may repeat or be dropped; loop: true for ambient loops, false for one-shot events.
  * Retouches (2026-10-03, requested in art review), all on the registered canvas, never redrawing the cat:
- * wrap: { frames, box } removes the stroke that separates a wrapped tail from the paws, so a raised tail is not shown twice;
+ * mirrorPaw: duplicates the intact left lower-body pixels in mirror, including its outline and alpha.
+ * No painted patch: the right paw is copied from the left; the moving tail stays behind it.
  * legShade: { top } deepens the fur's shadow tone below `top`, so the far legs separate from the near ones;
  * ground: true adds a soft stepped contact shadow under the feet.
  */
@@ -56,20 +59,21 @@ const SEQUENCES = [
   { id: 'reposo', name: 'Reposo sentado', purpose: 'Bienvenida y estados vacíos', sheet: 0, y: [648, 882], erase: [[0, 0, 266, 1000]], n: 8, anchor: 'fur', loop: true,
     play: [[0, 1000], [1, 120], [2, 800], [1, 120], [0, 600], [6, 90], [0, 500], [5, 160], [3, 160], [0, 600], [7, 900]] },
   { id: 'cola', name: 'Cola', purpose: 'Espera amable, con más presencia que el reposo', sheet: 1, y: [17, 250], erase: [[0, 0, 200, 74]], n: 8, anchor: 'fur', loop: true,
-    wrap: { frames: [1, 2, 3, 4, 5, 6], box: [84, 138, 118, 172] },
+    mirrorPaw: true,
     play: [[0, 500], [1, 100], [2, 100], [3, 120], [4, 260], [5, 110], [6, 100], [7, 400]] },
   { id: 'siesta', name: 'Siesta', purpose: 'Inactividad o espera larga sin operación en curso', sheet: 1, y: [259, 456], erase: [[0, 255, 210, 316]], n: 8, anchor: 'fur', loop: true,
     play: [[0, 600], [1, 600], [2, 600], [1, 600], [0, 600], [4, 450], [5, 600], [6, 450], [0, 600], [7, 220], [0, 600]] },
   { id: 'asomarse', name: 'Asomarse', purpose: 'Descubrimiento: algo nuevo por ver', sheet: 1, y: [460, 668], erase: [[0, 455, 245, 521]], n: 8, anchor: 'all', loop: false,
     play: [[0, 700], [1, 160], [2, 160], [3, 260], [4, 380], [5, 420], [6, 700], [7, 1200]] },
-  { id: 'meti-la-pata', name: 'Metí la pata', purpose: 'Error recuperable, con tono amable', sheet: 1, y: [677, 912], erase: [[0, 672, 255, 738]], n: 6, anchor: 'fur', loop: false,
-    wrap: { frames: [0, 1, 2, 3, 4, 5], box: [82, 148, 120, 182] },
+  // The label ends above y=731; its former y=738 mask also removed the first left ear's tip.
+  { id: 'meti-la-pata', name: 'Metí la pata', purpose: 'Error recuperable, con tono amable', sheet: 1, y: [677, 912], erase: [[0, 672, 255, 731]], n: 6, anchor: 'fur', loop: false,
+    mirrorPaw: true,
     play: [[0, 600], [1, 160], [2, 500], [3, 160], [4, 260], [5, 1400]] },
   { id: 'salto', name: 'Salto feliz', purpose: 'Éxito confirmado; una vez y breve', sheet: 2, y: [51, 265], erase: [[0, 51, 268, 126]], n: 8, anchor: 'x', loop: false,
     play: [[0, 400], [1, 220], [2, 70], [3, 80], [4, 200], [5, 80], [6, 160], [7, 1000]] },
   { id: 'caminata', name: 'Caminata', purpose: 'Envío en curso; no indica llegada', sheet: 2, y: [290, 470], erase: [[0, 290, 262, 470]], n: 6, anchor: 'fur', loop: true,
     legShade: { top: 128 }, ground: true,
-    play: [[0, 110], [1, 110], [2, 110], [3, 110], [4, 110], [5, 110]] },
+    play: [[0, 130], [1, 130], [2, 130], [3, 130], [4, 130], [5, 130]] },
   // The label box stops above the first frame's ear (it used to erase it); the right sparkle is a separate, shorter box.
   { id: 'preparando-pago', name: 'Preparando el pago', purpose: 'Procesamiento de una operación', sheet: 2, y: [478, 665], erase: [[0, 478, 232, 548], [232, 478, 262, 522]], n: 8, anchor: 'all', loop: true,
     play: [[0, 300], [1, 120], [2, 120], [3, 120], [4, 120], [5, 120], [6, 260], [7, 800]] },
@@ -95,40 +99,18 @@ const SEQUENCES = [
     play: [[0, 500], [1, 180], [2, 250], [3, 150], [4, 220], [5, 500], [7, 700], [6, 900]] },
 ];
 
+// Scoped art reviews must not regenerate unrelated frames or statics.
+const onlyArg = process.argv.find(arg => arg.startsWith('--only='));
+const selected = onlyArg ? new Set(onlyArg.slice(7).split(',')) : null;
+if (selected && [...selected].some(id => !SEQUENCES.some(seq => seq.id === id))) throw new Error('Unknown animation in --only');
+const previousManifest = selected ? JSON.parse(await fs.readFile(path.join(current, 'animaciones/manifest.json'), 'utf8')) : null;
+
 const ALPHA = 24; // ink on the sheet
 const isFur = (r, g, b) => r > 150 && r - g > 70 && g < 140 && b < 120;
 
 
 // Retouches on one registered frame (raw RGBA). See the SEQUENCES comment.
 const lum = (d, i) => 0.3 * d[i] + 0.59 * d[i + 1] + 0.11 * d[i + 2];
-function wrapPass(data, W, H, [X0, Y0, X1, Y1]) {
-  const px = (x, y) => (y * W + x) * 4, inside = (x, y) => x >= 0 && y >= 0 && x < W && y < H;
-  const clean = (x, y) => { const i = px(x, y); return data[i + 3] > 200 && isFur(data[i], data[i + 1], data[i + 2]) && lum(data, i) > 92; };
-  const darkAt = (x, y) => inside(x, y) && data[px(x, y) + 3] > 120 && lum(data, px(x, y)) < 80;
-  const keep = new Uint8Array(W * H);
-  // The leg line is the leftmost long vertical dark run; every other dark run in the box belongs to the stroke.
-  const runs = [];
-  for (let x = X0 - 6; x <= X1; x++) { let run = 0; for (let y = Y0 - 10; y <= Y1 + 10; y++) { if (darkAt(x, y)) run++; else { if (run >= 12) runs.push([x, y - run, y]); run = 0; } } }
-  const first = runs.length ? runs[0][0] : -99;
-  for (const [x, a, b] of runs) if (x <= first + 3) for (let y = a; y < b; y++) for (let dx = -1; dx <= 1; dx++) if (inside(x + dx, y)) keep[y * W + x + dx] = 1;
-  // The silhouette stays: nothing within 4 px of transparency is touched.
-  for (let y = Y0; y <= Y1; y++) for (let x = X0; x <= X1; x++) for (let dy = -4; dy <= 4; dy++) for (let dx = -4; dx <= 4; dx++) if (!inside(x + dx, y + dy) || data[px(x + dx, y + dy) + 3] < 60) keep[y * W + x] = 1;
-  const todo = new Set();
-  for (let y = Y0; y <= Y1; y++) for (let x = X0; x <= X1; x++) if (!keep[y * W + x] && data[px(x, y) + 3] > 120 && !clean(x, y)) todo.add(y * W + x);
-  const source = (x, y) => inside(x, y) && !todo.has(y * W + x) && clean(x, y);
-  const out = Buffer.from(data);
-  for (const k of todo) {
-    const x = k % W, y = (k / W) | 0, find = (dx, dy) => { for (let d = 1; d <= 8; d++) if (source(x + dx * d, y + dy * d)) return d; return 0; };
-    let a, b, t;
-    const up = find(0, -1), dn = find(0, 1);
-    if (up || dn) { a = up ? px(x, y - up) : px(x, y + dn); b = dn ? px(x, y + dn) : a; t = up && dn ? up / (up + dn) : 0; }
-    else { const lf = find(-1, 0), rt = find(1, 0); if (!lf && !rt) continue; a = lf ? px(x - lf, y) : px(x + rt, y); b = rt ? px(x + rt, y) : a; t = lf && rt ? lf / (lf + rt) : 0; }
-    const i = px(x, y);
-    for (let c = 0; c < 3; c++) out[i + c] = Math.round(data[a + c] * (1 - t) + data[b + c] * t);
-    out[i + 3] = 255;
-  }
-  return out;
-}
 function legShade(data, W, H, top, threshold = 106, mix = 0.55, deep = [0x9f, 0x29, 0x2e]) {
   for (let y = top; y < H; y++) for (let x = 0; x < W; x++) {
     const i = (y * W + x) * 4;
@@ -252,13 +234,13 @@ const initialFingerprint = await fingerprint(current);
 work = await fs.mkdtemp(path.join(root, '.brandkit-work-'));
 OUT = path.join(work, 'character');
 await fs.cp(current, OUT, { recursive: true });
-for (const dir of ['estaticos', 'animaciones']) await fs.rm(path.join(OUT, dir), { recursive: true, force: true });
+if (!selected) for (const dir of ['estaticos', 'animaciones']) await fs.rm(path.join(OUT, dir), { recursive: true, force: true });
 await fs.mkdir(path.join(OUT, 'estaticos'), { recursive: true });
 await fs.mkdir(path.join(OUT, 'animaciones/fotogramas'), { recursive: true });
 
 // 2. Statics: exact crops, trimmed to their content.
-const statics = [];
-for (const [id, name, purpose, file, [left, top, width, height]] of STATICS) {
+const statics = selected ? previousManifest.statics : [];
+for (const [id, name, purpose, file, [left, top, width, height]] of selected ? [] : STATICS) {
   const crop = await sharp(path.join(ORIG, file)).extract({ left, top, width, height }).png().toBuffer(); // trim runs before extract in one pipeline
   const png = await sharp(crop).trim({ threshold: 0 }).png({ compressionLevel: 9 }).toBuffer();
   await fs.writeFile(path.join(OUT, 'estaticos', `${id}.png`), png);
@@ -269,6 +251,10 @@ for (const [id, name, purpose, file, [left, top, width, height]] of STATICS) {
 // 3. Animations.
 const sheets = {}, animations = [];
 for (const seq of SEQUENCES) {
+  if (selected && !selected.has(seq.id)) {
+    animations.push(previousManifest.animations.find(a => a.id === seq.id));
+    continue;
+  }
   const S = sheets[seq.sheet] ??= await sheet(SHEETS[seq.sheet]);
   const frames = cut(S, seq);
   if (frames.length !== seq.n) throw new Error(`${seq.id}: expected ${seq.n} frames, found ${frames.length}`);
@@ -280,7 +266,7 @@ for (const seq of SEQUENCES) {
     const f = frames[i], img = await sharp(f.buf, { raw: { width: f.w, height: f.h, channels: 4 } }).png().toBuffer();
     let raw = await sharp({ create: { width: W, height: H, channels: 4, background: { r: 0, g: 0, b: 0, alpha: 0 } } })
       .composite([{ input: img, left: pos[i].x - x0, top: pos[i].y - y0 }]).raw().toBuffer();
-    if (seq.wrap?.frames.includes(i)) raw = wrapPass(wrapPass(raw, W, H, seq.wrap.box), W, H, seq.wrap.box);
+    if (seq.mirrorPaw) raw = mirrorPaw(raw, W, H);
     if (seq.legShade) raw = legShade(raw, W, H, seq.legShade.top);
     raws.push(raw);
   }
@@ -293,6 +279,7 @@ for (const seq of SEQUENCES) {
   // Only the frames the timing uses are delivered, numbered in playing order of first appearance.
   const used = [...new Set(seq.play.map(([f]) => f))];
   const dir = path.join(OUT, 'animaciones/fotogramas', seq.id);
+  if (selected) await fs.rm(dir, { recursive: true, force: true });
   await fs.mkdir(dir, { recursive: true });
   const number = new Map(used.map((f, k) => [f, k + 1]));
   for (const f of used) await fs.writeFile(path.join(dir, `${String(number.get(f)).padStart(2, '0')}.png`), canvas[f]);
