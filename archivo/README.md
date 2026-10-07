@@ -10,7 +10,7 @@ Material archivado para consulta y registro técnico. **No se utiliza en piezas 
 
 ## Retirado el 7 de octubre de 2026
 
-Restos de la landing Astro anterior, recuperables desde el historial de Git (commit `3c39c39`):
+Restos de la landing Astro anterior, recuperables desde el historial de Git (padre del commit «chore(repo): purge leftovers of the retired Astro landing»):
 
 - `personaje-web/`: los 14 WebP de la landing. Siguen idénticos byte a byte en `brandkit/descartado/mascota-2026-09/qa/antes/estaticos/`.
 - `archivo-web/`: favicons e iconos de la web anterior, sustituidos por `brandkit/02-logos/iconos-web/`.
