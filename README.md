@@ -28,10 +28,7 @@ No contiene código de frontend, servidor web ni configuración de despliegue (l
 │   └── plantillas/              Portadas, fondos y recursos reutilizables
 │
 ├── archivo/                     REGISTRO TÉCNICO E HISTÓRICO (No usar en piezas nuevas)
-│   ├── laboratorio-gatopago/    255 MB de animaciones, propuestas y rigs experimentales
-│   ├── personaje-web/           WebP del frontend anterior conservados byte a byte
-│   ├── archivo-web/             Iconos históricos de la web anterior
-│   └── iconos-terceros/         Logos de USDC, Arbitrum, Bitcoin y Ethereum
+│   └── laboratorio-gatopago/    255 MB de animaciones, propuestas y rigs experimentales
 │
 ├── herramientas/                SCRIPTS Y GENERADORES
 │   ├── brandkit/                Generadores de personaje, piezas sociales, release y tests

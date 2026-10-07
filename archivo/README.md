@@ -7,10 +7,11 @@ Material archivado para consulta y registro técnico. **No se utiliza en piezas 
 - **`laboratorio-gatopago/`**:
   - Propuestas de animación, rigs experimentales, manuales alternativos y componentes del laboratorio (255 MB).
   - Conservado para trazabilidad artística y técnica.
-- **`personaje-web/`**:
-  - 14 archivos WebP empleados en la landing anterior, preservados byte a byte como referencia histórica.
-- **`archivo-web/`**:
-  - Iconos y activos web históricos cuyos hashes diferían del kit canónico.
-- **`iconos-terceros/`**:
-  - Recursos de Bitcoin, USDC (Circle), Ethereum y Arbitrum.
-  - Pertenecen a sus respectivos propietarios y no constituyen activos propios de GatoPago.
+
+## Retirado el 7 de octubre de 2026
+
+Restos de la landing Astro anterior, recuperables desde el historial de Git (commit `3c39c39`):
+
+- `personaje-web/`: los 14 WebP de la landing. Siguen idénticos byte a byte en `brandkit/descartado/mascota-2026-09/qa/antes/estaticos/`.
+- `archivo-web/`: favicons e iconos de la web anterior, sustituidos por `brandkit/02-logos/iconos-web/`.
+- `iconos-terceros/`: logos de Bitcoin, USDC, Ethereum y Arbitrum que usaba la landing. No son activos de GatoPago; si una pieza los necesita, descargarlos del kit de prensa de cada marca.

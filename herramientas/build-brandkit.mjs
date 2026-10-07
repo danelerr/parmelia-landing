@@ -32,7 +32,7 @@ async function copy(source, relative, label) {
   const dest = target(relative);
   await fs.mkdir(path.dirname(dest), { recursive: true });
   let bytes = await fs.readFile(source);
-  if (!relative.startsWith('02-logos/pwa/') && /\.(md|txt|css|ts|astro|json|svg|webmanifest)$/i.test(source)) {
+  if (!relative.startsWith('02-logos/pwa/') && /\.(md|txt|css|json|svg|webmanifest)$/i.test(source)) {
     bytes = Buffer.from(bytes.toString('utf8').replace(/\r\n/g, '\n'));
     transforms.set(relative, 'lf');
   }
